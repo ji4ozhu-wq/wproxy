@@ -11,3 +11,11 @@ design-refs/
 screenshots/
 *.p8
 *.mobileprovision
+交付摘要.md
+*.p12
+*.pfx
+*.cer
+*.crt
+*.key
+*.pem
+*.provisionprofile
