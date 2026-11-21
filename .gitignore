@@ -19,3 +19,6 @@ screenshots/
 *.key
 *.pem
 *.provisionprofile
+
+# Local AI context (not for the public repo)
+CLAUDE.md
