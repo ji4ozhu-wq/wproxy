@@ -1,0 +1,120 @@
+name: Wuji
+options:
+  bundleIdPrefix: com.juejin.ios
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+  xcodeVersion: "27.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: R6748V42K5
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+    TARGETED_DEVICE_FAMILY: "1,2"
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+    OTHER_SWIFT_FLAGS: "$(inherited) -disable-sandbox"
+    SWIFT_STRICT_CONCURRENCY: minimal
+    OTHER_LDFLAGS: "$(inherited) -lsqlite3"
+    # The shipped LibXray.xcframework only carries iOS device arm64 + simulator arm64
+    # slices (see tools/build_libxray.sh). Release builds would otherwise try to link
+    # an x86_64 simulator slice that does not exist; Intel-Mac simulator development is
+    # not supported for this project (Apple Silicon only).
+    EXCLUDED_ARCHS[sdk=iphonesimulator*]: x86_64
+
+targets:
+  Wuji:
+    type: application
+    platform: iOS
+    sources:
+      - path: Wuji
+        excludes:
+          - "Info.plist"
+          - "Wuji.entitlements"
+          - "Resources/PrivacyInfo.xcprivacy"
+      # Privacy manifests are not auto-detected by XcodeGen; ship them explicitly.
+      - path: Wuji/Resources/PrivacyInfo.xcprivacy
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.juejin.ios.wuji
+        PRODUCT_NAME: Wuji
+        INFOPLIST_FILE: Wuji/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Wuji/Wuji.entitlements
+        MARKETING_VERSION: "3.3.1"
+        CURRENT_PROJECT_VERSION: "2"
+        OTHER_LDFLAGS: "$(inherited) -lresolv"
+        SWIFT_EMIT_LOC_STRINGS: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    dependencies:
+      - target: WujiTunnel
+        embed: true
+
+  WujiTunnel:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: WujiTunnel
+        excludes:
+          - "Info.plist"
+          - "WujiTunnel.entitlements"
+          - "PrivacyInfo.xcprivacy"
+      - path: WujiTunnel/PrivacyInfo.xcprivacy
+        buildPhase: resources
+      - path: Wuji/Core/Models
+      - path: Wuji/Core/Routing
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.juejin.ios.wuji.tunnel-ext
+        PRODUCT_NAME: WujiTunnel
+        MARKETING_VERSION: "3.3.1"
+        CURRENT_PROJECT_VERSION: "1"
+        OTHER_LDFLAGS: "$(inherited) -lresolv"
+        INFOPLIST_FILE: WujiTunnel/Info.plist
+        CODE_SIGN_ENTITLEMENTS: WujiTunnel/WujiTunnel.entitlements
+    dependencies:
+      - framework: Frameworks/LibXray.xcframework
+        embed: false
+
+  WujiUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: WujiUITests
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.juejin.ios.wuji.uitests
+        MARKETING_VERSION: "3.3.1"
+        CURRENT_PROJECT_VERSION: "1"
+    dependencies:
+      - target: Wuji
+
+  WujiTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: WujiTests
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.juejin.ios.wuji.tests
+        MARKETING_VERSION: "3.3.1"
+        CURRENT_PROJECT_VERSION: "1"
+    dependencies:
+      - target: Wuji
+
+schemes:
+  Wuji:
+    build:
+      targets:
+        Wuji: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - WujiTests
+        - WujiUITests

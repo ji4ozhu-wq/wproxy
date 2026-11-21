@@ -1,0 +1,148 @@
+/* ===== Danh sách nút ===== */
+"nodes.group.manual" = "Thủ công";
+"nodes.count.one" = "1 nút";
+"nodes.count.many" = "%d nút";
+"nodes.updated" = "Đã cập nhật %@";
+"nodes.updateFailed" = "Cập nhật thất bại";
+"nodes.sort" = "Sắp xếp";
+"nodes.sortBy" = "Sắp xếp theo";
+"nodes.sort.name" = "Tên";
+"nodes.sort.latency" = "Độ trễ";
+"nodes.sort.added" = "Ngày thêm";
+"nodes.sort.ascending" = "Tăng dần";
+"nodes.sort.descending" = "Giảm dần";
+"nodes.testAll" = "Kiểm tra tất cả";
+"nodes.testing" = "Đang kiểm tra…";
+"nodes.latency.unknown" = "--";
+"nodes.active" = "Đang dùng";
+"nodes.rowMenu" = "Tác vụ nút";
+"nodes.noResultsTitle" = "Không có kết quả";
+"nodes.noResultsMessage" = "Không có nút nào khớp với tìm kiếm của bạn.";
+
+/* Xóa */
+"nodes.delete" = "Xóa";
+"nodes.deleteConfirmTitle" = "Xóa nút";
+"nodes.deleteConfirmMessage" = "Xóa “%@” khỏi thiết bị này? Không thể hoàn tác.";
+
+/* ===== Menu thêm ===== */
+"nodes.addMenu.manual" = "Nhập thủ công";
+"nodes.addMenu.scan" = "Quét mã QR";
+"nodes.addMenu.paste" = "Dán từ bảng nhớ tạm";
+"nodes.addMenu.subscription" = "Thêm đăng ký";
+
+/* ===== Tác vụ nút ===== */
+"nodes.action.setActive" = "Đặt làm nút đang dùng";
+"nodes.action.edit" = "Sửa nút";
+"nodes.action.copyURI" = "Sao chép URI";
+"nodes.action.shareQR" = "Chia sẻ mã QR";
+"nodes.action.share" = "Chia sẻ";
+"nodes.action.delete" = "Xóa nút";
+"nodes.action.copied" = "Đã sao chép";
+"nodes.action.noURI" = "Nút này không có liên kết để chia sẻ.";
+
+/* ===== Biểu mẫu thêm/sửa nút ===== */
+"nodes.form.title" = "Thêm nút";
+"nodes.form.editTitle" = "Sửa nút";
+"nodes.form.section.protocol" = "GIAO THỨC";
+"nodes.form.section.server" = "MÁY CHỦ";
+"nodes.form.section.credentials" = "THÔNG TIN ĐĂNG NHẬP";
+"nodes.form.section.transport" = "TRUYỀN TẢI";
+"nodes.form.section.reality" = "REALITY";
+"nodes.form.section.advanced" = "NÂNG CAO";
+"nodes.form.name" = "Tên";
+"nodes.form.namePlaceholder" = "Không bắt buộc";
+"nodes.form.address" = "Địa chỉ";
+"nodes.form.port" = "Cổng";
+"nodes.form.uuid" = "UUID";
+"nodes.form.alterID" = "Alter ID";
+"nodes.form.encryption" = "Mã hóa";
+"nodes.form.flow" = "Flow";
+"nodes.form.password" = "Mật khẩu";
+"nodes.form.method" = "Phương thức";
+"nodes.form.network" = "Mạng";
+"nodes.form.security" = "Bảo mật";
+"nodes.form.tls" = "TLS";
+"nodes.form.sni" = "SNI";
+"nodes.form.path" = "Đường dẫn";
+"nodes.form.host" = "Host";
+"nodes.form.grpcService" = "Tên dịch vụ";
+"nodes.form.fingerprint" = "Fingerprint";
+"nodes.form.allowInsecure" = "Cho phép kết nối không an toàn";
+"nodes.form.realityPublicKey" = "Khóa công khai";
+"nodes.form.realityShortID" = "Short ID";
+"nodes.form.none" = "Không có";
+"nodes.form.saving" = "Đang lưu…";
+"nodes.form.saveFailed" = "Không thể lưu nút này. Vui lòng thử lại.";
+"nodes.form.error.addressRequired" = "Nhập địa chỉ máy chủ.";
+"nodes.form.error.portInvalid" = "Cổng phải nằm trong khoảng 1 đến 65535.";
+"nodes.form.error.uuidInvalid" = "Nhập UUID hợp lệ.";
+"nodes.form.error.passwordRequired" = "Nhập mật khẩu.";
+"nodes.form.error.realityKeyRequired" = "Nhập khóa công khai REALITY.";
+"nodes.form.error.shortIDInvalid" = "Short ID phải là số thập lục phân.";
+"nodes.form.error.duplicate" = "Đã có nút với các cài đặt này.";
+"nodes.form.error.addressInvalid" = "Nhập tên máy chủ hoặc địa chỉ IP hợp lệ.";
+
+/* ===== Nhập bằng dán ===== */
+"nodes.paste.title" = "Dán liên kết";
+"nodes.paste.placeholder" = "Dán liên kết chia sẻ tại đây, mỗi dòng một liên kết.";
+"nodes.paste.recognized" = "ĐÃ NHẬN DIỆN";
+"nodes.paste.import" = "Nhập";
+"nodes.paste.import.one" = "Nhập 1 nút";
+"nodes.paste.import.many" = "Nhập %d nút";
+"nodes.paste.emptyHint" = "Các nút được nhận diện sẽ xuất hiện tại đây.";
+"nodes.paste.noLinks" = "Không tìm thấy liên kết chia sẻ được hỗ trợ.";
+"nodes.paste.footer" = "Hỗ trợ liên kết vmess, vless, trojan, shadowsocks và socks5. Dán mỗi liên kết trên một dòng.";
+"nodes.paste.selected" = "Đã chọn %d";
+
+/* ===== Quét ===== */
+"nodes.scan.title" = "Quét mã QR";
+"nodes.scan.hint" = "Đặt mã QR vào trong khung";
+"nodes.scan.choosePhoto" = "Chọn từ Ảnh";
+"nodes.scan.noCamera" = "Camera không khả dụng trên thiết bị này. Hãy chọn ảnh thay thế.";
+"nodes.scan.permissionTitle" = "Cần quyền truy cập camera";
+"nodes.scan.permissionMessage" = "Cho phép truy cập camera để quét mã QR hoặc chọn ảnh thay thế.";
+"nodes.scan.openSettings" = "Mở Cài đặt";
+"nodes.scan.invalidQR" = "Mã QR này không chứa liên kết chia sẻ được hỗ trợ.";
+"nodes.scan.recognizedTitle" = "Đã nhận diện nút";
+"nodes.scan.save" = "Lưu nút";
+"nodes.scan.close" = "Đóng";
+"nodes.scan.pasteInstead" = "Dán liên kết thay thế";
+"nodes.scan.photoError" = "Không thể đọc mã QR từ ảnh đó.";
+"nodes.scan.starting" = "Đang khởi động camera…";
+
+/* ===== Chia sẻ mã QR ===== */
+"nodes.qr.title" = "Chia sẻ nút";
+"nodes.qr.saveToPhotos" = "Lưu vào Ảnh";
+"nodes.qr.copyURI" = "Sao chép URI";
+"nodes.qr.share" = "Chia sẻ";
+"nodes.qr.saved" = "Đã lưu vào Ảnh";
+"nodes.qr.saveFailed" = "Không thể lưu ảnh. Hãy cho phép thêm vào Ảnh rồi thử lại.";
+"nodes.qr.copied" = "Đã sao chép URI";
+"nodes.qr.noURI" = "Nút này không có liên kết để chia sẻ.";
+"nodes.qr.imageLabel" = "Mã QR cho %@";
+"nodes.qr.saving" = "Đang lưu…";
+
+/* ===== Bổ sung cho phần đồng ý ===== */
+"consent.noAccounts" = "Không tài khoản, không phân tích, không quảng cáo.";
+"consent.paragraph3" = "Lưu lượng mạng của bạn chỉ được gửi đến máy chủ bạn cấu hình.";
+"consent.permissions" = "WProxy chỉ yêu cầu quyền Network Extension (VPN) để tạo đường hầm truyền lưu lượng của bạn. Camera chỉ được dùng khi bạn quét mã QR, và Ảnh chỉ được dùng khi bạn chọn một ảnh mã QR hoặc lưu một ảnh bạn yêu cầu.";
+"consent.checked" = "Đã đồng ý";
+"consent.unchecked" = "Chưa đồng ý";
+
+/* ===== Giới thiệu ===== */
+"onboarding.pageIndicator" = "Trang %d trên %d";
+
+/* ===== Kết quả nhập / cảnh báo ===== */
+"nodes.import.summary" = "Đã nhập %1$d · Bỏ qua %2$d trùng lặp · Không phân tích được %3$d";
+"nodes.import.warningsCount" = "%d nút có tham số không được hỗ trợ";
+"nodes.import.failuresTitle" = "Không phân tích được %d";
+"nodes.import.warning" = "Nút này dùng tham số không được hỗ trợ (%@). Chúng sẽ bị bỏ qua.";
+"nodes.import.duplicate" = "Đã thêm";
+"nodes.scan.alreadyAdded" = "Nút này đã có trong danh sách của bạn.";
+"nodes.group.update" = "Cập nhật đăng ký";
+"nodes.action.testLatency" = "Kiểm tra độ trễ";
+"nodes.action.testing" = "Đang kiểm tra…";
+
+/* ===== SOCKS5 ===== */
+"nodes.form.username" = "Tên người dùng";
+"nodes.form.error.socksCredentials" = "Điền cả tên người dùng và mật khẩu, hoặc để trống cả hai.";

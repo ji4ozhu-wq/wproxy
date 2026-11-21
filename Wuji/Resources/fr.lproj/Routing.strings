@@ -1,0 +1,28 @@
+/* Routing — pages-b (D17/D18) */
+
+"routing.mode.ruleFootnote" = "Le mode par règles garde en direct le réseau local et les pays/régions sélectionnés ; tout le reste passe par votre nœud.";
+"routing.mode.globalFootnote" = "Tout le trafic passe par votre nœud. Le contournement du réseau local et des pays/régions est désactivé tant que le mode Global est activé.";
+"routing.bypassLan.footnote" = "Les adresses 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 et les adresses lien local restent en direct.";
+"routing.serverRoutingFootnote" = "L’adresse de votre serveur proxy est toujours connectée directement pour éviter les boucles de routage.";
+"routing.reconnectFootnote" = "Les modifications effectuées pendant la connexion se reconnectent automatiquement.";
+"routing.addRegion" = "Ajouter un pays/une région…";
+"routing.noRegions" = "Aucun pays/région sélectionné";
+"routing.picker.selected" = "SÉLECTIONNÉES";
+"routing.picker.all" = "TOUS LES PAYS/RÉGIONS";
+"routing.picker.selectAll" = "Tout sélectionner";
+"routing.picker.clearAll" = "Effacer la sélection";
+"routing.picker.noResultsTitle" = "Aucun pays/région trouvé";
+"routing.picker.noResultsMessage" = "Essayez un autre terme de recherche.";
+"routing.picker.unavailableTitle" = "Données de pays/régions indisponibles";
+"routing.picker.unavailableMessage" = "La liste des pays/régions intégrée n’a pas pu être chargée. Réinstaller l’app la restaurera.";
+"routing.picker.count" = "%d sélectionnées";
+
+"routing.globalMode" = "Mode Global";
+"routing.globalMode.subtitle" = "Envoie tout le trafic via votre nœud. Les règles de contournement ci-dessous sont ignorées.";
+
+"routing.dns.section" = "DNS";
+"routing.dns.doh" = "DoH distant (via le proxy)";
+"routing.dns.doh.subtitle" = "DNS over HTTPS via votre nœud. Masque les requêtes au réseau local ; la détection des pays/régions peut être moins précise.";
+"routing.dns.local" = "DNS local (direct)";
+"routing.dns.local.subtitle" = "Résout directement avec 8.8.8.8 / 1.1.1.1. Routage par pays/régions plus précis, mais le résolveur local peut voir vos requêtes.";
+"routing.dns.footnote" = "Les modifications effectuées pendant la connexion reconnectent automatiquement le tunnel.";

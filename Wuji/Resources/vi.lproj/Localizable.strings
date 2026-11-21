@@ -1,0 +1,196 @@
+/* Thẻ */
+"tab.connect" = "Kết nối";
+"tab.nodes" = "Nút";
+"tab.settings" = "Cài đặt";
+
+/* Chung */
+"common.allow" = "Cho phép";
+"common.notNow" = "Không phải bây giờ";
+"common.skip" = "Bỏ qua";
+"common.continue" = "Tiếp tục";
+"common.cancel" = "Hủy";
+"common.done" = "Xong";
+"common.save" = "Lưu";
+
+/* Trang chính */
+"home.notConnected" = "Chưa kết nối";
+"home.connecting" = "Đang kết nối…";
+"home.connected" = "Đã kết nối";
+"home.disconnecting" = "Đang ngắt kết nối…";
+"home.latencyUnknown" = "không rõ độ trễ";
+"home.selectNodeHint" = "Chọn một nút để bắt đầu";
+"home.currentNode" = "Nút hiện tại";
+"home.none" = "Không có";
+"home.routing" = "Định tuyến";
+"home.thisSession" = "Phiên này";
+"home.download" = "Tải xuống";
+"home.upload" = "Tải lên";
+"home.duration" = "Thời lượng";
+"home.total" = "Tổng";
+"home.chooseNode" = "Chọn một nút";
+"home.resetVpn" = "Đặt lại cấu hình VPN";
+"home.noNodeSelected" = "Hãy chọn một nút trước.";
+"unit.ms" = "%d ms";
+
+/* Kết nối lần đầu */
+"firstConnect.title" = "Cho phép cấu hình VPN";
+"firstConnect.body" = "iOS cần quyền của bạn để tạo đường hầm VPN. WProxy không thu thập hay ghi lại lưu lượng của bạn, và bạn có thể ngắt kết nối hoặc xóa cấu hình bất cứ lúc nào.";
+
+/* Đồng ý */
+"consent.navTitle" = "Trước khi bắt đầu";
+"consent.title" = "Dữ liệu của bạn ở lại trên thiết bị này.";
+"consent.paragraph1" = "WProxy chỉ lưu nút và cài đặt của bạn cục bộ trên thiết bị này.";
+"consent.agree" = "Tôi đồng ý với Điều khoản sử dụng và Chính sách quyền riêng tư.";
+"consent.continue" = "Đồng ý và tiếp tục";
+
+/* Giới thiệu */
+"onboarding.1.title" = "Kết nối của bạn, quy tắc của bạn.";
+"onboarding.1.body" = "Thêm máy chủ của riêng bạn, kết nối chỉ với một lần chạm và giữ lưu lượng mạng cục bộ hoặc quốc gia/khu vực đã chọn đi trực tiếp.";
+"onboarding.2.title" = "Mang máy chủ của bạn.";
+"onboarding.2.body" = "Thêm nút bằng mã QR, dán liên kết hoặc nhập URL đăng ký.";
+"onboarding.3.title" = "Giữ lưu lượng nội địa đi trực tiếp khi cần.";
+"onboarding.3.body" = "Mạng cục bộ và các quốc gia/khu vực bạn chọn sẽ đi trực tiếp. Mọi lưu lượng khác sẽ đi qua nút của bạn.";
+"onboarding.getStarted" = "Bắt đầu";
+
+/* Nút */
+"nodes.search" = "Tìm kiếm nút";
+"nodes.emptyTitle" = "Chưa có nút nào";
+"nodes.emptyMessage" = "Thêm máy chủ thủ công, quét mã QR hoặc nhập đăng ký để bắt đầu.";
+"nodes.addNode" = "Thêm nút";
+"nodes.addSubscription" = "Thêm đăng ký";
+
+/* Menu thêm */
+"addMenu.manual" = "Nhập thủ công";
+"addMenu.scan" = "Quét mã QR";
+"addMenu.paste" = "Dán từ bảng nhớ tạm";
+"addMenu.subscription" = "Thêm đăng ký";
+
+/* Định tuyến */
+"routing.title" = "Định tuyến";
+"routing.rule" = "Quy tắc";
+"routing.global" = "Toàn bộ";
+"routing.summary" = "Quy tắc · bỏ qua %d";
+"routing.modeSection" = "Chế độ";
+"routing.mode" = "Chế độ";
+"routing.localSection" = "Mạng cục bộ";
+"routing.bypassLan" = "Bỏ qua mạng cục bộ";
+"routing.regionsSection" = "Quốc gia/khu vực (bỏ qua trực tiếp)";
+"routing.bypassedRegions" = "Bỏ qua quốc gia/khu vực (Direct)";
+"routing.selectedCount" = "Đã chọn %d";
+"routing.searchRegions" = "Tìm kiếm quốc gia/khu vực";
+"routing.regionPickerTitle" = "Quốc gia/khu vực không qua proxy";
+
+/* Cài đặt */
+"settings.section.connection" = "Kết nối";
+"settings.section.subscriptions" = "Đăng ký";
+"settings.section.support" = "Hỗ trợ";
+"settings.routing" = "Định tuyến";
+"settings.onDemand" = "Theo yêu cầu";
+"settings.subscriptions" = "Đăng ký";
+"settings.autoUpdate" = "Tự động cập nhật";
+"settings.about" = "Giới thiệu và giấy phép";
+"settings.terms" = "Điều khoản sử dụng";
+"settings.privacy" = "Chính sách quyền riêng tư";
+"settings.contact" = "Liên hệ hỗ trợ";
+"settings.clearData" = "Xóa toàn bộ dữ liệu";
+"settings.clearConfirm" = "Xóa tất cả nút, đăng ký và cài đặt khỏi thiết bị này? Không thể hoàn tác.";
+
+/* Theo yêu cầu */
+"onDemand.off" = "Tắt";
+"onDemand.always" = "Luôn luôn";
+"onDemand.wifi" = "Chỉ Wi-Fi";
+"onDemand.cellular" = "Chỉ dữ liệu di động";
+
+/* Đăng ký */
+"subscriptions.title" = "Đăng ký";
+"subscriptions.add" = "Thêm đăng ký";
+"subscriptions.emptyTitle" = "Chưa có đăng ký";
+"subscriptions.emptyMessage" = "Thêm URL đăng ký để nhập và cập nhật nút tự động.";
+"subscriptions.nodes" = "nút";
+"subscriptions.expires" = "Hết hạn %@";
+"subscriptions.defaultName" = "Đăng ký";
+
+/* Thêm đăng ký */
+"subscriptionAdd.title" = "Thêm đăng ký";
+"subscriptionAdd.urlSection" = "URL đăng ký";
+"subscriptionAdd.details" = "Chi tiết";
+"subscriptionAdd.name" = "Tên";
+
+/* Giới thiệu */
+"about.licenses" = "Giấy phép mã nguồn mở";
+"about.builtWith" = "Được xây dựng với Xray-core (MPL-2.0) và libXray (MIT). Dữ liệu định tuyến theo quốc gia có nguồn gốc từ DB-IP Lite (CC BY 4.0) thông qua dự án v2fly/geoip (CC BY-SA 4.0).";
+
+/* Pháp lý */
+"legal.placeholder" = "Tài liệu này được đóng gói cùng ứng dụng.";
+
+/* Lỗi */
+"error.uri.unsupported" = "Liên kết chia sẻ không được hỗ trợ.";
+"error.uri.none" = "Không tìm thấy liên kết chia sẻ được hỗ trợ.";
+"error.subscription.url" = "URL đăng ký không hợp lệ.";
+"error.subscription.http" = "Máy chủ đăng ký trả về HTTP %d.";
+"error.subscription.body" = "Không thể đọc phản hồi đăng ký.";
+"error.subscription.empty" = "Đăng ký không chứa nút nào.";
+"error.tunnel.unavailable" = "VPN không khả dụng trên thiết bị này.";
+"error.tunnel.noConfig" = "Chưa chọn nút nào.";
+"error.tunnel.permission" = "Quyền VPN chưa được cấp.";
+"error.tunnel.timeout" = "Đường hầm VPN không khởi động kịp. Vui lòng thử lại.";
+"error.tunnel.failed" = "Không thể khởi động đường hầm VPN.";
+
+/* Chi tiết phân tích liên kết chia sẻ (nhập bằng dán/quét) */
+"error.uri.malformed.notLink" = "Văn bản này không phải liên kết chia sẻ.";
+"error.uri.malformed.noScheme" = "Liên kết thiếu giao thức.";
+"error.uri.malformed.noServer" = "Liên kết chia sẻ thiếu địa chỉ máy chủ.";
+"error.uri.malformed.badPort" = "Liên kết chia sẻ có cổng không hợp lệ.";
+"error.uri.malformed.vmessJSON" = "Liên kết VMess không chứa JSON base64 hợp lệ.";
+"error.uri.malformed.vmessServer" = "Liên kết VMess thiếu địa chỉ máy chủ.";
+"error.uri.malformed.vmessPort" = "Liên kết VMess có cổng không hợp lệ.";
+"error.uri.malformed.vmessUUID" = "Liên kết VMess thiếu UUID.";
+"error.uri.malformed.vlessUUID" = "Liên kết VLESS thiếu UUID.";
+"error.uri.malformed.vlessUUIDInvalid" = "Liên kết VLESS có UUID không hợp lệ.";
+"error.uri.malformed.trojanPassword" = "Liên kết Trojan thiếu mật khẩu.";
+"error.uri.malformed.ssFormat" = "Liên kết Shadowsocks không ở định dạng được hỗ trợ.";
+"error.uri.malformed.ssMethod" = "Liên kết Shadowsocks thiếu phương thức mã hóa.";
+"error.uri.malformed.ssPassword" = "Liên kết Shadowsocks thiếu mật khẩu.";
+"error.uri.unsupportedParams" = "Nút này dùng tham số không được hỗ trợ (%@). Chúng sẽ bị bỏ qua.";
+"error.subscription.insecure" = "Chỉ hỗ trợ URL đăng ký HTTPS.";
+"error.subscription.inFlight" = "Đăng ký này đang được cập nhật. Vui lòng thử lại sau giây lát.";
+
+/* Lỗi tạo cấu hình Xray */
+"error.xray.tooLarge" = "Quy tắc định tuyến tạo cấu hình %1$d KB, vượt giới hạn %2$d KB của nhân. Hãy chọn ít quốc gia/khu vực không qua proxy hơn.";
+"error.xray.dns" = "Địa chỉ máy chủ DNS “%@” không hợp lệ.";
+"error.xray.serialize" = "Không thể tuần tự hóa cấu hình Xray. %@";
+"error.xray.utf8" = "Không thể mã hóa cấu hình Xray dưới dạng UTF-8.";
+"error.xray.noServer" = "Nút không có địa chỉ máy chủ.";
+"error.xray.badPort" = "Cổng của nút phải nằm trong khoảng 1 đến 65535.";
+"error.xray.noUUID" = "UUID của nút bị thiếu hoặc không hợp lệ.";
+"error.xray.noTrojanPassword" = "Thiếu mật khẩu Trojan.";
+"error.xray.noSSMethod" = "Thiếu phương thức mã hóa Shadowsocks.";
+"error.xray.noSSPassword" = "Thiếu mật khẩu Shadowsocks.";
+"error.xray.noRealityKey" = "Thiếu khóa công khai REALITY.";
+"error.xray.ssReality" = "Shadowsocks không hỗ trợ lớp bảo mật REALITY.";
+"error.xray.noGrpcService" = "Thiếu tên dịch vụ gRPC.";
+
+"error.geoip.unavailable" = "Dữ liệu định tuyến theo quốc gia đang được chuẩn bị. Vui lòng thử lại sau giây lát.";
+"error.xray.socksCredentials" = "Tên người dùng và mật khẩu SOCKS5 phải được điền cùng nhau.";
+
+/* Lỗi phân tích liên kết chia sẻ SOCKS5 */
+"error.uri.malformed.socksFormat" = "Liên kết SOCKS5 không ở định dạng được hỗ trợ.";
+"error.uri.malformed.socksCredentials" = "Liên kết SOCKS5 cần cả tên người dùng và mật khẩu.";
+"home.action.connect" = "Kết nối";
+"home.action.disconnect" = "Ngắt kết nối";
+"app.name" = "WProxy";
+"permission.network.title" = "Quyền truy cập mạng";
+"permission.network.body" = "WProxy cần hai quyền iOS để tạo đường hầm bảo mật:
+
+• Mạng cục bộ — cho phép VPN nhận diện mạng của bạn và định tuyến lưu lượng nội bộ chính xác.
+• Cấu hình VPN — quyền hệ thống cho phép WProxy tạo đường hầm VPN.
+
+Hai hộp thoại hệ thống sẽ xuất hiện. Vui lòng cho phép cả hai để tiếp tục.";
+"permission.network.requesting" = "Đang yêu cầu quyền…";
+"permission.network.failed.title" = "Chưa được cấp quyền";
+"permission.network.failed.body" = "WProxy không thể tạo đường hầm nếu thiếu các quyền này. Hãy cho phép Mạng cục bộ và Cấu hình VPN trong Cài đặt rồi thử lại.";
+"permission.network.retry" = "Thử lại";
+"permission.network.openSettings" = "Mở Cài đặt";
+"permission.network.note" = "Có thể thay đổi sau: Cài đặt → Quyền riêng tư & Bảo mật → Mạng cục bộ, và Cài đặt → Cài đặt chung → VPN & Quản lý thiết bị.";
+/* Global confirmation after node switch / tunnel settings change */
+"toast.settingsApplied" = "Đã áp dụng cài đặt.";

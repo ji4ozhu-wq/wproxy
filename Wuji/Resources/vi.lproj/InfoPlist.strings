@@ -1,0 +1,6 @@
+"CFBundleDisplayName" = "WProxy";
+"NSCameraUsageDescription" = "WProxy chỉ dùng camera để quét mã QR máy chủ mà bạn chọn nhập.";
+"NSPhotoLibraryUsageDescription" = "WProxy đọc ảnh bạn chọn để nhận diện mã QR máy chủ.";
+"NSPhotoLibraryAddUsageDescription" = "WProxy lưu ảnh mã QR máy chủ vào thư viện ảnh của bạn khi bạn yêu cầu.";
+"CFBundleName" = "WProxy";
+"NSLocalNetworkUsageDescription" = "WProxy dùng quyền mạng cục bộ để nhận diện mạng hiện tại và định tuyến lưu lượng nội bộ chính xác khi VPN đang hoạt động.";

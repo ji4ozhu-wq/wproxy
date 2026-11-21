@@ -1,0 +1,148 @@
+/* ===== รายการโหนด ===== */
+"nodes.group.manual" = "ด้วยตนเอง";
+"nodes.count.one" = "1 โหนด";
+"nodes.count.many" = "%d โหนด";
+"nodes.updated" = "อัปเดต %@";
+"nodes.updateFailed" = "อัปเดตไม่สำเร็จ";
+"nodes.sort" = "เรียงลำดับ";
+"nodes.sortBy" = "เรียงตาม";
+"nodes.sort.name" = "ชื่อ";
+"nodes.sort.latency" = "ความหน่วง";
+"nodes.sort.added" = "วันที่เพิ่ม";
+"nodes.sort.ascending" = "น้อยไปมาก";
+"nodes.sort.descending" = "มากไปน้อย";
+"nodes.testAll" = "ทดสอบทั้งหมด";
+"nodes.testing" = "กำลังทดสอบ…";
+"nodes.latency.unknown" = "--";
+"nodes.active" = "ใช้งานอยู่";
+"nodes.rowMenu" = "การดำเนินการกับโหนด";
+"nodes.noResultsTitle" = "ไม่พบผลลัพธ์";
+"nodes.noResultsMessage" = "ไม่มีโหนดที่ตรงกับการค้นหาของคุณ";
+
+/* ลบ */
+"nodes.delete" = "ลบ";
+"nodes.deleteConfirmTitle" = "ลบโหนด";
+"nodes.deleteConfirmMessage" = "ลบ “%@” ออกจากอุปกรณ์นี้หรือไม่ การดำเนินการนี้ไม่สามารถย้อนกลับได้";
+
+/* ===== เมนูเพิ่ม ===== */
+"nodes.addMenu.manual" = "กรอกด้วยตนเอง";
+"nodes.addMenu.scan" = "สแกนคิวอาร์โค้ด";
+"nodes.addMenu.paste" = "วางจากคลิปบอร์ด";
+"nodes.addMenu.subscription" = "เพิ่มการสมัครใช้งาน";
+
+/* ===== การดำเนินการกับโหนด ===== */
+"nodes.action.setActive" = "ตั้งเป็นโหนดที่ใช้งาน";
+"nodes.action.edit" = "แก้ไขโหนด";
+"nodes.action.copyURI" = "คัดลอก URI";
+"nodes.action.shareQR" = "แชร์คิวอาร์โค้ด";
+"nodes.action.share" = "แชร์";
+"nodes.action.delete" = "ลบโหนด";
+"nodes.action.copied" = "คัดลอกแล้ว";
+"nodes.action.noURI" = "โหนดนี้ไม่มีลิงก์ที่แชร์ได้";
+
+/* ===== แบบฟอร์มเพิ่ม/แก้ไขโหนด ===== */
+"nodes.form.title" = "เพิ่มโหนด";
+"nodes.form.editTitle" = "แก้ไขโหนด";
+"nodes.form.section.protocol" = "โปรโตคอล";
+"nodes.form.section.server" = "เซิร์ฟเวอร์";
+"nodes.form.section.credentials" = "ข้อมูลรับรอง";
+"nodes.form.section.transport" = "การรับส่ง";
+"nodes.form.section.reality" = "REALITY";
+"nodes.form.section.advanced" = "ขั้นสูง";
+"nodes.form.name" = "ชื่อ";
+"nodes.form.namePlaceholder" = "ไม่บังคับ";
+"nodes.form.address" = "ที่อยู่";
+"nodes.form.port" = "พอร์ต";
+"nodes.form.uuid" = "UUID";
+"nodes.form.alterID" = "Alter ID";
+"nodes.form.encryption" = "การเข้ารหัส";
+"nodes.form.flow" = "Flow";
+"nodes.form.password" = "รหัสผ่าน";
+"nodes.form.method" = "วิธีการ";
+"nodes.form.network" = "เครือข่าย";
+"nodes.form.security" = "ความปลอดภัย";
+"nodes.form.tls" = "TLS";
+"nodes.form.sni" = "SNI";
+"nodes.form.path" = "เส้นทาง";
+"nodes.form.host" = "โฮสต์";
+"nodes.form.grpcService" = "ชื่อบริการ";
+"nodes.form.fingerprint" = "Fingerprint";
+"nodes.form.allowInsecure" = "อนุญาตการเชื่อมต่อที่ไม่ปลอดภัย";
+"nodes.form.realityPublicKey" = "คีย์สาธารณะ";
+"nodes.form.realityShortID" = "Short ID";
+"nodes.form.none" = "ไม่มี";
+"nodes.form.saving" = "กำลังบันทึก…";
+"nodes.form.saveFailed" = "ไม่สามารถบันทึกโหนดนี้ได้ โปรดลองอีกครั้ง";
+"nodes.form.error.addressRequired" = "โปรดกรอกที่อยู่เซิร์ฟเวอร์";
+"nodes.form.error.portInvalid" = "พอร์ตต้องอยู่ระหว่าง 1 ถึง 65535";
+"nodes.form.error.uuidInvalid" = "โปรดกรอก UUID ที่ถูกต้อง";
+"nodes.form.error.passwordRequired" = "โปรดกรอกรหัสผ่าน";
+"nodes.form.error.realityKeyRequired" = "โปรดกรอกคีย์สาธารณะ REALITY";
+"nodes.form.error.shortIDInvalid" = "Short ID ต้องเป็นเลขฐานสิบหก";
+"nodes.form.error.duplicate" = "มีโหนดที่มีการตั้งค่าเหล่านี้อยู่แล้ว";
+"nodes.form.error.addressInvalid" = "โปรดกรอกชื่อโฮสต์หรือที่อยู่ IP ที่ถูกต้อง";
+
+/* ===== นำเข้าด้วยการวาง ===== */
+"nodes.paste.title" = "วางลิงก์";
+"nodes.paste.placeholder" = "วางลิงก์แชร์ที่นี่ บรรทัดละหนึ่งลิงก์";
+"nodes.paste.recognized" = "ตรวจพบ";
+"nodes.paste.import" = "นำเข้า";
+"nodes.paste.import.one" = "นำเข้า 1 โหนด";
+"nodes.paste.import.many" = "นำเข้า %d โหนด";
+"nodes.paste.emptyHint" = "โหนดที่ตรวจพบจะแสดงที่นี่";
+"nodes.paste.noLinks" = "ไม่พบลิงก์แชร์ที่รองรับ";
+"nodes.paste.footer" = "รองรับลิงก์ vmess, vless, trojan, shadowsocks และ socks5 วางลิงก์บรรทัดละหนึ่งลิงก์";
+"nodes.paste.selected" = "เลือก %d รายการ";
+
+/* ===== สแกน ===== */
+"nodes.scan.title" = "สแกนคิวอาร์โค้ด";
+"nodes.scan.hint" = "วางคิวอาร์โค้ดไว้ในกรอบ";
+"nodes.scan.choosePhoto" = "เลือกจากรูปภาพ";
+"nodes.scan.noCamera" = "กล้องไม่พร้อมใช้งานบนอุปกรณ์นี้ โปรดเลือกภาพถ่ายแทน";
+"nodes.scan.permissionTitle" = "จำเป็นต้องเข้าถึงกล้อง";
+"nodes.scan.permissionMessage" = "อนุญาตให้เข้าถึงกล้องเพื่อสแกนคิวอาร์โค้ด หรือเลือกภาพถ่ายแทน";
+"nodes.scan.openSettings" = "เปิดการตั้งค่า";
+"nodes.scan.invalidQR" = "คิวอาร์โค้ดนี้ไม่มีลิงก์แชร์ที่รองรับ";
+"nodes.scan.recognizedTitle" = "ตรวจพบโหนด";
+"nodes.scan.save" = "บันทึกโหนด";
+"nodes.scan.close" = "ปิด";
+"nodes.scan.pasteInstead" = "วางลิงก์แทน";
+"nodes.scan.photoError" = "ไม่สามารถอ่านคิวอาร์โค้ดจากภาพนั้นได้";
+"nodes.scan.starting" = "กำลังเปิดกล้อง…";
+
+/* ===== แชร์คิวอาร์โค้ด ===== */
+"nodes.qr.title" = "แชร์โหนด";
+"nodes.qr.saveToPhotos" = "บันทึกไปยังรูปภาพ";
+"nodes.qr.copyURI" = "คัดลอก URI";
+"nodes.qr.share" = "แชร์";
+"nodes.qr.saved" = "บันทึกไปยังรูปภาพแล้ว";
+"nodes.qr.saveFailed" = "ไม่สามารถบันทึกภาพได้ โปรดอนุญาตการเพิ่มไปยังรูปภาพแล้วลองอีกครั้ง";
+"nodes.qr.copied" = "คัดลอก URI แล้ว";
+"nodes.qr.noURI" = "โหนดนี้ไม่มีลิงก์ที่แชร์ได้";
+"nodes.qr.imageLabel" = "คิวอาร์โค้ดสำหรับ %@";
+"nodes.qr.saving" = "กำลังบันทึก…";
+
+/* ===== ส่วนเพิ่มเติมของข้อตกลง ===== */
+"consent.noAccounts" = "ไม่มีบัญชี ไม่มีการวิเคราะห์ และไม่มีโฆษณา";
+"consent.paragraph3" = "ทราฟฟิกเครือข่ายของคุณจะถูกส่งไปยังเซิร์ฟเวอร์ที่คุณกำหนดเท่านั้น";
+"consent.permissions" = "WProxy ขอสิทธิ์ Network Extension (VPN) เพื่อสร้างอุโมงค์ที่รับส่งทราฟฟิกของคุณเท่านั้น กล้องใช้เมื่อคุณสแกนคิวอาร์โค้ด และรูปภาพใช้เมื่อคุณเลือกภาพคิวอาร์โค้ดหรือบันทึกภาพที่คุณขอให้บันทึก";
+"consent.checked" = "ยอมรับแล้ว";
+"consent.unchecked" = "ยังไม่ยอมรับ";
+
+/* ===== การแนะนำการใช้งาน ===== */
+"onboarding.pageIndicator" = "หน้า %d จาก %d";
+
+/* ===== ผลการนำเข้า / คำเตือน ===== */
+"nodes.import.summary" = "นำเข้า %1$d · ข้ามรายการซ้ำ %2$d · แยกวิเคราะห์ไม่ได้ %3$d";
+"nodes.import.warningsCount" = "%d โหนดมีพารามิเตอร์ที่ไม่รองรับ";
+"nodes.import.failuresTitle" = "แยกวิเคราะห์ไม่ได้ %d รายการ";
+"nodes.import.warning" = "โหนดนี้ใช้พารามิเตอร์ที่ไม่รองรับ (%@) จึงถูกละเว้น";
+"nodes.import.duplicate" = "เพิ่มแล้ว";
+"nodes.scan.alreadyAdded" = "โหนดนี้อยู่ในรายการของคุณแล้ว";
+"nodes.group.update" = "อัปเดตการสมัครใช้งาน";
+"nodes.action.testLatency" = "ทดสอบความหน่วง";
+"nodes.action.testing" = "กำลังทดสอบ…";
+
+/* ===== SOCKS5 ===== */
+"nodes.form.username" = "ชื่อผู้ใช้";
+"nodes.form.error.socksCredentials" = "กรอกทั้งชื่อผู้ใช้และรหัสผ่าน หรือเว้นทั้งสองช่องว่าง";

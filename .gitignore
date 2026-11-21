@@ -1,0 +1,13 @@
+.DS_Store
+build/
+preview/
+DerivedData/
+*.xcarchive
+*.ipa
+*.dSYM
+xcuserdata/
+tools/.cache/
+design-refs/
+screenshots/
+*.p8
+*.mobileprovision

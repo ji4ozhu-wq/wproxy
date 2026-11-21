@@ -1,0 +1,6 @@
+"CFBundleDisplayName" = "无极代理";
+"NSCameraUsageDescription" = "无极代理 仅在你扫码导入服务器二维码时使用相机。";
+"NSPhotoLibraryUsageDescription" = "无极代理 只读取你选择的照片，用于识别其中的服务器二维码。";
+"NSPhotoLibraryAddUsageDescription" = "当你要求保存服务器二维码图片时，无极代理 会将其保存到相册。";
+"CFBundleName" = "无极代理";
+"NSLocalNetworkUsageDescription" = "WProxy 使用本地网络权限来识别当前网络，并在 VPN 连接时正确转发本地流量。";

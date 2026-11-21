@@ -1,0 +1,66 @@
+"settings.section.data" = "ข้อมูล";
+"common.edit" = "แก้ไข";
+/* การตั้งค่า — pages-b (D19) */
+
+"settings.onDemand.footnote" = "เชื่อมต่อโดยอัตโนมัติเมื่อเครือข่ายที่เลือกพร้อมใช้งาน";
+"settings.resetVPN" = "รีเซ็ตการกำหนดค่า VPN";
+"settings.resetVPN.title" = "รีเซ็ตการกำหนดค่า VPN หรือไม่";
+"settings.resetVPN.body" = "การดำเนินการนี้จะลบการกำหนดค่า VPN ที่ WProxy ติดตั้งไว้ในการตั้งค่า iOS และจะหยุดการเชื่อมต่อที่ใช้งานอยู่";
+"settings.resetVPN.confirm" = "รีเซ็ตการกำหนดค่า";
+"settings.resetVPN.success" = "รีเซ็ตการกำหนดค่า VPN แล้ว";
+"settings.resetVPN.failure" = "ไม่สามารถรีเซ็ตการกำหนดค่า VPN ได้";
+"settings.latency.section" = "การทดสอบความหน่วง";
+"settings.latency.testURL" = "URL สำหรับทดสอบ";
+"settings.latency.timeout" = "หมดเวลา";
+"settings.latency.seconds" = "%d วินาที";
+"settings.latency.testURLTitle" = "URL สำหรับทดสอบ";
+"settings.latency.testURLFootnote" = "ใช้เมื่อทดสอบความหน่วงของโหนด โปรดใช้ URL แบบ HTTP หรือ HTTPS ที่ตอบกลับขนาดเล็กและรวดเร็ว";
+"settings.latency.testURLInvalid" = "โปรดกรอก URL ที่ขึ้นต้นด้วย http:// หรือ https:// ที่ถูกต้อง";
+"settings.latency.timeoutTitle" = "หมดเวลา";
+"settings.latency.timeoutFootnote" = "ระยะเวลาที่การทดสอบความหน่วงจะรอการตอบกลับก่อนรายงานว่าหมดเวลา";
+"settings.saved" = "บันทึกแล้ว";
+"settings.subscriptions.footnote" = "การอัปเดตอัตโนมัติทำงานขณะเปิดแอป";
+"settings.clearData.title" = "ล้างข้อมูลทั้งหมดหรือไม่";
+"settings.clearData.body" = "โหนด การสมัครใช้งาน และการตั้งค่าทั้งหมดจะถูกลบออกจากอุปกรณ์นี้ และแอปจะกลับสู่สถานะเริ่มต้นครั้งแรก การดำเนินการนี้ไม่สามารถย้อนกลับได้";
+"settings.clearData.success" = "ล้างข้อมูลทั้งหมดแล้ว";
+"settings.about.title" = "เกี่ยวกับ";
+"settings.about.version" = "เวอร์ชัน %@ (%@)";
+"settings.about.copyright" = "© 2026 WProxy";
+"settings.about.openSource" = "ใบอนุญาตโอเพนซอร์ส";
+"settings.about.component.xray" = "Xray-core";
+"settings.about.component.libxray" = "libXray";
+"settings.about.component.cidr" = "ข้อมูล CIDR ตามภูมิภาค";
+"settings.about.license.mpl" = "MPL-2.0";
+"settings.about.license.mit" = "MIT";
+"settings.about.license.rir" = "ข้อมูลการมอบหมายจาก RIR";
+"settings.about.xrayFootnote" = "Xray-core ได้รับอนุญาตภายใต้ Mozilla Public License 2.0 ข้อความใบอนุญาตฉบับเต็มมีดังนี้";
+"settings.about.libxrayFootnote" = "libXray ได้รับอนุญาตภายใต้ MIT License ข้อความใบอนุญาตฉบับเต็มมีดังนี้";
+"settings.about.cidrFootnote" = "ช่วง IP ของประเทศและภูมิภาคมาจากชุดข้อมูล GeoIP ที่เผยแพร่โดยโปรเจกต์ v2fly (อ้างอิง DB-IP Lite, CC BY 4.0; เผยแพร่ภายใต้ CC BY-SA 4.0)";
+"settings.legal.effectiveDate" = "วันที่มีผล: %@";
+"settings.legal.unavailableTitle" = "ไม่สามารถแสดงเอกสารได้";
+"settings.legal.unavailableMessage" = "ไม่สามารถโหลดเอกสารนี้จากชุดแอปได้";
+"settings.legal.retry" = "ลองอีกครั้ง";
+
+"settings.geoip.section" = "ข้อมูล GeoIP";
+"settings.geoip.status" = "เวอร์ชันฐานข้อมูล";
+"settings.geoip.updateNow" = "อัปเดตตอนนี้";
+"settings.geoip.updated" = "อัปเดต %@";
+"settings.geoip.bundled" = "ข้อมูลที่มาพร้อมแอป · %@";
+"settings.geoip.countries" = "%d ประเทศ · %d คำนำหน้า";
+"settings.geoip.source" = "แหล่งที่มา: %@";
+"settings.geoip.error" = "การอัปเดตล่าสุดล้มเหลว: %@";
+"settings.geoip.footnote" = "ข้อมูลการกำหนดเส้นทางตามประเทศจะอัปเดตอัตโนมัติ (ไม่เกินทุก 7 วัน) ขณะเชื่อมต่อ VPN หากอัปเดตล้มเหลวจะลองใหม่ทุกชั่วโมง";
+
+"settings.geoip.updateSuccess" = "อัปเดตข้อมูล GeoIP แล้ว";
+"settings.geoip.updateFailure" = "อัปเดตข้อมูล GeoIP ล้มเหลว โปรดลองอีกครั้งภายหลัง";
+
+/* ภาษา (การตั้งค่า → ภาษา, การสลับภาษาภายในแอป) */
+
+"settings.language.section" = "ภาษา";
+"settings.language.system" = "ตามระบบ";
+"settings.language.english" = "English";
+"settings.language.simplifiedChinese" = "简体中文";
+"settings.language.footnote" = "ภาษาของแอปจะเปลี่ยนทันที ข้อความขออนุญาตของระบบและชื่อแอปบนหน้าจอโฮมยังคงเป็นไปตามภาษาของอุปกรณ์ นโยบายความเป็นส่วนตัวและข้อกำหนดการใช้งานมีให้บริการในภาษาอังกฤษและภาษาจีนตัวย่อ ภาษาอื่นจะเปิดเวอร์ชันภาษาอังกฤษ";
+"settings.language.followSystem" = "ตามระบบ";
+"settings.language.current" = "ภาษา";
+"settings.language.chooseAnother" = "เลือกภาษาอื่น";

@@ -1,0 +1,66 @@
+"settings.section.data" = "数据";
+"common.edit" = "编辑";
+/* 设置 — pages-b（D19） */
+
+"settings.onDemand.footnote" = "当所选网络可用时自动连接。";
+"settings.resetVPN" = "重置 VPN 配置";
+"settings.resetVPN.title" = "重置 VPN 配置？";
+"settings.resetVPN.body" = "这会从 iOS 系统设置中移除 无极代理 安装的 VPN 配置，当前连接会被断开。";
+"settings.resetVPN.confirm" = "重置配置";
+"settings.resetVPN.success" = "VPN 配置已重置";
+"settings.resetVPN.failure" = "重置 VPN 配置失败。";
+"settings.latency.section" = "测速";
+"settings.latency.testURL" = "测速地址";
+"settings.latency.timeout" = "超时时间";
+"settings.latency.seconds" = "%d 秒";
+"settings.latency.testURLTitle" = "测速地址";
+"settings.latency.testURLFootnote" = "用于测试节点延迟。建议使用返回内容小、响应快的 HTTP 或 HTTPS 地址。";
+"settings.latency.testURLInvalid" = "请输入有效的 http:// 或 https:// 地址。";
+"settings.latency.timeoutTitle" = "超时时间";
+"settings.latency.timeoutFootnote" = "单次测速等待响应的时间，超过后按超时处理。";
+"settings.saved" = "已保存";
+"settings.subscriptions.footnote" = "App 打开时会自动更新订阅。";
+"settings.clearData.title" = "清空全部数据？";
+"settings.clearData.body" = "本机全部节点、订阅和设置都会被删除，App 将回到首次启动状态。此操作不可撤销。";
+"settings.clearData.success" = "数据已清空";
+"settings.about.title" = "关于";
+"settings.about.version" = "版本 %@（%@）";
+"settings.about.copyright" = "© 2026 无极代理";
+"settings.about.openSource" = "开源许可";
+"settings.about.component.xray" = "Xray-core";
+"settings.about.component.libxray" = "libXray";
+"settings.about.component.cidr" = "国家/区域 CIDR 数据";
+"settings.about.license.mpl" = "MPL-2.0";
+"settings.about.license.mit" = "MIT";
+"settings.about.license.rir" = "RIR 委派数据";
+"settings.about.xrayFootnote" = "Xray-core 使用 Mozilla Public License 2.0 许可，完整许可文本如下。";
+"settings.about.libxrayFootnote" = "libXray 使用 MIT 许可，完整许可文本如下。";
+"settings.about.cidrFootnote" = "国家/区域的 IP 网段来自 v2fly 项目发布的 GeoIP 数据集（基于 DB-IP Lite，CC BY 4.0；以 CC BY-SA 4.0 分发）。";
+"settings.legal.effectiveDate" = "生效日期：%@";
+"settings.legal.unavailableTitle" = "文档不可用";
+"settings.legal.unavailableMessage" = "无法从 App 内加载该文档。";
+"settings.legal.retry" = "重试";
+
+"settings.geoip.section" = "GeoIP 数据";
+"settings.geoip.status" = "数据库版本";
+"settings.geoip.updateNow" = "立即更新";
+"settings.geoip.updated" = "已更新 %@";
+"settings.geoip.bundled" = "内置快照 · %@";
+"settings.geoip.countries" = "%d 个国家/区域 · %d 个网段";
+"settings.geoip.source" = "来源：%@";
+"settings.geoip.error" = "上次更新失败：%@";
+"settings.geoip.footnote" = "分流数据在 VPN 连接后自动更新（最多每 7 天一次）；更新失败时每小时重试。";
+
+"settings.geoip.updateSuccess" = "GeoIP 数据已更新。";
+"settings.geoip.updateFailure" = "GeoIP 更新失败，请稍后重试。";
+
+/* 语言（设置 → 语言，应用内语言切换） */
+
+"settings.language.section" = "语言";
+"settings.language.system" = "跟随系统";
+"settings.language.english" = "English";
+"settings.language.simplifiedChinese" = "简体中文";
+"settings.language.footnote" = "应用内语言会立即切换。系统权限弹窗与主屏幕上的 App 名称仍由设备语言决定。隐私政策与用户协议提供英文和简体中文版本，其他语言将打开英文版。";
+"settings.language.followSystem" = "跟随系统";
+"settings.language.current" = "语言";
+"settings.language.chooseAnother" = "选择其他语言";

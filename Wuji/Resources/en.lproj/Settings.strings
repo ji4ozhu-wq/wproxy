@@ -1,0 +1,66 @@
+"settings.section.data" = "Data";
+"common.edit" = "Edit";
+/* Settings — pages-b (D19) */
+
+"settings.onDemand.footnote" = "Connect automatically when the selected network becomes available.";
+"settings.resetVPN" = "Reset VPN Configuration";
+"settings.resetVPN.title" = "Reset VPN Configuration?";
+"settings.resetVPN.body" = "This removes the VPN configuration WProxy installed in iOS Settings. Any active connection is stopped.";
+"settings.resetVPN.confirm" = "Reset Configuration";
+"settings.resetVPN.success" = "VPN configuration reset";
+"settings.resetVPN.failure" = "Couldn't reset the VPN configuration.";
+"settings.latency.section" = "Latency Test";
+"settings.latency.testURL" = "Test URL";
+"settings.latency.timeout" = "Timeout";
+"settings.latency.seconds" = "%d seconds";
+"settings.latency.testURLTitle" = "Test URL";
+"settings.latency.testURLFootnote" = "Used when testing node latency. Use an HTTP or HTTPS URL that returns a small, fast response.";
+"settings.latency.testURLInvalid" = "Enter a valid http:// or https:// URL.";
+"settings.latency.timeoutTitle" = "Timeout";
+"settings.latency.timeoutFootnote" = "How long a latency test waits for a response before it reports a timeout.";
+"settings.saved" = "Saved";
+"settings.subscriptions.footnote" = "Auto-update runs while the app is open.";
+"settings.clearData.title" = "Clear All Data?";
+"settings.clearData.body" = "All nodes, subscriptions, and settings will be deleted from this device, and the app returns to its first-run state. This cannot be undone.";
+"settings.clearData.success" = "All data cleared";
+"settings.about.title" = "About";
+"settings.about.version" = "Version %@ (%@)";
+"settings.about.copyright" = "© 2026 WProxy";
+"settings.about.openSource" = "Open Source Licenses";
+"settings.about.component.xray" = "Xray-core";
+"settings.about.component.libxray" = "libXray";
+"settings.about.component.cidr" = "Regional CIDR data";
+"settings.about.license.mpl" = "MPL-2.0";
+"settings.about.license.mit" = "MIT";
+"settings.about.license.rir" = "RIR delegation data";
+"settings.about.xrayFootnote" = "Xray-core is licensed under the Mozilla Public License 2.0. The full license text follows.";
+"settings.about.libxrayFootnote" = "libXray is licensed under the MIT License. The full license text follows.";
+"settings.about.cidrFootnote" = "Country and region IP ranges come from the GeoIP dataset published by the v2fly project (based on DB-IP Lite, CC BY 4.0; distributed as CC BY-SA 4.0).";
+"settings.legal.effectiveDate" = "Effective date: %@";
+"settings.legal.unavailableTitle" = "Document Unavailable";
+"settings.legal.unavailableMessage" = "This document couldn't be loaded from the app bundle.";
+"settings.legal.retry" = "Try Again";
+
+"settings.geoip.section" = "GeoIP Data";
+"settings.geoip.status" = "Database Version";
+"settings.geoip.updateNow" = "Update Now";
+"settings.geoip.updated" = "Updated %@";
+"settings.geoip.bundled" = "Bundled snapshot · %@";
+"settings.geoip.countries" = "%d countries · %d prefixes";
+"settings.geoip.source" = "Source: %@";
+"settings.geoip.error" = "Last update failed: %@";
+"settings.geoip.footnote" = "Country routing data refreshes automatically (at most once every 7 days) while the VPN is connected. A failed update retries every hour.";
+
+"settings.geoip.updateSuccess" = "GeoIP data updated.";
+"settings.geoip.updateFailure" = "GeoIP update failed. Please try again later.";
+
+/* Language (Settings → Language, in-app language switching) */
+
+"settings.language.section" = "Language";
+"settings.language.system" = "Follow System";
+"settings.language.english" = "English";
+"settings.language.simplifiedChinese" = "简体中文";
+"settings.language.footnote" = "The app language changes immediately. System permission prompts and the app name on the Home Screen still follow the device language. Privacy Policy and Terms of Use are available in English and Simplified Chinese; other languages open the English version.";
+"settings.language.followSystem" = "Follow System";
+"settings.language.current" = "Language";
+"settings.language.chooseAnother" = "Choose Another Language";

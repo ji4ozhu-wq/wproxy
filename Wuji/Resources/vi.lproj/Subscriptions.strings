@@ -1,0 +1,54 @@
+/* Đăng ký — pages-b (D14/D15/D16) */
+
+"subscriptions.list.nodeCount" = "%d nút";
+"subscriptions.list.updated" = "Đã cập nhật %@";
+"subscriptions.list.neverUpdated" = "Chưa cập nhật";
+"subscriptions.list.autoUpdateFootnote" = "Tự động cập nhật chạy khi ứng dụng đang mở.";
+"subscriptions.list.flow" = "%@ trên %@";
+"subscriptions.list.expires" = "Hết hạn %@";
+"subscriptions.list.error" = "Cập nhật thất bại";
+"subscriptions.list.deleteTitle" = "Xóa đăng ký?";
+"subscriptions.list.deleteBody" = "\"%@\" và tất cả nút của nó sẽ bị xóa khỏi thiết bị này. Không thể hoàn tác.";
+"subscriptions.list.deleteConfirm" = "Xóa đăng ký";
+"subscriptions.list.deletedToast" = "Đã xóa đăng ký";
+"subscriptions.list.delete" = "Xóa";
+
+"subscriptions.add.urlPlaceholder" = "https://example.com/subscribe";
+"subscriptions.add.autoUpdate" = "Tự động cập nhật";
+"subscriptions.add.footnote" = "Các nút từ đăng ký này sẽ xuất hiện trong một nhóm mới. Cập nhật sẽ thay thế danh sách nút nhưng giữ lựa chọn đang dùng khi có thể.";
+"subscriptions.add.action" = "Thêm và cập nhật";
+"subscriptions.add.invalidURL" = "Nhập URL đăng ký hợp lệ bắt đầu bằng https://.";
+"subscriptions.add.insecureURL" = "Chỉ hỗ trợ URL đăng ký HTTPS.";
+"subscriptions.add.failedTitle" = "Không thể thêm đăng ký";
+
+"subscriptions.edit.title" = "Sửa đăng ký";
+"subscriptions.edit.savedToast" = "Đã lưu đăng ký";
+
+"subscriptions.interval.off" = "Tắt";
+"subscriptions.interval.6h" = "Mỗi 6 giờ";
+"subscriptions.interval.12h" = "Mỗi 12 giờ";
+"subscriptions.interval.24h" = "Mỗi 24 giờ";
+"subscriptions.interval.7d" = "Mỗi 7 ngày";
+
+"subscriptions.detail.nodes" = "NÚT";
+"subscriptions.detail.used" = "ĐÃ DÙNG";
+"subscriptions.detail.expires" = "HẾT HẠN";
+"subscriptions.detail.lastUpdated" = "Cập nhật lần cuối";
+"subscriptions.detail.autoUpdate" = "Tự động cập nhật";
+"subscriptions.detail.url" = "URL";
+"subscriptions.detail.viewAll" = "Xem tất cả %d nút";
+"subscriptions.detail.updateNow" = "Cập nhật ngay";
+"subscriptions.detail.updateFailed" = "Cập nhật thất bại";
+"subscriptions.detail.delete" = "Xóa đăng ký";
+"subscriptions.detail.nodesTitle" = "Nút";
+"subscriptions.detail.noNodes" = "Đăng ký này chưa có nút nào.";
+"subscriptions.detail.updateSuccess" = "Đã cập nhật đăng ký";
+"subscriptions.detail.urlCopied" = "Đã sao chép URL";
+"subscriptions.detail.selectedNode" = "Đã chọn %@";
+"subscriptions.detail.notFound" = "Đăng ký này không còn tồn tại.";
+"subscriptions.detail.notFoundMessage" = "Có thể nó đã bị xóa. Hãy quay lại danh sách đăng ký.";
+"subscriptions.detail.never" = "Chưa bao giờ";
+"subscriptions.detail.retry" = "Thử lại";
+
+"subscriptions.list.update" = "Cập nhật";
+"subscriptions.list.updating" = "Đang cập nhật…";

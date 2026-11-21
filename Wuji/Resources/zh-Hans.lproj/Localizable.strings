@@ -1,0 +1,196 @@
+/* 标签页 */
+"tab.connect" = "连接";
+"tab.nodes" = "节点";
+"tab.settings" = "设置";
+
+/* 通用 */
+"common.allow" = "允许";
+"common.notNow" = "以后再说";
+"common.skip" = "跳过";
+"common.continue" = "继续";
+"common.cancel" = "取消";
+"common.done" = "完成";
+"common.save" = "保存";
+
+/* 首页 */
+"home.notConnected" = "未连接";
+"home.connecting" = "连接中…";
+"home.connected" = "已连接";
+"home.disconnecting" = "正在断开…";
+"home.latencyUnknown" = "延迟未知";
+"home.selectNodeHint" = "选择一个节点开始";
+"home.currentNode" = "当前节点";
+"home.none" = "无";
+"home.routing" = "分流";
+"home.thisSession" = "本次会话";
+"home.download" = "下载";
+"home.upload" = "上传";
+"home.duration" = "时长";
+"home.total" = "总计";
+"home.chooseNode" = "选择节点";
+"home.resetVpn" = "重置 VPN 配置";
+"home.noNodeSelected" = "请先选择一个节点。";
+"unit.ms" = "%d 毫秒";
+
+/* 首次连接 */
+"firstConnect.title" = "允许 VPN 配置";
+"firstConnect.body" = "iOS 需要你的授权才能创建 VPN 隧道。无极代理 不会收集或记录你的流量，你可以随时断开或移除该配置。";
+
+/* 协议同意 */
+"consent.navTitle" = "开始之前";
+"consent.title" = "你的数据只留在这台设备上。";
+"consent.paragraph1" = "无极代理 只在本机保存你的节点和设置。";
+"consent.agree" = "我已阅读并同意用户协议与隐私政策。";
+"consent.continue" = "同意并继续";
+
+/* 引导 */
+"onboarding.1.title" = "你的连接，你的规则。";
+"onboarding.1.body" = "添加你自己的服务器，一键连接，让局域网和你选定的国家/区域流量不代理。";
+"onboarding.2.title" = "用你自己的节点。";
+"onboarding.2.body" = "通过二维码、粘贴链接或订阅地址导入节点。";
+"onboarding.3.title" = "该不代理的地方不代理。";
+"onboarding.3.body" = "局域网和你选择的国家/区域保持不代理，其余流量走你的节点。";
+"onboarding.getStarted" = "开始使用";
+
+/* 节点 */
+"nodes.search" = "搜索节点";
+"nodes.emptyTitle" = "还没有节点";
+"nodes.emptyMessage" = "手动添加服务器、扫描二维码，或导入订阅开始使用。";
+"nodes.addNode" = "添加节点";
+"nodes.addSubscription" = "添加订阅";
+
+/* 添加方式 */
+"addMenu.manual" = "手动输入";
+"addMenu.scan" = "扫描二维码";
+"addMenu.paste" = "从剪贴板粘贴";
+"addMenu.subscription" = "添加订阅";
+
+/* 分流 */
+"routing.title" = "分流";
+"routing.rule" = "规则";
+"routing.global" = "全局";
+"routing.summary" = "规则 · 已绕过 %d 项";
+"routing.modeSection" = "模式";
+"routing.mode" = "模式";
+"routing.localSection" = "局域网";
+"routing.bypassLan" = "局域网不代理";
+"routing.regionsSection" = "国家/区域（绕行 Direct）";
+"routing.bypassedRegions" = "绕行(Direct) 国家/区域";
+"routing.selectedCount" = "已选 %d 个";
+"routing.searchRegions" = "搜索国家/区域";
+"routing.regionPickerTitle" = "不代理国家/区域";
+
+/* 设置 */
+"settings.section.connection" = "连接";
+"settings.section.subscriptions" = "订阅";
+"settings.section.support" = "支持";
+"settings.routing" = "分流";
+"settings.onDemand" = "按需连接";
+"settings.subscriptions" = "订阅";
+"settings.autoUpdate" = "自动更新";
+"settings.about" = "关于与开源许可";
+"settings.terms" = "用户协议";
+"settings.privacy" = "隐私政策";
+"settings.contact" = "联系支持";
+"settings.clearData" = "清空全部数据";
+"settings.clearConfirm" = "删除本机全部节点、订阅与设置？此操作不可撤销。";
+
+/* 按需连接 */
+"onDemand.off" = "关闭";
+"onDemand.always" = "总是";
+"onDemand.wifi" = "仅 Wi-Fi";
+"onDemand.cellular" = "仅蜂窝网络";
+
+/* 订阅 */
+"subscriptions.title" = "订阅";
+"subscriptions.add" = "添加订阅";
+"subscriptions.emptyTitle" = "还没有订阅";
+"subscriptions.emptyMessage" = "添加订阅地址，自动导入并更新节点。";
+"subscriptions.nodes" = "个节点";
+"subscriptions.expires" = "到期时间 %@";
+"subscriptions.defaultName" = "订阅";
+
+/* 添加订阅 */
+"subscriptionAdd.title" = "添加订阅";
+"subscriptionAdd.urlSection" = "订阅地址";
+"subscriptionAdd.details" = "详情";
+"subscriptionAdd.name" = "名称";
+
+/* 关于 */
+"about.licenses" = "开源许可";
+"about.builtWith" = "基于 Xray-core（MPL-2.0）与 libXray（MIT）构建。国家分流数据来自 v2fly/geoip 项目（基于 DB-IP Lite，CC BY 4.0；以 CC BY-SA 4.0 分发）。";
+
+/* 法律 */
+"legal.placeholder" = "该文档随 App 一起打包。";
+
+/* 错误 */
+"error.uri.unsupported" = "不支持的分享链接。";
+"error.uri.none" = "没有识别到支持的分享链接。";
+"error.subscription.url" = "订阅地址无效。";
+"error.subscription.http" = "订阅服务器返回 HTTP %d。";
+"error.subscription.body" = "订阅内容无法读取。";
+"error.subscription.empty" = "订阅中没有节点。";
+"error.tunnel.unavailable" = "当前设备无法使用 VPN。";
+"error.tunnel.noConfig" = "还没有选择节点。";
+"error.tunnel.permission" = "未获得 VPN 权限。";
+"error.tunnel.timeout" = "VPN 连接超时，请重试。";
+"error.tunnel.failed" = "VPN 连接启动失败。";
+
+/* 分享链接解析细节（粘贴/扫码导入） */
+"error.uri.malformed.notLink" = "这段文字不是分享链接。";
+"error.uri.malformed.noScheme" = "链接缺少协议前缀。";
+"error.uri.malformed.noServer" = "分享链接缺少服务器地址。";
+"error.uri.malformed.badPort" = "分享链接的端口无效。";
+"error.uri.malformed.vmessJSON" = "VMess 链接中的 base64 JSON 无效。";
+"error.uri.malformed.vmessServer" = "VMess 链接缺少服务器地址。";
+"error.uri.malformed.vmessPort" = "VMess 链接的端口无效。";
+"error.uri.malformed.vmessUUID" = "VMess 链接缺少 UUID。";
+"error.uri.malformed.vlessUUID" = "VLESS 链接缺少 UUID。";
+"error.uri.malformed.vlessUUIDInvalid" = "VLESS 链接的 UUID 无效。";
+"error.uri.malformed.trojanPassword" = "Trojan 链接缺少密码。";
+"error.uri.malformed.ssFormat" = "Shadowsocks 链接格式不受支持。";
+"error.uri.malformed.ssMethod" = "Shadowsocks 链接缺少加密方式。";
+"error.uri.malformed.ssPassword" = "Shadowsocks 链接缺少密码。";
+"error.uri.unsupportedParams" = "该节点包含不支持的参数（%@），导入后将被忽略。";
+"error.subscription.insecure" = "仅支持 HTTPS 订阅地址。";
+"error.subscription.inFlight" = "该订阅正在更新，请稍后再试。";
+
+/* Xray 配置构建错误 */
+"error.xray.tooLarge" = "分流规则生成的配置为 %1$d KB，超过 %2$d KB 的内核上限，请减少不代理国家/区域。";
+"error.xray.dns" = "DNS 服务器地址“%@”无效。";
+"error.xray.serialize" = "Xray 配置序列化失败。%@";
+"error.xray.utf8" = "Xray 配置无法编码为 UTF-8。";
+"error.xray.noServer" = "节点缺少服务器地址。";
+"error.xray.badPort" = "节点端口必须在 1 到 65535 之间。";
+"error.xray.noUUID" = "节点 UUID 缺失或格式无效。";
+"error.xray.noTrojanPassword" = "Trojan 密码缺失。";
+"error.xray.noSSMethod" = "Shadowsocks 加密方式缺失。";
+"error.xray.noSSPassword" = "Shadowsocks 密码缺失。";
+"error.xray.noRealityKey" = "REALITY 公钥缺失。";
+"error.xray.ssReality" = "Shadowsocks 不支持 REALITY 安全层。";
+"error.xray.noGrpcService" = "gRPC 服务名缺失。";
+
+"error.geoip.unavailable" = "国家分流数据仍在准备中，请稍后重试。";
+"error.xray.socksCredentials" = "SOCKS5 的用户名和密码需要同时填写。";
+
+/* SOCKS5 分享链接解析错误 */
+"error.uri.malformed.socksFormat" = "SOCKS5 链接格式不受支持。";
+"error.uri.malformed.socksCredentials" = "SOCKS5 链接需要同时提供用户名和密码。";
+"home.action.connect" = "连接";
+"home.action.disconnect" = "断开";
+"app.name" = "无极代理";
+"permission.network.title" = "网络访问权限";
+"permission.network.body" = "WProxy 需要两项 iOS 权限才能建立安全隧道：
+
+• 本地网络 —— 让 VPN 识别当前网络并正确转发本地流量。
+• VPN 配置 —— 允许 WProxy 创建 VPN 隧道的系统权限。
+
+接下来会出现两个系统弹窗，请都选择允许。";
+"permission.network.requesting" = "正在请求权限…";
+"permission.network.failed.title" = "权限未授予";
+"permission.network.failed.body" = "缺少上述权限，WProxy 无法建立隧道。请在系统设置中允许「本地网络」与「VPN 配置」，然后重试。";
+"permission.network.retry" = "重新请求";
+"permission.network.openSettings" = "打开系统设置";
+"permission.network.note" = "之后可在：设置 → 隐私与安全性 → 本地网络；设置 → 通用 → VPN 与设备管理 中修改。";
+/* Global confirmation after node switch / tunnel settings change */
+"toast.settingsApplied" = "设置已生效";

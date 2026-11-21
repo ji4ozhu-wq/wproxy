@@ -1,0 +1,65 @@
+"settings.section.data" = "データ";
+"common.edit" = "編集";
+
+"settings.onDemand.footnote" = "選択したネットワークが利用可能になったときに自動で接続します。";
+"settings.resetVPN" = "VPN 構成をリセット";
+"settings.resetVPN.title" = "VPN 構成をリセットしますか？";
+"settings.resetVPN.body" = "iOS の設定にインストールされた WProxy の VPN 構成を削除します。接続中の場合は切断されます。";
+"settings.resetVPN.confirm" = "構成をリセット";
+"settings.resetVPN.success" = "VPN 構成をリセットしました";
+"settings.resetVPN.failure" = "VPN 構成をリセットできませんでした。";
+"settings.latency.section" = "レイテンシテスト";
+"settings.latency.testURL" = "テスト URL";
+"settings.latency.timeout" = "タイムアウト";
+"settings.latency.seconds" = "%d 秒";
+"settings.latency.testURLTitle" = "テスト URL";
+"settings.latency.testURLFootnote" = "ノードのレイテンシをテストするときに使用します。小さく高速な応答を返す HTTP または HTTPS の URL を指定してください。";
+"settings.latency.testURLInvalid" = "有効な http:// または https:// の URL を入力してください。";
+"settings.latency.timeoutTitle" = "タイムアウト";
+"settings.latency.timeoutFootnote" = "レイテンシテストが応答を待つ時間です。超えるとタイムアウトとして扱われます。";
+"settings.saved" = "保存しました";
+"settings.subscriptions.footnote" = "自動更新はアプリを開いている間だけ実行されます。";
+"settings.clearData.title" = "すべてのデータを消去しますか？";
+"settings.clearData.body" = "このデバイスからすべてのノード、サブスクリプション、設定が削除され、アプリは初回起動時の状態に戻ります。この操作は取り消せません。";
+"settings.clearData.success" = "すべてのデータを消去しました";
+"settings.about.title" = "このアプリについて";
+"settings.about.version" = "バージョン %@（%@）";
+"settings.about.copyright" = "© 2026 WProxy";
+"settings.about.openSource" = "オープンソースライセンス";
+"settings.about.component.xray" = "Xray-core";
+"settings.about.component.libxray" = "libXray";
+"settings.about.component.cidr" = "リージョン別 CIDR データ";
+"settings.about.license.mpl" = "MPL-2.0";
+"settings.about.license.mit" = "MIT";
+"settings.about.license.rir" = "RIR 委任データ";
+"settings.about.xrayFootnote" = "Xray-core は Mozilla Public License 2.0 の下でライセンスされています。以下にライセンス全文を示します。";
+"settings.about.libxrayFootnote" = "libXray は MIT License の下でライセンスされています。以下にライセンス全文を示します。";
+"settings.about.cidrFootnote" = "国と地域の IP 範囲は、v2fly プロジェクトが公開している GeoIP データセット（DB-IP Lite を基にした CC BY 4.0、CC BY-SA 4.0 として配布）から取得しています。";
+"settings.legal.effectiveDate" = "施行日：%@";
+"settings.legal.unavailableTitle" = "ドキュメントを利用できません";
+"settings.legal.unavailableMessage" = "このドキュメントをアプリから読み込めませんでした。";
+"settings.legal.retry" = "再試行";
+
+"settings.geoip.section" = "GeoIP データ";
+"settings.geoip.status" = "データベースバージョン";
+"settings.geoip.updateNow" = "今すぐ更新";
+"settings.geoip.updated" = "%@に更新";
+"settings.geoip.bundled" = "内蔵スナップショット・%@";
+"settings.geoip.countries" = "%d か国・%d プレフィックス";
+"settings.geoip.source" = "ソース：%@";
+"settings.geoip.error" = "前回の更新に失敗しました：%@";
+"settings.geoip.footnote" = "国別ルーティングデータは、VPN 接続中に自動で更新されます（最短 7 日間隔）。更新に失敗した場合は 1 時間ごとに再試行します。";
+
+"settings.geoip.updateSuccess" = "GeoIP データを更新しました。";
+"settings.geoip.updateFailure" = "GeoIP データを更新できませんでした。しばらくしてから再試行してください。";
+
+/* Language (Settings → Language, in-app language switching) */
+
+"settings.language.section" = "言語";
+"settings.language.system" = "システムに従う";
+"settings.language.english" = "English";
+"settings.language.simplifiedChinese" = "简体中文";
+"settings.language.footnote" = "アプリの表示言語はすぐに切り替わります。システムの権限ダイアログとホーム画面のアプリ名は、引き続きデバイスの言語に従います。プライバシーポリシーと利用規約は英語と簡体字中国語で提供されており、その他の言語では英語版が開きます。";
+"settings.language.followSystem" = "システムに従う";
+"settings.language.current" = "言語";
+"settings.language.chooseAnother" = "別の言語を選択";

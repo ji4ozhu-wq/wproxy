@@ -1,0 +1,66 @@
+"settings.section.data" = "Données";
+"common.edit" = "Modifier";
+/* Settings — pages-b (D19) */
+
+"settings.onDemand.footnote" = "Se connecter automatiquement lorsque le réseau sélectionné est disponible.";
+"settings.resetVPN" = "Réinitialiser la configuration VPN";
+"settings.resetVPN.title" = "Réinitialiser la configuration VPN ?";
+"settings.resetVPN.body" = "Cela supprime la configuration VPN installée par WProxy dans les Réglages iOS. Toute connexion active sera interrompue.";
+"settings.resetVPN.confirm" = "Réinitialiser la configuration";
+"settings.resetVPN.success" = "Configuration VPN réinitialisée";
+"settings.resetVPN.failure" = "Impossible de réinitialiser la configuration VPN.";
+"settings.latency.section" = "Test de latence";
+"settings.latency.testURL" = "URL de test";
+"settings.latency.timeout" = "Délai d’attente";
+"settings.latency.seconds" = "%d secondes";
+"settings.latency.testURLTitle" = "URL de test";
+"settings.latency.testURLFootnote" = "Utilisée pour tester la latence des nœuds. Utilisez une URL HTTP ou HTTPS qui renvoie une réponse courte et rapide.";
+"settings.latency.testURLInvalid" = "Saisissez une URL http:// ou https:// valide.";
+"settings.latency.timeoutTitle" = "Délai d’attente";
+"settings.latency.timeoutFootnote" = "Durée pendant laquelle un test de latence attend une réponse avant d’indiquer un dépassement.";
+"settings.saved" = "Enregistré";
+"settings.subscriptions.footnote" = "La mise à jour automatique s’exécute lorsque l’app est ouverte.";
+"settings.clearData.title" = "Effacer toutes les données ?";
+"settings.clearData.body" = "Tous les nœuds, abonnements et réglages seront supprimés de cet appareil, et l’app reviendra à son état initial. Cette action est irréversible.";
+"settings.clearData.success" = "Toutes les données ont été effacées";
+"settings.about.title" = "À propos";
+"settings.about.version" = "Version %@ (%@)";
+"settings.about.copyright" = "© 2026 WProxy";
+"settings.about.openSource" = "Licences open source";
+"settings.about.component.xray" = "Xray-core";
+"settings.about.component.libxray" = "libXray";
+"settings.about.component.cidr" = "Données CIDR régionales";
+"settings.about.license.mpl" = "MPL-2.0";
+"settings.about.license.mit" = "MIT";
+"settings.about.license.rir" = "Données de délégation RIR";
+"settings.about.xrayFootnote" = "Xray-core est sous licence Mozilla Public License 2.0. Le texte complet de la licence suit.";
+"settings.about.libxrayFootnote" = "libXray est sous licence MIT. Le texte complet de la licence suit.";
+"settings.about.cidrFootnote" = "Les plages IP des pays et régions proviennent du jeu de données GeoIP publié par le projet v2fly (basé sur DB-IP Lite, CC BY 4.0 ; distribué sous CC BY-SA 4.0).";
+"settings.legal.effectiveDate" = "Date d’entrée en vigueur : %@";
+"settings.legal.unavailableTitle" = "Document indisponible";
+"settings.legal.unavailableMessage" = "Ce document n’a pas pu être chargé depuis le paquet de l’app.";
+"settings.legal.retry" = "Réessayer";
+
+"settings.geoip.section" = "Données GeoIP";
+"settings.geoip.status" = "Version de la base de données";
+"settings.geoip.updateNow" = "Mettre à jour maintenant";
+"settings.geoip.updated" = "Mis à jour %@";
+"settings.geoip.bundled" = "Instantané intégré · %@";
+"settings.geoip.countries" = "%d pays · %d préfixes";
+"settings.geoip.source" = "Source : %@";
+"settings.geoip.error" = "Échec de la dernière mise à jour : %@";
+"settings.geoip.footnote" = "Les données de routage par pays se mettent à jour automatiquement (au plus une fois tous les 7 jours) lorsque la VPN est connectée. En cas d’échec, la mise à jour est retentée toutes les heures.";
+
+"settings.geoip.updateSuccess" = "Données GeoIP mises à jour.";
+"settings.geoip.updateFailure" = "Impossible de mettre à jour les données GeoIP. Réessayez plus tard.";
+
+/* Language (Settings → Language, in-app language switching) */
+
+"settings.language.section" = "Langue";
+"settings.language.system" = "Suivre le système";
+"settings.language.english" = "English";
+"settings.language.simplifiedChinese" = "简体中文";
+"settings.language.footnote" = "La langue de l’app change immédiatement. Les demandes d’autorisation système et le nom de l’app sur l’écran d’accueil suivent toujours la langue de l’appareil. La Politique de confidentialité et les Conditions d’utilisation sont disponibles en anglais et en chinois simplifié ; dans les autres langues, la version anglaise s’ouvre.";
+"settings.language.followSystem" = "Suivre le système";
+"settings.language.current" = "Langue";
+"settings.language.chooseAnother" = "Choisir une autre langue";

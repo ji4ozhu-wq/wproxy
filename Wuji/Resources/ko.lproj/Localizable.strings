@@ -1,0 +1,196 @@
+/* Tabs */
+"tab.connect" = "연결";
+"tab.nodes" = "노드";
+"tab.settings" = "설정";
+
+/* Common */
+"common.allow" = "허용";
+"common.notNow" = "나중에";
+"common.skip" = "건너뛰기";
+"common.continue" = "계속";
+"common.cancel" = "취소";
+"common.done" = "완료";
+"common.save" = "저장";
+
+/* Home */
+"home.notConnected" = "연결되지 않음";
+"home.connecting" = "연결 중…";
+"home.connected" = "연결됨";
+"home.disconnecting" = "연결 해제 중…";
+"home.latencyUnknown" = "지연 시간 알 수 없음";
+"home.selectNodeHint" = "시작하려면 노드를 선택하세요";
+"home.currentNode" = "현재 노드";
+"home.none" = "없음";
+"home.routing" = "라우팅";
+"home.thisSession" = "이번 세션";
+"home.download" = "다운로드";
+"home.upload" = "업로드";
+"home.duration" = "연결 시간";
+"home.total" = "합계";
+"home.chooseNode" = "노드 선택";
+"home.resetVpn" = "VPN 구성 재설정";
+"home.noNodeSelected" = "먼저 노드를 선택하세요.";
+"unit.ms" = "%d ms";
+
+/* First connect */
+"firstConnect.title" = "VPN 구성 허용";
+"firstConnect.body" = "iOS에서 VPN 터널을 만들려면 권한이 필요합니다. WProxy는 트래픽을 수집하거나 기록하지 않으며, 언제든지 연결을 해제하거나 구성을 삭제할 수 있습니다.";
+
+/* Consent */
+"consent.navTitle" = "시작하기 전에";
+"consent.title" = "데이터는 이 기기에만 저장됩니다.";
+"consent.paragraph1" = "WProxy는 노드와 설정을 이 기기 안에만 저장합니다.";
+"consent.agree" = "이용약관 및 개인정보 처리방침에 동의합니다.";
+"consent.continue" = "동의하고 계속";
+
+/* Onboarding */
+"onboarding.1.title" = "내 연결은, 내 규칙대로.";
+"onboarding.1.body" = "원하는 서버를 추가하고 한 번의 탭으로 연결하세요. 로컬 네트워크 또는 선택한 국가/지역의 트래픽은 직접 연결됩니다.";
+"onboarding.2.title" = "원하는 서버를 사용하세요.";
+"onboarding.2.body" = "QR 코드, 링크 붙여넣기 또는 구독 URL 가져오기로 노드를 추가할 수 있습니다.";
+"onboarding.3.title" = "중요한 트래픽은 로컬로.";
+"onboarding.3.body" = "로컬 네트워크와 선택한 국가/지역은 직접 연결되고, 나머지는 노드를 통해 연결됩니다.";
+"onboarding.getStarted" = "시작하기";
+
+/* Nodes */
+"nodes.search" = "노드 검색";
+"nodes.emptyTitle" = "아직 노드가 없습니다";
+"nodes.emptyMessage" = "서버를 직접 추가하거나 QR 코드를 스캔하거나 구독을 가져와 시작하세요.";
+"nodes.addNode" = "노드 추가";
+"nodes.addSubscription" = "구독 추가";
+
+/* Add menu */
+"addMenu.manual" = "직접 입력";
+"addMenu.scan" = "QR 코드 스캔";
+"addMenu.paste" = "클립보드에서 붙여넣기";
+"addMenu.subscription" = "구독 추가";
+
+/* Routing */
+"routing.title" = "라우팅";
+"routing.rule" = "규칙";
+"routing.global" = "글로벌";
+"routing.summary" = "규칙 · %d개 우회";
+"routing.modeSection" = "모드";
+"routing.mode" = "모드";
+"routing.localSection" = "로컬 네트워크";
+"routing.bypassLan" = "로컬 네트워크 우회";
+"routing.regionsSection" = "국가/지역 (Direct 우회)";
+"routing.bypassedRegions" = "Direct 우회 국가/지역";
+"routing.selectedCount" = "%d개 선택됨";
+"routing.searchRegions" = "국가/지역 검색";
+"routing.regionPickerTitle" = "우회할 국가/지역";
+
+/* Settings */
+"settings.section.connection" = "연결";
+"settings.section.subscriptions" = "구독";
+"settings.section.support" = "지원";
+"settings.routing" = "라우팅";
+"settings.onDemand" = "주문형 연결";
+"settings.subscriptions" = "구독";
+"settings.autoUpdate" = "자동 업데이트";
+"settings.about" = "정보 및 라이선스";
+"settings.terms" = "이용약관";
+"settings.privacy" = "개인정보 처리방침";
+"settings.contact" = "지원 문의";
+"settings.clearData" = "모든 데이터 삭제";
+"settings.clearConfirm" = "이 기기에서 모든 노드, 구독, 설정을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.";
+
+/* On-demand */
+"onDemand.off" = "끔";
+"onDemand.always" = "항상";
+"onDemand.wifi" = "Wi-Fi만";
+"onDemand.cellular" = "셀룰러만";
+
+/* Subscriptions */
+"subscriptions.title" = "구독";
+"subscriptions.add" = "구독 추가";
+"subscriptions.emptyTitle" = "아직 구독이 없습니다";
+"subscriptions.emptyMessage" = "구독 URL을 추가하면 노드를 자동으로 가져오고 업데이트합니다.";
+"subscriptions.nodes" = "노드";
+"subscriptions.expires" = "만료일 %@";
+"subscriptions.defaultName" = "구독";
+
+/* Add subscription */
+"subscriptionAdd.title" = "구독 추가";
+"subscriptionAdd.urlSection" = "구독 URL";
+"subscriptionAdd.details" = "세부 정보";
+"subscriptionAdd.name" = "이름";
+
+/* About */
+"about.licenses" = "오픈 소스 라이선스";
+"about.builtWith" = "Xray-core(MPL-2.0)와 libXray(MIT)로 만들어졌습니다. 국가별 라우팅 데이터는 DB-IP Lite(CC BY 4.0)를 기반으로 v2fly/geoip 프로젝트(CC BY-SA 4.0)에서 제공됩니다.";
+
+/* Legal */
+"legal.placeholder" = "이 문서는 앱에 포함되어 있습니다.";
+
+/* Errors */
+"error.uri.unsupported" = "지원되지 않는 공유 링크입니다.";
+"error.uri.none" = "지원되는 공유 링크를 찾지 못했습니다.";
+"error.subscription.url" = "구독 URL이 올바르지 않습니다.";
+"error.subscription.http" = "구독 서버가 HTTP %d 응답을 반환했습니다.";
+"error.subscription.body" = "구독 응답을 읽지 못했습니다.";
+"error.subscription.empty" = "구독에 노드가 포함되어 있지 않습니다.";
+"error.tunnel.unavailable" = "이 기기에서는 VPN을 사용할 수 없습니다.";
+"error.tunnel.noConfig" = "선택된 노드가 없습니다.";
+"error.tunnel.permission" = "VPN 권한이 허용되지 않았습니다.";
+"error.tunnel.timeout" = "VPN 터널이 제시간에 시작되지 않았습니다. 다시 시도하세요.";
+"error.tunnel.failed" = "VPN 터널을 시작하지 못했습니다.";
+
+/* Share-link parse detail (pasted/scanned imports) */
+"error.uri.malformed.notLink" = "이 텍스트는 공유 링크가 아닙니다.";
+"error.uri.malformed.noScheme" = "링크에 스킴이 없습니다.";
+"error.uri.malformed.noServer" = "공유 링크에 서버 주소가 없습니다.";
+"error.uri.malformed.badPort" = "공유 링크의 포트가 올바르지 않습니다.";
+"error.uri.malformed.vmessJSON" = "VMess 링크에 올바른 Base64 JSON이 없습니다.";
+"error.uri.malformed.vmessServer" = "VMess 링크에 서버 주소가 없습니다.";
+"error.uri.malformed.vmessPort" = "VMess 링크의 포트가 올바르지 않습니다.";
+"error.uri.malformed.vmessUUID" = "VMess 링크에 UUID가 없습니다.";
+"error.uri.malformed.vlessUUID" = "VLESS 링크에 UUID가 없습니다.";
+"error.uri.malformed.vlessUUIDInvalid" = "VLESS 링크의 UUID가 올바르지 않습니다.";
+"error.uri.malformed.trojanPassword" = "Trojan 링크에 비밀번호가 없습니다.";
+"error.uri.malformed.ssFormat" = "Shadowsocks 링크가 지원되는 형식이 아닙니다.";
+"error.uri.malformed.ssMethod" = "Shadowsocks 링크에 암호화 방식이 없습니다.";
+"error.uri.malformed.ssPassword" = "Shadowsocks 링크에 비밀번호가 없습니다.";
+"error.uri.unsupportedParams" = "이 노드는 지원되지 않는 매개변수(%@)를 사용합니다. 해당 매개변수는 무시됩니다.";
+"error.subscription.insecure" = "HTTPS 구독 URL만 지원됩니다.";
+"error.subscription.inFlight" = "이 구독은 이미 업데이트 중입니다. 잠시 후 다시 시도하세요.";
+
+/* Xray config build errors */
+"error.xray.tooLarge" = "라우팅 규칙 구성이 %1$d KB로, 커널 한도 %2$d KB를 초과합니다. 우회할 국가/지역 수를 줄이세요.";
+"error.xray.dns" = "DNS 서버 주소가 올바르지 않습니다: %@";
+"error.xray.serialize" = "Xray 구성을 직렬화하지 못했습니다. %@";
+"error.xray.utf8" = "Xray 구성을 UTF-8로 인코딩하지 못했습니다.";
+"error.xray.noServer" = "노드에 서버 주소가 없습니다.";
+"error.xray.badPort" = "노드 포트는 1~65535 사이여야 합니다.";
+"error.xray.noUUID" = "노드 UUID가 없거나 형식이 올바르지 않습니다.";
+"error.xray.noTrojanPassword" = "Trojan 비밀번호가 없습니다.";
+"error.xray.noSSMethod" = "Shadowsocks 암호화 방식이 없습니다.";
+"error.xray.noSSPassword" = "Shadowsocks 비밀번호가 없습니다.";
+"error.xray.noRealityKey" = "REALITY 공개 키가 없습니다.";
+"error.xray.ssReality" = "Shadowsocks는 REALITY 보안 계층을 지원하지 않습니다.";
+"error.xray.noGrpcService" = "gRPC 서비스 이름이 없습니다.";
+
+"error.geoip.unavailable" = "국가별 라우팅 데이터를 준비하는 중입니다. 잠시 후 다시 시도하세요.";
+"error.xray.socksCredentials" = "SOCKS5 사용자 이름과 비밀번호를 모두 입력해야 합니다.";
+
+/* SOCKS5 share-link parse errors */
+"error.uri.malformed.socksFormat" = "SOCKS5 링크가 지원되는 형식이 아닙니다.";
+"error.uri.malformed.socksCredentials" = "SOCKS5 링크에는 사용자 이름과 비밀번호가 모두 필요합니다.";
+"home.action.connect" = "연결";
+"home.action.disconnect" = "연결 해제";
+"app.name" = "WProxy";
+"permission.network.title" = "네트워크 접근 권한";
+"permission.network.body" = "WProxy가 안전한 터널을 만들려면 iOS 권한 두 가지가 필요합니다:
+
+• 로컬 네트워크 — VPN이 현재 네트워크를 인식하고 로컬 트래픽을 올바르게 전달하도록 합니다.
+• VPN 구성 — WProxy가 VPN 터널을 만들 수 있도록 하는 시스템 권한입니다.
+
+시스템 안내가 두 번 표시됩니다. 모두 허용해 주세요.";
+"permission.network.requesting" = "권한을 요청하는 중…";
+"permission.network.failed.title" = "권한이 허용되지 않았습니다";
+"permission.network.failed.body" = "이 권한이 없으면 WProxy가 터널을 만들 수 없습니다. 설정에서 로컬 네트워크와 VPN 구성을 허용한 뒤 다시 시도해 주세요.";
+"permission.network.retry" = "다시 시도";
+"permission.network.openSettings" = "설정 열기";
+"permission.network.note" = "나중에 변경할 수 있습니다: 설정 → 개인정보 보호 및 보안 → 로컬 네트워크, 설정 → 일반 → VPN 및 기기 관리.";
+/* Global confirmation after node switch / tunnel settings change */
+"toast.settingsApplied" = "설정이 적용되었습니다.";

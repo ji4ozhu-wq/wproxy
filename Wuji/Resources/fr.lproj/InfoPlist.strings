@@ -1,0 +1,6 @@
+"CFBundleDisplayName" = "WProxy";
+"NSCameraUsageDescription" = "WProxy utilise l’appareil photo uniquement pour scanner les QR codes de serveurs que vous choisissez d’importer.";
+"NSPhotoLibraryUsageDescription" = "WProxy lit la photo que vous choisissez afin de reconnaître le QR code d’un serveur.";
+"NSPhotoLibraryAddUsageDescription" = "WProxy enregistre une image de QR code de serveur dans votre photothèque lorsque vous le demandez.";
+"CFBundleName" = "WProxy";
+"NSLocalNetworkUsageDescription" = "WProxy utilise l’autorisation Réseau local pour détecter votre réseau actuel et acheminer correctement le trafic local lorsque le VPN est actif.";

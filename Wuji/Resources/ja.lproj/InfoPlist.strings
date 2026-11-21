@@ -1,0 +1,6 @@
+"CFBundleDisplayName" = "WProxy";
+"NSCameraUsageDescription" = "WProxy は、取り込むサーバー QR コードをスキャンするときだけカメラを使用します。";
+"NSPhotoLibraryUsageDescription" = "WProxy は、選んだ写真からサーバー QR コードを認識するために写真を読み取ります。";
+"NSPhotoLibraryAddUsageDescription" = "保存を依頼されたときに、サーバー QR コード画像を写真ライブラリに保存します。";
+"CFBundleName" = "WProxy";
+"NSLocalNetworkUsageDescription" = "WProxy はローカルネットワーク権限を使用して現在のネットワークを認識し、VPN 接続中にローカル通信を正しく転送します。";

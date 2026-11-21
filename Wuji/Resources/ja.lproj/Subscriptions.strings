@@ -1,0 +1,54 @@
+/* Subscriptions — pages-b (D14/D15/D16) */
+
+"subscriptions.list.nodeCount" = "%d ノード";
+"subscriptions.list.updated" = "%@に更新";
+"subscriptions.list.neverUpdated" = "まだ更新されていません";
+"subscriptions.list.autoUpdateFootnote" = "自動更新はアプリを開いている間だけ実行されます。";
+"subscriptions.list.flow" = "%@ / %@";
+"subscriptions.list.expires" = "有効期限 %@";
+"subscriptions.list.error" = "更新に失敗しました";
+"subscriptions.list.deleteTitle" = "サブスクリプションを削除しますか？";
+"subscriptions.list.deleteBody" = "「%@」とそのすべてのノードがこのデバイスから削除されます。この操作は取り消せません。";
+"subscriptions.list.deleteConfirm" = "サブスクリプションを削除";
+"subscriptions.list.deletedToast" = "サブスクリプションを削除しました";
+"subscriptions.list.delete" = "削除";
+
+"subscriptions.add.urlPlaceholder" = "https://example.com/subscribe";
+"subscriptions.add.autoUpdate" = "自動更新";
+"subscriptions.add.footnote" = "このサブスクリプションのノードは新しいグループに表示されます。更新するとノード一覧が置き換わりますが、可能な限り選択中のノードは保持されます。";
+"subscriptions.add.action" = "追加して更新";
+"subscriptions.add.invalidURL" = "https:// で始まる有効なサブスクリプション URL を入力してください。";
+"subscriptions.add.insecureURL" = "HTTPS のサブスクリプション URL のみ対応しています。";
+"subscriptions.add.failedTitle" = "サブスクリプションを追加できませんでした";
+
+"subscriptions.edit.title" = "サブスクリプションを編集";
+"subscriptions.edit.savedToast" = "サブスクリプションを保存しました";
+
+"subscriptions.interval.off" = "オフ";
+"subscriptions.interval.6h" = "6 時間ごと";
+"subscriptions.interval.12h" = "12 時間ごと";
+"subscriptions.interval.24h" = "24 時間ごと";
+"subscriptions.interval.7d" = "7 日ごと";
+
+"subscriptions.detail.nodes" = "ノード";
+"subscriptions.detail.used" = "使用量";
+"subscriptions.detail.expires" = "有効期限";
+"subscriptions.detail.lastUpdated" = "最終更新";
+"subscriptions.detail.autoUpdate" = "自動更新";
+"subscriptions.detail.url" = "URL";
+"subscriptions.detail.viewAll" = "ノード %d 件をすべて表示";
+"subscriptions.detail.updateNow" = "今すぐ更新";
+"subscriptions.detail.updateFailed" = "更新に失敗しました";
+"subscriptions.detail.delete" = "サブスクリプションを削除";
+"subscriptions.detail.nodesTitle" = "ノード";
+"subscriptions.detail.noNodes" = "このサブスクリプションにはまだノードがありません。";
+"subscriptions.detail.updateSuccess" = "サブスクリプションを更新しました";
+"subscriptions.detail.urlCopied" = "URL をコピーしました";
+"subscriptions.detail.selectedNode" = "%@ を選択中";
+"subscriptions.detail.notFound" = "このサブスクリプションは存在しません。";
+"subscriptions.detail.notFoundMessage" = "削除された可能性があります。サブスクリプション一覧に戻ってください。";
+"subscriptions.detail.never" = "なし";
+"subscriptions.detail.retry" = "再試行";
+
+"subscriptions.list.update" = "更新";
+"subscriptions.list.updating" = "更新中…";

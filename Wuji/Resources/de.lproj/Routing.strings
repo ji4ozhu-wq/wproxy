@@ -1,0 +1,26 @@
+/* German — routing settings */
+
+"routing.mode.ruleFootnote" = "Regelbasiert hält lokales Netzwerk und ausgewählte Länder/Regionen direkt; der gesamte andere Datenverkehr nutzt deinen Knoten.";
+"routing.mode.globalFootnote" = "Der gesamte Datenverkehr nutzt deinen Knoten. Im Global-Modus sind lokales Netzwerk und die Umgehung von Ländern/Regionen deaktiviert.";
+"routing.bypassLan.footnote" = "10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 und Link-Local-Adressen bleiben direkt.";
+"routing.serverRoutingFootnote" = "Die Adresse deines Proxyservers wird immer direkt verbunden, um Routingschleifen zu vermeiden.";
+"routing.reconnectFootnote" = "Änderungen während einer aktiven Verbindung stellen die Verbindung automatisch neu her.";
+"routing.addRegion" = "Land/Region hinzufügen…";
+"routing.noRegions" = "Keine Länder/Regionen ausgewählt";
+"routing.picker.selected" = "AUSGEWÄHLT";
+"routing.picker.all" = "ALLE LÄNDER/REGIONEN";
+"routing.picker.selectAll" = "Alle auswählen";
+"routing.picker.clearAll" = "Alle abwählen";
+"routing.picker.noResultsTitle" = "Keine Länder/Regionen gefunden";
+"routing.picker.noResultsMessage" = "Versuche einen anderen Suchbegriff.";
+"routing.picker.unavailableTitle" = "Länder/Regionen-Daten nicht verfügbar";
+"routing.picker.unavailableMessage" = "Die integrierte Liste der Länder/Regionen konnte nicht geladen werden. Eine Neuinstallation der App stellt sie wieder her.";
+"routing.picker.count" = "%d ausgewählt";
+"routing.globalMode" = "Globaler Modus";
+"routing.globalMode.subtitle" = "Gesamten Datenverkehr durch deinen Knoten senden. Die Umgehungsregeln unten werden ignoriert.";
+"routing.dns.section" = "DNS";
+"routing.dns.doh" = "Entferntes DoH (über Proxy)";
+"routing.dns.doh.subtitle" = "DNS-over-HTTPS über deinen Knoten. Verbirgt Anfragen vor dem lokalen Netzwerk; die Erkennung von Ländern/Regionen kann ungenauer sein.";
+"routing.dns.local" = "Lokales DNS (direkt)";
+"routing.dns.local.subtitle" = "Direkt mit 8.8.8.8 / 1.1.1.1 auflösen. Genauere Weiterleitung nach Ländern/Regionen, aber der lokale Resolver kann deine Anfragen sehen.";
+"routing.dns.footnote" = "Änderungen während einer aktiven Verbindung stellen den Tunnel automatisch neu her.";

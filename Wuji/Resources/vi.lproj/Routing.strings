@@ -1,0 +1,28 @@
+/* Định tuyến — pages-b (D17/D18) */
+
+"routing.mode.ruleFootnote" = "Chế độ quy tắc giữ mạng cục bộ và các quốc gia/khu vực đã chọn đi trực tiếp; mọi lưu lượng khác đi qua nút của bạn.";
+"routing.mode.globalFootnote" = "Mọi lưu lượng đều đi qua nút của bạn. Bỏ qua mạng cục bộ và quốc gia/khu vực bị tắt khi bật chế độ toàn bộ.";
+"routing.bypassLan.footnote" = "Các địa chỉ 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 và link-local sẽ đi trực tiếp.";
+"routing.serverRoutingFootnote" = "Địa chỉ máy chủ proxy của bạn luôn được kết nối trực tiếp để tránh vòng lặp định tuyến.";
+"routing.reconnectFootnote" = "Thay đổi khi đang kết nối sẽ tự động kết nối lại.";
+"routing.addRegion" = "Thêm quốc gia/khu vực…";
+"routing.noRegions" = "Chưa chọn quốc gia/khu vực";
+"routing.picker.selected" = "ĐÃ CHỌN";
+"routing.picker.all" = "TẤT CẢ QUỐC GIA/KHU VỰC";
+"routing.picker.selectAll" = "Chọn tất cả";
+"routing.picker.clearAll" = "Bỏ chọn tất cả";
+"routing.picker.noResultsTitle" = "Không tìm thấy quốc gia/khu vực";
+"routing.picker.noResultsMessage" = "Hãy thử từ khóa khác.";
+"routing.picker.unavailableTitle" = "Dữ liệu quốc gia/khu vực không khả dụng";
+"routing.picker.unavailableMessage" = "Không thể tải danh sách quốc gia/khu vực tích hợp. Cài lại ứng dụng sẽ khôi phục danh sách này.";
+"routing.picker.count" = "Đã chọn %d";
+
+"routing.globalMode" = "Chế độ toàn bộ";
+"routing.globalMode.subtitle" = "Gửi mọi lưu lượng qua nút của bạn. Các quy tắc bỏ qua bên dưới bị bỏ qua.";
+
+"routing.dns.section" = "DNS";
+"routing.dns.doh" = "DoH từ xa (qua proxy)";
+"routing.dns.doh.subtitle" = "DNS-over-HTTPS qua nút của bạn. Ẩn truy vấn khỏi mạng cục bộ; phát hiện quốc gia/khu vực có thể kém chính xác hơn.";
+"routing.dns.local" = "DNS cục bộ (trực tiếp)";
+"routing.dns.local.subtitle" = "Phân giải trực tiếp bằng 8.8.8.8 / 1.1.1.1. Định tuyến quốc gia/khu vực chính xác hơn, nhưng máy phân giải cục bộ có thể thấy truy vấn của bạn.";
+"routing.dns.footnote" = "Thay đổi khi đang kết nối sẽ tự động kết nối lại đường hầm.";

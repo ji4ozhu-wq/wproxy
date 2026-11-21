@@ -1,0 +1,196 @@
+/* Tabs */
+"tab.connect" = "接続";
+"tab.nodes" = "ノード";
+"tab.settings" = "設定";
+
+/* Common */
+"common.allow" = "許可";
+"common.notNow" = "今はしない";
+"common.skip" = "スキップ";
+"common.continue" = "続ける";
+"common.cancel" = "キャンセル";
+"common.done" = "完了";
+"common.save" = "保存";
+
+/* Home */
+"home.notConnected" = "未接続";
+"home.connecting" = "接続中…";
+"home.connected" = "接続済み";
+"home.disconnecting" = "切断中…";
+"home.latencyUnknown" = "レイテンシ不明";
+"home.selectNodeHint" = "開始するにはノードを選択してください";
+"home.currentNode" = "現在のノード";
+"home.none" = "なし";
+"home.routing" = "ルーティング";
+"home.thisSession" = "今回のセッション";
+"home.download" = "ダウンロード";
+"home.upload" = "アップロード";
+"home.duration" = "接続時間";
+"home.total" = "合計";
+"home.chooseNode" = "ノードを選択";
+"home.resetVpn" = "VPN 構成をリセット";
+"home.noNodeSelected" = "先にノードを選択してください。";
+"unit.ms" = "%d ms";
+
+/* First connect */
+"firstConnect.title" = "VPN 構成を許可";
+"firstConnect.body" = "iOS で VPN トンネルを作成するには許可が必要です。WProxy は通信を収集・記録しません。いつでも切断したり、構成を削除したりできます。";
+
+/* Consent */
+"consent.navTitle" = "はじめる前に";
+"consent.title" = "あなたのデータは、このデバイスに保存されます。";
+"consent.paragraph1" = "WProxy はノードと設定を、このデバイス内だけに保存します。";
+"consent.agree" = "利用規約とプライバシーポリシーに同意します。";
+"consent.continue" = "同意して続ける";
+
+/* Onboarding */
+"onboarding.1.title" = "接続は、自分のルールで。";
+"onboarding.1.body" = "自分のサーバーを追加してワンタップで接続。ローカルネットワークや選択した国/地域の通信は直接接続します。";
+"onboarding.2.title" = "サーバーは自分で用意。";
+"onboarding.2.body" = "QR コード、リンクの貼り付け、サブスクリプション URL の取り込みでノードを追加できます。";
+"onboarding.3.title" = "必要な通信はローカルのまま。";
+"onboarding.3.body" = "ローカルネットワークと選択した国/地域は直接接続され、それ以外はノード経由になります。";
+"onboarding.getStarted" = "はじめる";
+
+/* Nodes */
+"nodes.search" = "ノードを検索";
+"nodes.emptyTitle" = "ノードがありません";
+"nodes.emptyMessage" = "サーバーを手動で追加するか、QR コードをスキャンするか、サブスクリプションを取り込んで始めましょう。";
+"nodes.addNode" = "ノードを追加";
+"nodes.addSubscription" = "サブスクリプションを追加";
+
+/* Add menu */
+"addMenu.manual" = "手動で入力";
+"addMenu.scan" = "QR コードをスキャン";
+"addMenu.paste" = "クリップボードから貼り付け";
+"addMenu.subscription" = "サブスクリプションを追加";
+
+/* Routing */
+"routing.title" = "ルーティング";
+"routing.rule" = "ルール";
+"routing.global" = "グローバル";
+"routing.summary" = "ルール・%d 件をバイパス";
+"routing.modeSection" = "モード";
+"routing.mode" = "モード";
+"routing.localSection" = "ローカルネットワーク";
+"routing.bypassLan" = "ローカルネットワークをバイパス";
+"routing.regionsSection" = "国/地域（Direct バイパス）";
+"routing.bypassedRegions" = "国/地域を Direct でバイパス";
+"routing.selectedCount" = "%d 件選択中";
+"routing.searchRegions" = "国/地域を検索";
+"routing.regionPickerTitle" = "バイパスする国/地域";
+
+/* Settings */
+"settings.section.connection" = "接続";
+"settings.section.subscriptions" = "サブスクリプション";
+"settings.section.support" = "サポート";
+"settings.routing" = "ルーティング";
+"settings.onDemand" = "オンデマンド接続";
+"settings.subscriptions" = "サブスクリプション";
+"settings.autoUpdate" = "自動更新";
+"settings.about" = "このアプリについてとライセンス";
+"settings.terms" = "利用規約";
+"settings.privacy" = "プライバシーポリシー";
+"settings.contact" = "サポートに問い合わせ";
+"settings.clearData" = "すべてのデータを消去";
+"settings.clearConfirm" = "このデバイスからすべてのノード、サブスクリプション、設定を削除しますか？この操作は取り消せません。";
+
+/* On-demand */
+"onDemand.off" = "オフ";
+"onDemand.always" = "常に";
+"onDemand.wifi" = "Wi-Fi のみ";
+"onDemand.cellular" = "モバイル通信のみ";
+
+/* Subscriptions */
+"subscriptions.title" = "サブスクリプション";
+"subscriptions.add" = "サブスクリプションを追加";
+"subscriptions.emptyTitle" = "サブスクリプションがありません";
+"subscriptions.emptyMessage" = "サブスクリプション URL を追加すると、ノードを自動で取り込んで更新します。";
+"subscriptions.nodes" = "ノード";
+"subscriptions.expires" = "有効期限 %@";
+"subscriptions.defaultName" = "サブスクリプション";
+
+/* Add subscription */
+"subscriptionAdd.title" = "サブスクリプションを追加";
+"subscriptionAdd.urlSection" = "サブスクリプション URL";
+"subscriptionAdd.details" = "詳細";
+"subscriptionAdd.name" = "名前";
+
+/* About */
+"about.licenses" = "オープンソースライセンス";
+"about.builtWith" = "Xray-core（MPL-2.0）と libXray（MIT）を使用して構築されています。国別ルーティングデータは、DB-IP Lite（CC BY 4.0）を基にした v2fly/geoip プロジェクト（CC BY-SA 4.0）から取得しています。";
+
+/* Legal */
+"legal.placeholder" = "このドキュメントはアプリに同梱されています。";
+
+/* Errors */
+"error.uri.unsupported" = "対応していない共有リンクです。";
+"error.uri.none" = "対応する共有リンクが見つかりませんでした。";
+"error.subscription.url" = "サブスクリプション URL が無効です。";
+"error.subscription.http" = "サブスクリプションサーバーが HTTP %d を返しました。";
+"error.subscription.body" = "サブスクリプションの応答を読み取れませんでした。";
+"error.subscription.empty" = "サブスクリプションにノードが含まれていません。";
+"error.tunnel.unavailable" = "このデバイスでは VPN を利用できません。";
+"error.tunnel.noConfig" = "ノードが選択されていません。";
+"error.tunnel.permission" = "VPN の許可が得られませんでした。";
+"error.tunnel.timeout" = "VPN トンネルが時間内に開始されませんでした。もう一度お試しください。";
+"error.tunnel.failed" = "VPN トンネルを開始できませんでした。";
+
+/* Share-link parse detail (pasted/scanned imports) */
+"error.uri.malformed.notLink" = "このテキストは共有リンクではありません。";
+"error.uri.malformed.noScheme" = "リンクにスキームがありません。";
+"error.uri.malformed.noServer" = "共有リンクにサーバーアドレスがありません。";
+"error.uri.malformed.badPort" = "共有リンクのポートが無効です。";
+"error.uri.malformed.vmessJSON" = "VMess リンクに有効な Base64 JSON が含まれていません。";
+"error.uri.malformed.vmessServer" = "VMess リンクにサーバーアドレスがありません。";
+"error.uri.malformed.vmessPort" = "VMess リンクのポートが無効です。";
+"error.uri.malformed.vmessUUID" = "VMess リンクに UUID がありません。";
+"error.uri.malformed.vlessUUID" = "VLESS リンクに UUID がありません。";
+"error.uri.malformed.vlessUUIDInvalid" = "VLESS リンクの UUID が無効です。";
+"error.uri.malformed.trojanPassword" = "Trojan リンクにパスワードがありません。";
+"error.uri.malformed.ssFormat" = "Shadowsocks リンクの形式に対応していません。";
+"error.uri.malformed.ssMethod" = "Shadowsocks リンクに暗号化方式がありません。";
+"error.uri.malformed.ssPassword" = "Shadowsocks リンクにパスワードがありません。";
+"error.uri.unsupportedParams" = "このノードは未対応のパラメータ（%@）を使用しています。これらは無視されます。";
+"error.subscription.insecure" = "HTTPS のサブスクリプション URL のみ対応しています。";
+"error.subscription.inFlight" = "このサブスクリプションは更新中です。しばらくしてから再試行してください。";
+
+/* Xray config build errors */
+"error.xray.tooLarge" = "ルーティングルールの構成が %1$d KB になり、カーネルの上限 %2$d KB を超えています。バイパスする国/地域を減らしてください。";
+"error.xray.dns" = "DNS サーバーアドレス「%@」は無効です。";
+"error.xray.serialize" = "Xray 構成をシリアライズできませんでした。%@";
+"error.xray.utf8" = "Xray 構成を UTF-8 でエンコードできませんでした。";
+"error.xray.noServer" = "ノードにサーバーアドレスがありません。";
+"error.xray.badPort" = "ノードのポートは 1〜65535 の範囲で指定してください。";
+"error.xray.noUUID" = "ノードの UUID がないか、形式が正しくありません。";
+"error.xray.noTrojanPassword" = "Trojan のパスワードがありません。";
+"error.xray.noSSMethod" = "Shadowsocks の暗号化方式がありません。";
+"error.xray.noSSPassword" = "Shadowsocks のパスワードがありません。";
+"error.xray.noRealityKey" = "REALITY の公開鍵がありません。";
+"error.xray.ssReality" = "Shadowsocks は REALITY セキュリティレイヤーに対応していません。";
+"error.xray.noGrpcService" = "gRPC のサービス名がありません。";
+
+"error.geoip.unavailable" = "国別ルーティングデータを準備しています。しばらくしてから再試行してください。";
+"error.xray.socksCredentials" = "SOCKS5 のユーザー名とパスワードは両方入力してください。";
+
+/* SOCKS5 share-link parse errors */
+"error.uri.malformed.socksFormat" = "SOCKS5 リンクの形式に対応していません。";
+"error.uri.malformed.socksCredentials" = "SOCKS5 リンクにはユーザー名とパスワードの両方が必要です。";
+"home.action.connect" = "接続";
+"home.action.disconnect" = "切断";
+"app.name" = "WProxy";
+"permission.network.title" = "ネットワークへのアクセス";
+"permission.network.body" = "WProxy が安全なトンネルを構築するには、iOS の 2 つの権限が必要です：
+
+• ローカルネットワーク — VPN が現在のネットワークを認識し、ローカル通信を正しく転送できるようにします。
+• VPN 構成 — WProxy が VPN トンネルを作成するためのシステム権限です。
+
+2 つのシステム確認が表示されます。どちらも「許可」してください。";
+"permission.network.requesting" = "権限をリクエスト中…";
+"permission.network.failed.title" = "権限が許可されていません";
+"permission.network.failed.body" = "これらの権限がないと WProxy はトンネルを構築できません。「設定」でローカルネットワークと VPN 構成を許可してから、もう一度お試しください。";
+"permission.network.retry" = "もう一度試す";
+"permission.network.openSettings" = "設定を開く";
+"permission.network.note" = "後から変更できます：設定 → プライバシーとセキュリティ → ローカルネットワーク、設定 → 一般 → VPN とデバイス管理。";
+/* Global confirmation after node switch / tunnel settings change */
+"toast.settingsApplied" = "設定を反映しました。";

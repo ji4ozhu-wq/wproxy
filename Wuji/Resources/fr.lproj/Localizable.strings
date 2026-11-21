@@ -1,0 +1,196 @@
+/* Tabs */
+"tab.connect" = "Connexion";
+"tab.nodes" = "Nœuds";
+"tab.settings" = "Réglages";
+
+/* Common */
+"common.allow" = "Autoriser";
+"common.notNow" = "Plus tard";
+"common.skip" = "Passer";
+"common.continue" = "Continuer";
+"common.cancel" = "Annuler";
+"common.done" = "Terminé";
+"common.save" = "Enregistrer";
+
+/* Home */
+"home.notConnected" = "Non connecté";
+"home.connecting" = "Connexion…";
+"home.connected" = "Connecté";
+"home.disconnecting" = "Déconnexion…";
+"home.latencyUnknown" = "latence inconnue";
+"home.selectNodeHint" = "Sélectionnez un nœud pour commencer";
+"home.currentNode" = "Nœud actuel";
+"home.none" = "Aucun";
+"home.routing" = "Routage";
+"home.thisSession" = "Cette session";
+"home.download" = "Réception";
+"home.upload" = "Envoi";
+"home.duration" = "Durée";
+"home.total" = "Total";
+"home.chooseNode" = "Choisir un nœud";
+"home.resetVpn" = "Réinitialiser la configuration VPN";
+"home.noNodeSelected" = "Sélectionnez d’abord un nœud.";
+"unit.ms" = "%d ms";
+
+/* First connect */
+"firstConnect.title" = "Autoriser la configuration VPN";
+"firstConnect.body" = "iOS a besoin de votre autorisation pour créer un tunnel VPN. WProxy ne collecte ni ne journalise votre trafic, et vous pouvez vous déconnecter ou supprimer la configuration à tout moment.";
+
+/* Consent */
+"consent.navTitle" = "Avant de commencer";
+"consent.title" = "Vos données restent sur cet appareil.";
+"consent.paragraph1" = "WProxy stocke vos nœuds et vos réglages uniquement sur cet appareil.";
+"consent.agree" = "J’accepte les Conditions d’utilisation et la Politique de confidentialité.";
+"consent.continue" = "Accepter et continuer";
+
+/* Onboarding */
+"onboarding.1.title" = "Votre connexion, vos règles.";
+"onboarding.1.body" = "Ajoutez vos propres serveurs, connectez-vous en un geste et gardez le trafic du réseau local ou celui des pays/régions de votre choix en direct.";
+"onboarding.2.title" = "Utilisez vos propres serveurs.";
+"onboarding.2.body" = "Ajoutez des nœuds avec un QR code, collez un lien ou importez l’URL d’un abonnement.";
+"onboarding.3.title" = "Restez en local quand c’est important.";
+"onboarding.3.body" = "Votre réseau local et les pays/régions que vous choisissez restent en direct. Tout le reste passe par votre nœud.";
+"onboarding.getStarted" = "Commencer";
+
+/* Nodes */
+"nodes.search" = "Rechercher des nœuds";
+"nodes.emptyTitle" = "Aucun nœud pour l’instant";
+"nodes.emptyMessage" = "Ajoutez un serveur manuellement, scannez un QR code ou importez un abonnement pour commencer.";
+"nodes.addNode" = "Ajouter un nœud";
+"nodes.addSubscription" = "Ajouter un abonnement";
+
+/* Add menu */
+"addMenu.manual" = "Saisir manuellement";
+"addMenu.scan" = "Scanner un QR code";
+"addMenu.paste" = "Coller depuis le presse-papiers";
+"addMenu.subscription" = "Ajouter un abonnement";
+
+/* Routing */
+"routing.title" = "Routage";
+"routing.rule" = "Règle";
+"routing.global" = "Global";
+"routing.summary" = "Règle · %d contournements";
+"routing.modeSection" = "Mode";
+"routing.mode" = "Mode";
+"routing.localSection" = "Réseau local";
+"routing.bypassLan" = "Contourner le réseau local";
+"routing.regionsSection" = "Pays/Régions (contournement direct)";
+"routing.bypassedRegions" = "Pays/Régions en contournement direct";
+"routing.selectedCount" = "%d sélectionnées";
+"routing.searchRegions" = "Rechercher des pays/régions";
+"routing.regionPickerTitle" = "Pays/régions contournés";
+
+/* Settings */
+"settings.section.connection" = "Connexion";
+"settings.section.subscriptions" = "Abonnements";
+"settings.section.support" = "Assistance";
+"settings.routing" = "Routage";
+"settings.onDemand" = "À la demande";
+"settings.subscriptions" = "Abonnements";
+"settings.autoUpdate" = "Mise à jour automatique";
+"settings.about" = "À propos et licences";
+"settings.terms" = "Conditions d’utilisation";
+"settings.privacy" = "Politique de confidentialité";
+"settings.contact" = "Contacter l’assistance";
+"settings.clearData" = "Effacer toutes les données";
+"settings.clearConfirm" = "Supprimer de cet appareil tous les nœuds, abonnements et réglages ? Cette action est irréversible.";
+
+/* On-demand */
+"onDemand.off" = "Désactivé";
+"onDemand.always" = "Toujours";
+"onDemand.wifi" = "Wi-Fi uniquement";
+"onDemand.cellular" = "Données cellulaires uniquement";
+
+/* Subscriptions */
+"subscriptions.title" = "Abonnements";
+"subscriptions.add" = "Ajouter un abonnement";
+"subscriptions.emptyTitle" = "Aucun abonnement";
+"subscriptions.emptyMessage" = "Ajoutez l’URL d’un abonnement pour importer et mettre à jour les nœuds automatiquement.";
+"subscriptions.nodes" = "nœuds";
+"subscriptions.expires" = "Expire le %@";
+"subscriptions.defaultName" = "Abonnement";
+
+/* Add subscription */
+"subscriptionAdd.title" = "Ajouter un abonnement";
+"subscriptionAdd.urlSection" = "URL de l’abonnement";
+"subscriptionAdd.details" = "Détails";
+"subscriptionAdd.name" = "Nom";
+
+/* About */
+"about.licenses" = "Licences open source";
+"about.builtWith" = "Développé avec Xray-core (MPL-2.0) et libXray (MIT). Les données de routage par pays proviennent de DB-IP Lite (CC BY 4.0) via le projet v2fly/geoip (CC BY-SA 4.0).";
+
+/* Legal */
+"legal.placeholder" = "Ce document est fourni avec l’app.";
+
+/* Errors */
+"error.uri.unsupported" = "Lien de partage non pris en charge.";
+"error.uri.none" = "Aucun lien de partage compatible n’a été trouvé.";
+"error.subscription.url" = "L’URL de l’abonnement n’est pas valide.";
+"error.subscription.http" = "Le serveur d’abonnement a renvoyé HTTP %d.";
+"error.subscription.body" = "La réponse de l’abonnement n’a pas pu être lue.";
+"error.subscription.empty" = "L’abonnement ne contient aucun nœud.";
+"error.tunnel.unavailable" = "La VPN n’est pas disponible sur cet appareil.";
+"error.tunnel.noConfig" = "Aucun nœud n’est sélectionné.";
+"error.tunnel.permission" = "L’autorisation VPN n’a pas été accordée.";
+"error.tunnel.timeout" = "La VPN n’a pas démarré à temps. Réessayez.";
+"error.tunnel.failed" = "La VPN n’a pas pu démarrer.";
+
+/* Share-link parse detail (pasted/scanned imports) */
+"error.uri.malformed.notLink" = "Ce texte n’est pas un lien de partage.";
+"error.uri.malformed.noScheme" = "Il manque le schéma du lien.";
+"error.uri.malformed.noServer" = "Il manque l’adresse du serveur dans le lien de partage.";
+"error.uri.malformed.badPort" = "Le port du lien de partage n’est pas valide.";
+"error.uri.malformed.vmessJSON" = "Le lien VMess ne contient pas de JSON base64 valide.";
+"error.uri.malformed.vmessServer" = "Il manque l’adresse du serveur dans le lien VMess.";
+"error.uri.malformed.vmessPort" = "Le port du lien VMess n’est pas valide.";
+"error.uri.malformed.vmessUUID" = "Il manque l’UUID dans le lien VMess.";
+"error.uri.malformed.vlessUUID" = "Il manque l’UUID dans le lien VLESS.";
+"error.uri.malformed.vlessUUIDInvalid" = "L’UUID du lien VLESS n’est pas valide.";
+"error.uri.malformed.trojanPassword" = "Il manque le mot de passe dans le lien Trojan.";
+"error.uri.malformed.ssFormat" = "Le lien Shadowsocks n’est pas dans un format pris en charge.";
+"error.uri.malformed.ssMethod" = "Il manque la méthode de chiffrement dans le lien Shadowsocks.";
+"error.uri.malformed.ssPassword" = "Il manque le mot de passe dans le lien Shadowsocks.";
+"error.uri.unsupportedParams" = "Ce nœud utilise des paramètres non pris en charge (%@). Ils sont ignorés.";
+"error.subscription.insecure" = "Seules les URL d’abonnement HTTPS sont prises en charge.";
+"error.subscription.inFlight" = "Cet abonnement est déjà en cours de mise à jour. Réessayez dans un instant.";
+
+/* Xray config build errors */
+"error.xray.tooLarge" = "Les règles de routage génèrent une configuration de %1$d Ko, qui dépasse la limite du noyau de %2$d Ko. Sélectionnez moins de pays/régions contournés.";
+"error.xray.dns" = "L’adresse du serveur DNS « %@ » n’est pas valide.";
+"error.xray.serialize" = "La configuration Xray n’a pas pu être sérialisée. %@";
+"error.xray.utf8" = "La configuration Xray n’a pas pu être encodée en UTF-8.";
+"error.xray.noServer" = "Le nœud n’a pas d’adresse de serveur.";
+"error.xray.badPort" = "Le port du nœud doit être compris entre 1 et 65535.";
+"error.xray.noUUID" = "L’UUID du nœud est manquant ou incorrect.";
+"error.xray.noTrojanPassword" = "Le mot de passe Trojan est manquant.";
+"error.xray.noSSMethod" = "La méthode de chiffrement Shadowsocks est manquante.";
+"error.xray.noSSPassword" = "Le mot de passe Shadowsocks est manquant.";
+"error.xray.noRealityKey" = "La clé publique REALITY est manquante.";
+"error.xray.ssReality" = "Shadowsocks ne prend pas en charge la couche de sécurité REALITY.";
+"error.xray.noGrpcService" = "Le nom du service gRPC est manquant.";
+
+"error.geoip.unavailable" = "Les données de routage par pays sont encore en préparation. Réessayez dans un instant.";
+"error.xray.socksCredentials" = "Le nom d’utilisateur et le mot de passe SOCKS5 doivent être renseignés ensemble.";
+
+/* SOCKS5 share-link parse errors */
+"error.uri.malformed.socksFormat" = "Le lien SOCKS5 n’est pas dans un format pris en charge.";
+"error.uri.malformed.socksCredentials" = "Le lien SOCKS5 nécessite un nom d’utilisateur et un mot de passe.";
+"home.action.connect" = "Se connecter";
+"home.action.disconnect" = "Se déconnecter";
+"app.name" = "WProxy";
+"permission.network.title" = "Accès au réseau";
+"permission.network.body" = "WProxy a besoin de deux autorisations iOS pour créer un tunnel sécurisé :
+
+• Réseau local — permet au VPN de voir votre réseau et d’acheminer correctement le trafic local.
+• Configuration VPN — l’autorisation système qui permet à WProxy de créer le tunnel VPN.
+
+Deux fenêtres système vont apparaître. Veuillez autoriser les deux pour continuer.";
+"permission.network.requesting" = "Demande des autorisations…";
+"permission.network.failed.title" = "Autorisations non accordées";
+"permission.network.failed.body" = "WProxy ne peut pas créer le tunnel sans ces autorisations. Autorisez Réseau local et Configuration VPN dans Réglages, puis réessayez.";
+"permission.network.retry" = "Réessayer";
+"permission.network.openSettings" = "Ouvrir Réglages";
+"permission.network.note" = "Modifiable plus tard : Réglages → Confidentialité et sécurité → Réseau local, et Réglages → Général → VPN et gestion de l’appareil.";
+/* Global confirmation after node switch / tunnel settings change */
+"toast.settingsApplied" = "Réglages appliqués.";

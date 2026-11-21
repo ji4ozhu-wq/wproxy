@@ -1,0 +1,54 @@
+/* Subscriptions — pages-b (D14/D15/D16) */
+
+"subscriptions.list.nodeCount" = "%d nodos";
+"subscriptions.list.updated" = "Actualizado %@";
+"subscriptions.list.neverUpdated" = "Aún no se ha actualizado";
+"subscriptions.list.autoUpdateFootnote" = "La actualización automática se ejecuta mientras la app está abierta.";
+"subscriptions.list.flow" = "%@ de %@";
+"subscriptions.list.expires" = "Vence el %@";
+"subscriptions.list.error" = "Error al actualizar";
+"subscriptions.list.deleteTitle" = "¿Eliminar la suscripción?";
+"subscriptions.list.deleteBody" = "\"%@\" y todos sus nodos se eliminarán de este dispositivo. Esta acción no se puede deshacer.";
+"subscriptions.list.deleteConfirm" = "Eliminar suscripción";
+"subscriptions.list.deletedToast" = "Suscripción eliminada";
+"subscriptions.list.delete" = "Eliminar";
+
+"subscriptions.add.urlPlaceholder" = "https://example.com/subscribe";
+"subscriptions.add.autoUpdate" = "Actualización automática";
+"subscriptions.add.footnote" = "Los nodos de esta suscripción aparecerán en un grupo nuevo. Al actualizar se reemplaza la lista de nodos, pero se mantiene tu selección activa cuando es posible.";
+"subscriptions.add.action" = "Añadir y actualizar";
+"subscriptions.add.invalidURL" = "Introduce una URL de suscripción válida que empiece por https://.";
+"subscriptions.add.insecureURL" = "Solo se admiten URL de suscripción HTTPS.";
+"subscriptions.add.failedTitle" = "No se pudo añadir la suscripción";
+
+"subscriptions.edit.title" = "Editar suscripción";
+"subscriptions.edit.savedToast" = "Suscripción guardada";
+
+"subscriptions.interval.off" = "Desactivado";
+"subscriptions.interval.6h" = "Cada 6 horas";
+"subscriptions.interval.12h" = "Cada 12 horas";
+"subscriptions.interval.24h" = "Cada 24 horas";
+"subscriptions.interval.7d" = "Cada 7 días";
+
+"subscriptions.detail.nodes" = "NODOS";
+"subscriptions.detail.used" = "USADO";
+"subscriptions.detail.expires" = "VENCE";
+"subscriptions.detail.lastUpdated" = "Última actualización";
+"subscriptions.detail.autoUpdate" = "Actualización automática";
+"subscriptions.detail.url" = "URL";
+"subscriptions.detail.viewAll" = "Ver los %d nodos";
+"subscriptions.detail.updateNow" = "Actualizar ahora";
+"subscriptions.detail.updateFailed" = "Error al actualizar";
+"subscriptions.detail.delete" = "Eliminar suscripción";
+"subscriptions.detail.nodesTitle" = "Nodos";
+"subscriptions.detail.noNodes" = "Esta suscripción aún no contiene ningún nodo.";
+"subscriptions.detail.updateSuccess" = "Suscripción actualizada";
+"subscriptions.detail.urlCopied" = "URL copiada";
+"subscriptions.detail.selectedNode" = "%@ seleccionado";
+"subscriptions.detail.notFound" = "Esta suscripción ya no existe.";
+"subscriptions.detail.notFoundMessage" = "Es posible que se haya eliminado. Vuelve a la lista de suscripciones.";
+"subscriptions.detail.never" = "Nunca";
+"subscriptions.detail.retry" = "Reintentar";
+
+"subscriptions.list.update" = "Actualizar";
+"subscriptions.list.updating" = "Actualizando…";

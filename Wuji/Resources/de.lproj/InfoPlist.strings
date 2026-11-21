@@ -1,0 +1,8 @@
+/* German — Info.plist permission strings */
+
+"CFBundleDisplayName" = "WProxy";
+"NSCameraUsageDescription" = "WProxy verwendet die Kamera nur, um Server-QR-Codes zu scannen, die du importieren möchtest.";
+"NSPhotoLibraryUsageDescription" = "WProxy liest ein von dir ausgewähltes Foto, um einen Server-QR-Code zu erkennen.";
+"NSPhotoLibraryAddUsageDescription" = "WProxy sichert ein Server-QR-Code-Bild in deiner Fotomediathek, wenn du es anforderst.";
+"CFBundleName" = "WProxy";
+"NSLocalNetworkUsageDescription" = "WProxy nutzt die Berechtigung „Lokales Netzwerk“, um dein aktuelles Netzwerk zu erkennen und lokalen Datenverkehr bei aktivem VPN korrekt zu leiten.";

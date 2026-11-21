@@ -1,0 +1,28 @@
+/* Routing — pages-b (D17/D18) */
+
+"routing.mode.ruleFootnote" = "ルールベースでは、ローカルと選択した国/地域を直接接続し、それ以外の通信はノード経由になります。";
+"routing.mode.globalFootnote" = "すべての通信がノード経由になります。グローバルモードの間は、ローカルネットワークと国/地域のバイパスは無効になります。";
+"routing.bypassLan.footnote" = "10.0.0.0/8、172.16.0.0/12、192.168.0.0/16 およびリンクローカルアドレスは直接接続します。";
+"routing.serverRoutingFootnote" = "プロキシサーバーのアドレスは、ルーティングループを避けるため常に直接接続します。";
+"routing.reconnectFootnote" = "接続中に変更すると自動的に再接続されます。";
+"routing.addRegion" = "国/地域を追加…";
+"routing.noRegions" = "国/地域が選択されていません";
+"routing.picker.selected" = "選択済み";
+"routing.picker.all" = "すべての国/地域";
+"routing.picker.selectAll" = "すべて選択";
+"routing.picker.clearAll" = "すべて解除";
+"routing.picker.noResultsTitle" = "国/地域が見つかりません";
+"routing.picker.noResultsMessage" = "別のキーワードで検索してください。";
+"routing.picker.unavailableTitle" = "国/地域データを利用できません";
+"routing.picker.unavailableMessage" = "内蔵の国/地域リストを読み込めませんでした。アプリを再インストールすると復元されます。";
+"routing.picker.count" = "%d 件選択中";
+
+"routing.globalMode" = "グローバルモード";
+"routing.globalMode.subtitle" = "すべての通信をノード経由にします。以下のバイパスルールは無視されます。";
+
+"routing.dns.section" = "DNS";
+"routing.dns.doh" = "リモート DoH（プロキシ経由）";
+"routing.dns.doh.subtitle" = "ノード経由の DNS-over-HTTPS です。ローカルネットワークからクエリが見えなくなりますが、国/地域の判定精度が下がることがあります。";
+"routing.dns.local" = "ローカル DNS（直接）";
+"routing.dns.local.subtitle" = "8.8.8.8 / 1.1.1.1 で直接解決します。国/地域のルーティングがより正確になりますが、ローカルのリゾルバにクエリが見えます。";
+"routing.dns.footnote" = "接続中の変更はトンネルを自動的に再接続します。";

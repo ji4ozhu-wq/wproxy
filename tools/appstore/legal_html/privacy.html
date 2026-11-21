@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>隐私政策 / Privacy Policy · WProxy / 无极代理</title>
+<style>
+:root{color-scheme:light dark;--bg:#f6f7f9;--card:#fff;--ink:#171b26;--muted:#5c667a;--line:#e4e7ec;--accent:#1f6feb}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#161b22;--ink:#e6edf3;--muted:#9aa7b8;--line:#2d333b;--accent:#58a6ff}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Segoe UI",sans-serif}
+main{max-width:860px;margin:0 auto;padding:40px 22px 80px}header{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:26px;flex-wrap:wrap}
+.brand{font-weight:800;letter-spacing:.2px}.nav a{color:var(--accent);text-decoration:none;margin-left:16px;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 30px 20px;box-shadow:0 8px 30px rgba(15,23,42,.06)}
+h1{font-size:30px;line-height:1.25;margin:0 0 8px}h2{font-size:21px;margin:30px 0 8px;padding-top:6px;border-top:1px solid var(--line)}
+h3{font-size:17px;margin:20px 0 6px}p{margin:10px 0}ul,ol{margin:8px 0 12px;padding-left:24px}li{margin:5px 0}
+.meta{color:var(--muted);font-size:14px;margin:0 0 18px}.lang{border-top:2px solid var(--line);margin-top:34px;padding-top:22px}
+.lang-label{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.footer{margin-top:26px;color:var(--muted);font-size:13px}.footer a{color:var(--accent);text-decoration:none}
+a{color:var(--accent)}.note{background:rgba(31,111,235,.08);border-left:3px solid var(--accent);padding:10px 14px;border-radius:8px}
+@media (max-width:600px){main{padding:24px 14px 60px}.card{padding:22px 18px}}
+</style>
+</head>
+<body><main>
+<header><div class="brand">WProxy · 无极代理</div><nav class="nav"><a href="privacy.html">隐私政策</a><a href="terms.html">用户协议 / Terms</a><a href="support.html">支持 / Support</a></nav></header>
+<section class="card">
+<div class="lang-label">简体中文</div>
+<h1>无极代理 / WProxy 隐私政策</h1>
+<p>生效日期：2026 年 11 月 20 日 运营者：无极代理 / WProxy 开发者 联系邮箱：ji4ozhu@gmail.com</p>
+<h2>1. 摘要</h2>
+<p>无极代理（以下简称“本 App”）是一款<strong>连接用户自有服务器</strong>的代理客户端。我们不运营代理服务器，不提供节点，不要求注册账号，也不收集、出售或共享你的个人数据。你的节点、订阅和设置默认只保存在本机。</p>
+<h2>2. 本机保存的数据</h2>
+<p>为了让你正常使用 App，以下数据会写入本机数据库或 App Group 容器：</p>
+<ul><li>节点资料：名称、协议、服务器地址、端口、UUID/密码/SOCKS5 凭据、传输与 TLS 配置；</li><li>订阅资料：订阅 URL、名称、最近更新状态、流量/到期信息；</li><li>设置：分流模式、DNS 模式、语言、跳过国家/地区、局域网开关、测速地址、当前节点等；</li><li>运行状态：当前隧道配置、连接状态、本次流量统计；</li><li>GeoIP/geosite 数据文件。</li></ul>
+<p>上述数据不会由我们上传到服务器。你可以在 App 的“设置 → 清空数据”中删除；卸载 App 通常会删除本机数据，但 iOS 可能保留 App Group 容器，建议先在 App 内清空。</p>
+<h2>3. 网络请求与第三方</h2>
+<p>本 App 不会向我们的服务器发送使用数据、分析数据、崩溃报告或广告标识。实际网络请求包括：</p>
+<ul><li><strong>代理连接</strong>：你连接节点后，流量经 iOS VPN 隧道发送到你配置的服务器。该服务器由你或第三方运营，不经过我们，我们无法查看你的访问内容。</li><li><strong>订阅更新</strong>：App 直接请求你填写的订阅 URL；订阅提供方会看到你的网络请求和 IP。订阅 URL 可能包含访问令牌，请妥善保管。</li><li><strong>延迟测试</strong>：App 会向节点发起 TCP 连接，并在已连接时请求你配置的测速 URL（默认是 <code>https://www.gstatic.com/generate_204</code>）。结果仅保存在本机。</li><li><strong>DNS</strong>：</li></ul>
+<p>- 远程 DoH 模式：中国域名通过 <code>223.5.5.5</code> / <code>119.29.29.29</code> 直连解析；其他域名通过代理使用 <code>1.1.1.1</code> / <code>8.8.8.8</code> 的 DoH 解析。 - 本地 DNS 模式：直接使用 <code>8.8.8.8</code> / <code>1.1.1.1</code> 解析。 - 上述公共 DNS 解析器会看到对应的查询内容；代理服务器在处理 DoH 时也可能看到目标地址。我们不会收到或记录这些查询。</p>
+<ul><li><strong>GeoIP 数据更新</strong>：App 从 v2fly/geoip 的公共发布镜像（如 jsDelivr、GitHub）下载公开的 GeoIP/geosite 数据，不包含账号或设备信息。</li><li><strong>Apple 服务</strong>：付费购买、TestFlight、系统诊断等由 Apple 按其政策处理，我们无法访问你的 Apple ID 支付信息。</li></ul>
+<p>第三方可能位于你所在国家/地区之外；使用代理、订阅和公共 DNS 时，请自行评估相关风险。</p>
+<h2>4. 权限</h2>
+<ul><li><strong>VPN / 网络扩展</strong>：用于创建系统 VPN 隧道，把流量转发到你选择的服务器。</li><li><strong>本地网络</strong>：用于完成 iOS 的本地网络/VPN 相关授权流程，并支持你启用“局域网不代理”；我们不会扫描、收集或上传你的局域网内容。</li><li><strong>相机</strong>：仅在你主动扫码时使用。</li><li><strong>相册</strong>：仅在你主动选择二维码图片或保存二维码时使用。</li><li>通知、定位、通讯录、麦克风：本 App 不请求这些权限。</li></ul>
+<h2>5. 我们不收集的数据</h2>
+<p>我们不收集账号、姓名、手机号、邮箱（联系客服时除外）、设备标识符、精确位置、通讯录、浏览记录、连接日志或广告标识；App 内没有广告 SDK、分析 SDK 或第三方追踪 SDK。</p>
+<h2>6. 安全</h2>
+<p>节点凭据和配置保存在本机受 iOS 数据保护的容器中；运行的隧道配置使用文件保护，并在断开后删除。我们未对本地数据库做额外加密，请使用设备锁屏密码并妥善保管设备。任何代理协议的安全性、服务器可信度和隐私表现取决于你选择的服务器，我们不提供保证。</p>
+<h2>7. 保留与删除</h2>
+<p>本机数据保留到你删除它为止。你可以在 App 内清空数据，或卸载 App。订阅提供方、DNS 解析器和代理服务器按其自身政策保留数据，我们无法代为删除。</p>
+<h2>8. 儿童</h2>
+<p>本 App 不面向 13 岁以下儿童，也不会有意收集儿童数据。</p>
+<h2>9. 变更</h2>
+<p>我们可能更新本政策。重大变更会通过版本更新说明或 App 内提示告知；继续使用即表示接受更新后的政策。</p>
+<h2>10. 联系我们</h2>
+<p>隐私问题请联系：ji4ozhu@gmail.com</p>
+<div class="lang"><div class="lang-label">English</div>
+<h1>WProxy Privacy Policy</h1>
+<p>Effective date: November 20, 2026 Operator: the WProxy / 无极代理 developer Contact: ji4ozhu@gmail.com</p>
+<h2>1. Summary</h2>
+<p>WProxy is a client for connecting to <strong>your own proxy server</strong>. We do not operate proxy servers, provide nodes, require an account, or collect, sell, or share your personal data. Your nodes, subscriptions, and settings are stored on your device by default.</p>
+<h2>2. Data stored on your device</h2>
+<p>The app stores the following locally (SQLite database and App Group container):</p>
+<ul><li>Node profiles: name, protocol, server address, port, UUID/password/SOCKS5 credentials, transport and TLS settings.</li><li>Subscriptions: URL, name, last update status, traffic and expiry metadata.</li><li>Settings: routing mode, DNS mode, language, bypassed countries/regions, LAN option, latency test URL, active node.</li><li>Runtime state: current tunnel configuration, connection state, session traffic counters.</li><li>GeoIP/geosite data files.</li></ul>
+<p>We do not upload this data to our servers. You can remove it with “Settings → Clear Data”; uninstalling the app normally removes local data, but iOS may retain the App Group container, so clear data in the app first.</p>
+<h2>3. Network requests and third parties</h2>
+<p>The app does not send usage data, analytics, crash reports, or advertising identifiers to us. Actual network requests include:</p>
+<ul><li><strong>Proxy connections</strong>: when connected, traffic goes through the iOS VPN tunnel to the server you configured. That server is operated by you or a third party, not by us; we cannot see your traffic.</li><li><strong>Subscription updates</strong>: the app requests the subscription URL you entered directly; the subscription provider sees your request and IP. A subscription URL may contain an access token—keep it private.</li><li><strong>Latency tests</strong>: the app opens a TCP connection to a node and, while connected, requests your configured test URL (default <code>https://www.gstatic.com/generate_204</code>). Results stay on the device.</li><li><strong>DNS</strong>:</li></ul>
+<p>- Remote DoH mode: Chinese domains are resolved directly via <code>223.5.5.5</code> / <code>119.29.29.29</code>; other domains use <code>1.1.1.1</code> / <code>8.8.8.8</code> DoH through the proxy. - Local DNS mode: queries go directly to <code>8.8.8.8</code> / <code>1.1.1.1</code>. - Those public resolvers see the queries; the proxy server may also see the DoH destination. We do not receive or log them.</p>
+<ul><li><strong>GeoIP updates</strong>: the app downloads public GeoIP/geosite data from v2fly/geoip mirrors (e.g. jsDelivr, GitHub); no account or device data is included.</li><li><strong>Apple services</strong>: purchases, TestFlight, and system diagnostics are handled by Apple under its policies; we cannot access your Apple ID payment details.</li></ul>
+<p>Third parties may be located outside your country/region. Evaluate the risks of the proxy, subscription, and public DNS services you choose.</p>
+<h2>4. Permissions</h2>
+<ul><li><strong>VPN / Network Extension</strong>: creates the system VPN tunnel and forwards traffic to your server.</li><li><strong>Local Network</strong>: completes iOS local-network/VPN authorization and supports the “bypass LAN” option; we do not scan, collect, or upload LAN content.</li><li><strong>Camera</strong>: only when you choose to scan a QR code.</li><li><strong>Photos</strong>: only when you choose a QR image or save a QR code.</li><li>We do not request notifications, location, contacts, or microphone access.</li></ul>
+<h2>5. Data we do not collect</h2>
+<p>We do not collect accounts, names, phone numbers, email addresses (except when you contact support), device identifiers, precise location, contacts, browsing history, connection logs, or advertising identifiers. The app contains no advertising, analytics, or third-party tracking SDKs.</p>
+<h2>6. Security</h2>
+<p>Node credentials and configuration are stored locally in iOS data-protected containers. The running tunnel configuration uses file protection and is deleted after disconnect. The local database is not additionally encrypted; use a device passcode and protect your device. The security, trustworthiness, and privacy of any proxy protocol depend on the server you choose; we make no guarantees.</p>
+<h2>7. Retention and deletion</h2>
+<p>Local data remains until you delete it. You can clear data in the app or uninstall it. Subscription providers, DNS resolvers, and proxy servers retain data under their own policies; we cannot delete it for you.</p>
+<h2>8. Children</h2>
+<p>The app is not directed to children under 13 and we do not knowingly collect children’s data.</p>
+<h2>9. Changes</h2>
+<p>We may update this policy. Material changes will be noted in release notes or in-app; continued use means you accept the updated policy.</p>
+<h2>10. Contact</h2>
+<p>Privacy questions: ji4ozhu@gmail.com</p>
+</div>
+<div class="footer">© 2026 绍兴天穹网络科技有限公司 · <a href="support.html">支持 / Support</a></div>
+</section>
+</main></body></html>

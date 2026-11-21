@@ -1,0 +1,54 @@
+/* 訂閱 — pages-b（D14/D15/D16） */
+
+"subscriptions.list.nodeCount" = "%d 個節點";
+"subscriptions.list.updated" = "更新於 %@";
+"subscriptions.list.neverUpdated" = "尚未更新";
+"subscriptions.list.autoUpdateFootnote" = "App 開啟時會自動更新訂閱。";
+"subscriptions.list.flow" = "已使用 %@／共 %@";
+"subscriptions.list.expires" = "%@ 到期";
+"subscriptions.list.error" = "更新失敗";
+"subscriptions.list.deleteTitle" = "刪除訂閱？";
+"subscriptions.list.deleteBody" = "「%@」及其所有節點將從這台裝置移除。此動作無法復原。";
+"subscriptions.list.deleteConfirm" = "刪除訂閱";
+"subscriptions.list.deletedToast" = "訂閱已刪除";
+"subscriptions.list.delete" = "刪除";
+
+"subscriptions.add.urlPlaceholder" = "https://example.com/subscribe";
+"subscriptions.add.autoUpdate" = "自動更新";
+"subscriptions.add.footnote" = "此訂閱的節點會出現在新的群組中。更新時會替換節點清單，並盡量保留目前已選的節點。";
+"subscriptions.add.action" = "新增並更新";
+"subscriptions.add.invalidURL" = "請輸入以 https:// 開頭的有效訂閱網址。";
+"subscriptions.add.insecureURL" = "僅支援 HTTPS 訂閱網址。";
+"subscriptions.add.failedTitle" = "無法新增訂閱";
+
+"subscriptions.edit.title" = "編輯訂閱";
+"subscriptions.edit.savedToast" = "訂閱已儲存";
+
+"subscriptions.interval.off" = "關閉";
+"subscriptions.interval.6h" = "每 6 小時";
+"subscriptions.interval.12h" = "每 12 小時";
+"subscriptions.interval.24h" = "每 24 小時";
+"subscriptions.interval.7d" = "每 7 天";
+
+"subscriptions.detail.nodes" = "節點";
+"subscriptions.detail.used" = "已使用";
+"subscriptions.detail.expires" = "到期";
+"subscriptions.detail.lastUpdated" = "最後更新";
+"subscriptions.detail.autoUpdate" = "自動更新";
+"subscriptions.detail.url" = "網址";
+"subscriptions.detail.viewAll" = "查看全部 %d 個節點";
+"subscriptions.detail.updateNow" = "立即更新";
+"subscriptions.detail.updateFailed" = "更新失敗";
+"subscriptions.detail.delete" = "刪除訂閱";
+"subscriptions.detail.nodesTitle" = "節點";
+"subscriptions.detail.noNodes" = "此訂閱尚無任何節點。";
+"subscriptions.detail.updateSuccess" = "訂閱已更新";
+"subscriptions.detail.urlCopied" = "網址已複製";
+"subscriptions.detail.selectedNode" = "已選擇 %@";
+"subscriptions.detail.notFound" = "此訂閱已不存在。";
+"subscriptions.detail.notFoundMessage" = "它可能已被刪除，請回到訂閱清單。";
+"subscriptions.detail.never" = "從未";
+"subscriptions.detail.retry" = "再試一次";
+
+"subscriptions.list.update" = "更新";
+"subscriptions.list.updating" = "更新中…";

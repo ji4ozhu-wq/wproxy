@@ -1,0 +1,65 @@
+"settings.section.data" = "데이터";
+"common.edit" = "편집";
+
+"settings.onDemand.footnote" = "선택한 네트워크를 사용할 수 있게 되면 자동으로 연결합니다.";
+"settings.resetVPN" = "VPN 구성 재설정";
+"settings.resetVPN.title" = "VPN 구성을 재설정하시겠습니까?";
+"settings.resetVPN.body" = "iOS 설정에 설치된 WProxy의 VPN 구성이 제거됩니다. 연결 중인 경우 연결이 해제됩니다.";
+"settings.resetVPN.confirm" = "구성 재설정";
+"settings.resetVPN.success" = "VPN 구성을 재설정했습니다";
+"settings.resetVPN.failure" = "VPN 구성을 재설정하지 못했습니다.";
+"settings.latency.section" = "지연 시간 테스트";
+"settings.latency.testURL" = "테스트 URL";
+"settings.latency.timeout" = "제한 시간";
+"settings.latency.seconds" = "%d초";
+"settings.latency.testURLTitle" = "테스트 URL";
+"settings.latency.testURLFootnote" = "노드 지연 시간을 측정할 때 사용합니다. 작고 빠른 응답을 반환하는 HTTP 또는 HTTPS URL을 사용하세요.";
+"settings.latency.testURLInvalid" = "올바른 http:// 또는 https:// URL을 입력하세요.";
+"settings.latency.timeoutTitle" = "제한 시간";
+"settings.latency.timeoutFootnote" = "지연 시간 테스트가 응답을 기다리는 시간입니다. 이를 넘으면 시간 초과로 처리됩니다.";
+"settings.saved" = "저장됨";
+"settings.subscriptions.footnote" = "자동 업데이트는 앱이 열려 있는 동안에만 실행됩니다.";
+"settings.clearData.title" = "모든 데이터를 삭제하시겠습니까?";
+"settings.clearData.body" = "이 기기에서 모든 노드, 구독, 설정이 삭제되고 앱이 처음 실행한 상태로 돌아갑니다. 이 작업은 되돌릴 수 없습니다.";
+"settings.clearData.success" = "모든 데이터를 삭제했습니다";
+"settings.about.title" = "정보";
+"settings.about.version" = "버전 %@ (%@)";
+"settings.about.copyright" = "© 2026 WProxy";
+"settings.about.openSource" = "오픈 소스 라이선스";
+"settings.about.component.xray" = "Xray-core";
+"settings.about.component.libxray" = "libXray";
+"settings.about.component.cidr" = "지역별 CIDR 데이터";
+"settings.about.license.mpl" = "MPL-2.0";
+"settings.about.license.mit" = "MIT";
+"settings.about.license.rir" = "RIR 위임 데이터";
+"settings.about.xrayFootnote" = "Xray-core는 Mozilla Public License 2.0에 따라 라이선스됩니다. 전체 라이선스 전문은 아래와 같습니다.";
+"settings.about.libxrayFootnote" = "libXray는 MIT License에 따라 라이선스됩니다. 전체 라이선스 전문은 아래와 같습니다.";
+"settings.about.cidrFootnote" = "국가 및 지역 IP 범위는 v2fly 프로젝트가 배포하는 GeoIP 데이터셋(DB-IP Lite 기반, CC BY 4.0, CC BY-SA 4.0으로 배포)에서 가져옵니다.";
+"settings.legal.effectiveDate" = "시행일: %@";
+"settings.legal.unavailableTitle" = "문서를 사용할 수 없음";
+"settings.legal.unavailableMessage" = "앱에서 이 문서를 불러오지 못했습니다.";
+"settings.legal.retry" = "다시 시도";
+
+"settings.geoip.section" = "GeoIP 데이터";
+"settings.geoip.status" = "데이터베이스 버전";
+"settings.geoip.updateNow" = "지금 업데이트";
+"settings.geoip.updated" = "%@에 업데이트됨";
+"settings.geoip.bundled" = "내장 스냅샷 · %@";
+"settings.geoip.countries" = "%d개 국가 · %d개 프리픽스";
+"settings.geoip.source" = "출처: %@";
+"settings.geoip.error" = "마지막 업데이트 실패: %@";
+"settings.geoip.footnote" = "국가별 라우팅 데이터는 VPN 연결 중에 자동으로 업데이트됩니다(최소 7일 간격). 업데이트에 실패하면 1시간마다 다시 시도합니다.";
+
+"settings.geoip.updateSuccess" = "GeoIP 데이터를 업데이트했습니다.";
+"settings.geoip.updateFailure" = "GeoIP 데이터를 업데이트하지 못했습니다. 나중에 다시 시도하세요.";
+
+/* Language (Settings → Language, in-app language switching) */
+
+"settings.language.section" = "언어";
+"settings.language.system" = "시스템 설정 따르기";
+"settings.language.english" = "English";
+"settings.language.simplifiedChinese" = "简体中文";
+"settings.language.footnote" = "앱 언어는 즉시 전환됩니다. 시스템 권한 대화상자와 홈 화면의 앱 이름은 계속 기기 언어를 따릅니다. 개인정보 처리방침과 이용약관은 영어와 중국어 간체로 제공되며, 다른 언어에서는 영어 버전이 열립니다.";
+"settings.language.followSystem" = "시스템 설정 따르기";
+"settings.language.current" = "언어";
+"settings.language.chooseAnother" = "다른 언어 선택";

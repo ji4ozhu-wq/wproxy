@@ -1,0 +1,6 @@
+"CFBundleDisplayName" = "WProxy";
+"NSCameraUsageDescription" = "WProxy ใช้กล้องเพื่อสแกนคิวอาร์โค้ดเซิร์ฟเวอร์ที่คุณเลือกนำเข้าเท่านั้น";
+"NSPhotoLibraryUsageDescription" = "WProxy อ่านภาพที่คุณเลือกเพื่อจดจำคิวอาร์โค้ดเซิร์ฟเวอร์";
+"NSPhotoLibraryAddUsageDescription" = "WProxy บันทึกภาพคิวอาร์โค้ดเซิร์ฟเวอร์ลงในคลังภาพของคุณเมื่อคุณขอให้บันทึก";
+"CFBundleName" = "WProxy";
+"NSLocalNetworkUsageDescription" = "WProxy ใช้สิทธิ์เครือข่ายท้องถิ่นเพื่อตรวจหาเครือข่ายปัจจุบันและส่งข้อมูลในเครื่องอย่างถูกต้องขณะ VPN ทำงาน";

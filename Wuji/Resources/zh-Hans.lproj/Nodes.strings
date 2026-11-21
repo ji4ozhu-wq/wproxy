@@ -1,0 +1,148 @@
+/* ===== 节点列表 ===== */
+"nodes.group.manual" = "手动添加";
+"nodes.count.one" = "1 个节点";
+"nodes.count.many" = "%d 个节点";
+"nodes.updated" = "更新于 %@";
+"nodes.updateFailed" = "更新失败";
+"nodes.sort" = "排序";
+"nodes.sortBy" = "排序方式";
+"nodes.sort.name" = "名称";
+"nodes.sort.latency" = "延迟";
+"nodes.sort.added" = "添加时间";
+"nodes.sort.ascending" = "升序";
+"nodes.sort.descending" = "降序";
+"nodes.testAll" = "全部测速";
+"nodes.testing" = "测速中…";
+"nodes.latency.unknown" = "--";
+"nodes.active" = "当前节点";
+"nodes.rowMenu" = "节点操作";
+"nodes.noResultsTitle" = "没有结果";
+"nodes.noResultsMessage" = "没有匹配当前搜索的节点。";
+
+/* 删除 */
+"nodes.delete" = "删除";
+"nodes.deleteConfirmTitle" = "删除节点";
+"nodes.deleteConfirmMessage" = "从本机移除“%@”？此操作不可撤销。";
+
+/* ===== 添加方式 ===== */
+"nodes.addMenu.manual" = "手动输入";
+"nodes.addMenu.scan" = "扫描二维码";
+"nodes.addMenu.paste" = "从剪贴板粘贴";
+"nodes.addMenu.subscription" = "添加订阅";
+
+/* ===== 节点操作 ===== */
+"nodes.action.setActive" = "设为当前节点";
+"nodes.action.edit" = "编辑节点";
+"nodes.action.copyURI" = "复制链接";
+"nodes.action.shareQR" = "分享二维码";
+"nodes.action.share" = "分享";
+"nodes.action.delete" = "删除节点";
+"nodes.action.copied" = "已复制";
+"nodes.action.noURI" = "该节点没有可分享的链接。";
+
+/* ===== 添加 / 编辑节点表单 ===== */
+"nodes.form.title" = "添加节点";
+"nodes.form.editTitle" = "编辑节点";
+"nodes.form.section.protocol" = "协议";
+"nodes.form.section.server" = "服务器";
+"nodes.form.section.credentials" = "凭据";
+"nodes.form.section.transport" = "传输";
+"nodes.form.section.reality" = "REALITY";
+"nodes.form.section.advanced" = "高级";
+"nodes.form.name" = "名称";
+"nodes.form.namePlaceholder" = "可选";
+"nodes.form.address" = "地址";
+"nodes.form.port" = "端口";
+"nodes.form.uuid" = "UUID";
+"nodes.form.alterID" = "Alter ID";
+"nodes.form.encryption" = "加密方式";
+"nodes.form.flow" = "流控";
+"nodes.form.password" = "密码";
+"nodes.form.method" = "加密方法";
+"nodes.form.network" = "传输协议";
+"nodes.form.security" = "安全层";
+"nodes.form.tls" = "TLS";
+"nodes.form.sni" = "SNI";
+"nodes.form.path" = "路径";
+"nodes.form.host" = "主机名";
+"nodes.form.grpcService" = "服务名";
+"nodes.form.fingerprint" = "浏览器指纹";
+"nodes.form.allowInsecure" = "允许不安全连接";
+"nodes.form.realityPublicKey" = "公钥";
+"nodes.form.realityShortID" = "Short ID";
+"nodes.form.none" = "无";
+"nodes.form.saving" = "保存中…";
+"nodes.form.saveFailed" = "节点保存失败，请重试。";
+"nodes.form.error.addressRequired" = "请填写服务器地址。";
+"nodes.form.error.portInvalid" = "端口必须在 1 到 65535 之间。";
+"nodes.form.error.uuidInvalid" = "请填写合法的 UUID。";
+"nodes.form.error.passwordRequired" = "请填写密码。";
+"nodes.form.error.realityKeyRequired" = "请填写 REALITY 公钥。";
+"nodes.form.error.shortIDInvalid" = "Short ID 必须是十六进制。";
+"nodes.form.error.duplicate" = "已存在相同设置的节点。";
+"nodes.form.error.addressInvalid" = "请填写合法的域名或 IP 地址。";
+
+/* ===== 剪贴板导入 ===== */
+"nodes.paste.title" = "粘贴链接";
+"nodes.paste.placeholder" = "在此粘贴分享链接，每行一条。";
+"nodes.paste.recognized" = "已识别";
+"nodes.paste.import" = "导入";
+"nodes.paste.import.one" = "导入 1 个节点";
+"nodes.paste.import.many" = "导入 %d 个节点";
+"nodes.paste.emptyHint" = "识别出的节点会显示在这里。";
+"nodes.paste.noLinks" = "没有识别到支持的分享链接。";
+"nodes.paste.footer" = "支持 vmess、vless、trojan、shadowsocks、socks5 链接，每行粘贴一条。";
+"nodes.paste.selected" = "已选 %d 个";
+
+/* ===== 扫码 ===== */
+"nodes.scan.title" = "扫描二维码";
+"nodes.scan.hint" = "将二维码放入取景框内";
+"nodes.scan.choosePhoto" = "从相册选择";
+"nodes.scan.noCamera" = "当前设备没有可用相机，请从相册选择图片。";
+"nodes.scan.permissionTitle" = "需要相机权限";
+"nodes.scan.permissionMessage" = "允许使用相机才能扫描二维码，也可以从相册选择图片。";
+"nodes.scan.openSettings" = "打开设置";
+"nodes.scan.invalidQR" = "这个二维码不包含支持的分享链接。";
+"nodes.scan.recognizedTitle" = "已识别节点";
+"nodes.scan.save" = "保存节点";
+"nodes.scan.close" = "关闭";
+"nodes.scan.pasteInstead" = "改为粘贴链接";
+"nodes.scan.photoError" = "无法从这张图片中识别二维码。";
+"nodes.scan.starting" = "正在启动相机…";
+
+/* ===== 二维码分享 ===== */
+"nodes.qr.title" = "分享节点";
+"nodes.qr.saveToPhotos" = "保存到相册";
+"nodes.qr.copyURI" = "复制链接";
+"nodes.qr.share" = "分享";
+"nodes.qr.saved" = "已保存到相册";
+"nodes.qr.saveFailed" = "图片保存失败，请允许访问相册后重试。";
+"nodes.qr.copied" = "链接已复制";
+"nodes.qr.noURI" = "该节点没有可分享的链接。";
+"nodes.qr.imageLabel" = "%@ 的二维码";
+"nodes.qr.saving" = "保存中…";
+
+/* ===== 协议同意补充 ===== */
+"consent.noAccounts" = "没有账号、没有统计、没有广告。";
+"consent.paragraph3" = "你的网络流量只会发往你自己配置的服务器。";
+"consent.permissions" = "无极代理 仅在创建承载你流量的 VPN 隧道时申请网络扩展（VPN）权限；相机仅在你扫描二维码时使用，相册仅在你选择二维码图片或保存二维码图片时使用。";
+"consent.checked" = "已同意";
+"consent.unchecked" = "未同意";
+
+/* ===== 引导 ===== */
+"onboarding.pageIndicator" = "第 %d 页，共 %d 页";
+
+/* ===== 导入结果 / 警告 ===== */
+"nodes.import.summary" = "已导入 %1$d 条，跳过重复 %2$d 条，无法解析 %3$d 条";
+"nodes.import.warningsCount" = "%d 个节点含不支持的参数";
+"nodes.import.failuresTitle" = "无法解析 %d 条";
+"nodes.import.warning" = "该节点包含不支持的参数（%@），导入后将被忽略。";
+"nodes.import.duplicate" = "已存在";
+"nodes.scan.alreadyAdded" = "该节点已在列表中。";
+"nodes.group.update" = "更新订阅";
+"nodes.action.testLatency" = "测试延迟";
+"nodes.action.testing" = "测速中…";
+
+/* ===== SOCKS5 ===== */
+"nodes.form.username" = "用户名";
+"nodes.form.error.socksCredentials" = "请同时填写用户名和密码，或两者都留空。";

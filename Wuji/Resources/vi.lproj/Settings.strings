@@ -1,0 +1,66 @@
+"settings.section.data" = "Dữ liệu";
+"common.edit" = "Sửa";
+/* Cài đặt — pages-b (D19) */
+
+"settings.onDemand.footnote" = "Tự động kết nối khi mạng đã chọn khả dụng.";
+"settings.resetVPN" = "Đặt lại cấu hình VPN";
+"settings.resetVPN.title" = "Đặt lại cấu hình VPN?";
+"settings.resetVPN.body" = "Thao tác này sẽ xóa cấu hình VPN mà WProxy đã cài trong Cài đặt iOS. Kết nối đang hoạt động sẽ bị dừng.";
+"settings.resetVPN.confirm" = "Đặt lại cấu hình";
+"settings.resetVPN.success" = "Đã đặt lại cấu hình VPN";
+"settings.resetVPN.failure" = "Không thể đặt lại cấu hình VPN.";
+"settings.latency.section" = "Kiểm tra độ trễ";
+"settings.latency.testURL" = "URL kiểm tra";
+"settings.latency.timeout" = "Thời gian chờ";
+"settings.latency.seconds" = "%d giây";
+"settings.latency.testURLTitle" = "URL kiểm tra";
+"settings.latency.testURLFootnote" = "Được dùng khi kiểm tra độ trễ của nút. Hãy dùng URL HTTP hoặc HTTPS trả về phản hồi nhỏ, nhanh.";
+"settings.latency.testURLInvalid" = "Nhập URL http:// hoặc https:// hợp lệ.";
+"settings.latency.timeoutTitle" = "Thời gian chờ";
+"settings.latency.timeoutFootnote" = "Thời gian một lần kiểm tra độ trễ chờ phản hồi trước khi báo hết thời gian chờ.";
+"settings.saved" = "Đã lưu";
+"settings.subscriptions.footnote" = "Tự động cập nhật chạy khi ứng dụng đang mở.";
+"settings.clearData.title" = "Xóa toàn bộ dữ liệu?";
+"settings.clearData.body" = "Tất cả nút, đăng ký và cài đặt sẽ bị xóa khỏi thiết bị này, và ứng dụng trở về trạng thái lần chạy đầu tiên. Không thể hoàn tác.";
+"settings.clearData.success" = "Đã xóa toàn bộ dữ liệu";
+"settings.about.title" = "Giới thiệu";
+"settings.about.version" = "Phiên bản %@ (%@)";
+"settings.about.copyright" = "© 2026 WProxy";
+"settings.about.openSource" = "Giấy phép mã nguồn mở";
+"settings.about.component.xray" = "Xray-core";
+"settings.about.component.libxray" = "libXray";
+"settings.about.component.cidr" = "Dữ liệu CIDR theo khu vực";
+"settings.about.license.mpl" = "MPL-2.0";
+"settings.about.license.mit" = "MIT";
+"settings.about.license.rir" = "Dữ liệu phân bổ RIR";
+"settings.about.xrayFootnote" = "Xray-core được cấp phép theo Mozilla Public License 2.0. Toàn văn giấy phép như sau.";
+"settings.about.libxrayFootnote" = "libXray được cấp phép theo MIT License. Toàn văn giấy phép như sau.";
+"settings.about.cidrFootnote" = "Dải IP quốc gia và khu vực lấy từ bộ dữ liệu GeoIP do dự án v2fly công bố (dựa trên DB-IP Lite, CC BY 4.0; phân phối theo CC BY-SA 4.0).";
+"settings.legal.effectiveDate" = "Ngày hiệu lực: %@";
+"settings.legal.unavailableTitle" = "Không thể hiển thị tài liệu";
+"settings.legal.unavailableMessage" = "Không thể tải tài liệu này từ gói ứng dụng.";
+"settings.legal.retry" = "Thử lại";
+
+"settings.geoip.section" = "Dữ liệu GeoIP";
+"settings.geoip.status" = "Phiên bản cơ sở dữ liệu";
+"settings.geoip.updateNow" = "Cập nhật ngay";
+"settings.geoip.updated" = "Đã cập nhật %@";
+"settings.geoip.bundled" = "Bản đi kèm · %@";
+"settings.geoip.countries" = "%d quốc gia · %d tiền tố";
+"settings.geoip.source" = "Nguồn: %@";
+"settings.geoip.error" = "Cập nhật gần nhất thất bại: %@";
+"settings.geoip.footnote" = "Dữ liệu định tuyến theo quốc gia tự động làm mới (tối đa 7 ngày một lần) khi VPN đang kết nối. Cập nhật thất bại sẽ được thử lại mỗi giờ.";
+
+"settings.geoip.updateSuccess" = "Đã cập nhật dữ liệu GeoIP.";
+"settings.geoip.updateFailure" = "Cập nhật GeoIP thất bại. Vui lòng thử lại sau.";
+
+/* Ngôn ngữ (Cài đặt → Ngôn ngữ, chuyển ngôn ngữ trong ứng dụng) */
+
+"settings.language.section" = "Ngôn ngữ";
+"settings.language.system" = "Theo hệ thống";
+"settings.language.english" = "English";
+"settings.language.simplifiedChinese" = "简体中文";
+"settings.language.footnote" = "Ngôn ngữ ứng dụng thay đổi ngay lập tức. Hộp thoại quyền của hệ thống và tên ứng dụng trên Màn hình chính vẫn theo ngôn ngữ thiết bị. Chính sách quyền riêng tư và Điều khoản sử dụng có bằng tiếng Anh và tiếng Trung giản thể; ngôn ngữ khác sẽ mở bản tiếng Anh.";
+"settings.language.followSystem" = "Theo hệ thống";
+"settings.language.current" = "Ngôn ngữ";
+"settings.language.chooseAnother" = "Chọn ngôn ngữ khác";

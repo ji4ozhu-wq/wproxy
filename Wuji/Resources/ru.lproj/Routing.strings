@@ -1,0 +1,26 @@
+/* Russian — routing settings */
+
+"routing.mode.ruleFootnote" = "По правилам локальная сеть и выбранные страны/регионы идут напрямую, остальной трафик — через ваш узел.";
+"routing.mode.globalFootnote" = "Весь трафик идёт через ваш узел. В глобальном режиме обход локальной сети и стран/регионов отключён.";
+"routing.bypassLan.footnote" = "10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 и link-local адреса остаются прямыми.";
+"routing.serverRoutingFootnote" = "Адрес вашего прокси-сервера всегда подключается напрямую, чтобы избежать петель маршрутизации.";
+"routing.reconnectFootnote" = "Изменения при активном подключении автоматически переподключают туннель.";
+"routing.addRegion" = "Добавить страну/регион…";
+"routing.noRegions" = "Страны/регионы не выбраны";
+"routing.picker.selected" = "ВЫБРАНО";
+"routing.picker.all" = "ВСЕ СТРАНЫ/РЕГИОНЫ";
+"routing.picker.selectAll" = "Выбрать все";
+"routing.picker.clearAll" = "Снять выбор";
+"routing.picker.noResultsTitle" = "Страны/регионы не найдены";
+"routing.picker.noResultsMessage" = "Попробуйте другой запрос.";
+"routing.picker.unavailableTitle" = "Данные стран/регионов недоступны";
+"routing.picker.unavailableMessage" = "Не удалось загрузить встроенный список стран/регионов. Переустановка приложения восстановит его.";
+"routing.picker.count" = "%d выбрано";
+"routing.globalMode" = "Глобальный режим";
+"routing.globalMode.subtitle" = "Весь трафик идёт через ваш узел. Правила обхода ниже игнорируются.";
+"routing.dns.section" = "DNS";
+"routing.dns.doh" = "Удалённый DoH (через прокси)";
+"routing.dns.doh.subtitle" = "DNS-over-HTTPS через ваш узел. Скрывает запросы от локальной сети, но определение стран/регионов может быть менее точным.";
+"routing.dns.local" = "Локальный DNS (напрямую)";
+"routing.dns.local.subtitle" = "Разрешение имён напрямую через 8.8.8.8 / 1.1.1.1. Более точная маршрутизация по странам/регионам, но локальный резолвер видит ваши запросы.";
+"routing.dns.footnote" = "Изменения при активном подключении автоматически переподключают туннель.";

@@ -1,0 +1,66 @@
+"settings.section.data" = "資料";
+"common.edit" = "編輯";
+/* 設定 — pages-b（D19） */
+
+"settings.onDemand.footnote" = "當所選網路可用時自動連線。";
+"settings.resetVPN" = "重設 VPN 設定";
+"settings.resetVPN.title" = "重設 VPN 設定？";
+"settings.resetVPN.body" = "這會從 iOS 設定中移除 無極代理 安裝的 VPN 設定，目前的連線也會中斷。";
+"settings.resetVPN.confirm" = "重設設定";
+"settings.resetVPN.success" = "VPN 設定已重設";
+"settings.resetVPN.failure" = "無法重設 VPN 設定。";
+"settings.latency.section" = "延遲測試";
+"settings.latency.testURL" = "測試網址";
+"settings.latency.timeout" = "逾時";
+"settings.latency.seconds" = "%d 秒";
+"settings.latency.testURLTitle" = "測試網址";
+"settings.latency.testURLFootnote" = "用於測試節點延遲。請使用回應內容小且快速的 HTTP 或 HTTPS 網址。";
+"settings.latency.testURLInvalid" = "請輸入有效的 http:// 或 https:// 網址。";
+"settings.latency.timeoutTitle" = "逾時";
+"settings.latency.timeoutFootnote" = "延遲測試等待回應的時間，超過即視為逾時。";
+"settings.saved" = "已儲存";
+"settings.subscriptions.footnote" = "App 開啟時會自動更新訂閱。";
+"settings.clearData.title" = "清除所有資料？";
+"settings.clearData.body" = "這台裝置上的所有節點、訂閱與設定都會被刪除，App 將回到首次啟動狀態。此動作無法復原。";
+"settings.clearData.success" = "已清除所有資料";
+"settings.about.title" = "關於";
+"settings.about.version" = "版本 %@（%@）";
+"settings.about.copyright" = "© 2026 無極代理";
+"settings.about.openSource" = "開放原始碼授權";
+"settings.about.component.xray" = "Xray-core";
+"settings.about.component.libxray" = "libXray";
+"settings.about.component.cidr" = "區域 CIDR 資料";
+"settings.about.license.mpl" = "MPL-2.0";
+"settings.about.license.mit" = "MIT";
+"settings.about.license.rir" = "RIR 委派資料";
+"settings.about.xrayFootnote" = "Xray-core 採用 Mozilla Public License 2.0 授權，完整授權條款如下。";
+"settings.about.libxrayFootnote" = "libXray 採用 MIT 授權，完整授權條款如下。";
+"settings.about.cidrFootnote" = "國家與區域的 IP 範圍來自 v2fly 專案發布的 GeoIP 資料集（基於 DB-IP Lite，CC BY 4.0；以 CC BY-SA 4.0 散布）。";
+"settings.legal.effectiveDate" = "生效日期：%@";
+"settings.legal.unavailableTitle" = "文件無法使用";
+"settings.legal.unavailableMessage" = "無法從 App 內建資源載入此文件。";
+"settings.legal.retry" = "再試一次";
+
+"settings.geoip.section" = "GeoIP 資料";
+"settings.geoip.status" = "資料庫版本";
+"settings.geoip.updateNow" = "立即更新";
+"settings.geoip.updated" = "已更新 %@";
+"settings.geoip.bundled" = "內建快照 · %@";
+"settings.geoip.countries" = "%d 個國家 · %d 個網段";
+"settings.geoip.source" = "來源：%@";
+"settings.geoip.error" = "上次更新失敗：%@";
+"settings.geoip.footnote" = "國家分流資料會在 VPN 連線時自動更新（最多每 7 天一次）。更新失敗時每小時重試一次。";
+
+"settings.geoip.updateSuccess" = "GeoIP 資料已更新。";
+"settings.geoip.updateFailure" = "GeoIP 更新失敗，請稍後再試。";
+
+/* 語言（設定 → 語言，應用程式內語言切換） */
+
+"settings.language.section" = "語言";
+"settings.language.system" = "跟隨系統";
+"settings.language.english" = "English";
+"settings.language.simplifiedChinese" = "简体中文";
+"settings.language.footnote" = "應用程式語言會立即切換。系統權限提示與主畫面上的 App 名稱仍依裝置語言顯示。隱私權政策與使用者條款提供英文與簡體中文版本，其他語言會開啟英文版。";
+"settings.language.followSystem" = "跟隨系統";
+"settings.language.current" = "語言";
+"settings.language.chooseAnother" = "選擇其他語言";

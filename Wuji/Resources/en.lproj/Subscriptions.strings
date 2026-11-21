@@ -1,0 +1,54 @@
+/* Subscriptions — pages-b (D14/D15/D16) */
+
+"subscriptions.list.nodeCount" = "%d nodes";
+"subscriptions.list.updated" = "Updated %@";
+"subscriptions.list.neverUpdated" = "Not updated yet";
+"subscriptions.list.autoUpdateFootnote" = "Auto-update runs while the app is open.";
+"subscriptions.list.flow" = "%@ of %@";
+"subscriptions.list.expires" = "Expires %@";
+"subscriptions.list.error" = "Update failed";
+"subscriptions.list.deleteTitle" = "Delete Subscription?";
+"subscriptions.list.deleteBody" = "\"%@\" and all of its nodes will be removed from this device. This cannot be undone.";
+"subscriptions.list.deleteConfirm" = "Delete Subscription";
+"subscriptions.list.deletedToast" = "Subscription deleted";
+"subscriptions.list.delete" = "Delete";
+
+"subscriptions.add.urlPlaceholder" = "https://example.com/subscribe";
+"subscriptions.add.autoUpdate" = "Auto Update";
+"subscriptions.add.footnote" = "Nodes from this subscription will appear in a new group. Updating replaces the node list but keeps your active selection when possible.";
+"subscriptions.add.action" = "Add & Update";
+"subscriptions.add.invalidURL" = "Enter a valid subscription URL that starts with https://.";
+"subscriptions.add.insecureURL" = "Only HTTPS subscription URLs are supported.";
+"subscriptions.add.failedTitle" = "Couldn't Add Subscription";
+
+"subscriptions.edit.title" = "Edit Subscription";
+"subscriptions.edit.savedToast" = "Subscription saved";
+
+"subscriptions.interval.off" = "Off";
+"subscriptions.interval.6h" = "Every 6 Hours";
+"subscriptions.interval.12h" = "Every 12 Hours";
+"subscriptions.interval.24h" = "Every 24 Hours";
+"subscriptions.interval.7d" = "Every 7 Days";
+
+"subscriptions.detail.nodes" = "NODES";
+"subscriptions.detail.used" = "USED";
+"subscriptions.detail.expires" = "EXPIRES";
+"subscriptions.detail.lastUpdated" = "Last Updated";
+"subscriptions.detail.autoUpdate" = "Auto Update";
+"subscriptions.detail.url" = "URL";
+"subscriptions.detail.viewAll" = "View All %d Nodes";
+"subscriptions.detail.updateNow" = "Update Now";
+"subscriptions.detail.updateFailed" = "Update Failed";
+"subscriptions.detail.delete" = "Delete Subscription";
+"subscriptions.detail.nodesTitle" = "Nodes";
+"subscriptions.detail.noNodes" = "This subscription doesn't contain any nodes yet.";
+"subscriptions.detail.updateSuccess" = "Subscription updated";
+"subscriptions.detail.urlCopied" = "URL copied";
+"subscriptions.detail.selectedNode" = "%@ selected";
+"subscriptions.detail.notFound" = "This subscription no longer exists.";
+"subscriptions.detail.notFoundMessage" = "It may have been deleted. Go back to the subscription list.";
+"subscriptions.detail.never" = "Never";
+"subscriptions.detail.retry" = "Try Again";
+
+"subscriptions.list.update" = "Update";
+"subscriptions.list.updating" = "Updating…";

@@ -1,0 +1,148 @@
+/* ===== Nodes list ===== */
+"nodes.group.manual" = "Manual";
+"nodes.count.one" = "1 nodo";
+"nodes.count.many" = "%d nodos";
+"nodes.updated" = "Actualizado %@";
+"nodes.updateFailed" = "Error al actualizar";
+"nodes.sort" = "Ordenar";
+"nodes.sortBy" = "Ordenar por";
+"nodes.sort.name" = "Nombre";
+"nodes.sort.latency" = "Latencia";
+"nodes.sort.added" = "Fecha de alta";
+"nodes.sort.ascending" = "Ascendente";
+"nodes.sort.descending" = "Descendente";
+"nodes.testAll" = "Probar todos";
+"nodes.testing" = "Probando…";
+"nodes.latency.unknown" = "--";
+"nodes.active" = "Activo";
+"nodes.rowMenu" = "Acciones del nodo";
+"nodes.noResultsTitle" = "Sin resultados";
+"nodes.noResultsMessage" = "Ningún nodo coincide con tu búsqueda.";
+
+/* Delete */
+"nodes.delete" = "Eliminar";
+"nodes.deleteConfirmTitle" = "Eliminar nodo";
+"nodes.deleteConfirmMessage" = "¿Quitar “%@” de este dispositivo? Esta acción no se puede deshacer.";
+
+/* ===== Add menu ===== */
+"nodes.addMenu.manual" = "Introducir manualmente";
+"nodes.addMenu.scan" = "Escanear código QR";
+"nodes.addMenu.paste" = "Pegar del portapapeles";
+"nodes.addMenu.subscription" = "Añadir suscripción";
+
+/* ===== Node actions ===== */
+"nodes.action.setActive" = "Establecer como activo";
+"nodes.action.edit" = "Editar nodo";
+"nodes.action.copyURI" = "Copiar URI";
+"nodes.action.shareQR" = "Compartir código QR";
+"nodes.action.share" = "Compartir";
+"nodes.action.delete" = "Eliminar nodo";
+"nodes.action.copied" = "Copiado";
+"nodes.action.noURI" = "Este nodo no tiene un enlace para compartir.";
+
+/* ===== Add / edit node form ===== */
+"nodes.form.title" = "Añadir nodo";
+"nodes.form.editTitle" = "Editar nodo";
+"nodes.form.section.protocol" = "PROTOCOLO";
+"nodes.form.section.server" = "SERVIDOR";
+"nodes.form.section.credentials" = "CREDENCIALES";
+"nodes.form.section.transport" = "TRANSPORTE";
+"nodes.form.section.reality" = "REALITY";
+"nodes.form.section.advanced" = "AVANZADO";
+"nodes.form.name" = "Nombre";
+"nodes.form.namePlaceholder" = "Opcional";
+"nodes.form.address" = "Dirección";
+"nodes.form.port" = "Puerto";
+"nodes.form.uuid" = "UUID";
+"nodes.form.alterID" = "Alter ID";
+"nodes.form.encryption" = "Cifrado";
+"nodes.form.flow" = "Flow";
+"nodes.form.password" = "Contraseña";
+"nodes.form.method" = "Método";
+"nodes.form.network" = "Red";
+"nodes.form.security" = "Seguridad";
+"nodes.form.tls" = "TLS";
+"nodes.form.sni" = "SNI";
+"nodes.form.path" = "Ruta";
+"nodes.form.host" = "Host";
+"nodes.form.grpcService" = "Nombre del servicio";
+"nodes.form.fingerprint" = "Huella";
+"nodes.form.allowInsecure" = "Permitir no seguro";
+"nodes.form.realityPublicKey" = "Clave pública";
+"nodes.form.realityShortID" = "ID corto";
+"nodes.form.none" = "Ninguno";
+"nodes.form.saving" = "Guardando…";
+"nodes.form.saveFailed" = "No se pudo guardar este nodo. Inténtalo de nuevo.";
+"nodes.form.error.addressRequired" = "Introduce la dirección del servidor.";
+"nodes.form.error.portInvalid" = "El puerto debe estar entre 1 y 65535.";
+"nodes.form.error.uuidInvalid" = "Introduce un UUID válido.";
+"nodes.form.error.passwordRequired" = "Introduce una contraseña.";
+"nodes.form.error.realityKeyRequired" = "Introduce la clave pública de REALITY.";
+"nodes.form.error.shortIDInvalid" = "El ID corto debe ser hexadecimal.";
+"nodes.form.error.duplicate" = "Ya existe un nodo con esta configuración.";
+"nodes.form.error.addressInvalid" = "Introduce un nombre de host o una dirección IP válidos.";
+
+/* ===== Paste import ===== */
+"nodes.paste.title" = "Pegar enlaces";
+"nodes.paste.placeholder" = "Pega aquí los enlaces para compartir, uno por línea.";
+"nodes.paste.recognized" = "RECONOCIDO";
+"nodes.paste.import" = "Importar";
+"nodes.paste.import.one" = "Importar 1 nodo";
+"nodes.paste.import.many" = "Importar %d nodos";
+"nodes.paste.emptyHint" = "Los nodos reconocidos aparecerán aquí.";
+"nodes.paste.noLinks" = "No se encontró ningún enlace para compartir compatible.";
+"nodes.paste.footer" = "Admite enlaces vmess, vless, trojan, shadowsocks y socks5. Pega un enlace por línea.";
+"nodes.paste.selected" = "%d seleccionados";
+
+/* ===== Scan ===== */
+"nodes.scan.title" = "Escanear código QR";
+"nodes.scan.hint" = "Coloca el código QR dentro del marco";
+"nodes.scan.choosePhoto" = "Elegir de Fotos";
+"nodes.scan.noCamera" = "La cámara no está disponible en este dispositivo. Elige una foto.";
+"nodes.scan.permissionTitle" = "Se necesita acceso a la cámara";
+"nodes.scan.permissionMessage" = "Permite el acceso a la cámara para escanear códigos QR o elige una foto.";
+"nodes.scan.openSettings" = "Abrir Ajustes";
+"nodes.scan.invalidQR" = "Este código QR no contiene un enlace para compartir compatible.";
+"nodes.scan.recognizedTitle" = "Nodo reconocido";
+"nodes.scan.save" = "Guardar nodo";
+"nodes.scan.close" = "Cerrar";
+"nodes.scan.pasteInstead" = "Pegar un enlace en su lugar";
+"nodes.scan.photoError" = "No se pudo leer ningún código QR de esa foto.";
+"nodes.scan.starting" = "Iniciando cámara…";
+
+/* ===== QR share ===== */
+"nodes.qr.title" = "Compartir nodo";
+"nodes.qr.saveToPhotos" = "Guardar en Fotos";
+"nodes.qr.copyURI" = "Copiar URI";
+"nodes.qr.share" = "Compartir";
+"nodes.qr.saved" = "Guardado en Fotos";
+"nodes.qr.saveFailed" = "No se pudo guardar la imagen. Permite añadir a Fotos e inténtalo de nuevo.";
+"nodes.qr.copied" = "URI copiada";
+"nodes.qr.noURI" = "Este nodo no tiene un enlace para compartir.";
+"nodes.qr.imageLabel" = "Código QR de %@";
+"nodes.qr.saving" = "Guardando…";
+
+/* ===== Consent additions ===== */
+"consent.noAccounts" = "Sin cuentas, sin estadísticas y sin anuncios.";
+"consent.paragraph3" = "Tu tráfico de red solo se envía al servidor que configures.";
+"consent.permissions" = "WProxy solicita el permiso de Extensión de red (VPN) solo para crear el túnel que transporta tu tráfico. La cámara solo se usa al escanear un código QR, y Fotos solo al elegir una imagen de QR o al guardar una que hayas pedido guardar.";
+"consent.checked" = "Aceptado";
+"consent.unchecked" = "Sin aceptar";
+
+/* ===== Onboarding ===== */
+"onboarding.pageIndicator" = "Página %d de %d";
+
+/* ===== Import results / warnings ===== */
+"nodes.import.summary" = "Importados %1$d · %2$d duplicados omitidos · %3$d no se pudieron analizar";
+"nodes.import.warningsCount" = "%d nodos con parámetros no compatibles";
+"nodes.import.failuresTitle" = "No se pudieron analizar %d";
+"nodes.import.warning" = "Este nodo usa parámetros no compatibles (%@). Se ignoran.";
+"nodes.import.duplicate" = "Ya añadido";
+"nodes.scan.alreadyAdded" = "Este nodo ya está en tu lista.";
+"nodes.group.update" = "Actualizar suscripción";
+"nodes.action.testLatency" = "Probar latencia";
+"nodes.action.testing" = "Probando…";
+
+/* ===== SOCKS5 ===== */
+"nodes.form.username" = "Nombre de usuario";
+"nodes.form.error.socksCredentials" = "Rellena el nombre de usuario y la contraseña, o deja ambos vacíos.";

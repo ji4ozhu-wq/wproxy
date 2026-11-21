@@ -1,0 +1,148 @@
+/* ===== Nodes list ===== */
+"nodes.group.manual" = "手動";
+"nodes.count.one" = "1 ノード";
+"nodes.count.many" = "%d ノード";
+"nodes.updated" = "%@に更新";
+"nodes.updateFailed" = "更新に失敗しました";
+"nodes.sort" = "並べ替え";
+"nodes.sortBy" = "並べ替えの基準";
+"nodes.sort.name" = "名前";
+"nodes.sort.latency" = "レイテンシ";
+"nodes.sort.added" = "追加日";
+"nodes.sort.ascending" = "昇順";
+"nodes.sort.descending" = "降順";
+"nodes.testAll" = "すべてテスト";
+"nodes.testing" = "テスト中…";
+"nodes.latency.unknown" = "--";
+"nodes.active" = "アクティブ";
+"nodes.rowMenu" = "ノードの操作";
+"nodes.noResultsTitle" = "該当なし";
+"nodes.noResultsMessage" = "検索に一致するノードがありません。";
+
+/* Delete */
+"nodes.delete" = "削除";
+"nodes.deleteConfirmTitle" = "ノードを削除";
+"nodes.deleteConfirmMessage" = "「%@」をこのデバイスから削除しますか？この操作は取り消せません。";
+
+/* ===== Add menu ===== */
+"nodes.addMenu.manual" = "手動で入力";
+"nodes.addMenu.scan" = "QR コードをスキャン";
+"nodes.addMenu.paste" = "クリップボードから貼り付け";
+"nodes.addMenu.subscription" = "サブスクリプションを追加";
+
+/* ===== Node actions ===== */
+"nodes.action.setActive" = "アクティブに設定";
+"nodes.action.edit" = "ノードを編集";
+"nodes.action.copyURI" = "URI をコピー";
+"nodes.action.shareQR" = "QR コードを共有";
+"nodes.action.share" = "共有";
+"nodes.action.delete" = "ノードを削除";
+"nodes.action.copied" = "コピーしました";
+"nodes.action.noURI" = "このノードには共有できるリンクがありません。";
+
+/* ===== Add / edit node form ===== */
+"nodes.form.title" = "ノードを追加";
+"nodes.form.editTitle" = "ノードを編集";
+"nodes.form.section.protocol" = "プロトコル";
+"nodes.form.section.server" = "サーバー";
+"nodes.form.section.credentials" = "認証情報";
+"nodes.form.section.transport" = "トランスポート";
+"nodes.form.section.reality" = "REALITY";
+"nodes.form.section.advanced" = "詳細設定";
+"nodes.form.name" = "名前";
+"nodes.form.namePlaceholder" = "任意";
+"nodes.form.address" = "アドレス";
+"nodes.form.port" = "ポート";
+"nodes.form.uuid" = "UUID";
+"nodes.form.alterID" = "Alter ID";
+"nodes.form.encryption" = "暗号化";
+"nodes.form.flow" = "フロー";
+"nodes.form.password" = "パスワード";
+"nodes.form.method" = "方式";
+"nodes.form.network" = "トランスポート";
+"nodes.form.security" = "セキュリティ";
+"nodes.form.tls" = "TLS";
+"nodes.form.sni" = "SNI";
+"nodes.form.path" = "パス";
+"nodes.form.host" = "ホスト";
+"nodes.form.grpcService" = "サービス名";
+"nodes.form.fingerprint" = "フィンガープリント";
+"nodes.form.allowInsecure" = "安全でない接続を許可";
+"nodes.form.realityPublicKey" = "公開鍵";
+"nodes.form.realityShortID" = "Short ID";
+"nodes.form.none" = "なし";
+"nodes.form.saving" = "保存中…";
+"nodes.form.saveFailed" = "このノードを保存できませんでした。もう一度お試しください。";
+"nodes.form.error.addressRequired" = "サーバーアドレスを入力してください。";
+"nodes.form.error.portInvalid" = "ポートは 1〜65535 の範囲で指定してください。";
+"nodes.form.error.uuidInvalid" = "有効な UUID を入力してください。";
+"nodes.form.error.passwordRequired" = "パスワードを入力してください。";
+"nodes.form.error.realityKeyRequired" = "REALITY の公開鍵を入力してください。";
+"nodes.form.error.shortIDInvalid" = "Short ID は 16 進数で入力してください。";
+"nodes.form.error.duplicate" = "同じ設定のノードがすでに存在します。";
+"nodes.form.error.addressInvalid" = "有効なホスト名または IP アドレスを入力してください。";
+
+/* ===== Paste import ===== */
+"nodes.paste.title" = "リンクを貼り付け";
+"nodes.paste.placeholder" = "共有リンクを 1 行に 1 つずつ貼り付けてください。";
+"nodes.paste.recognized" = "認識済み";
+"nodes.paste.import" = "取り込む";
+"nodes.paste.import.one" = "1 件のノードを取り込む";
+"nodes.paste.import.many" = "%d 件のノードを取り込む";
+"nodes.paste.emptyHint" = "認識したノードがここに表示されます。";
+"nodes.paste.noLinks" = "対応する共有リンクが見つかりませんでした。";
+"nodes.paste.footer" = "vmess、vless、trojan、shadowsocks、socks5 のリンクに対応しています。1 行に 1 つずつ貼り付けてください。";
+"nodes.paste.selected" = "%d 件選択中";
+
+/* ===== Scan ===== */
+"nodes.scan.title" = "QR コードをスキャン";
+"nodes.scan.hint" = "QR コードをフレーム内に合わせてください";
+"nodes.scan.choosePhoto" = "写真から選択";
+"nodes.scan.noCamera" = "このデバイスではカメラを使用できません。代わりに写真を選択してください。";
+"nodes.scan.permissionTitle" = "カメラへのアクセスが必要です";
+"nodes.scan.permissionMessage" = "QR コードをスキャンするにはカメラへのアクセスを許可するか、代わりに写真を選択してください。";
+"nodes.scan.openSettings" = "設定を開く";
+"nodes.scan.invalidQR" = "この QR コードには対応する共有リンクが含まれていません。";
+"nodes.scan.recognizedTitle" = "ノードを認識しました";
+"nodes.scan.save" = "ノードを保存";
+"nodes.scan.close" = "閉じる";
+"nodes.scan.pasteInstead" = "代わりにリンクを貼り付け";
+"nodes.scan.photoError" = "その写真から QR コードを読み取れませんでした。";
+"nodes.scan.starting" = "カメラを起動しています…";
+
+/* ===== QR share ===== */
+"nodes.qr.title" = "ノードを共有";
+"nodes.qr.saveToPhotos" = "写真に保存";
+"nodes.qr.copyURI" = "URI をコピー";
+"nodes.qr.share" = "共有";
+"nodes.qr.saved" = "写真に保存しました";
+"nodes.qr.saveFailed" = "画像を保存できませんでした。写真への追加を許可して、もう一度お試しください。";
+"nodes.qr.copied" = "URI をコピーしました";
+"nodes.qr.noURI" = "このノードには共有できるリンクがありません。";
+"nodes.qr.imageLabel" = "%@ の QR コード";
+"nodes.qr.saving" = "保存中…";
+
+/* ===== Consent additions ===== */
+"consent.noAccounts" = "アカウントも解析も広告もありません。";
+"consent.paragraph3" = "通信は、あなたが設定したサーバーにだけ送信されます。";
+"consent.permissions" = "WProxy がネットワーク拡張（VPN）の許可を求めるのは、通信を運ぶトンネルを作成するためだけです。カメラは QR コードをスキャンするとき、写真は QR 画像を選択するときや保存を依頼されたときだけ使用します。";
+"consent.checked" = "同意済み";
+"consent.unchecked" = "未同意";
+
+/* ===== Onboarding ===== */
+"onboarding.pageIndicator" = "%d / %d ページ";
+
+/* ===== Import results / warnings ===== */
+"nodes.import.summary" = "取り込み %1$d 件・重複スキップ %2$d 件・解析失敗 %3$d 件";
+"nodes.import.warningsCount" = "未対応のパラメータを含むノード %d 件";
+"nodes.import.failuresTitle" = "%d 件を解析できませんでした";
+"nodes.import.warning" = "このノードは未対応のパラメータ（%@）を使用しています。これらは無視されます。";
+"nodes.import.duplicate" = "追加済み";
+"nodes.scan.alreadyAdded" = "このノードはすでに一覧にあります。";
+"nodes.group.update" = "サブスクリプションを更新";
+"nodes.action.testLatency" = "レイテンシをテスト";
+"nodes.action.testing" = "テスト中…";
+
+/* ===== SOCKS5 ===== */
+"nodes.form.username" = "ユーザー名";
+"nodes.form.error.socksCredentials" = "ユーザー名とパスワードの両方を入力するか、両方とも空にしてください。";

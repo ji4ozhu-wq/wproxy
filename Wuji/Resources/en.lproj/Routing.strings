@@ -1,0 +1,28 @@
+/* Routing — pages-b (D17/D18) */
+
+"routing.mode.ruleFootnote" = "Rule-based keeps local and selected countries/regions direct; all other traffic uses your node.";
+"routing.mode.globalFootnote" = "All traffic uses your node. Local-network and country/region bypassing are turned off while Global mode is on.";
+"routing.bypassLan.footnote" = "10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 and link-local addresses stay direct.";
+"routing.serverRoutingFootnote" = "Your proxy server's address is always connected directly to avoid routing loops.";
+"routing.reconnectFootnote" = "Changes made while connected reconnect automatically.";
+"routing.addRegion" = "Add Country/Region…";
+"routing.noRegions" = "No countries/regions selected";
+"routing.picker.selected" = "SELECTED";
+"routing.picker.all" = "ALL COUNTRIES/REGIONS";
+"routing.picker.selectAll" = "Select All";
+"routing.picker.clearAll" = "Clear All";
+"routing.picker.noResultsTitle" = "No Countries/Regions Found";
+"routing.picker.noResultsMessage" = "Try a different search term.";
+"routing.picker.unavailableTitle" = "Country/Region Data Unavailable";
+"routing.picker.unavailableMessage" = "The built-in country/region list couldn't be loaded. Reinstalling the app will restore it.";
+"routing.picker.count" = "%d selected";
+
+"routing.globalMode" = "Global Mode";
+"routing.globalMode.subtitle" = "Send all traffic through your node. The bypass rules below are ignored.";
+
+"routing.dns.section" = "DNS";
+"routing.dns.doh" = "Remote DoH (through proxy)";
+"routing.dns.doh.subtitle" = "DNS-over-HTTPS through your node. Hides queries from the local network; country/region detection may be less accurate.";
+"routing.dns.local" = "Local DNS (direct)";
+"routing.dns.local.subtitle" = "Resolve with 8.8.8.8 / 1.1.1.1 directly. More accurate country/region routing, but the local resolver can see your queries.";
+"routing.dns.footnote" = "Changes while connected reconnect the tunnel automatically.";

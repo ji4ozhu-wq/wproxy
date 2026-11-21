@@ -1,0 +1,148 @@
+/* ===== Nodes list ===== */
+"nodes.group.manual" = "Manual";
+"nodes.count.one" = "1 node";
+"nodes.count.many" = "%d nodes";
+"nodes.updated" = "Updated %@";
+"nodes.updateFailed" = "Update failed";
+"nodes.sort" = "Sort";
+"nodes.sortBy" = "Sort By";
+"nodes.sort.name" = "Name";
+"nodes.sort.latency" = "Latency";
+"nodes.sort.added" = "Date Added";
+"nodes.sort.ascending" = "Ascending";
+"nodes.sort.descending" = "Descending";
+"nodes.testAll" = "Test All";
+"nodes.testing" = "Testing…";
+"nodes.latency.unknown" = "--";
+"nodes.active" = "Active";
+"nodes.rowMenu" = "Node Actions";
+"nodes.noResultsTitle" = "No Results";
+"nodes.noResultsMessage" = "No nodes match your search.";
+
+/* Delete */
+"nodes.delete" = "Delete";
+"nodes.deleteConfirmTitle" = "Delete Node";
+"nodes.deleteConfirmMessage" = "Remove “%@” from this device? This cannot be undone.";
+
+/* ===== Add menu ===== */
+"nodes.addMenu.manual" = "Enter Manually";
+"nodes.addMenu.scan" = "Scan QR Code";
+"nodes.addMenu.paste" = "Paste from Clipboard";
+"nodes.addMenu.subscription" = "Add Subscription";
+
+/* ===== Node actions ===== */
+"nodes.action.setActive" = "Set as Active";
+"nodes.action.edit" = "Edit Node";
+"nodes.action.copyURI" = "Copy URI";
+"nodes.action.shareQR" = "Share QR Code";
+"nodes.action.share" = "Share";
+"nodes.action.delete" = "Delete Node";
+"nodes.action.copied" = "Copied";
+"nodes.action.noURI" = "This node doesn't have a shareable link.";
+
+/* ===== Add / edit node form ===== */
+"nodes.form.title" = "Add Node";
+"nodes.form.editTitle" = "Edit Node";
+"nodes.form.section.protocol" = "PROTOCOL";
+"nodes.form.section.server" = "SERVER";
+"nodes.form.section.credentials" = "CREDENTIALS";
+"nodes.form.section.transport" = "TRANSPORT";
+"nodes.form.section.reality" = "REALITY";
+"nodes.form.section.advanced" = "ADVANCED";
+"nodes.form.name" = "Name";
+"nodes.form.namePlaceholder" = "Optional";
+"nodes.form.address" = "Address";
+"nodes.form.port" = "Port";
+"nodes.form.uuid" = "UUID";
+"nodes.form.alterID" = "Alter ID";
+"nodes.form.encryption" = "Encryption";
+"nodes.form.flow" = "Flow";
+"nodes.form.password" = "Password";
+"nodes.form.method" = "Method";
+"nodes.form.network" = "Network";
+"nodes.form.security" = "Security";
+"nodes.form.tls" = "TLS";
+"nodes.form.sni" = "SNI";
+"nodes.form.path" = "Path";
+"nodes.form.host" = "Host";
+"nodes.form.grpcService" = "Service Name";
+"nodes.form.fingerprint" = "Fingerprint";
+"nodes.form.allowInsecure" = "Allow Insecure";
+"nodes.form.realityPublicKey" = "Public Key";
+"nodes.form.realityShortID" = "Short ID";
+"nodes.form.none" = "None";
+"nodes.form.saving" = "Saving…";
+"nodes.form.saveFailed" = "Couldn't save this node. Try again.";
+"nodes.form.error.addressRequired" = "Enter a server address.";
+"nodes.form.error.portInvalid" = "Port must be between 1 and 65535.";
+"nodes.form.error.uuidInvalid" = "Enter a valid UUID.";
+"nodes.form.error.passwordRequired" = "Enter a password.";
+"nodes.form.error.realityKeyRequired" = "Enter the REALITY public key.";
+"nodes.form.error.shortIDInvalid" = "Short ID must be hexadecimal.";
+"nodes.form.error.duplicate" = "A node with these settings already exists.";
+"nodes.form.error.addressInvalid" = "Enter a valid host name or IP address.";
+
+/* ===== Paste import ===== */
+"nodes.paste.title" = "Paste Links";
+"nodes.paste.placeholder" = "Paste share links here, one per line.";
+"nodes.paste.recognized" = "RECOGNIZED";
+"nodes.paste.import" = "Import";
+"nodes.paste.import.one" = "Import 1 Node";
+"nodes.paste.import.many" = "Import %d Nodes";
+"nodes.paste.emptyHint" = "Recognized nodes will appear here.";
+"nodes.paste.noLinks" = "No supported share links were found.";
+"nodes.paste.footer" = "Supports vmess, vless, trojan, shadowsocks and socks5 links. Paste one link per line.";
+"nodes.paste.selected" = "%d selected";
+
+/* ===== Scan ===== */
+"nodes.scan.title" = "Scan QR Code";
+"nodes.scan.hint" = "Place the QR code inside the frame";
+"nodes.scan.choosePhoto" = "Choose from Photos";
+"nodes.scan.noCamera" = "Camera isn't available on this device. Choose a photo instead.";
+"nodes.scan.permissionTitle" = "Camera Access Needed";
+"nodes.scan.permissionMessage" = "Allow camera access to scan QR codes, or pick a photo instead.";
+"nodes.scan.openSettings" = "Open Settings";
+"nodes.scan.invalidQR" = "This QR code doesn't contain a supported share link.";
+"nodes.scan.recognizedTitle" = "Node Recognized";
+"nodes.scan.save" = "Save Node";
+"nodes.scan.close" = "Close";
+"nodes.scan.pasteInstead" = "Paste a link instead";
+"nodes.scan.photoError" = "Couldn't read a QR code from that photo.";
+"nodes.scan.starting" = "Starting camera…";
+
+/* ===== QR share ===== */
+"nodes.qr.title" = "Share Node";
+"nodes.qr.saveToPhotos" = "Save to Photos";
+"nodes.qr.copyURI" = "Copy URI";
+"nodes.qr.share" = "Share";
+"nodes.qr.saved" = "Saved to Photos";
+"nodes.qr.saveFailed" = "Couldn't save the image. Allow adding to Photos and try again.";
+"nodes.qr.copied" = "URI Copied";
+"nodes.qr.noURI" = "This node doesn't have a shareable link.";
+"nodes.qr.imageLabel" = "QR code for %@";
+"nodes.qr.saving" = "Saving…";
+
+/* ===== Consent additions ===== */
+"consent.noAccounts" = "No accounts, no analytics, and no ads.";
+"consent.paragraph3" = "Your network traffic is only sent to the server you configure.";
+"consent.permissions" = "WProxy asks for the Network Extension (VPN) permission only to build the tunnel that carries your traffic. Camera is used only when you scan a QR code, and Photos only when you pick a QR image or save one you asked to save.";
+"consent.checked" = "Agreed";
+"consent.unchecked" = "Not agreed";
+
+/* ===== Onboarding ===== */
+"onboarding.pageIndicator" = "Page %d of %d";
+
+/* ===== Import results / warnings ===== */
+"nodes.import.summary" = "Imported %1$d · Skipped %2$d duplicates · %3$d couldn't be parsed";
+"nodes.import.warningsCount" = "%d nodes with unsupported parameters";
+"nodes.import.failuresTitle" = "Couldn't parse %d";
+"nodes.import.warning" = "This node uses unsupported parameters (%@). They are ignored.";
+"nodes.import.duplicate" = "Already added";
+"nodes.scan.alreadyAdded" = "This node is already in your list.";
+"nodes.group.update" = "Update subscription";
+"nodes.action.testLatency" = "Test Latency";
+"nodes.action.testing" = "Testing…";
+
+/* ===== SOCKS5 ===== */
+"nodes.form.username" = "Username";
+"nodes.form.error.socksCredentials" = "Fill in both the username and password, or leave both empty.";

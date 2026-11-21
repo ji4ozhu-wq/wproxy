@@ -1,0 +1,8 @@
+/* Russian — Info.plist permission strings */
+
+"CFBundleDisplayName" = "WProxy";
+"NSCameraUsageDescription" = "WProxy использует камеру только для сканирования QR-кодов серверов, которые вы хотите импортировать.";
+"NSPhotoLibraryUsageDescription" = "WProxy читает выбранное вами фото, чтобы распознать QR-код сервера.";
+"NSPhotoLibraryAddUsageDescription" = "WProxy сохраняет изображение QR-кода сервера в вашу медиатеку по вашему запросу.";
+"CFBundleName" = "WProxy";
+"NSLocalNetworkUsageDescription" = "WProxy использует разрешение «Локальная сеть», чтобы определять текущую сеть и правильно маршрутизировать локальный трафик при активном VPN.";

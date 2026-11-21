@@ -1,0 +1,28 @@
+/* 分流 — pages-b（D17/D18） */
+
+"routing.mode.ruleFootnote" = "規則分流會讓區域網路與已選國家/區域的流量維持不代理，其餘流量則走你的節點。";
+"routing.mode.globalFootnote" = "全域模式下所有流量都走你的節點，區域網路與國家/區域不代理暫不生效。";
+"routing.bypassLan.footnote" = "10.0.0.0/8、172.16.0.0/12、192.168.0.0/16 及連結本地位址會維持不代理。";
+"routing.serverRoutingFootnote" = "你的代理伺服器位址一律不代理，以避免路由迴圈。";
+"routing.reconnectFootnote" = "連線中修改會自動重新連線。";
+"routing.addRegion" = "新增國家/區域…";
+"routing.noRegions" = "尚未選擇國家/區域";
+"routing.picker.selected" = "已選";
+"routing.picker.all" = "所有國家/區域";
+"routing.picker.selectAll" = "全選";
+"routing.picker.clearAll" = "清除";
+"routing.picker.noResultsTitle" = "找不到國家/區域";
+"routing.picker.noResultsMessage" = "換個關鍵字試試看。";
+"routing.picker.unavailableTitle" = "國家/區域資料無法使用";
+"routing.picker.unavailableMessage" = "內建國家/區域清單載入失敗，重新安裝 App 即可恢復。";
+"routing.picker.count" = "已選 %d 個";
+
+"routing.globalMode" = "全域模式";
+"routing.globalMode.subtitle" = "所有流量都經由你的節點，下方的不代理規則不生效。";
+
+"routing.dns.section" = "DNS";
+"routing.dns.doh" = "遠端 DoH（經代理）";
+"routing.dns.doh.subtitle" = "透過節點使用 DoH 解析。區域網路看不到查詢，但國家/區域判斷可能較不準確。";
+"routing.dns.local" = "本機 DNS（不代理）";
+"routing.dns.local.subtitle" = "直接以 8.8.8.8 / 1.1.1.1 解析。分流較準確，但本機解析器能看到你的查詢內容。";
+"routing.dns.footnote" = "連線中修改會自動重新連線。";

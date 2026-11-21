@@ -1,0 +1,6 @@
+"CFBundleDisplayName" = "無極代理";
+"NSCameraUsageDescription" = "無極代理 僅在你掃描伺服器 QR Code 時使用相機。";
+"NSPhotoLibraryUsageDescription" = "無極代理 只會讀取你選擇的照片，用來辨識其中的伺服器 QR Code。";
+"NSPhotoLibraryAddUsageDescription" = "當你要求儲存伺服器 QR Code 圖片時，無極代理 會將其儲存到照片。";
+"CFBundleName" = "無極代理";
+"NSLocalNetworkUsageDescription" = "WProxy 使用區域網路權限來辨識目前網路，並在 VPN 連線時正確轉送本機流量。";

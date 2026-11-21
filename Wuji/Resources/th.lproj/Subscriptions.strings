@@ -1,0 +1,54 @@
+/* การสมัครใช้งาน — pages-b (D14/D15/D16) */
+
+"subscriptions.list.nodeCount" = "%d โหนด";
+"subscriptions.list.updated" = "อัปเดต %@";
+"subscriptions.list.neverUpdated" = "ยังไม่อัปเดต";
+"subscriptions.list.autoUpdateFootnote" = "การอัปเดตอัตโนมัติทำงานขณะเปิดแอป";
+"subscriptions.list.flow" = "%@ จาก %@";
+"subscriptions.list.expires" = "หมดอายุ %@";
+"subscriptions.list.error" = "อัปเดตไม่สำเร็จ";
+"subscriptions.list.deleteTitle" = "ลบการสมัครใช้งานหรือไม่";
+"subscriptions.list.deleteBody" = "\"%@\" และโหนดทั้งหมดจะถูกลบออกจากอุปกรณ์นี้ การดำเนินการนี้ไม่สามารถย้อนกลับได้";
+"subscriptions.list.deleteConfirm" = "ลบการสมัครใช้งาน";
+"subscriptions.list.deletedToast" = "ลบการสมัครใช้งานแล้ว";
+"subscriptions.list.delete" = "ลบ";
+
+"subscriptions.add.urlPlaceholder" = "https://example.com/subscribe";
+"subscriptions.add.autoUpdate" = "อัปเดตอัตโนมัติ";
+"subscriptions.add.footnote" = "โหนดจากการสมัครใช้งานนี้จะแสดงในกลุ่มใหม่ การอัปเดตจะแทนที่รายการโหนด แต่จะเก็บโหนดที่เลือกไว้เมื่อเป็นไปได้";
+"subscriptions.add.action" = "เพิ่มและอัปเดต";
+"subscriptions.add.invalidURL" = "โปรดกรอก URL การสมัครใช้งานที่ถูกต้องซึ่งขึ้นต้นด้วย https://";
+"subscriptions.add.insecureURL" = "รองรับเฉพาะ URL การสมัครใช้งานแบบ HTTPS เท่านั้น";
+"subscriptions.add.failedTitle" = "ไม่สามารถเพิ่มการสมัครใช้งานได้";
+
+"subscriptions.edit.title" = "แก้ไขการสมัครใช้งาน";
+"subscriptions.edit.savedToast" = "บันทึกการสมัครใช้งานแล้ว";
+
+"subscriptions.interval.off" = "ปิด";
+"subscriptions.interval.6h" = "ทุก 6 ชั่วโมง";
+"subscriptions.interval.12h" = "ทุก 12 ชั่วโมง";
+"subscriptions.interval.24h" = "ทุก 24 ชั่วโมง";
+"subscriptions.interval.7d" = "ทุก 7 วัน";
+
+"subscriptions.detail.nodes" = "โหนด";
+"subscriptions.detail.used" = "ใช้แล้ว";
+"subscriptions.detail.expires" = "หมดอายุ";
+"subscriptions.detail.lastUpdated" = "อัปเดตล่าสุด";
+"subscriptions.detail.autoUpdate" = "อัปเดตอัตโนมัติ";
+"subscriptions.detail.url" = "URL";
+"subscriptions.detail.viewAll" = "ดูโหนดทั้งหมด %d โหนด";
+"subscriptions.detail.updateNow" = "อัปเดตตอนนี้";
+"subscriptions.detail.updateFailed" = "อัปเดตไม่สำเร็จ";
+"subscriptions.detail.delete" = "ลบการสมัครใช้งาน";
+"subscriptions.detail.nodesTitle" = "โหนด";
+"subscriptions.detail.noNodes" = "การสมัครใช้งานนี้ยังไม่มีโหนด";
+"subscriptions.detail.updateSuccess" = "อัปเดตการสมัครใช้งานแล้ว";
+"subscriptions.detail.urlCopied" = "คัดลอก URL แล้ว";
+"subscriptions.detail.selectedNode" = "เลือก %@ แล้ว";
+"subscriptions.detail.notFound" = "ไม่พบการสมัครใช้งานนี้อีกต่อไป";
+"subscriptions.detail.notFoundMessage" = "อาจถูกลบไปแล้ว โปรดกลับไปที่รายการการสมัครใช้งาน";
+"subscriptions.detail.never" = "ไม่เคย";
+"subscriptions.detail.retry" = "ลองอีกครั้ง";
+
+"subscriptions.list.update" = "อัปเดต";
+"subscriptions.list.updating" = "กำลังอัปเดต…";

@@ -1,0 +1,148 @@
+/* ===== 節點清單 ===== */
+"nodes.group.manual" = "手動";
+"nodes.count.one" = "1 個節點";
+"nodes.count.many" = "%d 個節點";
+"nodes.updated" = "更新於 %@";
+"nodes.updateFailed" = "更新失敗";
+"nodes.sort" = "排序";
+"nodes.sortBy" = "排序方式";
+"nodes.sort.name" = "名稱";
+"nodes.sort.latency" = "延遲";
+"nodes.sort.added" = "加入日期";
+"nodes.sort.ascending" = "遞增";
+"nodes.sort.descending" = "遞減";
+"nodes.testAll" = "全部測速";
+"nodes.testing" = "測速中…";
+"nodes.latency.unknown" = "--";
+"nodes.active" = "使用中";
+"nodes.rowMenu" = "節點操作";
+"nodes.noResultsTitle" = "沒有結果";
+"nodes.noResultsMessage" = "沒有符合搜尋條件的節點。";
+
+/* 刪除 */
+"nodes.delete" = "刪除";
+"nodes.deleteConfirmTitle" = "刪除節點";
+"nodes.deleteConfirmMessage" = "要從這台裝置移除「%@」嗎？此動作無法復原。";
+
+/* ===== 新增方式 ===== */
+"nodes.addMenu.manual" = "手動輸入";
+"nodes.addMenu.scan" = "掃描 QR Code";
+"nodes.addMenu.paste" = "從剪貼簿貼上";
+"nodes.addMenu.subscription" = "新增訂閱";
+
+/* ===== 節點操作 ===== */
+"nodes.action.setActive" = "設為目前節點";
+"nodes.action.edit" = "編輯節點";
+"nodes.action.copyURI" = "複製 URI";
+"nodes.action.shareQR" = "分享 QR Code";
+"nodes.action.share" = "分享";
+"nodes.action.delete" = "刪除節點";
+"nodes.action.copied" = "已複製";
+"nodes.action.noURI" = "此節點沒有可分享的連結。";
+
+/* ===== 新增／編輯節點表單 ===== */
+"nodes.form.title" = "新增節點";
+"nodes.form.editTitle" = "編輯節點";
+"nodes.form.section.protocol" = "通訊協定";
+"nodes.form.section.server" = "伺服器";
+"nodes.form.section.credentials" = "認證資訊";
+"nodes.form.section.transport" = "傳輸";
+"nodes.form.section.reality" = "REALITY";
+"nodes.form.section.advanced" = "進階";
+"nodes.form.name" = "名稱";
+"nodes.form.namePlaceholder" = "選填";
+"nodes.form.address" = "位址";
+"nodes.form.port" = "連接埠";
+"nodes.form.uuid" = "UUID";
+"nodes.form.alterID" = "Alter ID";
+"nodes.form.encryption" = "加密方式";
+"nodes.form.flow" = "Flow";
+"nodes.form.password" = "密碼";
+"nodes.form.method" = "加密方法";
+"nodes.form.network" = "傳輸方式";
+"nodes.form.security" = "安全層";
+"nodes.form.tls" = "TLS";
+"nodes.form.sni" = "SNI";
+"nodes.form.path" = "路徑";
+"nodes.form.host" = "主機名稱";
+"nodes.form.grpcService" = "服務名稱";
+"nodes.form.fingerprint" = "瀏覽器指紋";
+"nodes.form.allowInsecure" = "允許不安全連線";
+"nodes.form.realityPublicKey" = "公鑰";
+"nodes.form.realityShortID" = "Short ID";
+"nodes.form.none" = "無";
+"nodes.form.saving" = "儲存中…";
+"nodes.form.saveFailed" = "無法儲存此節點，請再試一次。";
+"nodes.form.error.addressRequired" = "請填寫伺服器位址。";
+"nodes.form.error.portInvalid" = "連接埠必須介於 1 到 65535 之間。";
+"nodes.form.error.uuidInvalid" = "請填寫有效的 UUID。";
+"nodes.form.error.passwordRequired" = "請填寫密碼。";
+"nodes.form.error.realityKeyRequired" = "請填寫 REALITY 公鑰。";
+"nodes.form.error.shortIDInvalid" = "Short ID 必須是十六進位。";
+"nodes.form.error.duplicate" = "已存在相同設定的節點。";
+"nodes.form.error.addressInvalid" = "請填寫有效的網域名稱或 IP 位址。";
+
+/* ===== 貼上匯入 ===== */
+"nodes.paste.title" = "貼上連結";
+"nodes.paste.placeholder" = "在此貼上分享連結，每行一個。";
+"nodes.paste.recognized" = "已辨識";
+"nodes.paste.import" = "匯入";
+"nodes.paste.import.one" = "匯入 1 個節點";
+"nodes.paste.import.many" = "匯入 %d 個節點";
+"nodes.paste.emptyHint" = "辨識到的節點會顯示在這裡。";
+"nodes.paste.noLinks" = "找不到支援的分享連結。";
+"nodes.paste.footer" = "支援 vmess、vless、trojan、shadowsocks 與 socks5 連結，每行貼上一個。";
+"nodes.paste.selected" = "已選 %d 個";
+
+/* ===== 掃描 ===== */
+"nodes.scan.title" = "掃描 QR Code";
+"nodes.scan.hint" = "將 QR Code 對準框內";
+"nodes.scan.choosePhoto" = "從照片中選擇";
+"nodes.scan.noCamera" = "此裝置無法使用相機，請改從照片選擇。";
+"nodes.scan.permissionTitle" = "需要相機權限";
+"nodes.scan.permissionMessage" = "允許相機權限才能掃描 QR Code，也可以改從照片選擇。";
+"nodes.scan.openSettings" = "開啟設定";
+"nodes.scan.invalidQR" = "此 QR Code 不包含支援的分享連結。";
+"nodes.scan.recognizedTitle" = "已辨識節點";
+"nodes.scan.save" = "儲存節點";
+"nodes.scan.close" = "關閉";
+"nodes.scan.pasteInstead" = "改為貼上連結";
+"nodes.scan.photoError" = "無法從該照片讀取 QR Code。";
+"nodes.scan.starting" = "正在啟動相機…";
+
+/* ===== QR Code 分享 ===== */
+"nodes.qr.title" = "分享節點";
+"nodes.qr.saveToPhotos" = "儲存到照片";
+"nodes.qr.copyURI" = "複製 URI";
+"nodes.qr.share" = "分享";
+"nodes.qr.saved" = "已儲存到照片";
+"nodes.qr.saveFailed" = "無法儲存圖片，請允許加入照片後再試一次。";
+"nodes.qr.copied" = "已複製 URI";
+"nodes.qr.noURI" = "此節點沒有可分享的連結。";
+"nodes.qr.imageLabel" = "%@ 的 QR Code";
+"nodes.qr.saving" = "儲存中…";
+
+/* ===== 同意補充 ===== */
+"consent.noAccounts" = "沒有帳號、沒有分析、沒有廣告。";
+"consent.paragraph3" = "你的網路流量只會傳送到你設定的伺服器。";
+"consent.permissions" = "無極代理 僅為了建立承載你流量的 VPN 通道而要求網路擴充功能（VPN）權限。相機僅在掃描 QR Code 時使用；照片僅在你挑選 QR 圖片或要求儲存圖片時使用。";
+"consent.checked" = "已同意";
+"consent.unchecked" = "未同意";
+
+/* ===== 引導 ===== */
+"onboarding.pageIndicator" = "第 %d 頁，共 %d 頁";
+
+/* ===== 匯入結果／警告 ===== */
+"nodes.import.summary" = "已匯入 %1$d 個，略過重複 %2$d 個，%3$d 個無法解析";
+"nodes.import.warningsCount" = "%d 個節點含不受支援的參數";
+"nodes.import.failuresTitle" = "無法解析 %d 個";
+"nodes.import.warning" = "此節點使用不受支援的參數（%@），將被忽略。";
+"nodes.import.duplicate" = "已加入";
+"nodes.scan.alreadyAdded" = "此節點已在你的清單中。";
+"nodes.group.update" = "更新訂閱";
+"nodes.action.testLatency" = "測試延遲";
+"nodes.action.testing" = "測試中…";
+
+/* ===== SOCKS5 ===== */
+"nodes.form.username" = "使用者名稱";
+"nodes.form.error.socksCredentials" = "使用者名稱與密碼請一起填寫，或兩者都留空。";

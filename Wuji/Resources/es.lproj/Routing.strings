@@ -1,0 +1,28 @@
+/* Routing — pages-b (D17/D18) */
+
+"routing.mode.ruleFootnote" = "Con el modo por reglas, la red local y los países/regiones seleccionados se conectan directamente; el resto del tráfico usa tu nodo.";
+"routing.mode.globalFootnote" = "Todo el tráfico usa tu nodo. La exclusión del tráfico de la red local y de los países/regiones se desactiva mientras el modo Global está activo.";
+"routing.bypassLan.footnote" = "Las direcciones 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 y las locales de enlace se mantienen directas.";
+"routing.serverRoutingFootnote" = "La dirección de tu servidor proxy siempre se conecta directamente para evitar bucles de enrutamiento.";
+"routing.reconnectFootnote" = "Los cambios hechos durante la conexión se reconectan automáticamente.";
+"routing.addRegion" = "Añadir país/región…";
+"routing.noRegions" = "Ningún país/región seleccionado";
+"routing.picker.selected" = "SELECCIONADAS";
+"routing.picker.all" = "TODOS LOS PAÍSES/REGIONES";
+"routing.picker.selectAll" = "Seleccionar todo";
+"routing.picker.clearAll" = "Borrar selección";
+"routing.picker.noResultsTitle" = "No se encontraron países/regiones";
+"routing.picker.noResultsMessage" = "Prueba con otro término de búsqueda.";
+"routing.picker.unavailableTitle" = "Datos de países/regiones no disponibles";
+"routing.picker.unavailableMessage" = "No se pudo cargar la lista de países/regiones incluida. Al reinstalar la app se restaurará.";
+"routing.picker.count" = "%d seleccionadas";
+
+"routing.globalMode" = "Modo Global";
+"routing.globalMode.subtitle" = "Envía todo el tráfico por tu nodo. Las reglas de exclusión siguientes se ignoran.";
+
+"routing.dns.section" = "DNS";
+"routing.dns.doh" = "DoH remoto (a través del proxy)";
+"routing.dns.doh.subtitle" = "DNS over HTTPS a través de tu nodo. Oculta las consultas a la red local; la detección de países/regiones puede ser menos precisa.";
+"routing.dns.local" = "DNS local (directo)";
+"routing.dns.local.subtitle" = "Resuelve con 8.8.8.8 / 1.1.1.1 directamente. Enrutamiento por países/regiones más preciso, pero el resolutor local puede ver tus consultas.";
+"routing.dns.footnote" = "Los cambios hechos durante la conexión reconectan el túnel automáticamente.";

@@ -1,0 +1,54 @@
+/* 订阅 — pages-b（D14/D15/D16） */
+
+"subscriptions.list.nodeCount" = "%d 个节点";
+"subscriptions.list.updated" = "更新于 %@";
+"subscriptions.list.neverUpdated" = "尚未更新";
+"subscriptions.list.autoUpdateFootnote" = "App 打开时会自动更新订阅。";
+"subscriptions.list.flow" = "已用 %@ / 共 %@";
+"subscriptions.list.expires" = "到期时间 %@";
+"subscriptions.list.error" = "更新失败";
+"subscriptions.list.deleteTitle" = "删除订阅？";
+"subscriptions.list.deleteBody" = "“%@”及其全部节点将从本机删除，此操作不可撤销。";
+"subscriptions.list.deleteConfirm" = "删除订阅";
+"subscriptions.list.deletedToast" = "订阅已删除";
+"subscriptions.list.delete" = "删除";
+
+"subscriptions.add.urlPlaceholder" = "https://example.com/subscribe";
+"subscriptions.add.autoUpdate" = "自动更新";
+"subscriptions.add.footnote" = "该订阅的节点会出现在新的分组中。更新会替换节点列表，并尽量保留当前选中的节点。";
+"subscriptions.add.action" = "添加并更新";
+"subscriptions.add.invalidURL" = "请输入以 https:// 开头的有效订阅地址。";
+"subscriptions.add.insecureURL" = "仅支持 HTTPS 订阅地址。";
+"subscriptions.add.failedTitle" = "无法添加订阅";
+
+"subscriptions.edit.title" = "编辑订阅";
+"subscriptions.edit.savedToast" = "订阅已保存";
+
+"subscriptions.interval.off" = "关闭";
+"subscriptions.interval.6h" = "每 6 小时";
+"subscriptions.interval.12h" = "每 12 小时";
+"subscriptions.interval.24h" = "每 24 小时";
+"subscriptions.interval.7d" = "每 7 天";
+
+"subscriptions.detail.nodes" = "节点";
+"subscriptions.detail.used" = "已用";
+"subscriptions.detail.expires" = "到期";
+"subscriptions.detail.lastUpdated" = "最后更新";
+"subscriptions.detail.autoUpdate" = "自动更新";
+"subscriptions.detail.url" = "地址";
+"subscriptions.detail.viewAll" = "查看全部 %d 个节点";
+"subscriptions.detail.updateNow" = "立即更新";
+"subscriptions.detail.updateFailed" = "更新失败";
+"subscriptions.detail.delete" = "删除订阅";
+"subscriptions.detail.nodesTitle" = "节点";
+"subscriptions.detail.noNodes" = "该订阅还没有任何节点。";
+"subscriptions.detail.updateSuccess" = "订阅已更新";
+"subscriptions.detail.urlCopied" = "地址已复制";
+"subscriptions.detail.selectedNode" = "已选择 %@";
+"subscriptions.detail.notFound" = "该订阅已不存在。";
+"subscriptions.detail.notFoundMessage" = "它可能已被删除，请返回订阅列表。";
+"subscriptions.detail.never" = "从未";
+"subscriptions.detail.retry" = "重试";
+
+"subscriptions.list.update" = "更新";
+"subscriptions.list.updating" = "更新中…";

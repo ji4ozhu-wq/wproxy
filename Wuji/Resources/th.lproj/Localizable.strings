@@ -1,0 +1,196 @@
+/* แท็บ */
+"tab.connect" = "เชื่อมต่อ";
+"tab.nodes" = "โหนด";
+"tab.settings" = "การตั้งค่า";
+
+/* ทั่วไป */
+"common.allow" = "อนุญาต";
+"common.notNow" = "ไม่ใช่ตอนนี้";
+"common.skip" = "ข้าม";
+"common.continue" = "ดำเนินการต่อ";
+"common.cancel" = "ยกเลิก";
+"common.done" = "เสร็จสิ้น";
+"common.save" = "บันทึก";
+
+/* หน้าหลัก */
+"home.notConnected" = "ยังไม่ได้เชื่อมต่อ";
+"home.connecting" = "กำลังเชื่อมต่อ…";
+"home.connected" = "เชื่อมต่อแล้ว";
+"home.disconnecting" = "กำลังยกเลิกการเชื่อมต่อ…";
+"home.latencyUnknown" = "ไม่ทราบความหน่วง";
+"home.selectNodeHint" = "เลือกโหนดเพื่อเริ่มต้น";
+"home.currentNode" = "โหนดปัจจุบัน";
+"home.none" = "ไม่มี";
+"home.routing" = "การกำหนดเส้นทาง";
+"home.thisSession" = "เซสชันนี้";
+"home.download" = "ดาวน์โหลด";
+"home.upload" = "อัปโหลด";
+"home.duration" = "ระยะเวลา";
+"home.total" = "รวม";
+"home.chooseNode" = "เลือกโหนด";
+"home.resetVpn" = "รีเซ็ตการกำหนดค่า VPN";
+"home.noNodeSelected" = "โปรดเลือกโหนดก่อน";
+"unit.ms" = "%d ms";
+
+/* การเชื่อมต่อครั้งแรก */
+"firstConnect.title" = "อนุญาตการกำหนดค่า VPN";
+"firstConnect.body" = "iOS ต้องได้รับอนุญาตจากคุณเพื่อสร้างอุโมงค์ VPN WProxy ไม่เก็บหรือบันทึกทราฟฟิกของคุณ และคุณสามารถยกเลิกการเชื่อมต่อหรือลบการกำหนดค่าได้ทุกเมื่อ";
+
+/* ข้อตกลง */
+"consent.navTitle" = "ก่อนเริ่มต้น";
+"consent.title" = "ข้อมูลของคุณอยู่ในอุปกรณ์นี้เท่านั้น";
+"consent.paragraph1" = "WProxy จัดเก็บโหนดและการตั้งค่าของคุณไว้ในอุปกรณ์นี้เท่านั้น";
+"consent.agree" = "ฉันยอมรับข้อกำหนดการใช้งานและนโยบายความเป็นส่วนตัว";
+"consent.continue" = "ยอมรับและดำเนินการต่อ";
+
+/* การแนะนำการใช้งาน */
+"onboarding.1.title" = "การเชื่อมต่อของคุณ อยู่ในการควบคุมของคุณ";
+"onboarding.1.body" = "เพิ่มเซิร์ฟเวอร์ของคุณเอง เชื่อมต่อได้ในแตะเดียว และให้ทราฟฟิกเครือข่ายภายในหรือประเทศ/ภูมิภาคที่เลือกเชื่อมต่อโดยตรง";
+"onboarding.2.title" = "ใช้เซิร์ฟเวอร์ของคุณเอง";
+"onboarding.2.body" = "เพิ่มโหนดด้วยคิวอาร์โค้ด วางลิงก์ หรือนำเข้า URL การสมัครใช้งาน";
+"onboarding.3.title" = "ให้ทราฟฟิกภายในประเทศเชื่อมต่อโดยตรงเมื่อจำเป็น";
+"onboarding.3.body" = "เครือข่ายภายในและประเทศ/ภูมิภาคที่คุณเลือกจะเชื่อมต่อโดยตรง ส่วนที่เหลือจะใช้โหนดของคุณ";
+"onboarding.getStarted" = "เริ่มใช้งาน";
+
+/* โหนด */
+"nodes.search" = "ค้นหาโหนด";
+"nodes.emptyTitle" = "ยังไม่มีโหนด";
+"nodes.emptyMessage" = "เพิ่มเซิร์ฟเวอร์ด้วยตนเอง สแกนคิวอาร์โค้ด หรือนำเข้าการสมัครใช้งานเพื่อเริ่มต้น";
+"nodes.addNode" = "เพิ่มโหนด";
+"nodes.addSubscription" = "เพิ่มการสมัครใช้งาน";
+
+/* เมนูเพิ่ม */
+"addMenu.manual" = "กรอกด้วยตนเอง";
+"addMenu.scan" = "สแกนคิวอาร์โค้ด";
+"addMenu.paste" = "วางจากคลิปบอร์ด";
+"addMenu.subscription" = "เพิ่มการสมัครใช้งาน";
+
+/* การกำหนดเส้นทาง */
+"routing.title" = "การกำหนดเส้นทาง";
+"routing.rule" = "กฎ";
+"routing.global" = "ทั้งระบบ";
+"routing.summary" = "กฎ · ข้าม %d รายการ";
+"routing.modeSection" = "โหมด";
+"routing.mode" = "โหมด";
+"routing.localSection" = "เครือข่ายภายใน";
+"routing.bypassLan" = "ข้ามเครือข่ายภายใน";
+"routing.regionsSection" = "ประเทศ/ภูมิภาค (ข้ามแบบ Direct)";
+"routing.bypassedRegions" = "ข้ามประเทศ/ภูมิภาคแบบ Direct";
+"routing.selectedCount" = "เลือก %d รายการ";
+"routing.searchRegions" = "ค้นหาประเทศ/ภูมิภาค";
+"routing.regionPickerTitle" = "ประเทศ/ภูมิภาคที่ไม่ผ่านพร็อกซี";
+
+/* การตั้งค่า */
+"settings.section.connection" = "การเชื่อมต่อ";
+"settings.section.subscriptions" = "การสมัครใช้งาน";
+"settings.section.support" = "การสนับสนุน";
+"settings.routing" = "การกำหนดเส้นทาง";
+"settings.onDemand" = "ตามต้องการ";
+"settings.subscriptions" = "การสมัครใช้งาน";
+"settings.autoUpdate" = "อัปเดตอัตโนมัติ";
+"settings.about" = "เกี่ยวกับและใบอนุญาต";
+"settings.terms" = "ข้อกำหนดการใช้งาน";
+"settings.privacy" = "นโยบายความเป็นส่วนตัว";
+"settings.contact" = "ติดต่อฝ่ายสนับสนุน";
+"settings.clearData" = "ล้างข้อมูลทั้งหมด";
+"settings.clearConfirm" = "ลบโหนด การสมัครใช้งาน และการตั้งค่าทั้งหมดออกจากอุปกรณ์นี้หรือไม่ การดำเนินการนี้ไม่สามารถย้อนกลับได้";
+
+/* ตามต้องการ */
+"onDemand.off" = "ปิด";
+"onDemand.always" = "เสมอ";
+"onDemand.wifi" = "เฉพาะ Wi-Fi";
+"onDemand.cellular" = "เฉพาะเซลลูลาร์";
+
+/* การสมัครใช้งาน */
+"subscriptions.title" = "การสมัครใช้งาน";
+"subscriptions.add" = "เพิ่มการสมัครใช้งาน";
+"subscriptions.emptyTitle" = "ยังไม่มีการสมัครใช้งาน";
+"subscriptions.emptyMessage" = "เพิ่ม URL การสมัครใช้งานเพื่อนำเข้าและอัปเดตโหนดโดยอัตโนมัติ";
+"subscriptions.nodes" = "โหนด";
+"subscriptions.expires" = "หมดอายุ %@";
+"subscriptions.defaultName" = "การสมัครใช้งาน";
+
+/* เพิ่มการสมัครใช้งาน */
+"subscriptionAdd.title" = "เพิ่มการสมัครใช้งาน";
+"subscriptionAdd.urlSection" = "URL การสมัครใช้งาน";
+"subscriptionAdd.details" = "รายละเอียด";
+"subscriptionAdd.name" = "ชื่อ";
+
+/* เกี่ยวกับ */
+"about.licenses" = "ใบอนุญาตโอเพนซอร์ส";
+"about.builtWith" = "สร้างด้วย Xray-core (MPL-2.0) และ libXray (MIT) ข้อมูลการกำหนดเส้นทางตามประเทศได้มาจาก DB-IP Lite (CC BY 4.0) ผ่านโปรเจกต์ v2fly/geoip (CC BY-SA 4.0)";
+
+/* เอกสารทางกฎหมาย */
+"legal.placeholder" = "เอกสารนี้มาพร้อมกับแอป";
+
+/* ข้อผิดพลาด */
+"error.uri.unsupported" = "ไม่รองรับลิงก์แชร์นี้";
+"error.uri.none" = "ไม่พบลิงก์แชร์ที่รองรับ";
+"error.subscription.url" = "URL การสมัครใช้งานไม่ถูกต้อง";
+"error.subscription.http" = "เซิร์ฟเวอร์การสมัครใช้งานตอบกลับ HTTP %d";
+"error.subscription.body" = "ไม่สามารถอ่านการตอบกลับของการสมัครใช้งานได้";
+"error.subscription.empty" = "การสมัครใช้งานไม่มีโหนดใด ๆ";
+"error.tunnel.unavailable" = "VPN ไม่พร้อมใช้งานบนอุปกรณ์นี้";
+"error.tunnel.noConfig" = "ยังไม่ได้เลือกโหนด";
+"error.tunnel.permission" = "ไม่ได้รับอนุญาตให้ใช้ VPN";
+"error.tunnel.timeout" = "อุโมงค์ VPN ไม่ได้เริ่มภายในเวลาที่กำหนด โปรดลองอีกครั้ง";
+"error.tunnel.failed" = "ไม่สามารถเริ่มอุโมงค์ VPN ได้";
+
+/* รายละเอียดการแยกวิเคราะห์ลิงก์แชร์ (นำเข้าด้วยการวาง/สแกน) */
+"error.uri.malformed.notLink" = "ข้อความนี้ไม่ใช่ลิงก์แชร์";
+"error.uri.malformed.noScheme" = "ลิงก์ไม่มี scheme";
+"error.uri.malformed.noServer" = "ลิงก์แชร์ไม่มีที่อยู่เซิร์ฟเวอร์";
+"error.uri.malformed.badPort" = "ลิงก์แชร์มีพอร์ตที่ไม่ถูกต้อง";
+"error.uri.malformed.vmessJSON" = "ลิงก์ VMess ไม่มี JSON base64 ที่ถูกต้อง";
+"error.uri.malformed.vmessServer" = "ลิงก์ VMess ไม่มีที่อยู่เซิร์ฟเวอร์";
+"error.uri.malformed.vmessPort" = "ลิงก์ VMess มีพอร์ตที่ไม่ถูกต้อง";
+"error.uri.malformed.vmessUUID" = "ลิงก์ VMess ไม่มี UUID";
+"error.uri.malformed.vlessUUID" = "ลิงก์ VLESS ไม่มี UUID";
+"error.uri.malformed.vlessUUIDInvalid" = "ลิงก์ VLESS มี UUID ที่ไม่ถูกต้อง";
+"error.uri.malformed.trojanPassword" = "ลิงก์ Trojan ไม่มีรหัสผ่าน";
+"error.uri.malformed.ssFormat" = "ลิงก์ Shadowsocks ไม่อยู่ในรูปแบบที่รองรับ";
+"error.uri.malformed.ssMethod" = "ลิงก์ Shadowsocks ไม่มีวิธีการเข้ารหัส";
+"error.uri.malformed.ssPassword" = "ลิงก์ Shadowsocks ไม่มีรหัสผ่าน";
+"error.uri.unsupportedParams" = "โหนดนี้ใช้พารามิเตอร์ที่ไม่รองรับ (%@) จึงถูกละเว้น";
+"error.subscription.insecure" = "รองรับเฉพาะ URL การสมัครใช้งานแบบ HTTPS เท่านั้น";
+"error.subscription.inFlight" = "กำลังอัปเดตการสมัครใช้งานนี้อยู่ โปรดลองอีกครั้งในอีกสักครู่";
+
+/* ข้อผิดพลาดในการสร้างการกำหนดค่า Xray */
+"error.xray.tooLarge" = "กฎการกำหนดเส้นทางสร้างการกำหนดค่าขนาด %1$d KB ซึ่งเกินขีดจำกัด %2$d KB ของเคอร์เนล โปรดเลือกประเทศ/ภูมิภาคที่ไม่ผ่านพร็อกซีให้น้อยลง";
+"error.xray.dns" = "ที่อยู่เซิร์ฟเวอร์ DNS “%@” ไม่ถูกต้อง";
+"error.xray.serialize" = "ไม่สามารถแปลงการกำหนดค่า Xray ได้ %@";
+"error.xray.utf8" = "ไม่สามารถเข้ารหัสการกำหนดค่า Xray เป็น UTF-8 ได้";
+"error.xray.noServer" = "โหนดไม่มีที่อยู่เซิร์ฟเวอร์";
+"error.xray.badPort" = "พอร์ตของโหนดต้องอยู่ระหว่าง 1 ถึง 65535";
+"error.xray.noUUID" = "UUID ของโหนดหายไปหรือไม่ถูกต้อง";
+"error.xray.noTrojanPassword" = "รหัสผ่าน Trojan หายไป";
+"error.xray.noSSMethod" = "วิธีการเข้ารหัสของ Shadowsocks หายไป";
+"error.xray.noSSPassword" = "รหัสผ่าน Shadowsocks หายไป";
+"error.xray.noRealityKey" = "คีย์สาธารณะ REALITY หายไป";
+"error.xray.ssReality" = "Shadowsocks ไม่รองรับเลเยอร์ความปลอดภัย REALITY";
+"error.xray.noGrpcService" = "ชื่อบริการ gRPC หายไป";
+
+"error.geoip.unavailable" = "ข้อมูลการกำหนดเส้นทางตามประเทศยังเตรียมไม่เสร็จ โปรดลองอีกครั้งในอีกสักครู่";
+"error.xray.socksCredentials" = "ต้องกรอกชื่อผู้ใช้และรหัสผ่าน SOCKS5 พร้อมกัน";
+
+/* ข้อผิดพลาดการแยกวิเคราะห์ลิงก์แชร์ SOCKS5 */
+"error.uri.malformed.socksFormat" = "ลิงก์ SOCKS5 ไม่อยู่ในรูปแบบที่รองรับ";
+"error.uri.malformed.socksCredentials" = "ลิงก์ SOCKS5 ต้องมีทั้งชื่อผู้ใช้และรหัสผ่าน";
+"home.action.connect" = "เชื่อมต่อ";
+"home.action.disconnect" = "ยกเลิกการเชื่อมต่อ";
+"app.name" = "WProxy";
+"permission.network.title" = "การเข้าถึงเครือข่าย";
+"permission.network.body" = "WProxy ต้องใช้สิทธิ์ iOS สองรายการเพื่อสร้างอุโมงค์ที่ปลอดภัย:
+
+• เครือข่ายท้องถิ่น — ให้ VPN มองเห็นเครือข่ายของคุณและส่งข้อมูลในเครื่องได้อย่างถูกต้อง
+• การกำหนดค่า VPN — สิทธิ์ของระบบที่อนุญาตให้ WProxy สร้างอุโมงค์ VPN
+
+จะมีกล่องข้อความระบบสองครั้ง กรุณาอนุญาตทั้งสองรายการเพื่อดำเนินการต่อ";
+"permission.network.requesting" = "กำลังขอสิทธิ์…";
+"permission.network.failed.title" = "ยังไม่ได้อนุญาตสิทธิ์";
+"permission.network.failed.body" = "หากไม่มีสิทธิ์เหล่านี้ WProxy จะสร้างอุโมงค์ไม่ได้ กรุณาอนุญาตเครือข่ายท้องถิ่นและการกำหนดค่า VPN ในการตั้งค่า แล้วลองอีกครั้ง";
+"permission.network.retry" = "ลองอีกครั้ง";
+"permission.network.openSettings" = "เปิดการตั้งค่า";
+"permission.network.note" = "เปลี่ยนได้ภายหลัง: การตั้งค่า → ความเป็นส่วนตัวและความปลอดภัย → เครือข่ายท้องถิ่น และ การตั้งค่า → ทั่วไป → VPN และการจัดการอุปกรณ์";
+/* Global confirmation after node switch / tunnel settings change */
+"toast.settingsApplied" = "นำการตั้งค่าไปใช้แล้ว";

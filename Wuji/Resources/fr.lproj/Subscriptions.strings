@@ -1,0 +1,54 @@
+/* Subscriptions — pages-b (D14/D15/D16) */
+
+"subscriptions.list.nodeCount" = "%d nœuds";
+"subscriptions.list.updated" = "Mis à jour %@";
+"subscriptions.list.neverUpdated" = "Pas encore mis à jour";
+"subscriptions.list.autoUpdateFootnote" = "La mise à jour automatique s’exécute lorsque l’app est ouverte.";
+"subscriptions.list.flow" = "%@ sur %@";
+"subscriptions.list.expires" = "Expire le %@";
+"subscriptions.list.error" = "Échec de la mise à jour";
+"subscriptions.list.deleteTitle" = "Supprimer l’abonnement ?";
+"subscriptions.list.deleteBody" = "\"%@\" et tous ses nœuds seront supprimés de cet appareil. Cette action est irréversible.";
+"subscriptions.list.deleteConfirm" = "Supprimer l’abonnement";
+"subscriptions.list.deletedToast" = "Abonnement supprimé";
+"subscriptions.list.delete" = "Supprimer";
+
+"subscriptions.add.urlPlaceholder" = "https://example.com/subscribe";
+"subscriptions.add.autoUpdate" = "Mise à jour automatique";
+"subscriptions.add.footnote" = "Les nœuds de cet abonnement apparaîtront dans un nouveau groupe. La mise à jour remplace la liste des nœuds tout en conservant votre sélection active lorsque c’est possible.";
+"subscriptions.add.action" = "Ajouter et mettre à jour";
+"subscriptions.add.invalidURL" = "Saisissez une URL d’abonnement valide commençant par https://.";
+"subscriptions.add.insecureURL" = "Seules les URL d’abonnement HTTPS sont prises en charge.";
+"subscriptions.add.failedTitle" = "Impossible d’ajouter l’abonnement";
+
+"subscriptions.edit.title" = "Modifier l’abonnement";
+"subscriptions.edit.savedToast" = "Abonnement enregistré";
+
+"subscriptions.interval.off" = "Désactivé";
+"subscriptions.interval.6h" = "Toutes les 6 heures";
+"subscriptions.interval.12h" = "Toutes les 12 heures";
+"subscriptions.interval.24h" = "Toutes les 24 heures";
+"subscriptions.interval.7d" = "Tous les 7 jours";
+
+"subscriptions.detail.nodes" = "NŒUDS";
+"subscriptions.detail.used" = "UTILISÉ";
+"subscriptions.detail.expires" = "EXPIRE";
+"subscriptions.detail.lastUpdated" = "Dernière mise à jour";
+"subscriptions.detail.autoUpdate" = "Mise à jour automatique";
+"subscriptions.detail.url" = "URL";
+"subscriptions.detail.viewAll" = "Afficher les %d nœuds";
+"subscriptions.detail.updateNow" = "Mettre à jour";
+"subscriptions.detail.updateFailed" = "Échec de la mise à jour";
+"subscriptions.detail.delete" = "Supprimer l’abonnement";
+"subscriptions.detail.nodesTitle" = "Nœuds";
+"subscriptions.detail.noNodes" = "Cet abonnement ne contient encore aucun nœud.";
+"subscriptions.detail.updateSuccess" = "Abonnement mis à jour";
+"subscriptions.detail.urlCopied" = "URL copiée";
+"subscriptions.detail.selectedNode" = "%@ sélectionné";
+"subscriptions.detail.notFound" = "Cet abonnement n’existe plus.";
+"subscriptions.detail.notFoundMessage" = "Il a peut-être été supprimé. Revenez à la liste des abonnements.";
+"subscriptions.detail.never" = "Jamais";
+"subscriptions.detail.retry" = "Réessayer";
+
+"subscriptions.list.update" = "Mettre à jour";
+"subscriptions.list.updating" = "Mise à jour…";

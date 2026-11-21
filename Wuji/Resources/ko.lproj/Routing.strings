@@ -1,0 +1,28 @@
+/* Routing — pages-b (D17/D18) */
+
+"routing.mode.ruleFootnote" = "규칙 기반은 로컬과 선택한 국가/지역을 직접 연결하고, 나머지 트래픽은 노드를 통해 전송합니다.";
+"routing.mode.globalFootnote" = "모든 트래픽이 노드를 통해 전송됩니다. 글로벌 모드에서는 로컬 네트워크와 국가/지역 우회가 꺼집니다.";
+"routing.bypassLan.footnote" = "10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 및 링크 로컬 주소는 직접 연결됩니다.";
+"routing.serverRoutingFootnote" = "프록시 서버 주소는 라우팅 루프를 피하기 위해 항상 직접 연결됩니다.";
+"routing.reconnectFootnote" = "연결 중에 변경하면 자동으로 다시 연결됩니다.";
+"routing.addRegion" = "국가/지역 추가…";
+"routing.noRegions" = "선택한 국가/지역 없음";
+"routing.picker.selected" = "선택됨";
+"routing.picker.all" = "모든 국가/지역";
+"routing.picker.selectAll" = "모두 선택";
+"routing.picker.clearAll" = "모두 해제";
+"routing.picker.noResultsTitle" = "국가/지역을 찾을 수 없음";
+"routing.picker.noResultsMessage" = "다른 검색어를 입력해 보세요.";
+"routing.picker.unavailableTitle" = "국가/지역 데이터를 사용할 수 없음";
+"routing.picker.unavailableMessage" = "내장 국가/지역 목록을 불러오지 못했습니다. 앱을 다시 설치하면 복원됩니다.";
+"routing.picker.count" = "%d개 선택됨";
+
+"routing.globalMode" = "글로벌 모드";
+"routing.globalMode.subtitle" = "모든 트래픽을 노드를 통해 전송합니다. 아래 우회 규칙은 무시됩니다.";
+
+"routing.dns.section" = "DNS";
+"routing.dns.doh" = "원격 DoH(프록시 경유)";
+"routing.dns.doh.subtitle" = "노드를 통한 DNS-over-HTTPS입니다. 로컬 네트워크에서 쿼리를 볼 수 없지만 국가/지역 판단이 덜 정확할 수 있습니다.";
+"routing.dns.local" = "로컬 DNS(직접)";
+"routing.dns.local.subtitle" = "8.8.8.8 / 1.1.1.1로 직접 확인합니다. 국가/지역 라우팅이 더 정확해지지만 로컬 리졸버가 쿼리를 볼 수 있습니다.";
+"routing.dns.footnote" = "연결 중에 변경하면 터널이 자동으로 다시 연결됩니다.";
