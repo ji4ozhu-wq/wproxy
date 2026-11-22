@@ -1,5 +1,4 @@
 import SwiftUI
-import UIKit
 
 /// Modal destinations owned by the Nodes feature.
 enum NodeFlow: Identifiable {
@@ -41,15 +40,9 @@ struct NodeListView: View {
 
     var body: some View {
         NavigationStack {
-            List {
-                listContent
-            }
-            .listStyle(.insetGrouped)
-            .scrollContentBackground(.hidden)
-            .background(Theme.background)
-            .searchable(text: $searchText,
-                        placement: .navigationBarDrawer(displayMode: .always),
-                        prompt: Text(L10n.t("nodes.search")))
+            nodeListRoot
+            .wujiSearchable(text: $searchText,
+                             prompt: Text(L10n.t("nodes.search")))
             .navigationTitle(L10n.t("tab.nodes"))
             .toolbar { toolbarContent }
             .refreshable { await testAllNodes() }
@@ -57,10 +50,11 @@ struct NodeListView: View {
             .sheet(item: $activeFlow, onDismiss: presentPendingFlow) { flow in
                 sheetContent(for: flow)
             }
-            .fullScreenCover(isPresented: $showScan, onDismiss: presentPendingFlow) {
+            .wujiFullScreenCover(isPresented: $showScan, onDismiss: presentPendingFlow) {
                 ScanQRView()
+                    .wujiSheetSizing(width: 620, height: 720)
             }
-            .fullScreenCover(item: $debugFullScreenFlow) { flow in
+            .wujiFullScreenCover(item: $debugFullScreenFlow) { flow in
                 sheetContent(for: flow)
             }
             .confirmationDialog(deleteDialogTitle,
@@ -84,13 +78,13 @@ struct NodeListView: View {
 
     @ToolbarContentBuilder
     private var toolbarContent: some ToolbarContent {
-        ToolbarItem(placement: .topBarTrailing) {
+        ToolbarItem(placement: .wujiTrailing) {
             if !app.nodes.isEmpty {
                 sortMenu
                     .accessibilityIdentifier("wuji.nodes.sortMenu")
             }
         }
-        ToolbarItem(placement: .topBarTrailing) {
+        ToolbarItem(placement: .wujiTrailing) {
             if !app.nodes.isEmpty {
                 Button {
                     Task { await testAllNodes() }
@@ -107,7 +101,7 @@ struct NodeListView: View {
                 .accessibilityIdentifier("wuji.nodes.testAllButton")
             }
         }
-        ToolbarItem(placement: .topBarTrailing) {
+        ToolbarItem(placement: .wujiTrailing) {
             Button {
                 open(.menu)
             } label: {
@@ -167,6 +161,131 @@ struct NodeListView: View {
     }
 
     // MARK: - List content
+
+    @ViewBuilder
+    private var nodeListRoot: some View {
+        #if os(macOS)
+        MacGlassPage {
+            ScrollView {
+                macGlassNodeContent
+            }
+            .scrollIndicators(.hidden)
+        }
+        #else
+        WujiSettingsList {
+            listContent
+        }
+        .wujiListBackground()
+        #endif
+    }
+
+    #if os(macOS)
+    private var macGlassNodeContent: some View {
+        VStack(alignment: .leading, spacing: 18) {
+            if app.nodes.isEmpty {
+                EmptyStateView(symbol: "server.rack",
+                               title: L10n.t("nodes.empty.title", table: "Nodes"),
+                               message: L10n.t("nodes.empty.message", table: "Nodes"))
+                    .frame(minHeight: 320)
+            } else if displayGroups.isEmpty {
+                EmptyStateView(symbol: "magnifyingglass",
+                               title: L10n.t("nodes.noResults", table: "Nodes"),
+                               message: L10n.t("nodes.noResultsMessage", table: "Nodes"))
+                    .frame(minHeight: 320)
+            } else {
+                ForEach(displayGroups) { group in
+                    VStack(alignment: .leading, spacing: 8) {
+                        HStack(spacing: 8) {
+                            Text(group.name)
+                                .font(MacGlass.sectionFont)
+                                .foregroundStyle(Theme.secondaryLabel)
+                            Spacer(minLength: 8)
+                            Text("\(nodes(in: group).count)")
+                                .font(.system(size: 12))
+                                .foregroundStyle(Theme.tertiaryLabel)
+                        }
+                        .padding(.horizontal, 4)
+
+                        MacGlassCard {
+                            VStack(spacing: 0) {
+                                let groupNodes = sortedNodes(in: group)
+                                ForEach(Array(groupNodes.enumerated()), id: \.element.id) { index, profile in
+                                    macGlassNodeRow(profile)
+                                    if index < groupNodes.count - 1 {
+                                        MacGlassDivider()
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .frame(maxWidth: 700)
+        .frame(maxWidth: .infinity)
+        .padding(.horizontal, 20)
+        .padding(.top, 18)
+        .padding(.bottom, 30)
+    }
+
+    private func macGlassNodeRow(_ profile: NodeProfile) -> some View {
+        HStack(spacing: 8) {
+            Button {
+                select(profile)
+            } label: {
+                HStack(spacing: 12) {
+                    MacGlassIcon(symbol: "network", tint: macGlassTint(for: profile.proto))
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text(profile.displayName)
+                            .font(.system(size: 16, weight: .semibold))
+                            .foregroundStyle(Theme.label)
+                            .lineLimit(1)
+                        Text("\(profile.proto.shortBadge) · \(profile.endpoint)")
+                            .font(.system(size: 12))
+                            .foregroundStyle(Theme.secondaryLabel)
+                            .lineLimit(1)
+                    }
+                    Spacer(minLength: 6)
+                    latencyView(profile)
+                    if app.settings.activeProfileID == profile.id {
+                        Image(systemName: "checkmark")
+                            .font(.system(size: 13, weight: .semibold))
+                            .foregroundStyle(MacGlass.blue)
+                    }
+                }
+                .padding(.leading, 16)
+                .frame(height: 58)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .wujiRowHover()
+            .accessibilityLabel("\(profile.displayName), \(profile.proto.shortBadge), \(profile.endpoint)")
+            .accessibilityIdentifier("wuji.nodes.row.\(profile.id)")
+
+            Button {
+                activeFlow = .actions(profile)
+            } label: {
+                Image(systemName: "ellipsis")
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundStyle(Theme.secondaryLabel)
+                    .frame(width: 30, height: 30)
+                    .contentShape(Rectangle())
+            }
+            .buttonStyle(.borderless)
+            .padding(.trailing, 12)
+        }
+    }
+
+    private func macGlassTint(for proto: ProxyProtocol) -> Color {
+        switch proto {
+        case .vmess: return MacGlass.blue
+        case .vless: return MacGlass.purple
+        case .trojan: return MacGlass.orange
+        case .shadowsocks: return MacGlass.teal
+        case .socks: return MacGlass.gray
+        }
+    }
+    #endif
 
     @ViewBuilder
     private var listContent: some View {
@@ -299,6 +418,7 @@ struct NodeListView: View {
                     }
                 }
                 .contentShape(Rectangle())
+                .wujiRowHover()
             }
             .buttonStyle(.plain)
             .accessibilityLabel("\(profile.displayName), \(profile.proto.shortBadge), \(profile.endpoint)")
@@ -374,7 +494,7 @@ struct NodeListView: View {
                 .font(.system(size: 40, weight: .regular))
                 .foregroundStyle(Theme.secondaryLabel)
                 .frame(width: 88, height: 88)
-                .background(Color(.tertiarySystemFill))
+                .background(Theme.fillTertiary)
                 .clipShape(Circle())
             Text(L10n.t("nodes.emptyTitle"))
                 .font(.title3.bold())
@@ -495,7 +615,7 @@ struct NodeListView: View {
 
     private func select(_ profile: NodeProfile) {
         app.setActive(profile)
-        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        PlatformHaptics.impact()
     }
 
     private func testAllNodes() async {
@@ -595,26 +715,33 @@ struct NodeListView: View {
             AddNodeMenuSheet { selection in
                 open(selection)
             }
+            .wujiPresentationDetents([.medium])
+            .wujiSheetSizing(width: 420, height: 400)
         case .addNode:
             NavigationStack {
                 AddNodeFormView(initialProtocol: debugAddFormProtocol,
                                 onClose: { activeFlow = nil })
             }
+            .wujiSheetSizing(width: 560, height: 700)
         case .edit(let profile):
             NavigationStack {
                 AddNodeFormView(editingProfile: profile,
                                 onClose: { activeFlow = nil })
             }
+            .wujiSheetSizing(width: 560, height: 700)
         case .actions(let profile):
             NodeActionsSheet(profile: profile)
+                .wujiSheetSizing(width: 520, height: 620)
         case .paste:
             NavigationStack {
                 PasteImportView(initialText: debugPasteInitialText, onImport: { summary in
                     toast = summary.message
                 })
             }
+            .wujiSheetSizing()
         case .addSubscription:
             AddSubscriptionView()
+                .wujiSheetSizing()
         case .scan:
             EmptyView()
         }
@@ -779,7 +906,7 @@ struct AddNodeMenuSheet: View {
         .padding(.bottom, 16)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(Theme.background)
-        .presentationDetents([.medium])
+        .wujiPresentationDetents([.medium])
         .presentationDragIndicator(.visible)
     }
 
@@ -819,7 +946,7 @@ struct SheetRowButtonStyle: ButtonStyle {
         configuration.label
             .background(
                 RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
-                    .fill(configuration.isPressed ? Color(.systemGray4).opacity(0.6) : Color.clear)
+                    .fill(configuration.isPressed ? Theme.gray4.opacity(0.6) : Color.clear)
             )
     }
 }

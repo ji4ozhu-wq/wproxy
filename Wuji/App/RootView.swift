@@ -1,7 +1,7 @@
 import SwiftUI
 
 enum Tab: Hashable {
-    case connect, nodes, settings
+    case connect, nodes, settings, logs
 }
 
 struct RootView: View {
@@ -17,6 +17,7 @@ struct RootView: View {
             switch arguments[index + 1] {
             case "settings": return .settings
             case "nodes": return .nodes
+            case "logs": return .logs
             default: return .connect
             }
         }
@@ -34,11 +35,16 @@ struct RootView: View {
                 ConsentView()
             } else {
                 GeometryReader { proxy in
+                    #if os(macOS)
+                    // macOS uses the iPad layout (sidebar + detail) at every size.
+                    splitLayout
+                    #else
                     if proxy.size.width >= 700 {
                         splitLayout
                     } else {
                         tabLayout
                     }
+                    #endif
                 }
             }
         }
@@ -54,13 +60,25 @@ struct RootView: View {
         .onChange(of: app.settings.appLanguage) { _, newValue in
             L10n.overrideLanguage = newValue.localeIdentifier
         }
-        .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
+        .onReceive(NotificationCenter.default.publisher(for: PlatformNotifications.appDidBecomeActive)) { _ in
             app.reload()
             Task {
                 await app.syncTunnelSystemState()
                 await app.autoUpdateSubscriptionsIfNeeded()
             }
         }
+        .onReceive(NotificationCenter.default.publisher(for: .wujiSelectTab)) { note in
+            guard let raw = note.object as? String else { return }
+            let tab: Tab
+            switch raw {
+            case "nodes": tab = .nodes
+            case "settings": tab = .settings
+            default: tab = .connect
+            }
+            selectedTab = tab
+            splitSelection = tab
+        }
+        .wujiMacWindowSizing()
     }
 
     // Compact: native tab bar (iPhone portrait / SE)
@@ -83,10 +101,25 @@ struct RootView: View {
     private var splitLayout: some View {
         NavigationSplitView {
             List(selection: $splitSelection) {
+                #if os(macOS)
+                Section {
+                    HStack(spacing: 10) {
+                        AppMarkBadge(size: 30)
+                        Text("WProxy")
+                            .font(.headline)
+                            .foregroundStyle(Theme.label)
+                    }
+                    .padding(.vertical, 2)
+                }
+                #endif
                 Label(L10n.t("tab.connect"), systemImage: "power").tag(Tab.connect)
                 Label(L10n.t("tab.nodes"), systemImage: "list.bullet.rectangle").tag(Tab.nodes)
                 Label(L10n.t("tab.settings"), systemImage: "gearshape").tag(Tab.settings)
+                #if os(macOS)
+                Label(L10n.t("tab.logs"), systemImage: "doc.text.magnifyingglass").tag(Tab.logs)
+                #endif
             }
+            .navigationSplitViewColumnWidth(min: 180, ideal: 196, max: 220)
             .navigationTitle("Wuji")
         } detail: {
             switch splitSelection ?? .connect {
@@ -96,9 +129,16 @@ struct RootView: View {
                 NodeListView()
             case .settings:
                 SettingsView()
+            case .logs:
+                #if os(macOS)
+                AccessLogView()
+                #else
+                EmptyView()
+                #endif
             }
         }
         .navigationSplitViewStyle(.balanced)
         .tint(Theme.tint)
+        .wujiGlassWindowBackground()
     }
 }

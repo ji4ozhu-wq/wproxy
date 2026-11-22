@@ -158,3 +158,47 @@ Es erscheinen zwei Systemdialoge. Bitte erlaube beide, um fortzufahren.";
 "permission.network.note" = "Später änderbar: Einstellungen → Datenschutz & Sicherheit → Lokales Netzwerk sowie Einstellungen → Allgemein → VPN & Geräteverwaltung.";
 /* Global confirmation after node switch / tunnel settings change */
 "toast.settingsApplied" = "Einstellungen übernommen.";
+
+"home.details.section" = "Verbindungsdetails";
+
+"home.details.exit" = "Ausgangsserver";
+
+"home.details.protocol" = "Protokoll";
+
+"home.details.routing" = "Routingmodus";
+
+"home.details.dns" = "DNS";
+
+"menu.showWindow" = "Hauptfenster anzeigen";
+
+"menu.about" = "Über WProxy";
+
+"menu.quit" = "WProxy beenden";
+
+"logs.title" = "Verbindungsprotokoll";
+
+"logs.all" = "Alle";
+
+"logs.proxy" = "Proxy";
+
+"logs.direct" = "Direkt";
+
+"logs.dns" = "DNS";
+
+"logs.other" = "Andere";
+
+"logs.empty" = "Live-Proxy-/Direkt-Protokolle erscheinen nach dem Verbinden hier.";
+
+"logs.pause" = "Pausieren";
+
+"logs.resume" = "Fortsetzen";
+
+"logs.clear" = "Leeren";
+
+"logs.live" = "Live";
+
+"logs.paused" = "Pausiert";
+
+"tab.logs" = "Protokoll";
+
+"logs.save" = "Sichern";

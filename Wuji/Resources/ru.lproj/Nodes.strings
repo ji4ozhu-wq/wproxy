@@ -100,6 +100,7 @@
 "nodes.scan.starting" = "Запуск камеры…";
 "nodes.qr.title" = "Поделиться узлом";
 "nodes.qr.saveToPhotos" = "Сохранить в Фото";
+"nodes.qr.saveToFile" = "Сохранить изображение…";
 "nodes.qr.copyURI" = "Копировать URI";
 "nodes.qr.share" = "Поделиться";
 "nodes.qr.saved" = "Сохранено в Фото";

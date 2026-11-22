@@ -18,7 +18,7 @@ counters are read from the managed `core.Instance` under the same lock as
 `tools/build_libxray.sh` pins upstream libXray to commit
 `5a0f7d8d1c28b34afb5727b04b26a10f6dbac7e3`, resets the checkout, applies every
 `*.patch` in this directory and rebuilds `Frameworks/LibXray.xcframework`
-(iOS device arm64 + iOS simulator arm64).
+(`ios-arm64`, `ios-arm64-simulator` and the universal `macos-arm64_x86_64`).
 
 ## Validation
 
@@ -30,7 +30,9 @@ Compiles a macOS driver against the rebuilt macOS libXray slice plus a config
 generator built from the real app sources, then checks that:
 
 - the `getTrafficStats` method is registered (fork applied),
-- every generated node config (VMess/VLESS/Trojan/SS, tcp/ws/grpc/xhttp, TLS and
-  REALITY, rule/global routing, ~16k-CIDR bypass) is accepted by `testXray`,
+- every generated node config (VMess/VLESS/Trojan/SS/SOCKS, tcp/ws/grpc/xhttp,
+  TLS and REALITY, rule/global routing, ~16k-CIDR bypass, proxyDoH/local DNS) is
+  accepted by `testXray`; the fixture asset directory mirrors the app's App Group
+  (extracted GeoIP asset + `geosite.dat` unpacked from `Wuji/Resources`),
 - `getTrafficStats` reports real byte counters for traffic through a SOCKS
   inbound, and rejects polling after `stopXray`.

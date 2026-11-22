@@ -113,6 +113,7 @@
 /* ===== QR share ===== */
 "nodes.qr.title" = "Partager le nœud";
 "nodes.qr.saveToPhotos" = "Enregistrer dans Photos";
+"nodes.qr.saveToFile" = "Enregistrer l'image…";
 "nodes.qr.copyURI" = "Copier l’URI";
 "nodes.qr.share" = "Partager";
 "nodes.qr.saved" = "Enregistré dans Photos";

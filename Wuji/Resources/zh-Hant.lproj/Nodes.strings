@@ -113,6 +113,7 @@
 /* ===== QR Code 分享 ===== */
 "nodes.qr.title" = "分享節點";
 "nodes.qr.saveToPhotos" = "儲存到照片";
+"nodes.qr.saveToFile" = "儲存圖片…";
 "nodes.qr.copyURI" = "複製 URI";
 "nodes.qr.share" = "分享";
 "nodes.qr.saved" = "已儲存到照片";

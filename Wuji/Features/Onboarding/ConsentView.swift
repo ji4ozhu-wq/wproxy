@@ -35,11 +35,12 @@ struct ConsentView: View {
                 .foregroundStyle(Theme.secondaryLabel)
                 .padding(.horizontal, Theme.hMargin)
                 .padding(.bottom, 28)
+                .wujiMacContentWidth(760)
             }
             .scrollDismissesKeyboard(.interactively)
             .background(Theme.background)
             .navigationTitle(L10n.t("consent.navTitle"))
-            .navigationBarTitleDisplayMode(.inline)
+            .wujiInlineNavigationTitle()
             .navigationDestination(isPresented: $debugShowTerms) {
                 LegalDocumentView(kind: .terms)
             }
@@ -132,7 +133,7 @@ struct ConsentView: View {
             .fill(agreed ? Theme.tint : Color.clear)
             .overlay(
                 RoundedRectangle(cornerRadius: 6, style: .continuous)
-                    .strokeBorder(agreed ? Color.clear : Color(.systemGray3), lineWidth: 1.5)
+                    .strokeBorder(agreed ? Color.clear : Theme.gray3, lineWidth: 1.5)
             )
             .frame(width: 26, height: 26)
             .overlay(

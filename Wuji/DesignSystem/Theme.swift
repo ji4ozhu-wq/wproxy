@@ -1,8 +1,16 @@
 import Foundation
 import SwiftUI
 
+#if os(iOS)
+import UIKit
+#elseif os(macOS)
+import AppKit
+#endif
+
 enum Theme {
-    // Colors (system semantic, light theme only)
+    // Colors (system semantic, light theme only). The iOS values are the original
+    // ones; macOS maps the same roles onto AppKit's semantic colors.
+    #if os(iOS)
     static let background = Color(.systemGroupedBackground)
     static let card = Color(.secondarySystemGroupedBackground)
     static let label = Color(.label)
@@ -14,6 +22,32 @@ enum Theme {
     static let red = Color(.systemRed)
     static let orange = Color(.systemOrange)
     static let gray = Color(.systemGray)
+    #else
+    static let background = Color(nsColor: .underPageBackgroundColor)
+    static let card = Color(nsColor: .controlBackgroundColor)
+    static let label = Color(nsColor: .labelColor)
+    static let secondaryLabel = Color(nsColor: .secondaryLabelColor)
+    static let tertiaryLabel = Color(nsColor: .tertiaryLabelColor)
+    static let tint = Color(nsColor: .systemBlue)
+    static let separator = Color(nsColor: .separatorColor)
+    static let green = Color(nsColor: .systemGreen)
+    static let red = Color(nsColor: .systemRed)
+    static let orange = Color(nsColor: .systemOrange)
+    static let gray = Color(nsColor: .systemGray)
+    #endif
+
+    // Fills (iOS `*SystemFill` colors; macOS uses its nearest semantic equivalents).
+    #if os(iOS)
+    static let fillTertiary = Color(.tertiarySystemFill)
+    static let fillSecondary = Color(.secondarySystemFill)
+    static let gray3 = Color(.systemGray3)
+    static let gray4 = Color(.systemGray4)
+    #else
+    static let fillTertiary = Color(nsColor: .quaternaryLabelColor)
+    static let fillSecondary = Color(nsColor: .unemphasizedSelectedContentBackgroundColor)
+    static let gray3 = Color(nsColor: .systemGray)
+    static let gray4 = Color(nsColor: .systemGray)
+    #endif
 
     // Layout
     static let cardRadius: CGFloat = 12

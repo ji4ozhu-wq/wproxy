@@ -160,6 +160,46 @@ final class TunnelController: TunnelControlling {
         }
     }
 
+    // MARK: - Access log (macOS)
+
+    #if os(macOS)
+    /// Fetches the in-memory access-log tail from the tunnel extension (max 1 MB).
+    func requestAccessLogs(after seq: Int) async -> AccessLogBatch? {
+        guard let manager = currentManager(),
+              let session = manager.connection as? NETunnelProviderSession,
+              session.status == .connected else { return nil }
+        let request = Data("{\"type\":\"logs\",\"after\":\(seq)}".utf8)
+        let reply = await sendProviderMessage(request, via: session)
+        guard let reply else { return nil }
+        return try? JSONDecoder().decode(AccessLogBatch.self, from: reply)
+    }
+
+    /// Clears the extension-side in-memory access-log buffer.
+    func clearAccessLog() async {
+        guard let manager = currentManager(),
+              let session = manager.connection as? NETunnelProviderSession,
+              session.status == .connected else { return }
+        _ = await sendProviderMessage(Data(#"{"type":"logsClear"}"#.utf8), via: session)
+    }
+    #endif
+
+    private func sendProviderMessage(_ request: Data, via session: NETunnelProviderSession) async -> Data? {
+        await withCheckedContinuation { continuation in
+            let box = ProviderReplyBox(continuation)
+            do {
+                try session.sendProviderMessage(request) { data in
+                    box.finish(data)
+                }
+            } catch {
+                Self.log.error("sendProviderMessage failed: \(error.localizedDescription, privacy: .private)")
+                box.finish(nil)
+            }
+            DispatchQueue.global(qos: .utility).asyncAfter(deadline: .now() + Self.providerMessageTimeout) {
+                box.finish(nil)
+            }
+        }
+    }
+
     // MARK: - Traffic
 
     func requestTrafficStats() async -> TunnelSessionStats? {
@@ -390,17 +430,29 @@ final class TunnelController: TunnelControlling {
         case .wifi:
             let connect = NEOnDemandRuleConnect()
             connect.interfaceTypeMatch = .wiFi
+            #if os(iOS)
             let disconnect = NEOnDemandRuleDisconnect()
             disconnect.interfaceTypeMatch = .cellular
             manager.isOnDemandEnabled = true
             manager.onDemandRules = [connect, disconnect]
+            #else
+            // macOS has no cellular interface rule; connect on Wi-Fi only.
+            manager.isOnDemandEnabled = true
+            manager.onDemandRules = [connect]
+            #endif
         case .cellular:
+            #if os(iOS)
             let connect = NEOnDemandRuleConnect()
             connect.interfaceTypeMatch = .cellular
             let disconnect = NEOnDemandRuleDisconnect()
             disconnect.interfaceTypeMatch = .wiFi
             manager.isOnDemandEnabled = true
             manager.onDemandRules = [connect, disconnect]
+            #else
+            // macOS has no cellular interface, so this mode behaves like "off".
+            manager.isOnDemandEnabled = false
+            manager.onDemandRules = []
+            #endif
         }
     }
 

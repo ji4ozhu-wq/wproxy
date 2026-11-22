@@ -57,6 +57,7 @@ struct OnboardingView: View {
             .padding(.horizontal, 20)
             .padding(.top, 8)
 
+            #if os(iOS)
             TabView(selection: $page) {
                 ForEach(pages.indices, id: \.self) { index in
                     pageView(pages[index])
@@ -65,6 +66,12 @@ struct OnboardingView: View {
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             .accessibilityIdentifier("wuji.onboarding.pager")
+            #else
+            // macOS has no paged TabView; show the current page and let the
+            // "Continue" button (or the page indicator) switch pages.
+            pageView(pages[min(page, pages.count - 1)])
+                .accessibilityIdentifier("wuji.onboarding.pager")
+            #endif
 
             pageIndicator
                 .padding(.bottom, 26)
@@ -108,6 +115,7 @@ struct OnboardingView: View {
                 }
                 .frame(maxWidth: .infinity)
                 .frame(minHeight: proxy.size.height)
+                .wujiMacContentWidth(640)
             }
             .scrollBounceBehavior(.basedOnSize)
         }
@@ -153,7 +161,7 @@ struct OnboardingView: View {
         HStack(spacing: 8) {
             ForEach(pages.indices, id: \.self) { index in
                 Circle()
-                    .fill(index == page ? Theme.tint : Color(.systemGray4))
+                    .fill(index == page ? Theme.tint : Theme.gray4)
                     .frame(width: 8, height: 8)
             }
         }

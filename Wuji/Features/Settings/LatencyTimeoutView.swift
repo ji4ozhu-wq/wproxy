@@ -10,7 +10,7 @@ struct LatencyTimeoutView: View {
     private let options: [TimeInterval] = [3, 5, 8, 10, 15]
 
     var body: some View {
-        List {
+        WujiSettingsList {
             Section {
                 ForEach(options, id: \.self) { seconds in
                     Button {
@@ -37,10 +37,9 @@ struct LatencyTimeoutView: View {
                 Text(L10n.t("settings.latency.timeoutFootnote", table: "Settings"))
             }
         }
-        .listStyle(.insetGrouped)
         .navigationTitle(L10n.t("settings.latency.timeoutTitle", table: "Settings"))
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar(.hidden, for: .tabBar)
+        .wujiInlineNavigationTitle()
+        .wujiHiddenTabBar()
     }
 
     private func label(for seconds: TimeInterval) -> String {

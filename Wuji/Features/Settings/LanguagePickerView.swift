@@ -11,7 +11,7 @@ struct LanguagePickerView: View {
     }
 
     var body: some View {
-        List {
+        WujiSettingsList {
             Section {
                 ForEach(supportedLanguages, id: \.self) { language in
                     Button {
@@ -42,9 +42,8 @@ struct LanguagePickerView: View {
                 Text(L10n.t("settings.language.footnote", table: "Settings"))
             }
         }
-        .listStyle(.insetGrouped)
         .navigationTitle(L10n.t("settings.language.chooseAnother", table: "Settings"))
-        .navigationBarTitleDisplayMode(.inline)
+        .wujiInlineNavigationTitle()
         .accessibilityIdentifier("wuji.settings.language.picker")
     }
 

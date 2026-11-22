@@ -46,16 +46,15 @@ struct CountryPickerView: View {
                 }
             }
             .navigationTitle(L10n.t("routing.regionPickerTitle"))
-            .navigationBarTitleDisplayMode(.inline)
-            .searchable(text: $query,
-                        placement: .navigationBarDrawer(displayMode: .always),
-                        prompt: L10n.t("routing.searchRegions"))
+            .wujiInlineNavigationTitle()
+            .wujiSearchable(text: $query,
+                             prompt: L10n.t("routing.searchRegions"))
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem(placement: .wujiLeading) {
                     Button(L10n.t("common.cancel")) { dismiss() }
                         .accessibilityIdentifier("wuji.routing.picker.cancel")
                 }
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItem(placement: .wujiTrailing) {
                     Button(L10n.t("common.done")) { commit() }
                         .fontWeight(.semibold)
                         .accessibilityIdentifier("wuji.routing.picker.done")
@@ -63,12 +62,15 @@ struct CountryPickerView: View {
             }
             .onAppear(perform: loadDraftIfNeeded)
         }
+        .wujiMacSheetActions(onCancel: { dismiss() },
+                             confirmTitle: L10n.t("common.done"),
+                             onConfirm: { commit() })
     }
 
     // MARK: - List
 
     private var list: some View {
-        List {
+        WujiSettingsList {
             if hasSearchQuery && selectedCountries.isEmpty && unselectedCountries.isEmpty {
                 noResultsState
             } else {
@@ -93,7 +95,7 @@ struct CountryPickerView: View {
                 }
             }
         }
-        .listStyle(.insetGrouped)
+        
         .accessibilityIdentifier("wuji.routing.picker.list")
     }
 

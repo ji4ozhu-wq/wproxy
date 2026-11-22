@@ -60,8 +60,8 @@ struct AddSubscriptionView: View {
                 Section {
                     TextField(L10n.t("subscriptions.add.urlPlaceholder", table: "Subscriptions"), text: $url)
                         .focused($focusedField, equals: .url)
-                        .keyboardType(.URL)
-                        .textInputAutocapitalization(.never)
+                        .wujiKeyboardType(.url)
+                        .wujiNoAutocapitalization()
                         .autocorrectionDisabled()
                         .submitLabel(.done)
                         .onSubmit { focusedField = nil }
@@ -83,6 +83,19 @@ struct AddSubscriptionView: View {
                             .disabled(isLoading)
                             .accessibilityIdentifier("wuji.subscriptions.add.nameField")
                     }
+                    #if os(macOS)
+                    // macOS sheets cannot push (no toolbar back button), so the
+                    // interval picker is an inline menu there.
+                    Picker(L10n.t("subscriptions.add.autoUpdate", table: "Subscriptions"),
+                           selection: $interval) {
+                        ForEach(SubscriptionUpdateInterval.allCases) { option in
+                            Text(option.displayName).tag(option)
+                        }
+                    }
+                    .pickerStyle(.menu)
+                    .disabled(isLoading)
+                    .accessibilityIdentifier("wuji.subscriptions.add.autoUpdate")
+                    #else
                     NavigationLink {
                         intervalPicker
                     } label: {
@@ -91,6 +104,7 @@ struct AddSubscriptionView: View {
                     }
                     .disabled(isLoading)
                     .accessibilityIdentifier("wuji.subscriptions.add.autoUpdate")
+                    #endif
                 } header: {
                     UppercaseSectionHeader(title: L10n.t("subscriptionAdd.details"))
                 } footer: {
@@ -112,18 +126,18 @@ struct AddSubscriptionView: View {
                     }
                 }
             }
-            .listStyle(.insetGrouped)
+            .wujiListStyle()
             .scrollDismissesKeyboard(.interactively)
             .environment(\.defaultMinListRowHeight, 44)
             .navigationTitle(titleText)
-            .navigationBarTitleDisplayMode(.inline)
+            .wujiInlineNavigationTitle()
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem(placement: .wujiLeading) {
                     Button(L10n.t("common.cancel")) { dismiss() }
                         .disabled(isLoading)
                         .accessibilityIdentifier("wuji.subscriptions.add.cancel")
                 }
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItem(placement: .wujiTrailing) {
                     Button(L10n.t("common.save")) { Task { await submit() } }
                         .disabled(!canSubmit)
                         .accessibilityIdentifier("wuji.subscriptions.add.save")
@@ -145,6 +159,7 @@ struct AddSubscriptionView: View {
                 }
                 .background(Theme.background)
             }
+            .wujiMacSheetActions(onCancel: { dismiss() })
         }
     }
 
@@ -171,9 +186,9 @@ struct AddSubscriptionView: View {
                 .accessibilityIdentifier("wuji.subscriptions.add.interval.\(option.rawValue)")
             }
         }
-        .listStyle(.insetGrouped)
+        .wujiListStyle()
         .navigationTitle(L10n.t("subscriptions.add.autoUpdate", table: "Subscriptions"))
-        .navigationBarTitleDisplayMode(.inline)
+        .wujiInlineNavigationTitle()
     }
 
     // MARK: - Submit

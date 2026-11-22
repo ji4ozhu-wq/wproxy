@@ -1,5 +1,4 @@
 import SwiftUI
-import UIKit
 
 /// Custom bottom sheet with the actions for one node (design `N-node-actions`).
 /// Owns a `NavigationStack` so "Edit Node" and "Share QR Code" push full-height
@@ -16,6 +15,8 @@ struct NodeActionsSheet: View {
     @State private var copyError: String?
     @State private var showDeleteConfirm = false
     @State private var showShare = false
+    @State private var showEditForm = false
+    @State private var showQRShare = false
     @State private var testingLatency = false
     @State private var latencyTested = false
     @State private var latencyResult: Int?
@@ -38,7 +39,7 @@ struct NodeActionsSheet: View {
     var body: some View {
         NavigationStack(path: $path) {
             content
-                .toolbar(.hidden, for: .navigationBar)
+                .wujiHiddenNavigationBar()
                 .navigationDestination(for: Route.self) { route in
                     switch route {
                     case .edit:
@@ -50,7 +51,7 @@ struct NodeActionsSheet: View {
                     }
                 }
         }
-        .presentationDetents([.height(520), .large], selection: $detent)
+        .wujiPresentationDetents([.height(520), .large], selection: $detent)
         .presentationDragIndicator(.visible)
         .confirmationDialog(L10n.t("nodes.deleteConfirmTitle", table: "Nodes"),
                             isPresented: $showDeleteConfirm,
@@ -63,12 +64,31 @@ struct NodeActionsSheet: View {
         } message: {
             Text(String(format: L10n.t("nodes.deleteConfirmMessage", table: "Nodes"), profile.displayName))
         }
+        .sheet(isPresented: $showEditForm) {
+            NavigationStack {
+                AddNodeFormView(editingProfile: profile,
+                                showsCancelButton: true,
+                                onSaved: {
+                                    showEditForm = false
+                                    dismiss()
+                                })
+            }
+            .wujiSheetSizing(width: 560, height: 700)
+        }
+        .sheet(isPresented: $showQRShare) {
+            NavigationStack {
+                QRShareView(profile: profile)
+            }
+            .wujiSheetSizing(width: 560, height: 700)
+        }
         .sheet(isPresented: $showShare) {
             if shareURI.isEmpty {
                 Text(L10n.t("nodes.action.noURI", table: "Nodes"))
                     .padding()
+                    .wujiSheetSizing(width: 380, height: 170)
             } else {
                 ShareSheet(items: [shareURI])
+                    .wujiSheetSizing(width: 380, height: 200)
             }
         }
         .onChange(of: path.count) { _, count in
@@ -110,6 +130,19 @@ struct NodeActionsSheet: View {
 
                     divider
 
+                    #if os(macOS)
+                    // macOS sheets render no toolbar/back button for pushed pages, so
+                    // edit/QR open as proper sheets with their own action bars instead.
+                    Button {
+                        showEditForm = true
+                    } label: {
+                        actionRow(symbol: "pencil",
+                                  title: L10n.t("nodes.action.edit", table: "Nodes"),
+                                  tint: Theme.tint)
+                    }
+                    .buttonStyle(SheetRowButtonStyle())
+                    .accessibilityIdentifier("wuji.nodes.actions.edit")
+                    #else
                     NavigationLink(value: Route.edit) {
                         actionRow(symbol: "pencil",
                                   title: L10n.t("nodes.action.edit", table: "Nodes"),
@@ -117,6 +150,7 @@ struct NodeActionsSheet: View {
                     }
                     .buttonStyle(SheetRowButtonStyle())
                     .accessibilityIdentifier("wuji.nodes.actions.edit")
+                    #endif
 
                     divider
 
@@ -166,6 +200,17 @@ struct NodeActionsSheet: View {
 
                     divider
 
+                    #if os(macOS)
+                    Button {
+                        showQRShare = true
+                    } label: {
+                        actionRow(symbol: "qrcode",
+                                  title: L10n.t("nodes.action.shareQR", table: "Nodes"),
+                                  tint: Theme.tint)
+                    }
+                    .buttonStyle(SheetRowButtonStyle())
+                    .accessibilityIdentifier("wuji.nodes.actions.shareQR")
+                    #else
                     NavigationLink(value: Route.shareQR) {
                         actionRow(symbol: "qrcode",
                                   title: L10n.t("nodes.action.shareQR", table: "Nodes"),
@@ -173,6 +218,7 @@ struct NodeActionsSheet: View {
                     }
                     .buttonStyle(SheetRowButtonStyle())
                     .accessibilityIdentifier("wuji.nodes.actions.shareQR")
+                    #endif
 
                     divider
 
@@ -276,9 +322,9 @@ struct NodeActionsSheet: View {
             copyError = L10n.t("nodes.action.noURI", table: "Nodes")
             return
         }
-        UIPasteboard.general.string = shareURI
+        PlatformPasteboard.setString(shareURI)
         copyError = nil
-        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        PlatformHaptics.impact()
         withAnimation(.easeInOut(duration: 0.15)) { copied = true }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
             withAnimation(.easeInOut(duration: 0.15)) { copied = false }
@@ -291,9 +337,17 @@ struct NodeActionsSheet: View {
         didConfigureDebug = true
         switch DebugScreenshotRoute.value("-WujiScreenshotDetail") {
         case "qr":
+            #if os(macOS)
+            showQRShare = true
+            #else
             path.append(Route.shareQR)
+            #endif
         case "edit":
+            #if os(macOS)
+            showEditForm = true
+            #else
             path.append(Route.edit)
+            #endif
         default:
             break
         }

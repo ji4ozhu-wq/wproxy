@@ -194,3 +194,47 @@ Hai hộp thoại hệ thống sẽ xuất hiện. Vui lòng cho phép cả hai 
 "permission.network.note" = "Có thể thay đổi sau: Cài đặt → Quyền riêng tư & Bảo mật → Mạng cục bộ, và Cài đặt → Cài đặt chung → VPN & Quản lý thiết bị.";
 /* Global confirmation after node switch / tunnel settings change */
 "toast.settingsApplied" = "Đã áp dụng cài đặt.";
+
+"home.details.section" = "Chi tiết kết nối";
+
+"home.details.exit" = "Máy chủ đầu ra";
+
+"home.details.protocol" = "Giao thức";
+
+"home.details.routing" = "Chế độ định tuyến";
+
+"home.details.dns" = "DNS";
+
+"menu.showWindow" = "Hiển thị cửa sổ chính";
+
+"menu.about" = "Giới thiệu WProxy";
+
+"menu.quit" = "Thoát WProxy";
+
+"logs.title" = "Nhật ký kết nối";
+
+"logs.all" = "Tất cả";
+
+"logs.proxy" = "Proxy";
+
+"logs.direct" = "Trực tiếp";
+
+"logs.dns" = "DNS";
+
+"logs.other" = "Khác";
+
+"logs.empty" = "Nhật ký proxy / trực tiếp sẽ hiển thị ở đây sau khi kết nối.";
+
+"logs.pause" = "Tạm dừng";
+
+"logs.resume" = "Tiếp tục";
+
+"logs.clear" = "Xóa";
+
+"logs.live" = "Trực tiếp";
+
+"logs.paused" = "Đã tạm dừng";
+
+"tab.logs" = "Nhật ký";
+
+"logs.save" = "Lưu";

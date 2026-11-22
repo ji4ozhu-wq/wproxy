@@ -4,14 +4,15 @@
 #
 #   tools/libxray-patch/validation/run_validation.sh
 #
-# Requires a previous `tools/build_libxray.sh` run (its macOS slice is reused),
-# Xcode command line tools, python3 and curl. No NetworkExtension / real device
+# Requires a previous `tools/build_libxray.sh` run: the macOS slice of the shipped
+# Frameworks/LibXray.xcframework is linked directly, so validation covers the exact
+# static library the Xcode targets consume. No NetworkExtension / real device
 # is needed: testXray only constructs and closes an Xray instance, and the
 # traffic check runs a SOCKS inbound instead of a tun device.
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 ROOT="$(cd "$HERE/../../.." && pwd)"
-LIB="$ROOT/tools/.cache/libXray/apple_xcframework/macosx-x86_64-arm64/libXray.a"
+LIB="$ROOT/Frameworks/LibXray.xcframework/macos-arm64_x86_64/libXray.a"
 WORK="$ROOT/tools/.cache/validation"
 
 if [ ! -f "$LIB" ]; then
@@ -35,6 +36,11 @@ rm -rf "$ASSET_DIR"
 mkdir -p "$ASSET_DIR"
 python3 "$HERE/extract_geoip_asset.py" \
   "$ROOT/Wuji/Resources/geoip.dat.gz" "$ASSET_DIR/wuji-geoip-validate.dat" cn private
+# The generated configs point xray.location.asset at this fixture directory (same
+# layout as the app's App Group); proxyDoH DNS resolves geosite:cn from it, so install
+# the bundled geosite.dat the same way the app's GeoIPUpdater does.
+gzip -dc "$ROOT/Wuji/Resources/geosite.dat.gz" > "$ASSET_DIR/geosite.dat"
+echo "Installed fixture assets: $(ls "$ASSET_DIR" | tr '\n' ' ')"
 
 rm -rf "$WORK/configs"
 "$WORK/gen_configs" "$WORK/configs" "$ASSET_DIR"

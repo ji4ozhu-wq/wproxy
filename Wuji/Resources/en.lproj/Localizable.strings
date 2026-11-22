@@ -194,3 +194,47 @@ You will see two system prompts. Please allow both to continue.";
 "permission.network.note" = "You can change these later: Settings → Privacy & Security → Local Network, and Settings → General → VPN & Device Management.";
 /* Global confirmation after node switch / tunnel settings change */
 "toast.settingsApplied" = "Settings applied.";
+
+"home.details.section" = "Connection Details";
+
+"home.details.exit" = "Exit server";
+
+"home.details.protocol" = "Protocol";
+
+"home.details.routing" = "Routing mode";
+
+"home.details.dns" = "DNS";
+
+"menu.showWindow" = "Show Main Window";
+
+"menu.about" = "About WProxy";
+
+"menu.quit" = "Quit WProxy";
+
+"logs.title" = "Connection Log";
+
+"logs.all" = "All";
+
+"logs.proxy" = "Proxy";
+
+"logs.direct" = "Direct";
+
+"logs.dns" = "DNS";
+
+"logs.other" = "Other";
+
+"logs.empty" = "Live proxy / direct logs will appear here after connecting.";
+
+"logs.pause" = "Pause";
+
+"logs.resume" = "Resume";
+
+"logs.clear" = "Clear";
+
+"logs.live" = "Live";
+
+"logs.paused" = "Paused";
+
+"tab.logs" = "Logs";
+
+"logs.save" = "Save";

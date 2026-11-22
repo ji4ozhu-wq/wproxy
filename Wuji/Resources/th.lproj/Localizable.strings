@@ -194,3 +194,47 @@
 "permission.network.note" = "เปลี่ยนได้ภายหลัง: การตั้งค่า → ความเป็นส่วนตัวและความปลอดภัย → เครือข่ายท้องถิ่น และ การตั้งค่า → ทั่วไป → VPN และการจัดการอุปกรณ์";
 /* Global confirmation after node switch / tunnel settings change */
 "toast.settingsApplied" = "นำการตั้งค่าไปใช้แล้ว";
+
+"home.details.section" = "รายละเอียดการเชื่อมต่อ";
+
+"home.details.exit" = "เซิร์ฟเวอร์ขาออก";
+
+"home.details.protocol" = "โปรโตคอล";
+
+"home.details.routing" = "โหมดกำหนดเส้นทาง";
+
+"home.details.dns" = "DNS";
+
+"menu.showWindow" = "แสดงหน้าต่างหลัก";
+
+"menu.about" = "เกี่ยวกับ WProxy";
+
+"menu.quit" = "ออกจาก WProxy";
+
+"logs.title" = "บันทึกการเชื่อมต่อ";
+
+"logs.all" = "ทั้งหมด";
+
+"logs.proxy" = "พร็อกซี";
+
+"logs.direct" = "ตรง";
+
+"logs.dns" = "DNS";
+
+"logs.other" = "อื่นๆ";
+
+"logs.empty" = "บันทึกพร็อกซี / ตรงแบบเรียลไทม์จะแสดงที่นี่หลังเชื่อมต่อ";
+
+"logs.pause" = "หยุดชั่วคราว";
+
+"logs.resume" = "ดำเนินการต่อ";
+
+"logs.clear" = "ล้าง";
+
+"logs.live" = "เรียลไทม์";
+
+"logs.paused" = "หยุดชั่วคราว";
+
+"tab.logs" = "บันทึก";
+
+"logs.save" = "บันทึก";

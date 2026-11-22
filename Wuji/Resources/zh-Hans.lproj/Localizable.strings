@@ -194,3 +194,47 @@
 "permission.network.note" = "之后可在：设置 → 隐私与安全性 → 本地网络；设置 → 通用 → VPN 与设备管理 中修改。";
 /* Global confirmation after node switch / tunnel settings change */
 "toast.settingsApplied" = "设置已生效";
+
+"home.details.section" = "连接详情";
+
+"home.details.exit" = "出口服务器";
+
+"home.details.protocol" = "协议";
+
+"home.details.routing" = "分流模式";
+
+"home.details.dns" = "DNS";
+
+"menu.showWindow" = "显示主窗口";
+
+"menu.about" = "关于无极代理";
+
+"menu.quit" = "退出无极代理";
+
+"logs.title" = "连接日志";
+
+"logs.all" = "全部";
+
+"logs.proxy" = "代理";
+
+"logs.direct" = "直连";
+
+"logs.dns" = "DNS";
+
+"logs.other" = "其他";
+
+"logs.empty" = "连接后这里会显示实时代理 / 直连日志。";
+
+"logs.pause" = "暂停";
+
+"logs.resume" = "继续";
+
+"logs.clear" = "清空";
+
+"logs.live" = "实时";
+
+"logs.paused" = "已暂停";
+
+"tab.logs" = "日志";
+
+"logs.save" = "保存";

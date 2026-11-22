@@ -1,5 +1,4 @@
 import SwiftUI
-import UIKit
 
 /// Settings root (spec §5.11, design reference `N-settings`). Also acts as the entry
 /// point for the subscription list, routing is reached from the Home summary row.
@@ -32,34 +31,22 @@ struct SettingsView: View {
 
     var body: some View {
         NavigationStack(path: $path) {
-            ScrollViewReader { proxy in
-                List {
-                    latencySection
-                    subscriptionsSection
-                    geoIPSection
-                    languageSection.id("settings.language.section")
-                    supportSection
-                    dataSection
-                }
-                .listStyle(.insetGrouped)
-                .task {
-                    #if DEBUG
-                    await applyLanguageScreenshotHarness(proxy)
-                    #endif
-                }
-            }
-            .navigationTitle(L10n.t("tab.settings"))
+            settingsRoot
+                .navigationTitle(PlatformFlags.isMacOS ? "" : L10n.t("tab.settings"))
             .navigationDestination(for: Route.self) { route in
                 destination(for: route)
             }
             .sheet(isPresented: $showAddSubscription) {
                 AddSubscriptionView()
+                    .wujiSheetSizing(width: 520, height: 620)
             }
             .sheet(isPresented: $showRoutingSheet) {
                 RoutingSettingsView()
+                    .wujiSheetSizing(width: 520, height: 640)
             }
             .sheet(item: $confirmation) { request in
                 ConfirmationSheet(request: request)
+                    .wujiSheetSizing(width: 420, height: 240)
             }
             .wujiToast($toast)
             .task {
@@ -75,19 +62,310 @@ struct SettingsView: View {
         }
     }
 
+    /// Root content: native grouped Form on macOS, iOS-style List elsewhere.
+    @ViewBuilder
+    private var settingsRoot: some View {
+        #if os(macOS)
+        macGlassSettingsContent
+        #else
+        ScrollViewReader { proxy in
+            List {
+                latencySection
+                subscriptionsSection
+                geoIPSection
+                languageSection.id("settings.language.section")
+                supportSection
+                dataSection
+            }
+            .wujiListStyle()
+            .task {
+                #if DEBUG
+                await applyLanguageScreenshotHarness(proxy)
+                #endif
+            }
+        }
+        #endif
+    }
+
+    // MARK: - macOS iOS 26 Liquid Glass settings
+
+    #if os(macOS)
+    private var macGlassSettingsContent: some View {
+        MacGlassPage {
+            ViewThatFits(in: .vertical) {
+                macGlassSettingsColumns
+                ScrollView {
+                    macGlassSettingsColumns
+                }
+                .scrollIndicators(.hidden)
+            }
+        }
+        .toolbarBackground(.hidden, for: .windowToolbar)
+    }
+
+    /// Two compact columns keep every settings section visible without a scrollbar.
+    private var macGlassSettingsColumns: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            Text(L10n.t("tab.settings"))
+                .font(MacGlass.titleFont)
+                .foregroundStyle(Theme.label)
+                .padding(.horizontal, 4)
+
+            HStack(alignment: .top, spacing: 18) {
+                VStack(spacing: 14) {
+                    macGlassLatencySection
+                    macGlassSubscriptionsSection
+                    macGlassGeoIPSection
+                }
+                VStack(spacing: 14) {
+                    macGlassLanguageSection
+                    macGlassSupportSection
+                    macGlassDataSection
+                }
+            }
+        }
+        .frame(maxWidth: 900)
+        .frame(maxWidth: .infinity)
+        .padding(.horizontal, 18)
+        .padding(.top, 16)
+        .padding(.bottom, 20)
+    }
+
+    private func macGlassSection<Rows: View>(title: String, footnote: String? = nil,
+                                             @ViewBuilder rows: () -> Rows) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            MacGlassSectionHeader(title: title)
+            MacGlassCard {
+                VStack(spacing: 0) { rows() }
+            }
+            if let footnote {
+                MacGlassFootnote(text: footnote)
+            }
+        }
+    }
+
+    private var macGlassLatencySection: some View {
+        macGlassSection(title: L10n.t("settings.latency.section", table: "Settings")) {
+            NavigationLink(value: Route.testURL) {
+                MacGlassRow(symbol: "gauge.medium", tint: MacGlass.blue,
+                            title: L10n.t("settings.latency.testURL", table: "Settings"),
+                            value: SubscriptionFormat.host(app.settings.latencyTestURL))
+            }
+            .buttonStyle(.plain)
+            .wujiRowHover()
+            .accessibilityIdentifier("wuji.settings.testURL")
+
+            MacGlassDivider()
+
+            NavigationLink(value: Route.timeout) {
+                MacGlassRow(symbol: "clock", tint: MacGlass.orange,
+                            title: L10n.t("settings.latency.timeout", table: "Settings"),
+                            value: secondsLabel(for: app.settings.latencyTimeout))
+            }
+            .buttonStyle(.plain)
+            .wujiRowHover()
+            .accessibilityIdentifier("wuji.settings.timeout")
+        }
+    }
+
+    private var macGlassSubscriptionsSection: some View {
+        macGlassSection(title: L10n.t("settings.section.subscriptions")) {
+            HStack(spacing: 12) {
+                MacGlassIcon(symbol: "arrow.triangle.2.circlepath", tint: MacGlass.green)
+                Text(L10n.t("settings.autoUpdate"))
+                    .font(MacGlass.rowFont)
+                    .foregroundStyle(Theme.label)
+                Spacer(minLength: 8)
+                Toggle("", isOn: Binding(
+                    get: { app.settings.subscriptionAutoUpdateEnabled },
+                    set: { newValue in
+                        app.settings.subscriptionAutoUpdateEnabled = newValue
+                        app.saveSettings()
+                    }
+                ))
+                .labelsHidden()
+                .toggleStyle(.switch)
+                .tint(MacGlass.green)
+                .accessibilityIdentifier("wuji.settings.autoUpdate")
+            }
+            .padding(.horizontal, 16)
+            .frame(height: MacGlass.rowHeight)
+
+            MacGlassDivider()
+
+            NavigationLink(value: Route.subscriptionList) {
+                MacGlassRow(symbol: "dot.radiowaves.left.and.right", tint: MacGlass.blue,
+                            title: L10n.t("settings.subscriptions"),
+                            value: "\(app.subscriptions.count)")
+            }
+            .buttonStyle(.plain)
+            .wujiRowHover()
+            .accessibilityIdentifier("wuji.settings.subscriptions")
+        }
+    }
+
+    private var macGlassGeoIPSection: some View {
+        macGlassSection(title: L10n.t("settings.geoip.section", table: "Settings")) {
+            MacGlassRow(symbol: "globe", tint: MacGlass.purple,
+                        title: L10n.t("settings.geoip.status", table: "Settings"),
+                        value: geoIPStatusText,
+                        showsChevron: false)
+                .accessibilityIdentifier("wuji.settings.geoipStatus")
+
+            MacGlassDivider()
+
+            Button {
+                Task { await runGeoIPUpdate() }
+            } label: {
+                HStack(spacing: 12) {
+                    MacGlassIcon(symbol: "arrow.down.circle", tint: MacGlass.blue)
+                    Text(L10n.t("settings.geoip.updateNow", table: "Settings"))
+                        .font(MacGlass.rowFont)
+                        .foregroundStyle(MacGlass.blue)
+                    Spacer(minLength: 8)
+                    if geoIPUpdating {
+                        ProgressView().controlSize(.small)
+                    }
+                }
+                .padding(.horizontal, 16)
+                .frame(height: MacGlass.rowHeight)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .wujiRowHover()
+            .disabled(geoIPUpdating)
+            .accessibilityIdentifier("wuji.settings.geoipUpdate")
+        }
+    }
+
+    private var macGlassLanguageSection: some View {
+        macGlassSection(title: L10n.t("settings.language.section", table: "Settings")) {
+            Button {
+                selectLanguage(.system)
+            } label: {
+                HStack(spacing: 12) {
+                    MacGlassIcon(symbol: "character.bubble", tint: MacGlass.teal)
+                    Text(L10n.t("settings.language.followSystem", table: "Settings"))
+                        .font(MacGlass.rowFont)
+                        .foregroundStyle(Theme.label)
+                    Spacer(minLength: 8)
+                    if app.settings.appLanguage == .system {
+                        Image(systemName: "checkmark")
+                            .font(.system(size: 13, weight: .semibold))
+                            .foregroundStyle(MacGlass.blue)
+                    }
+                }
+                .padding(.horizontal, 16)
+                .frame(height: MacGlass.rowHeight)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .wujiRowHover()
+            .accessibilityIdentifier("wuji.settings.language.followSystem")
+
+            MacGlassDivider()
+
+            NavigationLink(value: Route.languagePicker) {
+                MacGlassRow(symbol: "globe", tint: MacGlass.teal,
+                            title: L10n.t("settings.language.current", table: "Settings"),
+                            value: currentLanguageName)
+            }
+            .buttonStyle(.plain)
+            .wujiRowHover()
+            .accessibilityIdentifier("wuji.settings.language.chooseAnother")
+        }
+    }
+
+    private var macGlassSupportSection: some View {
+        macGlassSection(title: L10n.t("settings.section.support")) {
+            NavigationLink(value: Route.about) {
+                MacGlassRow(symbol: "info.circle", tint: MacGlass.gray, title: L10n.t("settings.about"))
+            }
+            .buttonStyle(.plain)
+            .wujiRowHover()
+            .accessibilityIdentifier("wuji.settings.about")
+
+            MacGlassDivider()
+
+            Button {
+                openSupportEmail()
+            } label: {
+                HStack(spacing: 12) {
+                    MacGlassIcon(symbol: "envelope", tint: MacGlass.gray)
+                    Text(L10n.t("settings.contact"))
+                        .font(MacGlass.rowFont)
+                        .foregroundStyle(Theme.label)
+                    Spacer(minLength: 8)
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundStyle(Theme.tertiaryLabel)
+                }
+                .padding(.horizontal, 16)
+                .frame(height: MacGlass.rowHeight)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .wujiRowHover()
+            .accessibilityIdentifier("wuji.settings.contact")
+
+            MacGlassDivider()
+
+            NavigationLink(value: Route.terms) {
+                MacGlassRow(symbol: "doc.text", tint: MacGlass.gray, title: L10n.t("settings.terms"))
+            }
+            .buttonStyle(.plain)
+            .wujiRowHover()
+            .accessibilityIdentifier("wuji.settings.terms")
+
+            MacGlassDivider()
+
+            NavigationLink(value: Route.privacy) {
+                MacGlassRow(symbol: "hand.raised", tint: MacGlass.gray, title: L10n.t("settings.privacy"))
+            }
+            .buttonStyle(.plain)
+            .wujiRowHover()
+            .accessibilityIdentifier("wuji.settings.privacy")
+        }
+    }
+
+    private var macGlassDataSection: some View {
+        macGlassSection(title: L10n.t("settings.section.data", table: "Settings")) {
+            Button(role: .destructive) {
+                confirmation = clearDataRequest()
+            } label: {
+                HStack(spacing: 12) {
+                    MacGlassIcon(symbol: "trash", tint: MacGlass.red)
+                    Text(L10n.t("settings.clearData"))
+                        .font(MacGlass.rowFont)
+                        .foregroundStyle(MacGlass.red)
+                    Spacer(minLength: 8)
+                }
+                .padding(.horizontal, 16)
+                .frame(height: MacGlass.rowHeight)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .wujiRowHover()
+            .accessibilityIdentifier("wuji.settings.clearData")
+        }
+    }
+    #endif
+
     // MARK: - Sections
 
     private var latencySection: some View {
         Section {
             NavigationLink(value: Route.testURL) {
                 ValueRow(title: L10n.t("settings.latency.testURL", table: "Settings"),
-                         value: SubscriptionFormat.host(app.settings.latencyTestURL))
+                         value: SubscriptionFormat.host(app.settings.latencyTestURL),
+                         interactive: PlatformFlags.isMacOS)
             }
             .accessibilityIdentifier("wuji.settings.testURL")
 
             NavigationLink(value: Route.timeout) {
                 ValueRow(title: L10n.t("settings.latency.timeout", table: "Settings"),
-                         value: secondsLabel(for: app.settings.latencyTimeout))
+                         value: secondsLabel(for: app.settings.latencyTimeout),
+                         interactive: PlatformFlags.isMacOS)
             }
             .accessibilityIdentifier("wuji.settings.timeout")
         } header: {
@@ -109,7 +387,8 @@ struct SettingsView: View {
 
             NavigationLink(value: Route.subscriptionList) {
                 ValueRow(title: L10n.t("settings.subscriptions"),
-                         value: "\(app.subscriptions.count)")
+                         value: "\(app.subscriptions.count)",
+                         interactive: PlatformFlags.isMacOS)
             }
             .accessibilityIdentifier("wuji.settings.subscriptions")
         } header: {
@@ -188,7 +467,7 @@ struct SettingsView: View {
                 HStack(spacing: 12) {
                     Text(L10n.t("settings.language.followSystem", table: "Settings"))
                         .font(Theme.body)
-                        .foregroundStyle(Theme.label)
+                        .foregroundStyle(PlatformFlags.interactiveTitleColor)
                     Spacer(minLength: 8)
                     if app.settings.appLanguage == .system {
                         Image(systemName: "checkmark")
@@ -197,13 +476,15 @@ struct SettingsView: View {
                     }
                 }
                 .contentShape(Rectangle())
+                .wujiRowHover()
             }
             .buttonStyle(.plain)
             .accessibilityIdentifier("wuji.settings.language.followSystem")
 
             NavigationLink(value: Route.languagePicker) {
                 ValueRow(title: L10n.t("settings.language.current", table: "Settings"),
-                         value: currentLanguageName)
+                         value: currentLanguageName,
+                         interactive: PlatformFlags.isMacOS)
             }
             .accessibilityIdentifier("wuji.settings.language.chooseAnother")
         } header: {
@@ -236,6 +517,7 @@ struct SettingsView: View {
     private var supportSection: some View {        Section {
             NavigationLink(value: Route.about) {
                 Text(L10n.t("settings.about"))
+                    .wujiNavigationRow(chevron: false)
             }
             .accessibilityIdentifier("wuji.settings.about")
 
@@ -245,24 +527,27 @@ struct SettingsView: View {
                 HStack(spacing: 8) {
                     Text(L10n.t("settings.contact"))
                         .font(Theme.body)
-                        .foregroundStyle(Theme.label)
+                        .foregroundStyle(PlatformFlags.interactiveTitleColor)
                     Spacer(minLength: 12)
                     Image(systemName: "chevron.right")
                         .font(.footnote.weight(.semibold))
                         .foregroundStyle(Theme.tertiaryLabel)
                 }
                 .contentShape(Rectangle())
+                .wujiRowHover()
             }
             .buttonStyle(.plain)
             .accessibilityIdentifier("wuji.settings.contact")
 
             NavigationLink(value: Route.terms) {
                 Text(L10n.t("settings.terms"))
+                    .wujiNavigationRow(chevron: false)
             }
             .accessibilityIdentifier("wuji.settings.terms")
 
             NavigationLink(value: Route.privacy) {
                 Text(L10n.t("settings.privacy"))
+                    .wujiNavigationRow(chevron: false)
             }
             .accessibilityIdentifier("wuji.settings.privacy")
         } header: {
@@ -320,7 +605,7 @@ struct SettingsView: View {
 
     private func openSupportEmail() {
         guard let url = URL(string: "mailto:\(Self.supportEmail)") else { return }
-        UIApplication.shared.open(url)
+        PlatformSystem.open(url)
     }
 
     private func resetVPNRequest() -> ConfirmationRequest {

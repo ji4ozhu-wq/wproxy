@@ -86,7 +86,7 @@ struct ConfirmationSheet: View {
             .padding(.bottom, 12)
         }
         .background(Theme.background)
-        .presentationDetents([.medium, .large])
+        .wujiPresentationDetents([.medium, .large])
         .presentationDragIndicator(.hidden)
     }
 }
@@ -150,6 +150,10 @@ extension View {
 struct ValueRow: View {
     let title: String
     var value: String?
+    /// Blue link-style title + hover feedback on macOS (row navigates or acts).
+    var interactive = false
+    /// Manual trailing chevron; on macOS grouped Form the NavigationLink already
+    /// draws one, so only pass this for Button-based rows.
     var showsChevron = false
     var valueColor: Color = Theme.secondaryLabel
 
@@ -157,7 +161,7 @@ struct ValueRow: View {
         HStack(spacing: 8) {
             Text(title)
                 .font(Theme.body)
-                .foregroundStyle(Theme.label)
+                .foregroundStyle(interactive ? PlatformFlags.interactiveTitleColor : Theme.label)
             Spacer(minLength: 12)
             if let value {
                 Text(value)
@@ -174,6 +178,7 @@ struct ValueRow: View {
         }
         .frame(minHeight: 24)
         .contentShape(Rectangle())
+        .wujiRowHover(interactive)
     }
 }
 

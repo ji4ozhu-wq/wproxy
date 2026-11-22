@@ -16,11 +16,11 @@ struct LatencyTestURLView: View {
     }
 
     var body: some View {
-        List {
+        WujiSettingsList {
             Section {
                 TextField("https://", text: $text)
-                    .keyboardType(.URL)
-                    .textInputAutocapitalization(.never)
+                    .wujiKeyboardType(.url)
+                    .wujiNoAutocapitalization()
                     .autocorrectionDisabled()
                     .submitLabel(.done)
                     .focused($isFocused)
@@ -35,12 +35,11 @@ struct LatencyTestURLView: View {
                 }
             }
         }
-        .listStyle(.insetGrouped)
         .navigationTitle(L10n.t("settings.latency.testURLTitle", table: "Settings"))
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar(.hidden, for: .tabBar)
+        .wujiInlineNavigationTitle()
+        .wujiHiddenTabBar()
         .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
+            ToolbarItem(placement: .wujiTrailing) {
                 Button(L10n.t("common.save")) { save() }
                     .fontWeight(.semibold)
                     .accessibilityIdentifier("wuji.settings.latency.save")

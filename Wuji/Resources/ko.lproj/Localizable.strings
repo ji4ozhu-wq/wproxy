@@ -194,3 +194,47 @@
 "permission.network.note" = "나중에 변경할 수 있습니다: 설정 → 개인정보 보호 및 보안 → 로컬 네트워크, 설정 → 일반 → VPN 및 기기 관리.";
 /* Global confirmation after node switch / tunnel settings change */
 "toast.settingsApplied" = "설정이 적용되었습니다.";
+
+"home.details.section" = "연결 세부 정보";
+
+"home.details.exit" = "출구 서버";
+
+"home.details.protocol" = "프로토콜";
+
+"home.details.routing" = "라우팅 모드";
+
+"home.details.dns" = "DNS";
+
+"menu.showWindow" = "메인 윈도우 보기";
+
+"menu.about" = "WProxy 정보";
+
+"menu.quit" = "WProxy 종료";
+
+"logs.title" = "연결 로그";
+
+"logs.all" = "전체";
+
+"logs.proxy" = "프록시";
+
+"logs.direct" = "직접";
+
+"logs.dns" = "DNS";
+
+"logs.other" = "기타";
+
+"logs.empty" = "연결 후 프록시 / 직접 실시간 로그가 여기에 표시됩니다.";
+
+"logs.pause" = "일시정지";
+
+"logs.resume" = "재개";
+
+"logs.clear" = "지우기";
+
+"logs.live" = "실시간";
+
+"logs.paused" = "일시정지됨";
+
+"tab.logs" = "로그";
+
+"logs.save" = "저장";

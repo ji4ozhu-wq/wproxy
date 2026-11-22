@@ -36,23 +36,23 @@ struct RoutingSettingsView: View {
     }
 
     private var content: some View {
-        List {
+        WujiSettingsList {
             modeSection
             dnsSection
             localNetworkSection
             regionsSection
         }
-        .listStyle(.insetGrouped)
         .navigationTitle(L10n.t("routing.title"))
-        .navigationBarTitleDisplayMode(.inline)
+        .wujiInlineNavigationTitle()
         .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
+            ToolbarItem(placement: .wujiTrailing) {
                 Button(L10n.t("common.done")) { dismiss() }
                     .accessibilityIdentifier("wuji.routing.done")
             }
         }
         .sheet(isPresented: $showRegionPicker) {
             CountryPickerView()
+                .wujiSheetSizing(width: 560, height: 680)
         }
         .accessibilityIdentifier("wuji.routing.list")
         .task {
@@ -60,6 +60,9 @@ struct RoutingSettingsView: View {
             await openRegionPickerForScreenshotIfNeeded()
             #endif
         }
+        .wujiMacSheetActions(confirmTitle: L10n.t("common.done"),
+                             onConfirm: { dismiss() },
+                             isEnabled: !embeddedInNavigation)
     }
 
     // MARK: - Sections

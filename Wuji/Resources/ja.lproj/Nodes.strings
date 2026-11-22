@@ -113,6 +113,7 @@
 /* ===== QR share ===== */
 "nodes.qr.title" = "ノードを共有";
 "nodes.qr.saveToPhotos" = "写真に保存";
+"nodes.qr.saveToFile" = "画像を保存…";
 "nodes.qr.copyURI" = "URI をコピー";
 "nodes.qr.share" = "共有";
 "nodes.qr.saved" = "写真に保存しました";

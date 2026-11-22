@@ -1,12 +1,21 @@
 import SwiftUI
+import CoreImage
+
+#if os(iOS)
 import AVFoundation
 import PhotosUI
 import UIKit
-import CoreImage
+#else
+import PhotosUI
+#endif
 
 /// Camera / photo-library QR import (spec §5.5).
 /// Presented as a full-screen cover with a dark camera backdrop; falls back to the
 /// photo picker or clipboard import when the camera is unavailable or denied.
+///
+/// On macOS there is no live camera scanning: the same screen imports a QR image
+/// from Photos or from a file picked with the open panel, then runs the identical
+/// decode/preview/save flow.
 struct ScanQRView: View {
     @EnvironmentObject private var app: AppState
     @Environment(\.dismiss) private var dismiss
@@ -20,6 +29,7 @@ struct ScanQRView: View {
     @State private var invalidMessage: String?
     @State private var lastHandledCode: String?
     @State private var showPhotoPicker = false
+    @State private var showFileImporter = false
     @State private var photoItem: PhotosPickerItem?
     @State private var showPasteFallback = false
     @State private var didConfigureDebug = false
@@ -31,10 +41,12 @@ struct ScanQRView: View {
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
+            #if os(iOS)
             if cameraState == .running {
                 CameraPreviewView(session: scanner.session)
                     .ignoresSafeArea()
             }
+            #endif
             content
             if let previewProfile {
                 previewOverlay(profile: previewProfile)
@@ -42,12 +54,16 @@ struct ScanQRView: View {
         }
         .preferredColorScheme(.dark)
         .photosPicker(isPresented: $showPhotoPicker, selection: $photoItem, matching: .images)
+        .wujiImageFileImporter(isPresented: $showFileImporter) { url in
+            loadImageFile(url)
+        }
         .onAppear(perform: configureCamera)
         .onDisappear { scanner.stop() }
         .onChange(of: photoItem) { _, item in
             guard let item else { return }
             loadPhoto(item)
         }
+        #if os(iOS)
         .onChange(of: scenePhase) { _, phase in
             guard cameraState == .running else { return }
             if phase == .active {
@@ -56,6 +72,7 @@ struct ScanQRView: View {
                 scanner.stop()
             }
         }
+        #endif
         .onReceive(scanner.$code.compactMap { $0 }) { code in
             handleScannedCode(code)
         }
@@ -63,6 +80,7 @@ struct ScanQRView: View {
             NavigationStack {
                 PasteImportView()
             }
+            .wujiSheetSizing(width: 560, height: 700)
         }
     }
 
@@ -115,6 +133,11 @@ struct ScanQRView: View {
 
             bottomControls
                 .padding(.bottom, 24)
+
+            #if os(macOS)
+            pasteFallbackButton
+                .padding(.bottom, 8)
+            #endif
         }
     }
 
@@ -176,8 +199,8 @@ struct ScanQRView: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 36)
             Button {
-                if let url = URL(string: UIApplication.openSettingsURLString) {
-                    UIApplication.shared.open(url)
+                if let url = PlatformSystem.appSettingsURL {
+                    PlatformSystem.open(url)
                 }
             } label: {
                 Text(L10n.t("nodes.scan.openSettings", table: "Nodes"))
@@ -214,7 +237,11 @@ struct ScanQRView: View {
 
     private var bottomControls: some View {
         Button {
+            #if os(iOS)
             showPhotoPicker = true
+            #else
+            showFileImporter = true
+            #endif
         } label: {
             VStack(spacing: 10) {
                 Image(systemName: "camera")
@@ -276,7 +303,7 @@ struct ScanQRView: View {
                                 .foregroundStyle(Theme.tint)
                                 .frame(maxWidth: .infinity)
                                 .frame(height: 48)
-                                .background(Color(.secondarySystemFill))
+                                .background(Theme.fillSecondary)
                                 .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                         }
                         .buttonStyle(.plain)
@@ -322,6 +349,7 @@ struct ScanQRView: View {
             }
         }
         #endif
+        #if os(iOS)
         guard AVCaptureDevice.default(for: .video) != nil else {
             cameraState = .unavailable
             return
@@ -342,12 +370,18 @@ struct ScanQRView: View {
         default:
             cameraState = .denied
         }
+        #else
+        // macOS has no live camera path; the screen imports a QR image instead.
+        cameraState = .unavailable
+        #endif
     }
 
     private func startCamera() {
+        #if os(iOS)
         scanner.configureIfNeeded()
         scanner.start()
         cameraState = .running
+        #endif
     }
 
     // MARK: - Handling results
@@ -365,7 +399,7 @@ struct ScanQRView: View {
             previewError = nil
             previewProfile = profile
             scanner.stop()
-            UINotificationFeedbackGenerator().notificationOccurred(.success)
+            PlatformHaptics.success()
         } catch {
             invalidMessage = L10n.t("nodes.scan.invalidQR", table: "Nodes")
             scanner.reset()
@@ -448,10 +482,28 @@ struct ScanQRView: View {
             }
         }
     }
+
+    /// File-import path (used on macOS): read the picked image and run the same
+    /// QR decode. Compiled on both platforms so the `wujiImageFileImporter` call
+    /// site type-checks everywhere; iOS simply never invokes it.
+    private func loadImageFile(_ url: URL) {
+        let didAccess = url.startAccessingSecurityScopedResource()
+        defer { if didAccess { url.stopAccessingSecurityScopedResource() } }
+        guard let data = try? Data(contentsOf: url),
+              let code = QRImageDecoder.decode(data: data) else {
+            invalidMessage = L10n.t("nodes.scan.photoError", table: "Nodes")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                withAnimation(.easeInOut(duration: 0.2)) { invalidMessage = nil }
+            }
+            return
+        }
+        handleScannedCode(code)
+    }
 }
 
-// MARK: - Camera preview
+// MARK: - Camera preview (iOS only)
 
+#if os(iOS)
 private struct CameraPreviewView: UIViewRepresentable {
     let session: AVCaptureSession
 
@@ -472,9 +524,11 @@ private struct CameraPreviewView: UIViewRepresentable {
         uiView.previewLayer.session = session
     }
 }
+#endif
 
 // MARK: - Capture session
 
+#if os(iOS)
 final class QRScannerController: NSObject, ObservableObject, AVCaptureMetadataOutputObjectsDelegate {
     let session = AVCaptureSession()
     @Published var code: String?
@@ -526,6 +580,18 @@ final class QRScannerController: NSObject, ObservableObject, AVCaptureMetadataOu
         code = value
     }
 }
+#else
+/// macOS stand-in for the iOS capture controller: there is no live camera scan, so
+/// every lifecycle call is a no-op and only the QR decode result is published.
+final class QRScannerController: NSObject, ObservableObject {
+    @Published var code: String?
+
+    func configureIfNeeded() {}
+    func start() {}
+    func stop() {}
+    func reset() { code = nil }
+}
+#endif
 
 // MARK: - Viewfinder & photo decoding
 
@@ -565,7 +631,8 @@ private struct ViewfinderCorners: View {
 
 enum QRImageDecoder {
     static func decode(data: Data) -> String? {
-        guard let image = UIImage(data: data), let cgImage = image.cgImage else { return nil }
+        guard let image = PlatformImage.wujiDecoded(from: data),
+              let cgImage = image.wujiCGImage else { return nil }
         let ciImage = CIImage(cgImage: cgImage)
         let detector = CIDetector(ofType: CIDetectorTypeQRCode,
                                   context: nil,

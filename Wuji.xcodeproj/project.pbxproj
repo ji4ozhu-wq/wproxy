@@ -9,106 +9,223 @@
 /* Begin PBXBuildFile section */
 		0020ECE3C5B4A76E5D0BB210 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E387A4A27D5278F3D9454B /* DataTests.swift */; };
 		01D9A2C1EB48960A0182CB8E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2F309E67F278D651333C61 /* Models.swift */; };
+		02540074C0A322B04A6EEA69 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F88C5194C39655C93EF18D /* HomeView.swift */; };
 		02D819D3A7FCB7BC202134E0 /* GeoIPAssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55A81AB72AA9826C1D8425 /* GeoIPAssetManager.swift */; };
 		0392EAE4A1B4E72B667A6B4F /* GeoIPMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD368389EB46D64060BA62 /* GeoIPMetadata.swift */; };
+		03F8A53114EF1EB1BD97E47C /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3CD9E4171DE6B4AD926E6 /* Components.swift */; };
+		0497761014EE2CAA4436D494 /* CountryDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F510EE18AE17F5708665E56 /* CountryDirectory.swift */; };
 		075053F7B52B012E69C8636B /* TunFdResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F217A33F65421BFC093BE2F5 /* TunFdResolver.swift */; };
+		0B8F211397F0871D136A1F69 /* privacy-en.md in Resources */ = {isa = PBXBuildFile; fileRef = 43FC24400DC1558AFEA07E34 /* privacy-en.md */; };
 		0D7551E83D0F0F04C171B7DD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287FC46B50D8E68A3A1F7C4 /* SettingsView.swift */; };
+		0E2524FBB7AE20C789FF2A11 /* GeoIPUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5325E7C962F0817A74F74E /* GeoIPUpdater.swift */; };
+		129FD6EEC804F0EFC34CCCDF /* SmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C03C6B1C74C4AA0913578 /* SmokeTests.swift */; };
+		1481891664469582987E867C /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991D5597522DF34E5930F948 /* MenuBarController.swift */; };
 		14CBB45532781D70BB5A1E24 /* QRShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DB0D1312D3A07A6AC3DF6E /* QRShareView.swift */; };
+		17FE0B674CA3D826BEC6BC4B /* SubscriptionSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E7CDA466486E4CCD2734F2 /* SubscriptionSupport.swift */; };
 		1AB92587AEB55D5F99DF9AFC /* CountryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C749B786422B2C6847F23C1 /* CountryPickerView.swift */; };
+		1C3791E34A2C2BA53865BA69 /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFCD0109E0DA1E53CA79FA /* SubscriptionService.swift */; };
 		1CF719EAAA7E74FFED34C6D5 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF86E83A1F2F6C3CD4F99741 /* RootView.swift */; };
+		1EAF0F171D896EC6E48D74EE /* NodeActionsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B0F5F239146258567715F /* NodeActionsSheet.swift */; };
 		1FBCD8DFEE515744920E0A9B /* AddNodeFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F77B378148E7C1BFA3EC18 /* AddNodeFormView.swift */; };
 		21A5A6015DC2D6C3EA659E4C /* GeoIPAssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55A81AB72AA9826C1D8425 /* GeoIPAssetManager.swift */; };
+		231E6513A6FAE0379A564523 /* XrayConfigBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E777A20399C2F53D17D984 /* XrayConfigBuilder.swift */; };
+		233C4812324E1DE34DEED14C /* privacy-zh.md in Resources */ = {isa = PBXBuildFile; fileRef = E28D0882C88851E7DA171AA1 /* privacy-zh.md */; };
 		237AA92ED34DEB96572BD1D8 /* geosite.dat.gz in Resources */ = {isa = PBXBuildFile; fileRef = 004601ACAC51CBE63221D5FC /* geosite.dat.gz */; };
+		23800EB96F4D8D9C18242F1B /* LicensesCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38607419BF9F14B2C83AF50 /* LicensesCatalog.swift */; };
 		23C4B34B5E4C431B7939DB67 /* SubscriptionSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E7CDA466486E4CCD2734F2 /* SubscriptionSupport.swift */; };
 		245B8144814AA5779B24CE27 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8CC06F538F4A496B11D923 /* Theme.swift */; };
 		24AC07E1543A6ACB1893DBCF /* geoip.dat.gz in Resources */ = {isa = PBXBuildFile; fileRef = 199C84AA743D614BBBEC1EDB /* geoip.dat.gz */; };
+		266F1FBD718F1ABE547BB934 /* Routing.strings in Resources */ = {isa = PBXBuildFile; fileRef = 648A52CBB9F9253AD570357A /* Routing.strings */; };
+		282F43FC15DFAC0D8D893F37 /* RouteDiagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EAA108AF12E7BC1F16EAB6 /* RouteDiagnostics.swift */; };
+		2963160DD37E38B5724D4528 /* PlatformCompat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787C33386250F9C694D83762 /* PlatformCompat.swift */; };
 		2A09FCEF558B129AE7261D1C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B7D2A705E9CE0F9504CA2 /* OnboardingView.swift */; };
 		2AA3B205449D52E4923947EA /* SubscriptionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81B799F1F1F14001936B15 /* SubscriptionListView.swift */; };
 		2C22078303DF69D915779315 /* DemoSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F523712731207D2939C18 /* DemoSeed.swift */; };
+		2E010DFFB5E908867A87A075 /* SessionStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBC44715FCAD4811DFC120 /* SessionStatsModel.swift */; };
 		2E377F9F4A3FC02D47DB8D57 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373B02F207B9A4895115CB5 /* SettingsStore.swift */; };
 		321C80E92A836C17F1091EF1 /* LegalDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A0376A3D9A3B7CFABDAB0 /* LegalDocumentView.swift */; };
 		32FA65017C7D11C57E00676C /* LocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BF6D7DB60476FB5B75FC6 /* LocalizationTests.swift */; };
+		333053367C668CAED8000D2C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8CC06F538F4A496B11D923 /* Theme.swift */; };
 		341EE7C588022BA658DCD812 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3CD9E4171DE6B4AD926E6 /* Components.swift */; };
 		35F27127B2A797A7844CF043 /* geoip_countries.json in Resources */ = {isa = PBXBuildFile; fileRef = F555DF2BB0FCF8C35B52E56F /* geoip_countries.json */; };
+		37DEBD5F193EDB195FED37D8 /* DemoSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F523712731207D2939C18 /* DemoSeed.swift */; };
+		3AC686E77CCC0D83F1112449 /* AccessLogModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E437239579DAFE083C3F97 /* AccessLogModels.swift */; };
 		3B3423122EAF682DCBE6F93F /* URIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510A2CA39CAE8D28C2B5344 /* URIParser.swift */; };
 		3C0C4408DA5A45D1E262D30C /* TunnelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB3041A993F300002D0E818 /* TunnelController.swift */; };
+		3C924728C98E161AED721CC0 /* SubscriptionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A602DD2E3E19EA0FAE0AF2DD /* SubscriptionDetailView.swift */; };
+		3CECBCEA83A1113F19C30D01 /* CountryDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F510EE18AE17F5708665E56 /* CountryDirectory.swift */; };
+		3E82F4C53E0CAF22754F45A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EAD6E43AF34F6089A2F664A /* InfoPlist.strings */; };
 		3EDA2DC05EF4DE93007DBFF7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 10DD37EBF97653A15FD1FB38 /* PrivacyInfo.xcprivacy */; };
+		432F2D1908538C8979EA1917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561678B36E2570F43E6E975C /* Assets.xcassets */; };
 		4350B6EE8A780FE89D0E82EA /* XrayRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1EFB3D099799379E96F70F /* XrayRunner.swift */; };
+		464A66C439C2C873234C2857 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 10DD37EBF97653A15FD1FB38 /* PrivacyInfo.xcprivacy */; };
 		4662C5934CFC8F291003E8DD /* XrayConfigBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E777A20399C2F53D17D984 /* XrayConfigBuilder.swift */; };
+		470AC99E3209B8440098C7CD /* LatencyTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40282E7761429F7321D6CAA8 /* LatencyTester.swift */; };
 		476997860262BE3E09645C9E /* NetworkPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE2896849558B010C2A6A4D /* NetworkPermissionView.swift */; };
+		4941E055BDC63A37976F0AB2 /* LocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BF6D7DB60476FB5B75FC6 /* LocalizationTests.swift */; };
+		496097DEEDE3F6A0A51FF4A9 /* AccessLogRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DACF0ABC1763556B6DF470 /* AccessLogRelay.swift */; };
 		4E86D4AEEF5C5C85CCB5B6B2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AB61881225621C2F71B84E /* AppState.swift */; };
+		4ED183E958FBD2DC923B5750 /* SubscriptionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81B799F1F1F14001936B15 /* SubscriptionListView.swift */; };
+		4F730A81971AA203DECEE0C4 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373B02F207B9A4895115CB5 /* SettingsStore.swift */; };
+		503768513E415CE1459A5310 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B7D2A705E9CE0F9504CA2 /* OnboardingView.swift */; };
 		513EDBAAB891595E55A62A80 /* Routing.strings in Resources */ = {isa = PBXBuildFile; fileRef = 648A52CBB9F9253AD570357A /* Routing.strings */; };
+		5144C7DB8FEBB61ADA15263E /* GeoIPAssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55A81AB72AA9826C1D8425 /* GeoIPAssetManager.swift */; };
+		5252A1A8417DB7C0C9932127 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14593D93E97495FD9C9C8AA /* AppDatabase.swift */; };
+		52FEEFE94CE028FB49F906ED /* GeoIPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE7D8F613A3F6F565BC3281 /* GeoIPTests.swift */; };
+		5364F56F8D2C1F652F3331C9 /* AccessLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DDBCAA1E6B6F33460D0D7 /* AccessLogView.swift */; };
 		54996203EC291B13B4849C3A /* PasteImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC067FD924952E606409D947 /* PasteImportView.swift */; };
+		554BE31995B974176766E8A0 /* LibXray.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1374359A33189AE6B5713781 /* LibXray.xcframework */; };
+		5668C43DF96DFDC3B079DF0E /* terms-zh.md in Resources */ = {isa = PBXBuildFile; fileRef = E758BCA1D2D7C427F3532F47 /* terms-zh.md */; };
+		584E96D9EE011B89C981D000 /* AccessLogModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E437239579DAFE083C3F97 /* AccessLogModels.swift */; };
 		5995274B050A21F7670CEBE7 /* GeoIPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE7D8F613A3F6F565BC3281 /* GeoIPTests.swift */; };
+		5A05950326705A2CBD0732C0 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 4ECC08478D155A85FD8CEBEF /* PrivacyInfo.xcprivacy */; };
+		5C20226D75B170CD6EF7EE10 /* AccessLogModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E437239579DAFE083C3F97 /* AccessLogModels.swift */; };
 		5D4D63BE7249C7BE3CA5D7DD /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC22D3D311A3B017B24C4DDD /* AppGroup.swift */; };
+		5EB3E013C1831B0BEAE0D8A3 /* GeoIPMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD368389EB46D64060BA62 /* GeoIPMetadata.swift */; };
+		5EE64275D8D67BBC7D7772CF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AB61881225621C2F71B84E /* AppState.swift */; };
 		5F3C2E67AB6CCD31356E8A82 /* SessionStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBC44715FCAD4811DFC120 /* SessionStatsModel.swift */; };
+		5F5F7537B564A6B8C8E281C0 /* PlatformCompat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787C33386250F9C694D83762 /* PlatformCompat.swift */; };
 		5FE9D0842829128A1D899821 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 4ECC08478D155A85FD8CEBEF /* PrivacyInfo.xcprivacy */; };
+		604B9E51AE83FB08E1C7A7B3 /* AccessLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DDBCAA1E6B6F33460D0D7 /* AccessLogView.swift */; };
+		61FAA5D9ADC1536F17D6004F /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2F309E67F278D651333C61 /* Models.swift */; };
 		623E5776F585D012A22FE910 /* ScanQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC5BC0F8380DF467E360193 /* ScanQRView.swift */; };
+		624A6873E216F5747BA02636 /* SubscriptionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7630A88E927ACD61BD7754BA /* SubscriptionStore.swift */; };
 		6370BE95DA4D6E67F444A4B6 /* GeoIPMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD368389EB46D64060BA62 /* GeoIPMetadata.swift */; };
 		64804F8B06D5136DC523882B /* NodeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4625F8DE9FD2EA91C2A612 /* NodeListView.swift */; };
 		678B8BDFB4F89B6818569771 /* SmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C03C6B1C74C4AA0913578 /* SmokeTests.swift */; };
+		68EAB5463577375B99943B6C /* LatencyTestURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B67C8F9D09C38DB0A8949F /* LatencyTestURLView.swift */; };
+		69CDA997D9E23157DA7BB50A /* ScanQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC5BC0F8380DF467E360193 /* ScanQRView.swift */; };
 		6BA1AF678B4D07A656EAEBCE /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14593D93E97495FD9C9C8AA /* AppDatabase.swift */; };
 		6D2CD1B6A58ECDF3F2E7DD49 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF025B1C0699EC83BE0CF44E /* Localizable.strings */; };
+		6F61A662FA61D8BBDD4C4AE5 /* FirstConnectSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F953203C06F752EF2DFD0 /* FirstConnectSheet.swift */; };
+		6F840B25FDB3D7E16799218B /* TunnelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB3041A993F300002D0E818 /* TunnelController.swift */; };
 		6F8C27DF0F0B83CFA8EC7D78 /* Subscriptions.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07AFB77550176EFD23EDD34F /* Subscriptions.strings */; };
+		70FECD390E45351307F3323D /* LatencyTimeoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAF1FFFC7EB7F63A8E7103 /* LatencyTimeoutView.swift */; };
 		72D1AB6B11073214F4FD230D /* DialogComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653BC34CB0E6984A5B9AC72 /* DialogComponents.swift */; };
+		74B23CCA5905FA7A456AC586 /* terms-en.md in Resources */ = {isa = PBXBuildFile; fileRef = 276833763EC2C579F494F152 /* terms-en.md */; };
+		76956CDA0E18C350387E306F /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC22D3D311A3B017B24C4DDD /* AppGroup.swift */; };
+		77D753D7677BE7C5567FCA15 /* geosite.dat.gz in Resources */ = {isa = PBXBuildFile; fileRef = 004601ACAC51CBE63221D5FC /* geosite.dat.gz */; };
 		78B3C7298922D243A89CBDCD /* NetworkPermissionRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851C10A63AC7E305CADA267 /* NetworkPermissionRequester.swift */; };
+		79AA269C5EFF4AC4C645ED57 /* NodeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4625F8DE9FD2EA91C2A612 /* NodeListView.swift */; };
+		7BE35CA8C2F92E456966137E /* NetworkPermissionRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851C10A63AC7E305CADA267 /* NetworkPermissionRequester.swift */; };
 		7F28A884AE5D1960F792EE95 /* SubscriptionNodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F887E8A9A7268B2BC485D1 /* SubscriptionNodesView.swift */; };
+		8145B8982FDBBBA5710E85A4 /* ConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB0A630274EE8B8D6A5831 /* ConsentView.swift */; };
 		83BD875BF7CD2F2D51E83EE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17118DE25CCD4C420C4841B5 /* Assets.xcassets */; };
+		855FB18ABAC655438A52EFF6 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEF6EFCEB37F43B0875E2A6 /* PacketTunnelProvider.swift */; };
+		8587075D61E1676B648163F4 /* GeoIPProtoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44FBB48FCA576A2BF7579A /* GeoIPProtoParser.swift */; };
+		85F08A89D84F932ED2323774 /* TunnelNetworkSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FC8D93EC35FA773E15A6F7 /* TunnelNetworkSettings.swift */; };
 		8BB05DA124104FD763E0863D /* Settings.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1529A8A3C3D852691269A0A /* Settings.strings */; };
 		8C6884BA2FCBC6DE1CCA5D1D /* RoutingSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A704DE19E26A1D2E225D8A /* RoutingSettingsView.swift */; };
+		8C7AA7E9BC9A902A0B65BBBA /* GeoIPUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5325E7C962F0817A74F74E /* GeoIPUpdater.swift */; };
 		8D40DCE674DDB3A1FEFC98FA /* LatencyTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40282E7761429F7321D6CAA8 /* LatencyTester.swift */; };
 		8DDCE251AAA21A2EE0C9D822 /* LibXray.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1374359A33189AE6B5713781 /* LibXray.xcframework */; };
+		8E8B31C2BB5A8578D49F88C8 /* GeoIPAssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55A81AB72AA9826C1D8425 /* GeoIPAssetManager.swift */; };
+		8F7C8FC612FD0F147D8118E4 /* geoip.dat.gz in Resources */ = {isa = PBXBuildFile; fileRef = 199C84AA743D614BBBEC1EDB /* geoip.dat.gz */; };
 		903F5F3C6F51615E3F44112D /* URIParserCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D063581C65CA48BF16808B29 /* URIParserCore.swift */; };
 		9132A7EBA9C584B620A530B2 /* terms-zh.md in Resources */ = {isa = PBXBuildFile; fileRef = E758BCA1D2D7C427F3532F47 /* terms-zh.md */; };
+		91D9CCA2285DE710B1BDD97D /* WujiTunnel-macOS.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 316ABA6B7E1C16C3C2F21BA3 /* WujiTunnel-macOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		927080FE8C237A091939F28D /* CountryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C749B786422B2C6847F23C1 /* CountryPickerView.swift */; };
+		930A8A828AA04D12FAB13522 /* AddNodeFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F77B378148E7C1BFA3EC18 /* AddNodeFormView.swift */; };
 		934F2C5F206E49C246B1C0B8 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEF6EFCEB37F43B0875E2A6 /* PacketTunnelProvider.swift */; };
 		940B43DCB3A0036520CC94FF /* AddSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4833F4AECD10CCB61F52A29 /* AddSubscriptionView.swift */; };
+		9548155D84A9D3140D0E5CDC /* AccessLogRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DACF0ABC1763556B6DF470 /* AccessLogRelay.swift */; };
+		962A040C4D2469A5CDA6F281 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E387A4A27D5278F3D9454B /* DataTests.swift */; };
 		971AFD1785F42E0EEB596881 /* privacy-zh.md in Resources */ = {isa = PBXBuildFile; fileRef = E28D0882C88851E7DA171AA1 /* privacy-zh.md */; };
+		991B8CB47FBCC5A9DA182F3F /* GeoIPCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E4A562B1BF7FE2E0DEFF49 /* GeoIPCodec.swift */; };
+		9A79CA3A82B87FD25FE2E958 /* DialogComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653BC34CB0E6984A5B9AC72 /* DialogComponents.swift */; };
+		9C91BA59C1D205165FFE5F7D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF025B1C0699EC83BE0CF44E /* Localizable.strings */; };
 		9CE1E14EA6A1C50620439AB7 /* CountryDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F510EE18AE17F5708665E56 /* CountryDirectory.swift */; };
+		9D4B0DC9252E5B8D3533A984 /* Nodes.strings in Resources */ = {isa = PBXBuildFile; fileRef = 082B560C023EBA3A3AC96BA7 /* Nodes.strings */; };
 		9D7C614A153A078A490E760C /* TunnelNetworkSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FC8D93EC35FA773E15A6F7 /* TunnelNetworkSettings.swift */; };
+		9DAE8F247BB8C063D9C7396A /* URIParserCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D063581C65CA48BF16808B29 /* URIParserCore.swift */; };
+		9F8112C264019EEBDBE314BA /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC22D3D311A3B017B24C4DDD /* AppGroup.swift */; };
+		A22C544327E4133595483599 /* LicensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37931DB424A48E435774FEF /* LicensesView.swift */; };
+		A32E663806ADABFB752C5774 /* WujiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBAC7212578741E7C3E924 /* WujiApp.swift */; };
 		A385D789DA009643E9CDE4C9 /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BFCD0109E0DA1E53CA79FA /* SubscriptionService.swift */; };
 		A8340D4ADB3D36D0F36FA99C /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC22D3D311A3B017B24C4DDD /* AppGroup.swift */; };
+		A91AFD7C780C966068ADCA46 /* GeoIPCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E4A562B1BF7FE2E0DEFF49 /* GeoIPCodec.swift */; };
+		AE5085C28DA5E220BF855F61 /* LegalDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744A0376A3D9A3B7CFABDAB0 /* LegalDocumentView.swift */; };
 		B050F3048283C90C8AF22A04 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EAD6E43AF34F6089A2F664A /* InfoPlist.strings */; };
 		B10FDD84EC74086CAF4C3828 /* CountryDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F510EE18AE17F5708665E56 /* CountryDirectory.swift */; };
 		B33BFBEEA717A0E6355FB0C3 /* FirstConnectSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F953203C06F752EF2DFD0 /* FirstConnectSheet.swift */; };
 		B36B0DB0783B92A3DB8179A1 /* GeoIPProtoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44FBB48FCA576A2BF7579A /* GeoIPProtoParser.swift */; };
 		B406B2777604EED47CC5261E /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2F309E67F278D651333C61 /* Models.swift */; };
+		B5709E4D7B1CC40C0DD94EBA /* AccessLogModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E437239579DAFE083C3F97 /* AccessLogModels.swift */; };
 		B6373590FD2D4D783E6604F5 /* LanguagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02542F4972FC38F891F94BF /* LanguagePickerView.swift */; };
 		B639D66A3ED21632E3F76C03 /* GeoIPProtoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44FBB48FCA576A2BF7579A /* GeoIPProtoParser.swift */; };
 		B8893FB95145291D9935E3FD /* LicensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37931DB424A48E435774FEF /* LicensesView.swift */; };
 		B9A77650E2CB20D1CCAC868E /* WujiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBAC7212578741E7C3E924 /* WujiApp.swift */; };
 		BA626910DA4FFC6F5E6C74D0 /* LicensesCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38607419BF9F14B2C83AF50 /* LicensesCatalog.swift */; };
+		BD36D19DB5D37A61AA33AED1 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E5C4B2CCC47E14DDF38DCF /* AboutView.swift */; };
+		C06012CB5C26F1C8BF726E35 /* URIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510A2CA39CAE8D28C2B5344 /* URIParser.swift */; };
+		C22BE7DAA11107C22230C6DB /* EngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0068EECDCCEC998868DEBA6 /* EngineTests.swift */; };
 		C2CE158CF6A9A7CCAD9339AD /* WujiTunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8EE4EFA30D912D4D2F68467C /* WujiTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C3C5DF3FC3D56CF91D94A9C0 /* ProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8080B12D327FA2F4B3C6C85D /* ProfileStore.swift */; };
+		C5B8349C7498EB2F0AC9A079 /* XrayConfigBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E777A20399C2F53D17D984 /* XrayConfigBuilder.swift */; };
 		C5D79E041881ACEB4797E79C /* RouteDiagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EAA108AF12E7BC1F16EAB6 /* RouteDiagnostics.swift */; };
 		C7002E25FD386AC8E4A1EDB7 /* NodeActionsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96B0F5F239146258567715F /* NodeActionsSheet.swift */; };
+		C817D35E935A34157A632DD6 /* XrayRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1EFB3D099799379E96F70F /* XrayRunner.swift */; };
+		C86987E4BCFF50BDD1C871F9 /* NetworkPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE2896849558B010C2A6A4D /* NetworkPermissionView.swift */; };
 		C8945CCC44C1A3F0A4A667B1 /* AppSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFEA28BE3299F54377D6A31 /* AppSettingsTests.swift */; };
 		CA474B2F7F802BDC95068712 /* ConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB0A630274EE8B8D6A5831 /* ConsentView.swift */; };
 		CB8051DCE4AE62ED46907F45 /* GeoIPCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E4A562B1BF7FE2E0DEFF49 /* GeoIPCodec.swift */; };
+		CB907F475743E198EFB807FF /* ProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8080B12D327FA2F4B3C6C85D /* ProfileStore.swift */; };
+		CD0C439D23DEB8168FC3D444 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287FC46B50D8E68A3A1F7C4 /* SettingsView.swift */; };
+		CD42AD449D46B38878981E4A /* PasteImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC067FD924952E606409D947 /* PasteImportView.swift */; };
 		CDEF4A4705048B6FF882F314 /* GeoIPCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E4A562B1BF7FE2E0DEFF49 /* GeoIPCodec.swift */; };
+		D61E2FB4380927454F6D875B /* LanguagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02542F4972FC38F891F94BF /* LanguagePickerView.swift */; };
+		D691C07A2CFCD021BB082DB8 /* LegalDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112BDD45272CB263FB37FAD8 /* LegalDocument.swift */; };
 		D71DAFE1B3095F8EC0A34A97 /* terms-en.md in Resources */ = {isa = PBXBuildFile; fileRef = 276833763EC2C579F494F152 /* terms-en.md */; };
+		D8D79849196BBF8B275FEB82 /* QRShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DB0D1312D3A07A6AC3DF6E /* QRShareView.swift */; };
+		D96156CA0DFB09C22362DC07 /* SubscriptionNodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F887E8A9A7268B2BC485D1 /* SubscriptionNodesView.swift */; };
 		D9D9204B80584646F80BEA09 /* XrayConfigBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E777A20399C2F53D17D984 /* XrayConfigBuilder.swift */; };
 		DAB2DE1E15ED6A44B91670D6 /* LatencyTimeoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAAF1FFFC7EB7F63A8E7103 /* LatencyTimeoutView.swift */; };
+		DD978C00372965EBD718F47B /* geoip_countries.json in Resources */ = {isa = PBXBuildFile; fileRef = F555DF2BB0FCF8C35B52E56F /* geoip_countries.json */; };
 		E10A01F3EFF32E32A1874D89 /* SubscriptionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7630A88E927ACD61BD7754BA /* SubscriptionStore.swift */; };
+		E199761353082879233E7117 /* Subscriptions.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07AFB77550176EFD23EDD34F /* Subscriptions.strings */; };
 		E1CF9AA3915649EE349897F1 /* privacy-en.md in Resources */ = {isa = PBXBuildFile; fileRef = 43FC24400DC1558AFEA07E34 /* privacy-en.md */; };
+		E2D9A374D39596581E247E86 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF86E83A1F2F6C3CD4F99741 /* RootView.swift */; };
 		E5CC189341A95DDE3FAFCC94 /* PlaceholderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BECA5175BD22D3779783B91 /* PlaceholderTests.swift */; };
+		E6606060BA543D70ED2F4454 /* Settings.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1529A8A3C3D852691269A0A /* Settings.strings */; };
 		E851957E6C03C532B8274796 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E5C4B2CCC47E14DDF38DCF /* AboutView.swift */; };
 		E8826397CFC66727A74406FD /* Nodes.strings in Resources */ = {isa = PBXBuildFile; fileRef = 082B560C023EBA3A3AC96BA7 /* Nodes.strings */; };
 		EC98A454B3F50B67C7C8B4EB /* LatencyTestURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B67C8F9D09C38DB0A8949F /* LatencyTestURLView.swift */; };
 		EF6D7AB6494301EEC514C40E /* GeoIPUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5325E7C962F0817A74F74E /* GeoIPUpdater.swift */; };
+		F6899B1B050F5A6FC493BA8B /* GeoIPProtoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE44FBB48FCA576A2BF7579A /* GeoIPProtoParser.swift */; };
+		F6E16F12B3D54FED0A62BCA7 /* GeoIPMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD368389EB46D64060BA62 /* GeoIPMetadata.swift */; };
 		F718FDACB728C87829BE7D03 /* GeoIPUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5325E7C962F0817A74F74E /* GeoIPUpdater.swift */; };
+		F8E342D27D9113533E6BF466 /* RoutingSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A704DE19E26A1D2E225D8A /* RoutingSettingsView.swift */; };
+		FA41F503581B45C31DC00AED /* TunFdResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F217A33F65421BFC093BE2F5 /* TunFdResolver.swift */; };
+		FCE4BCB1DB39D244FCF5C860 /* AddSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4833F4AECD10CCB61F52A29 /* AddSubscriptionView.swift */; };
 		FD638A5AD1064908879B8D64 /* EngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0068EECDCCEC998868DEBA6 /* EngineTests.swift */; };
+		FD704CECCDDF81ECF48E476F /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2F309E67F278D651333C61 /* Models.swift */; };
 		FE51B5EF3222AFC0DF06E98C /* LegalDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112BDD45272CB263FB37FAD8 /* LegalDocument.swift */; };
+		FED49A991497CC2F19BB16E4 /* AppSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFEA28BE3299F54377D6A31 /* AppSettingsTests.swift */; };
 		FF0B379FFD17C57063D1B8DF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F88C5194C39655C93EF18D /* HomeView.swift */; };
 		FFCBDFA44BECDFE08C944DD0 /* SubscriptionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A602DD2E3E19EA0FAE0AF2DD /* SubscriptionDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1CE745A6B0B00BC43264012B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 029F340C6EF2B8C350065C86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF0B11468A6ADE23A584588E;
+			remoteInfo = "WujiTunnel-macOS";
+		};
 		838F9E60534E3B2144132406 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 029F340C6EF2B8C350065C86 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9809394D0EC5C3F7C4C3AA27;
 			remoteInfo = Wuji;
+		};
+		F0465DB7A6EBC75672629D23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 029F340C6EF2B8C350065C86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39121157C38DE6E80B638F19;
+			remoteInfo = "Wuji-macOS";
 		};
 		FBDB3B45A67A980242F543C0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -138,6 +255,17 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		90A317595262537CDCB13049 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				91D9CCA2285DE710B1BDD97D /* WujiTunnel-macOS.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +273,7 @@
 		01E537B4ED3C2081DF4E75E8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Nodes.strings; sourceTree = "<group>"; };
 		02F77B378148E7C1BFA3EC18 /* AddNodeFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNodeFormView.swift; sourceTree = "<group>"; };
 		050F523712731207D2939C18 /* DemoSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSeed.swift; sourceTree = "<group>"; };
+		05DACF0ABC1763556B6DF470 /* AccessLogRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessLogRelay.swift; sourceTree = "<group>"; };
 		09AB61881225621C2F71B84E /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		0CAAF1FFFC7EB7F63A8E7103 /* LatencyTimeoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatencyTimeoutView.swift; sourceTree = "<group>"; };
 		0DEF6EFCEB37F43B0875E2A6 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
@@ -172,6 +301,7 @@
 		289BAB3E571A6A132B01437E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Nodes.strings"; sourceTree = "<group>"; };
 		2CE2896849558B010C2A6A4D /* NetworkPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPermissionView.swift; sourceTree = "<group>"; };
 		2E49940EE3FB8CF5368A6CF7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Settings.strings"; sourceTree = "<group>"; };
+		316ABA6B7E1C16C3C2F21BA3 /* WujiTunnel-macOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WujiTunnel-macOS.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33EAA108AF12E7BC1F16EAB6 /* RouteDiagnostics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDiagnostics.swift; sourceTree = "<group>"; };
 		347E63D4DF2E08D99D908C1E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Subscriptions.strings; sourceTree = "<group>"; };
 		34E97FC582F6EE4627E3D7DF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Nodes.strings; sourceTree = "<group>"; };
@@ -190,6 +320,7 @@
 		4ECC08478D155A85FD8CEBEF /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		50072018C2FE5E4475D43185 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Routing.strings; sourceTree = "<group>"; };
 		52E3C832A77500261AB667F3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Routing.strings"; sourceTree = "<group>"; };
+		561678B36E2570F43E6E975C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56764893C4FF453E8FCCF8DB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Subscriptions.strings; sourceTree = "<group>"; };
 		5C6BF6D7DB60476FB5B75FC6 /* LocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTests.swift; sourceTree = "<group>"; };
 		5C8F4838C9F0123BA276F0E0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -200,6 +331,7 @@
 		64355F6E22337BCC59E6C4C4 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Subscriptions.strings"; sourceTree = "<group>"; };
 		66BFCD0109E0DA1E53CA79FA /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
 		66E387A4A27D5278F3D9454B /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
+		687026F9F8F595381AAAC955 /* WujiTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WujiTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D40A0EB801E2143EB62FB68 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6E48981C436FB7B838161A44 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Nodes.strings; sourceTree = "<group>"; };
 		6F2DE9319F0FC1DAAF6F84AD /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Routing.strings; sourceTree = "<group>"; };
@@ -209,6 +341,7 @@
 		75559DEF9A92DF9B5D98DAED /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Settings.strings"; sourceTree = "<group>"; };
 		7630A88E927ACD61BD7754BA /* SubscriptionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionStore.swift; sourceTree = "<group>"; };
 		766E44142F510123F2FC5DAF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		787C33386250F9C694D83762 /* PlatformCompat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformCompat.swift; sourceTree = "<group>"; };
 		78FC7085F79D51B599565694 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Settings.strings; sourceTree = "<group>"; };
 		7ACB0A630274EE8B8D6A5831 /* ConsentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentView.swift; sourceTree = "<group>"; };
 		7C8CC06F538F4A496B11D923 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -218,6 +351,7 @@
 		8080B12D327FA2F4B3C6C85D /* ProfileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStore.swift; sourceTree = "<group>"; };
 		8497100A7C2ED624EDEE97CA /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Settings.strings; sourceTree = "<group>"; };
 		88A45A0C5FBB409FC8506DCD /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		89E437239579DAFE083C3F97 /* AccessLogModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessLogModels.swift; sourceTree = "<group>"; };
 		8AD997A3E6C7C5E7EF0CC151 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8BECA5175BD22D3779783B91 /* PlaceholderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTests.swift; sourceTree = "<group>"; };
 		8EE4EFA30D912D4D2F68467C /* WujiTunnel.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = WujiTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +359,7 @@
 		8FE3E0FE284611AB79527764 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Settings.strings; sourceTree = "<group>"; };
 		939E36A1DF762FDFDEE50BB9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Settings.strings; sourceTree = "<group>"; };
 		94A704DE19E26A1D2E225D8A /* RoutingSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingSettingsView.swift; sourceTree = "<group>"; };
+		991D5597522DF34E5930F948 /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
 		992C03C6B1C74C4AA0913578 /* SmokeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokeTests.swift; sourceTree = "<group>"; };
 		9AC5BC0F8380DF467E360193 /* ScanQRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRView.swift; sourceTree = "<group>"; };
 		9B1EFB3D099799379E96F70F /* XrayRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XrayRunner.swift; sourceTree = "<group>"; };
@@ -237,6 +372,7 @@
 		A373B02F207B9A4895115CB5 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		A37F54C74AA0286128AE8A6C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Settings.strings; sourceTree = "<group>"; };
 		A602DD2E3E19EA0FAE0AF2DD /* SubscriptionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionDetailView.swift; sourceTree = "<group>"; };
+		A8B6F0044AB16805AE97840A /* Wuji-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wuji-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9C97B455709FD902244379A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AA55A81AB72AA9826C1D8425 /* GeoIPAssetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoIPAssetManager.swift; sourceTree = "<group>"; };
 		AC22D3D311A3B017B24C4DDD /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
@@ -273,6 +409,7 @@
 		E28D0882C88851E7DA171AA1 /* privacy-zh.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "privacy-zh.md"; sourceTree = "<group>"; };
 		E2921C418DF03E7BB1639214 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Routing.strings; sourceTree = "<group>"; };
 		E37931DB424A48E435774FEF /* LicensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensesView.swift; sourceTree = "<group>"; };
+		E44DDBCAA1E6B6F33460D0D7 /* AccessLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessLogView.swift; sourceTree = "<group>"; };
 		E4833F4AECD10CCB61F52A29 /* AddSubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubscriptionView.swift; sourceTree = "<group>"; };
 		E4BBAC7212578741E7C3E924 /* WujiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WujiApp.swift; sourceTree = "<group>"; };
 		E758BCA1D2D7C427F3532F47 /* terms-zh.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "terms-zh.md"; sourceTree = "<group>"; };
@@ -291,6 +428,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		42D75B55849BB2A71BB04918 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554BE31995B974176766E8A0 /* LibXray.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9DD129FD71A888B1E0881AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -334,6 +479,7 @@
 		192D1D81710A41CC4A930FD3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				89E437239579DAFE083C3F97 /* AccessLogModels.swift */,
 				AC22D3D311A3B017B24C4DDD /* AppGroup.swift */,
 				5D2F309E67F278D651333C61 /* Models.swift */,
 			);
@@ -434,6 +580,7 @@
 			isa = PBXGroup;
 			children = (
 				32DA6B1AB9D24860E15BBEC8 /* Home */,
+				8CA20991D2A09A635A5D45B0 /* Logs */,
 				0ADFA1A24402A3D84A48EFEE /* Nodes */,
 				312E118F5EDD038BB22E7047 /* Onboarding */,
 				42E8108EC7487CEA6A000828 /* Routing */,
@@ -468,8 +615,11 @@
 		664253D53F887D56D084BAA9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				A8B6F0044AB16805AE97840A /* Wuji-macOS.app */,
 				DAB5DFA2195E88F6303A9AEC /* Wuji.app */,
+				687026F9F8F595381AAAC955 /* WujiTests-macOS.xctest */,
 				F0DF32935344D73A6BF8BFD9 /* WujiTests.xctest */,
+				316ABA6B7E1C16C3C2F21BA3 /* WujiTunnel-macOS.appex */,
 				8EE4EFA30D912D4D2F68467C /* WujiTunnel.appex */,
 				5F6E944A89F49A09C32BD17C /* WujiUITests.xctest */,
 			);
@@ -497,6 +647,7 @@
 			isa = PBXGroup;
 			children = (
 				70F3CD9E4171DE6B4AD926E6 /* Components.swift */,
+				787C33386250F9C694D83762 /* PlatformCompat.swift */,
 				7C8CC06F538F4A496B11D923 /* Theme.swift */,
 			);
 			path = DesignSystem;
@@ -506,6 +657,7 @@
 			isa = PBXGroup;
 			children = (
 				85394A25B5E27B4740339FA7 /* Wuji */,
+				E7A5FED997C7EC814A27F1B9 /* WujiMac */,
 				1A11FB8C37643DD41BC36B6C /* WujiTests */,
 				BCA8D84FD110B57D6CD03809 /* WujiTunnel */,
 				08B3D9356CA17E984CB5BA93 /* WujiUITests */,
@@ -535,6 +687,14 @@
 			path = Wuji;
 			sourceTree = "<group>";
 		};
+		8CA20991D2A09A635A5D45B0 /* Logs */ = {
+			isa = PBXGroup;
+			children = (
+				E44DDBCAA1E6B6F33460D0D7 /* AccessLogView.swift */,
+			);
+			path = Logs;
+			sourceTree = "<group>";
+		};
 		BACAB286DC8E5DB741FBF7E0 /* Subscriptions */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +710,7 @@
 		BCA8D84FD110B57D6CD03809 /* WujiTunnel */ = {
 			isa = PBXGroup;
 			children = (
+				05DACF0ABC1763556B6DF470 /* AccessLogRelay.swift */,
 				0DEF6EFCEB37F43B0875E2A6 /* PacketTunnelProvider.swift */,
 				4ECC08478D155A85FD8CEBEF /* PrivacyInfo.xcprivacy */,
 				33EAA108AF12E7BC1F16EAB6 /* RouteDiagnostics.swift */,
@@ -570,6 +731,15 @@
 			path = Import;
 			sourceTree = "<group>";
 		};
+		E7A5FED997C7EC814A27F1B9 /* WujiMac */ = {
+			isa = PBXGroup;
+			children = (
+				561678B36E2570F43E6E975C /* Assets.xcassets */,
+				991D5597522DF34E5930F948 /* MenuBarController.swift */,
+			);
+			path = WujiMac;
+			sourceTree = "<group>";
+		};
 		FDC266A9AEFE82E569E4111A /* Tunnel */ = {
 			isa = PBXGroup;
 			children = (
@@ -582,6 +752,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		15F411629A95DCDED19B6A2D /* WujiTests-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D523F9F2B69E7BD0EB6DD6A4 /* Build configuration list for PBXNativeTarget "WujiTests-macOS" */;
+			buildPhases = (
+				BAC4D50A5723F782208DED56 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13C96881DCB1FA2E5B2787DB /* PBXTargetDependency */,
+			);
+			name = "WujiTests-macOS";
+			packageProductDependencies = (
+			);
+			productName = "WujiTests-macOS";
+			productReference = 687026F9F8F595381AAAC955 /* WujiTests-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		302584D78EE2A19D0A8A8CFA /* WujiTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 999ED46DA1DA3BA321D727C3 /* Build configuration list for PBXNativeTarget "WujiTests" */;
@@ -599,6 +787,26 @@
 			productName = WujiTests;
 			productReference = F0DF32935344D73A6BF8BFD9 /* WujiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		39121157C38DE6E80B638F19 /* Wuji-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF077FA8D96C5D21B7CE16F4 /* Build configuration list for PBXNativeTarget "Wuji-macOS" */;
+			buildPhases = (
+				1D20BFF9AFC5394D6231C194 /* Sources */,
+				AF06FFC6FDF78F0AF4B28321 /* Resources */,
+				90A317595262537CDCB13049 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				706206D2FD2475F643A7CDB6 /* PBXTargetDependency */,
+			);
+			name = "Wuji-macOS";
+			packageProductDependencies = (
+			);
+			productName = "Wuji-macOS";
+			productReference = A8B6F0044AB16805AE97840A /* Wuji-macOS.app */;
+			productType = "com.apple.product-type.application";
 		};
 		4C4086BE878F675260E0F611 /* WujiTunnel */ = {
 			isa = PBXNativeTarget;
@@ -657,6 +865,25 @@
 			productReference = 5F6E944A89F49A09C32BD17C /* WujiUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		FF0B11468A6ADE23A584588E /* WujiTunnel-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE2049617F7C13D74A8644A0 /* Build configuration list for PBXNativeTarget "WujiTunnel-macOS" */;
+			buildPhases = (
+				50113A1F89BEF18CABD5FF95 /* Sources */,
+				585FFBDEA35967D2F13C667E /* Resources */,
+				42D75B55849BB2A71BB04918 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WujiTunnel-macOS";
+			packageProductDependencies = (
+			);
+			productName = "WujiTunnel-macOS";
+			productReference = 316ABA6B7E1C16C3C2F21BA3 /* WujiTunnel-macOS.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -666,7 +893,15 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 2700;
 				TargetAttributes = {
+					15F411629A95DCDED19B6A2D = {
+						DevelopmentTeam = R6748V42K5;
+						ProvisioningStyle = Automatic;
+					};
 					302584D78EE2A19D0A8A8CFA = {
+						DevelopmentTeam = R6748V42K5;
+						ProvisioningStyle = Automatic;
+					};
+					39121157C38DE6E80B638F19 = {
 						DevelopmentTeam = R6748V42K5;
 						ProvisioningStyle = Automatic;
 					};
@@ -682,6 +917,10 @@
 						DevelopmentTeam = R6748V42K5;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 9809394D0EC5C3F7C4C3AA27;
+					};
+					FF0B11468A6ADE23A584588E = {
+						DevelopmentTeam = R6748V42K5;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -711,6 +950,9 @@
 			targets = (
 				9809394D0EC5C3F7C4C3AA27 /* Wuji */,
 				4C4086BE878F675260E0F611 /* WujiTunnel */,
+				39121157C38DE6E80B638F19 /* Wuji-macOS */,
+				FF0B11468A6ADE23A584588E /* WujiTunnel-macOS */,
+				15F411629A95DCDED19B6A2D /* WujiTests-macOS */,
 				BA0468205D2563F872AE636B /* WujiUITests */,
 				302584D78EE2A19D0A8A8CFA /* WujiTests */,
 			);
@@ -740,11 +982,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		585FFBDEA35967D2F13C667E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A05950326705A2CBD0732C0 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2F035A2BC99C8FD5BF4BCE2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5FE9D0842829128A1D899821 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF06FFC6FDF78F0AF4B28321 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				432F2D1908538C8979EA1917 /* Assets.xcassets in Resources */,
+				3E82F4C53E0CAF22754F45A4 /* InfoPlist.strings in Resources */,
+				9C91BA59C1D205165FFE5F7D /* Localizable.strings in Resources */,
+				9D4B0DC9252E5B8D3533A984 /* Nodes.strings in Resources */,
+				464A66C439C2C873234C2857 /* PrivacyInfo.xcprivacy in Resources */,
+				266F1FBD718F1ABE547BB934 /* Routing.strings in Resources */,
+				E6606060BA543D70ED2F4454 /* Settings.strings in Resources */,
+				E199761353082879233E7117 /* Subscriptions.strings in Resources */,
+				8F7C8FC612FD0F147D8118E4 /* geoip.dat.gz in Resources */,
+				DD978C00372965EBD718F47B /* geoip_countries.json in Resources */,
+				77D753D7677BE7C5567FCA15 /* geosite.dat.gz in Resources */,
+				0B8F211397F0871D136A1F69 /* privacy-en.md in Resources */,
+				233C4812324E1DE34DEED14C /* privacy-zh.md in Resources */,
+				74B23CCA5905FA7A456AC586 /* terms-en.md in Resources */,
+				5668C43DF96DFDC3B079DF0E /* terms-zh.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,6 +1027,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				584E96D9EE011B89C981D000 /* AccessLogModels.swift in Sources */,
+				9548155D84A9D3140D0E5CDC /* AccessLogRelay.swift in Sources */,
 				A8340D4ADB3D36D0F36FA99C /* AppGroup.swift in Sources */,
 				B10FDD84EC74086CAF4C3828 /* CountryDirectory.swift in Sources */,
 				02D819D3A7FCB7BC202134E0 /* GeoIPAssetManager.swift in Sources */,
@@ -772,11 +1046,101 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1D20BFF9AFC5394D6231C194 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD36D19DB5D37A61AA33AED1 /* AboutView.swift in Sources */,
+				B5709E4D7B1CC40C0DD94EBA /* AccessLogModels.swift in Sources */,
+				5364F56F8D2C1F652F3331C9 /* AccessLogView.swift in Sources */,
+				930A8A828AA04D12FAB13522 /* AddNodeFormView.swift in Sources */,
+				FCE4BCB1DB39D244FCF5C860 /* AddSubscriptionView.swift in Sources */,
+				5252A1A8417DB7C0C9932127 /* AppDatabase.swift in Sources */,
+				9F8112C264019EEBDBE314BA /* AppGroup.swift in Sources */,
+				5EE64275D8D67BBC7D7772CF /* AppState.swift in Sources */,
+				03F8A53114EF1EB1BD97E47C /* Components.swift in Sources */,
+				8145B8982FDBBBA5710E85A4 /* ConsentView.swift in Sources */,
+				3CECBCEA83A1113F19C30D01 /* CountryDirectory.swift in Sources */,
+				927080FE8C237A091939F28D /* CountryPickerView.swift in Sources */,
+				37DEBD5F193EDB195FED37D8 /* DemoSeed.swift in Sources */,
+				9A79CA3A82B87FD25FE2E958 /* DialogComponents.swift in Sources */,
+				6F61A662FA61D8BBDD4C4AE5 /* FirstConnectSheet.swift in Sources */,
+				8E8B31C2BB5A8578D49F88C8 /* GeoIPAssetManager.swift in Sources */,
+				A91AFD7C780C966068ADCA46 /* GeoIPCodec.swift in Sources */,
+				F6E16F12B3D54FED0A62BCA7 /* GeoIPMetadata.swift in Sources */,
+				8587075D61E1676B648163F4 /* GeoIPProtoParser.swift in Sources */,
+				8C7AA7E9BC9A902A0B65BBBA /* GeoIPUpdater.swift in Sources */,
+				02540074C0A322B04A6EEA69 /* HomeView.swift in Sources */,
+				D61E2FB4380927454F6D875B /* LanguagePickerView.swift in Sources */,
+				68EAB5463577375B99943B6C /* LatencyTestURLView.swift in Sources */,
+				470AC99E3209B8440098C7CD /* LatencyTester.swift in Sources */,
+				70FECD390E45351307F3323D /* LatencyTimeoutView.swift in Sources */,
+				D691C07A2CFCD021BB082DB8 /* LegalDocument.swift in Sources */,
+				AE5085C28DA5E220BF855F61 /* LegalDocumentView.swift in Sources */,
+				23800EB96F4D8D9C18242F1B /* LicensesCatalog.swift in Sources */,
+				A22C544327E4133595483599 /* LicensesView.swift in Sources */,
+				1481891664469582987E867C /* MenuBarController.swift in Sources */,
+				FD704CECCDDF81ECF48E476F /* Models.swift in Sources */,
+				7BE35CA8C2F92E456966137E /* NetworkPermissionRequester.swift in Sources */,
+				C86987E4BCFF50BDD1C871F9 /* NetworkPermissionView.swift in Sources */,
+				1EAF0F171D896EC6E48D74EE /* NodeActionsSheet.swift in Sources */,
+				79AA269C5EFF4AC4C645ED57 /* NodeListView.swift in Sources */,
+				503768513E415CE1459A5310 /* OnboardingView.swift in Sources */,
+				CD42AD449D46B38878981E4A /* PasteImportView.swift in Sources */,
+				5F5F7537B564A6B8C8E281C0 /* PlatformCompat.swift in Sources */,
+				CB907F475743E198EFB807FF /* ProfileStore.swift in Sources */,
+				D8D79849196BBF8B275FEB82 /* QRShareView.swift in Sources */,
+				E2D9A374D39596581E247E86 /* RootView.swift in Sources */,
+				F8E342D27D9113533E6BF466 /* RoutingSettingsView.swift in Sources */,
+				69CDA997D9E23157DA7BB50A /* ScanQRView.swift in Sources */,
+				2E010DFFB5E908867A87A075 /* SessionStatsModel.swift in Sources */,
+				4F730A81971AA203DECEE0C4 /* SettingsStore.swift in Sources */,
+				CD0C439D23DEB8168FC3D444 /* SettingsView.swift in Sources */,
+				3C924728C98E161AED721CC0 /* SubscriptionDetailView.swift in Sources */,
+				4ED183E958FBD2DC923B5750 /* SubscriptionListView.swift in Sources */,
+				D96156CA0DFB09C22362DC07 /* SubscriptionNodesView.swift in Sources */,
+				1C3791E34A2C2BA53865BA69 /* SubscriptionService.swift in Sources */,
+				624A6873E216F5747BA02636 /* SubscriptionStore.swift in Sources */,
+				17FE0B674CA3D826BEC6BC4B /* SubscriptionSupport.swift in Sources */,
+				333053367C668CAED8000D2C /* Theme.swift in Sources */,
+				6F840B25FDB3D7E16799218B /* TunnelController.swift in Sources */,
+				C06012CB5C26F1C8BF726E35 /* URIParser.swift in Sources */,
+				9DAE8F247BB8C063D9C7396A /* URIParserCore.swift in Sources */,
+				A32E663806ADABFB752C5774 /* WujiApp.swift in Sources */,
+				231E6513A6FAE0379A564523 /* XrayConfigBuilder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50113A1F89BEF18CABD5FF95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AC686E77CCC0D83F1112449 /* AccessLogModels.swift in Sources */,
+				496097DEEDE3F6A0A51FF4A9 /* AccessLogRelay.swift in Sources */,
+				76956CDA0E18C350387E306F /* AppGroup.swift in Sources */,
+				0497761014EE2CAA4436D494 /* CountryDirectory.swift in Sources */,
+				5144C7DB8FEBB61ADA15263E /* GeoIPAssetManager.swift in Sources */,
+				991B8CB47FBCC5A9DA182F3F /* GeoIPCodec.swift in Sources */,
+				5EB3E013C1831B0BEAE0D8A3 /* GeoIPMetadata.swift in Sources */,
+				F6899B1B050F5A6FC493BA8B /* GeoIPProtoParser.swift in Sources */,
+				0E2524FBB7AE20C789FF2A11 /* GeoIPUpdater.swift in Sources */,
+				61FAA5D9ADC1536F17D6004F /* Models.swift in Sources */,
+				855FB18ABAC655438A52EFF6 /* PacketTunnelProvider.swift in Sources */,
+				282F43FC15DFAC0D8D893F37 /* RouteDiagnostics.swift in Sources */,
+				FA41F503581B45C31DC00AED /* TunFdResolver.swift in Sources */,
+				85F08A89D84F932ED2323774 /* TunnelNetworkSettings.swift in Sources */,
+				C5B8349C7498EB2F0AC9A079 /* XrayConfigBuilder.swift in Sources */,
+				C817D35E935A34157A632DD6 /* XrayRunner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AF000B2D4EF340CD295A6F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E851957E6C03C532B8274796 /* AboutView.swift in Sources */,
+				5C20226D75B170CD6EF7EE10 /* AccessLogModels.swift in Sources */,
+				604B9E51AE83FB08E1C7A7B3 /* AccessLogView.swift in Sources */,
 				1FBCD8DFEE515744920E0A9B /* AddNodeFormView.swift in Sources */,
 				940B43DCB3A0036520CC94FF /* AddSubscriptionView.swift in Sources */,
 				6BA1AF678B4D07A656EAEBCE /* AppDatabase.swift in Sources */,
@@ -810,6 +1174,7 @@
 				64804F8B06D5136DC523882B /* NodeListView.swift in Sources */,
 				2A09FCEF558B129AE7261D1C /* OnboardingView.swift in Sources */,
 				54996203EC291B13B4849C3A /* PasteImportView.swift in Sources */,
+				2963160DD37E38B5724D4528 /* PlatformCompat.swift in Sources */,
 				C3C5DF3FC3D56CF91D94A9C0 /* ProfileStore.swift in Sources */,
 				14CBB45532781D70BB5A1E24 /* QRShareView.swift in Sources */,
 				1CF719EAAA7E74FFED34C6D5 /* RootView.swift in Sources */,
@@ -830,6 +1195,19 @@
 				903F5F3C6F51615E3F44112D /* URIParserCore.swift in Sources */,
 				B9A77650E2CB20D1CCAC868E /* WujiApp.swift in Sources */,
 				D9D9204B80584646F80BEA09 /* XrayConfigBuilder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAC4D50A5723F782208DED56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FED49A991497CC2F19BB16E4 /* AppSettingsTests.swift in Sources */,
+				962A040C4D2469A5CDA6F281 /* DataTests.swift in Sources */,
+				C22BE7DAA11107C22230C6DB /* EngineTests.swift in Sources */,
+				52FEEFE94CE028FB49F906ED /* GeoIPTests.swift in Sources */,
+				4941E055BDC63A37976F0AB2 /* LocalizationTests.swift in Sources */,
+				129FD6EEC804F0EFC34CCCDF /* SmokeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,10 +1240,20 @@
 			target = 9809394D0EC5C3F7C4C3AA27 /* Wuji */;
 			targetProxy = 838F9E60534E3B2144132406 /* PBXContainerItemProxy */;
 		};
+		13C96881DCB1FA2E5B2787DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 39121157C38DE6E80B638F19 /* Wuji-macOS */;
+			targetProxy = F0465DB7A6EBC75672629D23 /* PBXContainerItemProxy */;
+		};
 		163A35CE3EBEC1AA13602487 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9809394D0EC5C3F7C4C3AA27 /* Wuji */;
 			targetProxy = FC835EE3C61555CA50FC3EE2 /* PBXContainerItemProxy */;
+		};
+		706206D2FD2475F643A7CDB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF0B11468A6ADE23A584588E /* WujiTunnel-macOS */;
+			targetProxy = 1CE745A6B0B00BC43264012B /* PBXContainerItemProxy */;
 		};
 		F6A13B7AD7C556BB879E555E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -986,6 +1374,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		17556512A4A9A3832694905E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "WujiMac/Wuji-macOS.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "WujiMac/Info-Wuji-macOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 3.3.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juejin.ios.wuji;
+				PRODUCT_NAME = Wuji;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		25400779936ECA8EBB494877 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1041,7 +1451,6 @@
 				OTHER_LDFLAGS = "$(inherited) -lsqlite3";
 				OTHER_SWIFT_FLAGS = "$(inherited) -disable-sandbox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_STRICT_CONCURRENCY = minimal;
@@ -1049,6 +1458,74 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
+		};
+		32EAF9714BAD7A460A49646C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 3.3.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juejin.ios.wuji.tests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wuji.app/Contents/MacOS/Wuji";
+			};
+			name = Debug;
+		};
+		64E7601A65F42C1C175AD71D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WujiMac/WujiTunnel-macOS.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Frameworks\"",
+				);
+				INFOPLIST_FILE = "WujiMac/Info-WujiTunnel-macOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 3.3.1;
+				OTHER_LDFLAGS = "$(inherited) -lresolv -framework CoreFoundation -framework Security";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juejin.ios.wuji.tunnel-ext";
+				PRODUCT_NAME = WujiTunnel;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		650FBB7683A5D4ECCA8984EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "WujiMac/Wuji-macOS.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "WujiMac/Info-Wuji-macOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 3.3.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juejin.ios.wuji;
+				PRODUCT_NAME = Wuji;
+				SDKROOT = macosx;
+			};
+			name = Debug;
 		};
 		697AB1741640554EC12AFCB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1112,7 +1589,6 @@
 				OTHER_LDFLAGS = "$(inherited) -lsqlite3";
 				OTHER_SWIFT_FLAGS = "$(inherited) -disable-sandbox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_STRICT_CONCURRENCY = minimal;
@@ -1137,6 +1613,26 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wuji.app/Wuji";
+			};
+			name = Release;
+		};
+		977451F8FFAF537D904810A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 3.3.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juejin.ios.wuji.tests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wuji.app/Contents/MacOS/Wuji";
 			};
 			name = Release;
 		};
@@ -1291,6 +1787,32 @@
 			};
 			name = Release;
 		};
+		ED47B52660EFE4B8D728DD1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WujiMac/WujiTunnel-macOS.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Frameworks\"",
+				);
+				INFOPLIST_FILE = "WujiMac/Info-WujiTunnel-macOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 3.3.1;
+				OTHER_LDFLAGS = "$(inherited) -lresolv -framework CoreFoundation -framework Security";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.juejin.ios.wuji.tunnel-ext";
+				PRODUCT_NAME = WujiTunnel;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1335,6 +1857,33 @@
 			buildConfigurations = (
 				697AB1741640554EC12AFCB1 /* Debug */,
 				25400779936ECA8EBB494877 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CE2049617F7C13D74A8644A0 /* Build configuration list for PBXNativeTarget "WujiTunnel-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64E7601A65F42C1C175AD71D /* Debug */,
+				ED47B52660EFE4B8D728DD1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D523F9F2B69E7BD0EB6DD6A4 /* Build configuration list for PBXNativeTarget "WujiTests-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32EAF9714BAD7A460A49646C /* Debug */,
+				977451F8FFAF537D904810A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EF077FA8D96C5D21B7CE16F4 /* Build configuration list for PBXNativeTarget "Wuji-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				650FBB7683A5D4ECCA8984EF /* Debug */,
+				17556512A4A9A3832694905E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

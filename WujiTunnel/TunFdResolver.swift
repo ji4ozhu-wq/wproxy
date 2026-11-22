@@ -42,7 +42,16 @@ enum TunFdResolver {
     /// `expectedInterfaceAddress` (the tunnel IPv4 address the provider configured).
     static func utunFileDescriptor(expectedInterfaceAddress: String? = nil) -> Int32? {
         let descriptors = utunDescriptors()
-        guard !descriptors.isEmpty else {
+        if descriptors.isEmpty {
+            // Some NetworkExtension builds (notably macOS app extensions) don't
+            // expose the utun kernel-control peer through `getpeername`, so the
+            // sysaddr/sc_id probe above finds nothing. Fall back to identifying
+            // the socket by its UTUN_OPT_IFNAME and matching the interface that
+            // owns the tunnel address the provider just configured.
+            if let fallback = utunFileDescriptorByInterfaceName(expectedInterfaceAddress: expectedInterfaceAddress) {
+                log.info("Resolved utun fd \(fallback) via interface-name fallback")
+                return fallback
+            }
             log.error("No utun kernel-control socket found in this process")
             return nil
         }
@@ -74,6 +83,23 @@ enum TunFdResolver {
             result.append(TunDescriptor(fd: fd, unit: unit, interfaceName: socketInterfaceName(fd: fd)))
         }
         return result
+    }
+
+    /// Fallback resolver: walks the fd table and asks the kernel control for the
+    /// `UTUN_OPT_IFNAME` of every socket, keeping the ones whose interface is a
+    /// `utun*` device. Prefers the interface that owns `expectedInterfaceAddress`,
+    /// otherwise the highest fd (the newest tunnel).
+    private static func utunFileDescriptorByInterfaceName(expectedInterfaceAddress: String?) -> Int32? {
+        let expectedInterface = expectedInterfaceAddress.flatMap(interfaceName(owningAddress:))
+        var candidates: [(fd: Int32, name: String)] = []
+        for fd in Int32(3)...maximumFD {
+            guard let name = socketInterfaceName(fd: fd), name.hasPrefix("utun") else { continue }
+            candidates.append((fd, name))
+            if let expectedInterface, name == expectedInterface {
+                return fd
+            }
+        }
+        return candidates.max(by: { $0.fd < $1.fd })?.fd
     }
 
     // MARK: - Kernel control helpers

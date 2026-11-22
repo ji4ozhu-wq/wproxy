@@ -113,6 +113,7 @@
 /* ===== QR share ===== */
 "nodes.qr.title" = "노드 공유";
 "nodes.qr.saveToPhotos" = "사진에 저장";
+"nodes.qr.saveToFile" = "이미지 저장…";
 "nodes.qr.copyURI" = "URI 복사";
 "nodes.qr.share" = "공유";
 "nodes.qr.saved" = "사진에 저장됨";

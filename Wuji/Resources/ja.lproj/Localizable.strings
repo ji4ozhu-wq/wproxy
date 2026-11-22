@@ -194,3 +194,47 @@
 "permission.network.note" = "後から変更できます：設定 → プライバシーとセキュリティ → ローカルネットワーク、設定 → 一般 → VPN とデバイス管理。";
 /* Global confirmation after node switch / tunnel settings change */
 "toast.settingsApplied" = "設定を反映しました。";
+
+"home.details.section" = "接続の詳細";
+
+"home.details.exit" = "出口サーバー";
+
+"home.details.protocol" = "プロトコル";
+
+"home.details.routing" = "ルーティングモード";
+
+"home.details.dns" = "DNS";
+
+"menu.showWindow" = "メインウインドウを表示";
+
+"menu.about" = "WProxy について";
+
+"menu.quit" = "WProxy を終了";
+
+"logs.title" = "接続ログ";
+
+"logs.all" = "すべて";
+
+"logs.proxy" = "プロキシ";
+
+"logs.direct" = "直接";
+
+"logs.dns" = "DNS";
+
+"logs.other" = "その他";
+
+"logs.empty" = "接続後にプロキシ / 直接のリアルタイムログがここに表示されます。";
+
+"logs.pause" = "一時停止";
+
+"logs.resume" = "再開";
+
+"logs.clear" = "消去";
+
+"logs.live" = "ライブ";
+
+"logs.paused" = "一時停止中";
+
+"tab.logs" = "ログ";
+
+"logs.save" = "保存";

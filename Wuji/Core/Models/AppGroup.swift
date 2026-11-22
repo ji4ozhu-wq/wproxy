@@ -3,7 +3,30 @@ import Foundation
 /// Shared App Group container used to hand the tunnel configuration to the
 /// Network Extension and to read status back.
 enum AppGroup {
-    static let identifier = "group.com.youqu.wuji.appgroup"
+    /// Shared container identifier.
+    ///
+    /// iOS uses the registered `group.` identifier. macOS app groups use the
+    /// `<TeamID>.<group name>` form (Apple: "Configure app groups"), which macOS
+    /// validates against the code signing team and which does not need to be
+    /// registered on the developer website. The identifier is injected into both
+    /// macOS Info.plists as `WujiAppGroupIdentifier` so it stays in sync with the
+    /// signing team (`$(TeamIdentifierPrefix)` expands to e.g. `R6748V42K5.`).
+    static var identifier: String {
+        #if os(iOS)
+        return "group.com.youqu.wuji.appgroup"
+        #else
+        if let value = Bundle.main.object(forInfoDictionaryKey: "WujiAppGroupIdentifier") as? String,
+           !value.isEmpty,
+           !value.contains("$("),
+           !value.hasPrefix("group.") {
+            return value
+        }
+        // Fallback for unsigned builds, where `$(TeamIdentifierPrefix)` expands to
+        // nothing and the plist value would be the registered iOS group name. The
+        // macOS app group must carry the signing team's prefix.
+        return "R6748V42K5.group.com.youqu.wuji.appgroup"
+        #endif
+    }
 
     static var containerURL: URL? {
         FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: identifier)

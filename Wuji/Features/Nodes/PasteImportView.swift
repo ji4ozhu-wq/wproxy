@@ -1,5 +1,4 @@
 import SwiftUI
-import UIKit
 
 /// Result of one paste import. The importing screen hands it back to the node list,
 /// which shows it as a summary toast: imported / duplicates skipped / unreadable.
@@ -97,13 +96,13 @@ struct PasteImportView: View {
         .scrollDismissesKeyboard(.interactively)
         .background(Theme.background)
         .navigationTitle(L10n.t("nodes.paste.title", table: "Nodes"))
-        .navigationBarTitleDisplayMode(.inline)
+        .wujiInlineNavigationTitle()
         .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
+            ToolbarItem(placement: .wujiLeading) {
                 Button(L10n.t("common.cancel")) { dismiss() }
                     .accessibilityIdentifier("wuji.nodes.paste.cancelButton")
             }
-            ToolbarItem(placement: .topBarTrailing) {
+            ToolbarItem(placement: .wujiTrailing) {
                 Button(L10n.t("nodes.paste.import", table: "Nodes")) {
                     importSelected()
                 }
@@ -127,6 +126,7 @@ struct PasteImportView: View {
         .onChange(of: text) { _, newValue in
             parse(newValue)
         }
+        .wujiMacSheetActions(onCancel: { dismiss() })
     }
 
     // MARK: - Recognized list
@@ -291,7 +291,7 @@ struct PasteImportView: View {
         // system paste prompt for a purely visual check.
         if DebugScreenshotRoute.value("-WujiScreenshotPage") != nil { return }
         #endif
-        if let clipboard = UIPasteboard.general.string, !clipboard.isEmpty {
+        if let clipboard = PlatformPasteboard.string, !clipboard.isEmpty {
             text = clipboard
             parse(clipboard)
         }

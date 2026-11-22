@@ -836,6 +836,12 @@ final class DataTests: XCTestCase {
     // MARK: - B7 latency tester
 
     func testLatencyTesterMeasuresReachablePort() async throws {
+        #if os(macOS)
+        // The macOS test host runs inside the App Sandbox without the
+        // network.server entitlement, so a loopback NWListener cannot bind here.
+        // The same path is covered by the iOS test target.
+        throw XCTSkip("macOS sandbox test host cannot bind a loopback listener")
+        #endif
         let listener = try NWListener(using: .tcp, on: .any)
         let ready = expectation(description: "listener ready")
         listener.stateUpdateHandler = { state in

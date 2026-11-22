@@ -36,6 +36,10 @@ final class NetworkPermissionRequester {
         // simulate a grant so onboarding can be exercised in UI tests/screenshots.
         try? await Task.sleep(nanoseconds: 350_000_000)
         return true
+        #elseif os(macOS)
+        // macOS has no local-network permission gate for a VPN client: only the
+        // "allow VPN configuration" authorization matters (prompted on first save).
+        return await requestVPNConfiguration()
         #else
         guard await requestLocalNetwork() else { return false }
         return await requestVPNConfiguration()

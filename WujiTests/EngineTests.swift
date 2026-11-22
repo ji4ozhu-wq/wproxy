@@ -248,6 +248,8 @@ final class EngineTests: XCTestCase {
         XCTAssertNotNil(root["stats"], "The stats app must exist for the policy counters to be created")
 
         let log = try XCTUnwrap(root["log"] as? [String: Any])
+        // The tunnel extension injects the macOS access-log path at runtime; the config
+        // produced by the app stays quiet.
         XCTAssertEqual(log["loglevel"] as? String, "none")
     }
 

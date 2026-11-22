@@ -7,7 +7,7 @@ struct LicensesView: View {
     @State private var expanded: Set<String> = []
 
     var body: some View {
-        List {
+        WujiSettingsList {
             Section {
                 ForEach(LicensesCatalog.components) { component in
                     DisclosureGroup(isExpanded: isExpandedBinding(for: component.id)) {
@@ -39,10 +39,9 @@ struct LicensesView: View {
                 Text(L10n.t("about.builtWith"))
             }
         }
-        .listStyle(.insetGrouped)
         .navigationTitle(L10n.t("about.licenses"))
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar(.hidden, for: .tabBar)
+        .wujiInlineNavigationTitle()
+        .wujiHiddenTabBar()
     }
 
     private func isExpandedBinding(for id: String) -> Binding<Bool> {

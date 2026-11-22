@@ -1,5 +1,4 @@
 import SwiftUI
-import UIKit
 
 /// Manual node form (spec §5.4 / §5.8). One protocol segment drives the visible fields.
 /// Presented inside a `NavigationStack` (as a sheet for add, pushed for edit).
@@ -130,19 +129,24 @@ struct AddNodeFormView: View {
                 realitySection
             }
         }
-        .scrollContentBackground(.hidden)
-        .background(Theme.background)
+        #if os(macOS)
+        // macOS `Form` defaults to the two-column inspector style, which fights the
+        // custom label/field rows (labels get pushed around, fields overflow). The
+        // grouped style renders the same rows as a native settings list.
+        .formStyle(.grouped)
+        #endif
+        .wujiListBackground()
         .scrollDismissesKeyboard(.interactively)
         .navigationTitle(title)
-        .navigationBarTitleDisplayMode(.inline)
+        .wujiInlineNavigationTitle()
         .toolbar {
             if showsCancelButton {
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem(placement: .wujiLeading) {
                     Button(L10n.t("common.cancel")) { close() }
                         .accessibilityIdentifier("wuji.nodes.form.cancelButton")
                 }
             }
-            ToolbarItem(placement: .topBarTrailing) {
+            ToolbarItem(placement: .wujiTrailing) {
                 Button {
                     save()
                 } label: {
@@ -177,12 +181,31 @@ struct AddNodeFormView: View {
                 allowInsecure = false
             }
         }
+        // macOS sheets don't render SwiftUI toolbar items, so the form gets a
+        // visible bottom Cancel/Save bar there (iOS keeps its toolbar buttons).
+        .wujiMacSheetActions(onCancel: { close() },
+                             confirmTitle: L10n.t("common.save"),
+                             confirmDisabled: saving,
+                             onConfirm: { save() })
     }
 
     // MARK: - Sections
 
     private var protocolSection: some View {
         Section {
+            #if os(macOS)
+            // macOS does not compress a segmented control to the available width, so
+            // the five protocol segments overflow the sheet and the last one is clipped.
+            // Use the native menu picker there.
+            Picker(L10n.t("nodes.form.section.protocol", table: "Nodes"), selection: $proto) {
+                ForEach(ProxyProtocol.allCases, id: \.self) { value in
+                    Text(value == .shadowsocks ? value.shortBadge : value.displayName).tag(value)
+                }
+            }
+            .pickerStyle(.menu)
+            .labelsHidden()
+            .accessibilityIdentifier("wuji.nodes.form.protocolPicker")
+            #else
             Picker("", selection: $proto) {
                 ForEach(ProxyProtocol.allCases, id: \.self) { value in
                     Text(value == .shadowsocks ? value.shortBadge : value.displayName).tag(value)
@@ -191,6 +214,7 @@ struct AddNodeFormView: View {
             .pickerStyle(.segmented)
             .labelsHidden()
             .accessibilityIdentifier("wuji.nodes.form.protocolPicker")
+            #endif
         } header: {
             Text(L10n.t("nodes.form.section.protocol", table: "Nodes"))
         }
@@ -205,7 +229,7 @@ struct AddNodeFormView: View {
             fieldRow(label: L10n.t("nodes.form.address", table: "Nodes"),
                      placeholder: "example.com",
                      text: $server, field: .address,
-                     keyboard: .URL,
+                     keyboard: .url,
                      identifier: "wuji.nodes.form.address")
             errorRow("server")
             fieldRow(label: L10n.t("nodes.form.port", table: "Nodes"),
@@ -239,7 +263,7 @@ struct AddNodeFormView: View {
                         Text(value).tag(value)
                     }
                 }
-                .pickerStyle(.navigationLink)
+                .wujiNavigationLinkPickerStyle()
                 .accessibilityIdentifier("wuji.nodes.form.encryption")
             case .vless:
                 fieldRow(label: L10n.t("nodes.form.uuid", table: "Nodes"),
@@ -250,7 +274,7 @@ struct AddNodeFormView: View {
                     Text(L10n.t("nodes.form.none", table: "Nodes")).tag("")
                     Text("xtls-rprx-vision").tag("xtls-rprx-vision")
                 }
-                .pickerStyle(.navigationLink)
+                .wujiNavigationLinkPickerStyle()
                 .accessibilityIdentifier("wuji.nodes.form.flow")
             case .trojan:
                 fieldRow(label: L10n.t("nodes.form.password", table: "Nodes"),
@@ -263,7 +287,7 @@ struct AddNodeFormView: View {
                         Text(value).tag(value)
                     }
                 }
-                .pickerStyle(.navigationLink)
+                .wujiNavigationLinkPickerStyle()
                 .accessibilityIdentifier("wuji.nodes.form.method")
                 fieldRow(label: L10n.t("nodes.form.password", table: "Nodes"),
                          text: $password, field: .password,
@@ -293,7 +317,7 @@ struct AddNodeFormView: View {
                     Text(value.displayName).tag(value)
                 }
             }
-            .pickerStyle(.navigationLink)
+            .wujiNavigationLinkPickerStyle()
             .accessibilityIdentifier("wuji.nodes.form.network")
 
             if proto == .vless {
@@ -302,7 +326,7 @@ struct AddNodeFormView: View {
                     Text("TLS").tag(SecurityLayer.tls)
                     Text("REALITY").tag(SecurityLayer.reality)
                 }
-                .pickerStyle(.navigationLink)
+                .wujiNavigationLinkPickerStyle()
                 .accessibilityIdentifier("wuji.nodes.form.security")
             } else {
                 Toggle(L10n.t("nodes.form.tls", table: "Nodes"),
@@ -345,7 +369,7 @@ struct AddNodeFormView: View {
                     Text(Self.fingerprintLabel(value)).tag(value)
                 }
             }
-            .pickerStyle(.navigationLink)
+            .wujiNavigationLinkPickerStyle()
             .accessibilityIdentifier("wuji.nodes.form.fingerprint")
 
             if security != .none {
@@ -379,8 +403,28 @@ struct AddNodeFormView: View {
                           placeholder: String = "",
                           text: Binding<String>,
                           field: Field,
-                          keyboard: UIKeyboardType = .default,
+                          keyboard: PlatformKeyboardType = .default,
                           identifier: String) -> some View {
+        #if os(macOS)
+        // macOS text fields have a large intrinsic minimum width; the iOS trailing
+        // layout overflows the sheet and cuts controls off. Use a fixed label column
+        // and a constrained field that always fits the row.
+        HStack(spacing: 12) {
+            Text(label)
+                .font(.body)
+                .foregroundStyle(Theme.label)
+                .frame(width: 92, alignment: .leading)
+                .fixedSize(horizontal: true, vertical: false)
+            TextField(placeholder, text: text)
+                .font(.body)
+                .foregroundStyle(Theme.secondaryLabel)
+                .multilineTextAlignment(.leading)
+                .textFieldStyle(.roundedBorder)
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .focused($focusedField, equals: field)
+                .accessibilityIdentifier(identifier)
+        }
+        #else
         HStack(spacing: 12) {
             Text(label)
                 .font(.body)
@@ -390,12 +434,13 @@ struct AddNodeFormView: View {
                 .font(.body)
                 .foregroundStyle(Theme.secondaryLabel)
                 .multilineTextAlignment(.trailing)
-                .keyboardType(keyboard)
-                .textInputAutocapitalization(.never)
+                .wujiKeyboardType(keyboard)
+                .wujiNoAutocapitalization()
                 .autocorrectionDisabled()
                 .focused($focusedField, equals: field)
                 .accessibilityIdentifier(identifier)
         }
+        #endif
     }
 
     @ViewBuilder

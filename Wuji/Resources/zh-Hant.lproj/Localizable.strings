@@ -194,3 +194,47 @@
 "permission.network.note" = "之後可在：設定 → 隱私權與安全性 → 區域網路；設定 → 一般 → VPN 與裝置管理 中修改。";
 /* Global confirmation after node switch / tunnel settings change */
 "toast.settingsApplied" = "設定已生效";
+
+"home.details.section" = "連線詳情";
+
+"home.details.exit" = "出口伺服器";
+
+"home.details.protocol" = "協議";
+
+"home.details.routing" = "分流模式";
+
+"home.details.dns" = "DNS";
+
+"menu.showWindow" = "顯示主視窗";
+
+"menu.about" = "關於無極代理";
+
+"menu.quit" = "結束無極代理";
+
+"logs.title" = "連線日誌";
+
+"logs.all" = "全部";
+
+"logs.proxy" = "代理";
+
+"logs.direct" = "直連";
+
+"logs.dns" = "DNS";
+
+"logs.other" = "其他";
+
+"logs.empty" = "連線後這裡會顯示即時代理 / 直連日誌。";
+
+"logs.pause" = "暫停";
+
+"logs.resume" = "繼續";
+
+"logs.clear" = "清空";
+
+"logs.live" = "即時";
+
+"logs.paused" = "已暫停";
+
+"tab.logs" = "日誌";
+
+"logs.save" = "儲存";

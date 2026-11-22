@@ -113,6 +113,7 @@
 /* ===== Chia sẻ mã QR ===== */
 "nodes.qr.title" = "Chia sẻ nút";
 "nodes.qr.saveToPhotos" = "Lưu vào Ảnh";
+"nodes.qr.saveToFile" = "Lưu ảnh…";
 "nodes.qr.copyURI" = "Sao chép URI";
 "nodes.qr.share" = "Chia sẻ";
 "nodes.qr.saved" = "Đã lưu vào Ảnh";

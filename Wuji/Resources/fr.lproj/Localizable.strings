@@ -194,3 +194,47 @@ Deux fenêtres système vont apparaître. Veuillez autoriser les deux pour conti
 "permission.network.note" = "Modifiable plus tard : Réglages → Confidentialité et sécurité → Réseau local, et Réglages → Général → VPN et gestion de l’appareil.";
 /* Global confirmation after node switch / tunnel settings change */
 "toast.settingsApplied" = "Réglages appliqués.";
+
+"home.details.section" = "Détails de connexion";
+
+"home.details.exit" = "Serveur de sortie";
+
+"home.details.protocol" = "Protocole";
+
+"home.details.routing" = "Mode de routage";
+
+"home.details.dns" = "DNS";
+
+"menu.showWindow" = "Afficher la fenêtre principale";
+
+"menu.about" = "À propos de WProxy";
+
+"menu.quit" = "Quitter WProxy";
+
+"logs.title" = "Journal des connexions";
+
+"logs.all" = "Tout";
+
+"logs.proxy" = "Proxy";
+
+"logs.direct" = "Direct";
+
+"logs.dns" = "DNS";
+
+"logs.other" = "Autre";
+
+"logs.empty" = "Les journaux proxy / direct en direct apparaîtront ici après connexion.";
+
+"logs.pause" = "Pause";
+
+"logs.resume" = "Reprendre";
+
+"logs.clear" = "Effacer";
+
+"logs.live" = "En direct";
+
+"logs.paused" = "En pause";
+
+"tab.logs" = "Journal";
+
+"logs.save" = "Enregistrer";

@@ -24,8 +24,8 @@ struct LegalDocumentView: View {
             }
         }
         .navigationTitle(kind.title)
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar(.hidden, for: .tabBar)
+        .wujiInlineNavigationTitle()
+        .wujiHiddenTabBar()
         .task {
             loadIfNeeded()
         }
@@ -44,6 +44,7 @@ struct LegalDocumentView: View {
             .padding(.horizontal, Theme.hMargin)
             .padding(.top, 16)
             .padding(.bottom, 32)
+            .wujiMacContentWidth(820)
         }
         .background(Theme.background)
         .accessibilityIdentifier("wuji.settings.legal.scroll")

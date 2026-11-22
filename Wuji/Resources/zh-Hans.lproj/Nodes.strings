@@ -113,6 +113,7 @@
 /* ===== 二维码分享 ===== */
 "nodes.qr.title" = "分享节点";
 "nodes.qr.saveToPhotos" = "保存到相册";
+"nodes.qr.saveToFile" = "存储图片…";
 "nodes.qr.copyURI" = "复制链接";
 "nodes.qr.share" = "分享";
 "nodes.qr.saved" = "已保存到相册";

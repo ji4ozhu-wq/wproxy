@@ -113,6 +113,7 @@
 /* ===== แชร์คิวอาร์โค้ด ===== */
 "nodes.qr.title" = "แชร์โหนด";
 "nodes.qr.saveToPhotos" = "บันทึกไปยังรูปภาพ";
+"nodes.qr.saveToFile" = "บันทึกรูปภาพ…";
 "nodes.qr.copyURI" = "คัดลอก URI";
 "nodes.qr.share" = "แชร์";
 "nodes.qr.saved" = "บันทึกไปยังรูปภาพแล้ว";

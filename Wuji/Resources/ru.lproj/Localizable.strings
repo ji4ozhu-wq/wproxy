@@ -158,3 +158,47 @@
 "permission.network.note" = "Изменить можно позже: Настройки → Конфиденциальность и безопасность → Локальная сеть; Настройки → Основные → VPN и управление устройством.";
 /* Global confirmation after node switch / tunnel settings change */
 "toast.settingsApplied" = "Настройки применены.";
+
+"home.details.section" = "Подробности подключения";
+
+"home.details.exit" = "Сервер выхода";
+
+"home.details.protocol" = "Протокол";
+
+"home.details.routing" = "Режим маршрутизации";
+
+"home.details.dns" = "DNS";
+
+"menu.showWindow" = "Показать главное окно";
+
+"menu.about" = "О WProxy";
+
+"menu.quit" = "Выйти из WProxy";
+
+"logs.title" = "Журнал подключений";
+
+"logs.all" = "Все";
+
+"logs.proxy" = "Прокси";
+
+"logs.direct" = "Прямое";
+
+"logs.dns" = "DNS";
+
+"logs.other" = "Другое";
+
+"logs.empty" = "Журнал прокси / прямых соединений появится здесь после подключения.";
+
+"logs.pause" = "Пауза";
+
+"logs.resume" = "Продолжить";
+
+"logs.clear" = "Очистить";
+
+"logs.live" = "В реальном времени";
+
+"logs.paused" = "Пауза";
+
+"tab.logs" = "Журнал";
+
+"logs.save" = "Сохранить";

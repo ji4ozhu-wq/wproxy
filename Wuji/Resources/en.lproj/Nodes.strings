@@ -113,6 +113,7 @@
 /* ===== QR share ===== */
 "nodes.qr.title" = "Share Node";
 "nodes.qr.saveToPhotos" = "Save to Photos";
+"nodes.qr.saveToFile" = "Save Image…";
 "nodes.qr.copyURI" = "Copy URI";
 "nodes.qr.share" = "Share";
 "nodes.qr.saved" = "Saved to Photos";

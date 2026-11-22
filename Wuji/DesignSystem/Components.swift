@@ -71,6 +71,7 @@ struct PlainActionButton: View {
                 .foregroundStyle(color)
                 .frame(maxWidth: .infinity)
                 .frame(height: 44)
+                .wujiRowHover()
         }
     }
 }
@@ -91,7 +92,7 @@ struct DataRowView: View {
                 .frame(width: 24)
             Text(title)
                 .font(Theme.body)
-                .foregroundStyle(titleColor)
+                .foregroundStyle(showsChevron ? PlatformFlags.interactiveTitleColor : titleColor)
             Spacer(minLength: 8)
             if let value {
                 Text(value)
@@ -108,6 +109,7 @@ struct DataRowView: View {
         .padding(.horizontal, Theme.hMargin)
         .padding(.vertical, 11)
         .contentShape(Rectangle())
+        .wujiRowHover(showsChevron)
     }
 }
 
@@ -132,7 +134,7 @@ struct EmptyStateView: View {
                 .font(.system(size: 40, weight: .regular))
                 .foregroundStyle(Theme.secondaryLabel)
                 .frame(width: 88, height: 88)
-                .background(Color(.tertiarySystemFill))
+                .background(Theme.fillTertiary)
                 .clipShape(Circle())
             Text(title)
                 .font(.title3.bold())

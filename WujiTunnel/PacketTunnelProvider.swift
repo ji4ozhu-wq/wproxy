@@ -40,6 +40,9 @@ final class PacketTunnelProvider: NEPacketTunnelProvider {
         static let traffic = "traffic"
         static let status = "status"
         static let version = "version"
+        static let logs = "logs"
+        static let clearLogs = "logsClear"
+        static let after = "after"
     }
 
     private struct Snapshot {
@@ -65,6 +68,10 @@ final class PacketTunnelProvider: NEPacketTunnelProvider {
     private var trafficTimer: DispatchSourceTimer?
     private let completionLock = NSLock()
     private var startCompleted = false
+    #if os(macOS)
+    /// In-memory-only tail of the Xray access log (max 1 MB) served to the app.
+    private var accessLogRelay: AccessLogRelay?
+    #endif
 
     // MARK: - Tunnel lifecycle
 
@@ -108,6 +115,10 @@ final class PacketTunnelProvider: NEPacketTunnelProvider {
                 return
             }
             self.stopTrafficTimer()
+            #if os(macOS)
+            self.accessLogRelay?.stop()
+            self.accessLogRelay = nil
+            #endif
             XrayRunner.stop()
             self.updateSnapshot {
                 $0.running = false
@@ -142,8 +153,17 @@ final class PacketTunnelProvider: NEPacketTunnelProvider {
             completeStart(error: ProviderError.tunFileDescriptorNotFound, completionHandler: completionHandler)
             return
         }
+        #if os(macOS)
+        // Start a fresh in-memory-only access log relay and point Xray at its temp file.
+        let relay = AccessLogRelay()
+        relay?.start()
+        accessLogRelay = relay
+        let configJSON = Self.injectAccessLog(into: launch.xrayJSON, filePath: relay?.filePath)
+        #else
+        let configJSON = launch.xrayJSON
+        #endif
         do {
-            try XrayRunner.run(configJSON: launch.xrayJSON, tunFileDescriptor: descriptor)
+            try XrayRunner.run(configJSON: configJSON, tunFileDescriptor: descriptor)
         } catch {
             Self.log.error("runXray failed: \(error.localizedDescription, privacy: .public)")
             completeStart(error: error, completionHandler: completionHandler)
@@ -235,6 +255,25 @@ final class PacketTunnelProvider: NEPacketTunnelProvider {
         }
     }
 
+    /// Injects the extension-only access-log configuration into the Xray JSON:
+    /// temp file inside the extension container + DNS log (used to map IPs to domains).
+    private static func injectAccessLog(into json: String, filePath: String?) -> String {
+        guard let filePath,
+              var root = (try? JSONSerialization.jsonObject(with: Data(json.utf8))) as? [String: Any] else {
+            return json
+        }
+        root["log"] = [
+            "loglevel": "warning",
+            "access": filePath,
+            "dnsLog": true
+        ]
+        guard let data = try? JSONSerialization.data(withJSONObject: root, options: [.sortedKeys]),
+              let updated = String(data: data, encoding: .utf8) else {
+            return json
+        }
+        return updated
+    }
+
     private func currentStats() -> TunnelSessionStats {
         let current = readSnapshot()
         var stats = TunnelSessionStats()
@@ -266,6 +305,20 @@ final class PacketTunnelProvider: NEPacketTunnelProvider {
         case ProviderMessage.version:
             let version = XrayRunner.version() ?? ""
             completionHandler?(try? JSONEncoder().encode(["version": version]))
+        case ProviderMessage.logs:
+            #if os(macOS)
+            let after = request?[ProviderMessage.after] as? Int ?? 0
+            let batch = accessLogRelay?.snapshot(after: after)
+                ?? AccessLogBatch(entries: [], next: 0, dropped: true)
+            completionHandler?(try? JSONEncoder().encode(batch))
+            #else
+            completionHandler?(nil)
+            #endif
+        case ProviderMessage.clearLogs:
+            #if os(macOS)
+            accessLogRelay?.clear()
+            #endif
+            completionHandler?(try? JSONEncoder().encode(["ok": true]))
         default:
             Self.log.error("Unknown provider message")
             completionHandler?(nil)

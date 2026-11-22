@@ -3,7 +3,7 @@ import SwiftUI
 /// About screen (spec §5.12, design reference `N-about-licenses`).
 struct AboutView: View {
     var body: some View {
-        List {
+        WujiSettingsList {
             Section {
                 appHeader
                     .frame(maxWidth: .infinity)
@@ -15,6 +15,7 @@ struct AboutView: View {
                     LicensesView()
                 } label: {
                     Text(L10n.t("about.licenses"))
+                        .wujiNavigationRow(chevron: false)
                 }
                 .accessibilityIdentifier("wuji.settings.about.openSource")
             }
@@ -28,10 +29,9 @@ struct AboutView: View {
                     .listRowSeparator(.hidden)
             }
         }
-        .listStyle(.insetGrouped)
         .navigationTitle(L10n.t("settings.about.title", table: "Settings"))
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar(.hidden, for: .tabBar)
+        .wujiInlineNavigationTitle()
+        .wujiHiddenTabBar()
     }
 
     private var appHeader: some View {

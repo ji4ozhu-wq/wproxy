@@ -10,26 +10,28 @@ struct SubscriptionListView: View {
     @State private var updatingIDs: Set<String> = []
 
     var body: some View {
-        List {
+        WujiSettingsList {
             if app.subscriptions.isEmpty {
                 emptyState
             } else {
                 ForEach(app.subscriptions) { subscription in
                     card(for: subscription)
                 }
+                #if os(iOS)
                 Section {
                     EmptyView()
                 } footer: {
                     Text(L10n.t("subscriptions.list.autoUpdateFootnote", table: "Subscriptions"))
                 }
+                #endif
             }
         }
-        .listStyle(.insetGrouped)
+        
         .navigationTitle(L10n.t("subscriptions.title"))
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar(.hidden, for: .tabBar)
+        .wujiInlineNavigationTitle()
+        .wujiHiddenTabBar()
         .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
+            ToolbarItem(placement: .wujiTrailing) {
                 Button {
                     showAdd = true
                 } label: {
@@ -40,9 +42,11 @@ struct SubscriptionListView: View {
         }
         .sheet(isPresented: $showAdd) {
             AddSubscriptionView()
+                .wujiSheetSizing(width: 520, height: 620)
         }
         .sheet(item: $pendingDelete) { subscription in
             ConfirmationSheet(request: deleteRequest(for: subscription))
+                .wujiSheetSizing(width: 420, height: 240)
         }
         .wujiToast($toast)
         .accessibilityIdentifier("wuji.subscriptions.list")
@@ -86,6 +90,7 @@ struct SubscriptionListView: View {
                         .foregroundStyle(Theme.secondaryLabel)
                 }
                 .padding(.vertical, 2)
+                .wujiRowHover()
             }
             .listRowSeparator(.hidden)
             .swipeActions(edge: .trailing, allowsFullSwipe: false) {

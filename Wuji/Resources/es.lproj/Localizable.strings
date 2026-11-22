@@ -194,3 +194,47 @@ Verás dos avisos del sistema. Permite ambos para continuar.";
 "permission.network.note" = "Puedes cambiarlos más tarde: Ajustes → Privacidad y seguridad → Red local, y Ajustes → General → VPN y gestión de dispositivos.";
 /* Global confirmation after node switch / tunnel settings change */
 "toast.settingsApplied" = "Ajustes aplicados.";
+
+"home.details.section" = "Detalles de conexión";
+
+"home.details.exit" = "Servidor de salida";
+
+"home.details.protocol" = "Protocolo";
+
+"home.details.routing" = "Modo de enrutamiento";
+
+"home.details.dns" = "DNS";
+
+"menu.showWindow" = "Mostrar ventana principal";
+
+"menu.about" = "Acerca de WProxy";
+
+"menu.quit" = "Salir de WProxy";
+
+"logs.title" = "Registro de conexiones";
+
+"logs.all" = "Todo";
+
+"logs.proxy" = "Proxy";
+
+"logs.direct" = "Directo";
+
+"logs.dns" = "DNS";
+
+"logs.other" = "Otro";
+
+"logs.empty" = "Los registros de proxy / directo en vivo aparecerán aquí al conectarse.";
+
+"logs.pause" = "Pausar";
+
+"logs.resume" = "Reanudar";
+
+"logs.clear" = "Borrar";
+
+"logs.live" = "En vivo";
+
+"logs.paused" = "En pausa";
+
+"tab.logs" = "Registros";
+
+"logs.save" = "Guardar";

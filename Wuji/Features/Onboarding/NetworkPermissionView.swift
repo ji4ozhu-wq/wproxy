@@ -1,5 +1,4 @@
 import SwiftUI
-import UIKit
 
 /// First-run network permission gate, shown after the onboarding pages and before the
 /// consent screen. Requests Local Network + VPN Configuration; failures keep the user
@@ -75,7 +74,7 @@ struct NetworkPermissionView: View {
                                 .frame(maxWidth: .infinity)
                                 .padding(.vertical, 14)
                                 .foregroundStyle(Theme.label)
-                                .background(Color(.secondarySystemFill))
+                                .background(Theme.fillSecondary)
                                 .clipShape(Capsule())
                         }
                         .buttonStyle(.plain)
@@ -93,6 +92,7 @@ struct NetworkPermissionView: View {
             }
             .padding(.horizontal, Theme.hMargin)
             .padding(.bottom, 32)
+            .wujiMacContentWidth(720)
         }
         .background(Theme.background)
         .accessibilityIdentifier("wuji.permission.screen")
@@ -113,7 +113,7 @@ struct NetworkPermissionView: View {
     }
 
     private func openSystemSettings() {
-        guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
-        UIApplication.shared.open(url)
+        guard let url = PlatformSystem.appSettingsURL else { return }
+        PlatformSystem.open(url)
     }
 }

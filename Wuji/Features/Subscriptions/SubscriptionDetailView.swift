@@ -1,5 +1,4 @@
 import SwiftUI
-import UIKit
 
 /// Subscription detail (spec §5.7, design reference `N-subscription-detail`).
 /// Pushed from the subscription list; shows usage, metadata, a node preview, and the
@@ -30,11 +29,11 @@ struct SubscriptionDetailView: View {
             }
         }
         .navigationTitle(subscription?.name ?? L10n.t("subscriptions.title"))
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar(.hidden, for: .tabBar)
+        .wujiInlineNavigationTitle()
+        .wujiHiddenTabBar()
         .toolbar {
             if let subscription {
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItem(placement: .wujiTrailing) {
                     Button(L10n.t("common.edit", table: "Settings")) {
                         editingSubscription = subscription
                     }
@@ -44,12 +43,15 @@ struct SubscriptionDetailView: View {
         }
         .sheet(item: $editingSubscription) { subscription in
             AddSubscriptionView(editing: subscription)
+                .wujiSheetSizing(width: 520, height: 620)
         }
         .sheet(item: $deleteConfirmation) { request in
             ConfirmationSheet(request: request)
+                .wujiSheetSizing(width: 420, height: 240)
         }
         .sheet(isPresented: $showAllNodes) {
             SubscriptionNodesView(subscriptionID: subscriptionID)
+                .wujiSheetSizing(width: 560, height: 640)
         }
         .wujiToast($toast)
         .task {
@@ -82,7 +84,7 @@ struct SubscriptionDetailView: View {
 
     private func content(for subscription: Subscription) -> some View {
         let nodes = SubscriptionLookup.nodes(for: subscription, in: app)
-        return List {
+        return WujiSettingsList {
             statsSection(subscription: subscription, nodes: nodes)
             infoSection(subscription: subscription)
             if let message = updateError ?? subscription.lastError {
@@ -91,7 +93,7 @@ struct SubscriptionDetailView: View {
             nodesSection(subscription: subscription, nodes: nodes)
             actionsSection(subscription: subscription)
         }
-        .listStyle(.insetGrouped)
+        
         .accessibilityIdentifier("wuji.subscriptions.detail.list")
     }
 
@@ -129,11 +131,12 @@ struct SubscriptionDetailView: View {
             ValueRow(title: L10n.t("subscriptions.detail.autoUpdate", table: "Subscriptions"),
                      value: SubscriptionUpdateInterval(subscription: subscription).displayName)
             Button {
-                UIPasteboard.general.string = subscription.url
+                PlatformPasteboard.setString(subscription.url)
                 toast = L10n.t("subscriptions.detail.urlCopied", table: "Subscriptions")
             } label: {
                 ValueRow(title: L10n.t("subscriptions.detail.url", table: "Subscriptions"),
                          value: SubscriptionFormat.host(subscription.url),
+                         interactive: true,
                          showsChevron: true)
             }
             .buttonStyle(.plain)

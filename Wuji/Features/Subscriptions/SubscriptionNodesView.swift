@@ -20,7 +20,7 @@ struct SubscriptionNodesView: View {
 
     var body: some View {
         NavigationStack {
-            List {
+            WujiSettingsList {
                 if nodes.isEmpty {
                     EmptyStateView(symbol: "server.rack",
                                    title: L10n.t("subscriptions.detail.nodesTitle", table: "Subscriptions"),
@@ -61,16 +61,18 @@ struct SubscriptionNodesView: View {
                     }
                 }
             }
-            .listStyle(.insetGrouped)
+            .wujiListStyle()
             .navigationTitle(L10n.t("subscriptions.detail.nodesTitle", table: "Subscriptions"))
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar(.hidden, for: .tabBar)
+            .wujiInlineNavigationTitle()
+            .wujiHiddenTabBar()
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItem(placement: .wujiTrailing) {
                     Button(L10n.t("common.done")) { dismiss() }
                         .accessibilityIdentifier("wuji.subscriptions.nodes.done")
                 }
             }
         }
+        .wujiMacSheetActions(confirmTitle: L10n.t("common.done"),
+                             onConfirm: { dismiss() })
     }
 }

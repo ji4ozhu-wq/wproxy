@@ -17,10 +17,10 @@ settings:
     OTHER_SWIFT_FLAGS: "$(inherited) -disable-sandbox"
     SWIFT_STRICT_CONCURRENCY: minimal
     OTHER_LDFLAGS: "$(inherited) -lsqlite3"
-    # The shipped LibXray.xcframework only carries iOS device arm64 + simulator arm64
-    # slices (see tools/build_libxray.sh). Release builds would otherwise try to link
-    # an x86_64 simulator slice that does not exist; Intel-Mac simulator development is
-    # not supported for this project (Apple Silicon only).
+    # The shipped LibXray.xcframework carries iOS device arm64, iOS simulator arm64
+    # and a macOS universal (arm64 + x86_64) slice (see tools/build_libxray.sh).
+    # There is no x86_64 iOS-simulator slice; Intel-Mac simulator development is not
+    # supported for this project (iOS simulator development is Apple Silicon only).
     EXCLUDED_ARCHS[sdk=iphonesimulator*]: x86_64
 
 targets:
@@ -78,6 +78,100 @@ targets:
       - framework: Frameworks/LibXray.xcframework
         embed: false
 
+  # ---------------------------------------------------------------------------
+  # macOS 26+ (native). App Store distribution: the packet tunnel provider is
+  # packaged as a macOS *app extension* (App Store only per TN3134, same
+  # product type as the iOS extension), embedded in Contents/PlugIns. The app
+  # is sandboxed and shares the App Group container with the extension using
+  # the macOS "<TeamID>.<group name>" app-group form (no portal registration
+  # needed for that form; see docs/macos-appstore-checklist.md).
+  # macOS-only support files live in WujiMac/; shared Swift sources are compiled
+  # into both platforms with `#if os(...)` shims.
+  # ---------------------------------------------------------------------------
+  Wuji-macOS:
+    type: application
+    platform: macOS
+    deploymentTarget: "26.0"
+    sources:
+      - path: Wuji
+        excludes:
+          - "Info.plist"
+          - "Wuji.entitlements"
+          - "Resources/Assets.xcassets"
+          - "Resources/PrivacyInfo.xcprivacy"
+      - path: Wuji/Resources/PrivacyInfo.xcprivacy
+        buildPhase: resources
+      - path: WujiMac/MenuBarController.swift
+      - path: WujiMac/Assets.xcassets
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.juejin.ios.wuji
+        PRODUCT_NAME: Wuji
+        INFOPLIST_FILE: WujiMac/Info-Wuji-macOS.plist
+        CODE_SIGN_ENTITLEMENTS: WujiMac/Wuji-macOS.entitlements
+        MARKETING_VERSION: "3.3.1"
+        CURRENT_PROJECT_VERSION: "2"
+        MACOSX_DEPLOYMENT_TARGET: "26.0"
+        ENABLE_HARDENED_RUNTIME: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    dependencies:
+      - target: WujiTunnel-macOS
+        embed: true
+
+  WujiTunnel-macOS:
+    type: app-extension
+    platform: macOS
+    deploymentTarget: "26.0"
+    sources:
+      - path: WujiTunnel
+        excludes:
+          - "Info.plist"
+          - "WujiTunnel.entitlements"
+          - "PrivacyInfo.xcprivacy"
+      - path: WujiTunnel/PrivacyInfo.xcprivacy
+        buildPhase: resources
+      - path: Wuji/Core/Models
+      - path: Wuji/Core/Routing
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.juejin.ios.wuji.tunnel-ext
+        PRODUCT_NAME: WujiTunnel
+        MARKETING_VERSION: "3.3.1"
+        # macOS app extensions must carry the same build number as the container
+        # app (App Store validation rejects a mismatch).
+        CURRENT_PROJECT_VERSION: "2"
+        MACOSX_DEPLOYMENT_TARGET: "26.0"
+        ENABLE_HARDENED_RUNTIME: YES
+        INFOPLIST_FILE: WujiMac/Info-WujiTunnel-macOS.plist
+        CODE_SIGN_ENTITLEMENTS: WujiMac/WujiTunnel-macOS.entitlements
+        # libXray's cgo DNS resolver needs libresolv; the Go archive also references
+        # CoreFoundation/Security symbols on macOS (see libxray-mac verification).
+        OTHER_LDFLAGS: "$(inherited) -lresolv -framework CoreFoundation -framework Security"
+    dependencies:
+      - framework: Frameworks/LibXray.xcframework
+        embed: false
+
+  WujiTests-macOS:
+    type: bundle.unit-test
+    platform: macOS
+    deploymentTarget: "26.0"
+    sources:
+      - path: WujiTests
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.juejin.ios.wuji.tests
+        MARKETING_VERSION: "3.3.1"
+        CURRENT_PROJECT_VERSION: "1"
+        MACOSX_DEPLOYMENT_TARGET: "26.0"
+        # The macOS app target is named `Wuji-macOS` but ships as `Wuji.app`;
+        # point the test host at the built product explicitly.
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Wuji.app/Contents/MacOS/Wuji"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+    dependencies:
+      - target: Wuji-macOS
+
   WujiUITests:
     type: bundle.ui-testing
     platform: iOS
@@ -118,3 +212,13 @@ schemes:
       targets:
         - WujiTests
         - WujiUITests
+  Wuji-macOS:
+    build:
+      targets:
+        Wuji-macOS: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - WujiTests-macOS
