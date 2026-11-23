@@ -9,8 +9,7 @@
   </a>
 
   <p>
-    <a href="https://apps.apple.com/cn/app/%E6%97%A0%E6%9E%81%E4%BB%A3%E7%90%86/id1448657437">App Store（中国大陆）</a>
-    ·
+    
     <a href="https://apps.apple.com/app/id1448657437">App Store（全球）</a>
   </p>
 
@@ -130,7 +129,6 @@ WProxy is a client only. You must provide and operate your own server or use a s
 
 已上架 App Store：
 
-- [App Store（中国大陆）](https://apps.apple.com/cn/app/%E6%97%A0%E6%9E%81%E4%BB%A3%E7%90%86/id1448657437)
 - [App Store（全球）](https://apps.apple.com/app/id1448657437)
 
 ### 从源码构建
