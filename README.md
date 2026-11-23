@@ -6,12 +6,9 @@
 
   <a href="https://apps.apple.com/cn/app/%E6%97%A0%E6%9E%81%E4%BB%A3%E7%90%86/id1448657437">
     <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" height="48" alt="Download on the App Store">
-  </a>
-
-  <p>
-    
-    <a href="https://apps.apple.com/app/id1448657437">App Store（全球）</a>
-  </p>
+ 
+   [App Store (Global)](https://apps.apple.com/app/id1448657437)
+ 
 
   <p><strong>✅ 已上架 App Store · Now available on the App Store</strong></p>
 </div>
